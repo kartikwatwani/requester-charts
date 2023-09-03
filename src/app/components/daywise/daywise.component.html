@@ -1,0 +1,57 @@
+<div style="display: block;" class="chart-container">
+  <mat-form-field appearance="outline">
+    <mat-label>Filters</mat-label>
+    <mat-select name="key" [(ngModel)]="key" (selectionChange)="getData()">
+      <mat-option value="byDay">By Day</mat-option>
+      <mat-option value="byHour">By Hour</mat-option>
+      <mat-option value="byDayAndHour">By Day-Hour</mat-option>
+      <mat-option value="byId">By Id</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field
+    *ngIf="key==='byDayAndHour'"
+    appearance="outline"
+    style="margin-left: 20px;"
+  >
+  <mat-label>Hour</mat-label>
+    <mat-select
+      name="selectedHour"
+      [(ngModel)]="selectedHour"
+      (selectionChange)="prepareByDayandHourChart()"
+    >
+      <mat-option [value]="item.value" *ngFor="let item of hoursList"
+        >{{item.name}}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+  <canvas
+    *ngIf="data.length>0 &&key==='byDay'"
+    baseChart
+    [datasets]="barChartData"
+    [labels]="dayChartLabels"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+  >
+  </canvas>
+  <canvas
+    *ngIf="data.length>0 &&key==='byHour'"
+    baseChart
+    [datasets]="barChartData"
+    [labels]="hourChartLabels"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+  >
+  </canvas>
+  <canvas
+  *ngIf="data.length>0 &&key==='byDayAndHour'"
+  baseChart
+  [datasets]="barChartData"
+  [labels]="dayChartLabels"
+  [options]="barChartOptions"
+  [plugins]="barChartPlugins"
+  [legend]="barChartLegend"
+>
+</canvas>
+</div>

@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!-- <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon >menu</mat-icon>
+    </button> -->
+    <h1>Charts</h1>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <!-- <mat-sidenav #sidenav>
+    <mat-nav-list>
+
+      <a mat-list-item [routerLink]="'/day-wise'"> Day Wise </a>
+
+    </mat-nav-list>
+  </mat-sidenav> -->
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
