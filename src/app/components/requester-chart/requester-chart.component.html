@@ -1,0 +1,62 @@
+<mat-icon
+  class="cursor mt-4"
+  routerLink="../../"
+  style="position: relative; left: 30px;"
+  >arrow_back</mat-icon
+>
+<mat-form-field
+*ngIf="key ==='by10DayHour'"
+appearance="outline"
+style="margin-left: 20px;"
+>
+<mat-label>Day</mat-label>
+<mat-select
+  name="selectedDay"
+  [(ngModel)]="selectedDay"
+  (selectionChange)="prepareDataForDayAndHour()"
+>
+  <mat-option [value]="item.id" *ngFor="let item of dayList"
+    >{{ item.name }}</mat-option
+  >
+</mat-select>
+</mat-form-field>
+<mat-form-field
+*ngIf="key ==='by10DayHour'"
+appearance="outline"
+style="margin-left: 20px;"
+>
+<mat-label>Hour</mat-label>
+<mat-select
+  name="selectedHour"
+  [(ngModel)]="selectedHour"
+  (selectionChange)="prepareDataForDayAndHour()"
+>
+  <mat-option [value]="item.value" *ngFor="let item of hoursList"
+    >{{ item.name }}</mat-option
+  >
+</mat-select>
+</mat-form-field>
+
+
+<div style="display: block;" class="chart-container">
+  <canvas
+    *ngIf="chartData && filterKey === 'by10Day'"
+    baseChart
+    [datasets]="barChartData"
+    [labels]="dayChartLabels"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+  >
+  </canvas>
+  <canvas
+    *ngIf="chartData && filterKey === 'by10Hour'"
+    baseChart
+    [datasets]="barChartData"
+    [labels]="hourChartLabels"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+  >
+  </canvas>
+</div>

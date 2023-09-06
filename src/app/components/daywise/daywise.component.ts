@@ -14,7 +14,10 @@ export class DaywiseComponent {
     responsive: true,
   };
   dayCount = [0, 1, 2, 3, 4, 5, 6];
-  hourCount = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+  hourCount = [
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+    21, 22, 23,
+  ];
 
   dayChartLabels: any[] = [
     'Monday',
@@ -25,38 +28,75 @@ export class DaywiseComponent {
     'Staturday',
     'Sunday',
   ];
+  requesterList: any[] = [];
+  dayList: any[] = [
+    { name: 'Monday', id: 1 },
+    { name: 'Tuesday', id: 2 },
+    { name: 'Wednesday', id: 3 },
+    { name: 'Thursday', id: 4 },
+    { name: 'Friday', id: 5 },
+    { name: 'Staturday', id: 6 },
+    { name: 'Sunday', id: 7 },
+  ];
   hourChartLabels: any[] = [
-    '12-1',
-    '1-2',
-    '2-3',
-    '3-4',
-    '4-5',
-    '5-6',
-    '6-7',
-    '7-8',
-    '8-9',
-    '9-10',
-    '10-11',
-    '11-12',
+    '00:00-01:00',
+    '01:00-02:00',
+    '02:00-03:00',
+    '03:00-04:00',
+    '04:00-05:00',
+    '05:00-06:00',
+    '06:00-07:00',
+    '07:00-08:00',
+    '08:00-09:00',
+    '09:00-10:00',
+    '10:00-11:00',
+    '11:00-12:00',
+    '12:00-13:00',
+    '13:00-14:00',
+    '14:00-15:00',
+    '15:00-16:00',
+    '16:00-17:00',
+    '17:00-18:00',
+    '18:00-19:00',
+    '19:00-20:00',
+    '20:00-21:00',
+    '21:00-22:00',
+    '22:00-23:00',
+    '23:00-24:00',
   ];
 
   hoursList: any[] = [
-    { name: '12-1', value: '0' },
-    { name: '1-2', value: '1' },
-    { name: '2-3', value: '2' },
-    { name: '3-4', value: '3' },
-    { name: '4-5', value: '4' },
-    { name: '5-6', value: '5' },
-    { name: '6-7', value: '6' },
-    { name: '7-8', value: '7' },
-    { name: '8-9', value: '8' },
-    { name: '9-10', value: '9' },
-    { name: '10-11', value: '10' },
-    { name: '11-12', value: '11' },
+    { name: '00:00-01:00', value: '0' },
+    { name: '01:00-02:00', value: '1' },
+    { name: '02:00-03:00', value: '2' },
+    { name: '03:00-04:00', value: '3' },
+    { name: '04:00-05:00', value: '4' },
+    { name: '05:00-06:00', value: '5' },
+    { name: '06:00-07:00', value: '6' },
+    { name: '07:00-08:00', value: '7' },
+    { name: '08:00-09:00', value: '8' },
+    { name: '09:00-10:00', value: '9' },
+    { name: '10:00-11:00', value: '10' },
+    { name: '11:00-12:00', value: '11' },
+    { name: '12:00-13:00', value: '12' },
+    { name: '13:00-14:00', value: '13' },
+    { name: '14:00-15:00', value: '14' },
+    { name: '15:00-16:00', value: '15' },
+    { name: '16:00-17:00', value: '16' },
+    { name: '17:00-18:00', value: '17' },
+    { name: '18:00-19:00', value: '18' },
+    { name: '19:00-20:00', value: '19' },
+    { name: '20:00-21:00', value: '20' },
+    { name: '21:00-22:00', value: '21' },
+    { name: '22:00-23:00', value: '22' },
+    { name: '23:00-24:00', value: '23' },
   ];
   key = 'byDay';
+  newKey = '';
   selectedHour = this.hoursList[0].value;
+  selectedDay = this.dayList[0].id;
   barChartType: ChartType = 'bar';
+
   barChartLegend = true;
   barChartPlugins = [];
   data: any = [];
@@ -77,10 +117,24 @@ export class DaywiseComponent {
     this.getData();
   }
 
+  onDayChange() {
+    if (this.key === 'by10Day') {
+      this.calculateTop10byDay();
+    } else {
+      this.calculateTop10byDayHour();
+    }
+  }
+
   getData() {
     this.data = [];
+    this.newKey =
+      this.key === 'by10Day' ||
+      this.key === 'by10Hour' ||
+      this.key === 'by10DayHour'
+        ? 'byRequesterID'
+        : `${this.key}/LosAngeles`;
     this.chartService
-      .getAll(this.key)
+      .getAll(this.newKey)
       .snapshotChanges()
       .pipe(
         map((changes) =>
@@ -89,16 +143,71 @@ export class DaywiseComponent {
       )
       .subscribe((data) => {
         this.data = data;
-        console.log(this.data);
-
+        this.requesterList = [];
         if (this.key === 'byDay') {
           this.prepareDayChart();
         } else if (this.key === 'byHour') {
           this.prepareHourChart();
-        } else {
+        } else if (this.key === 'byDayAndHour') {
           this.prepareByDayandHourChart();
+        } else if (this.key === 'by10Day') {
+          this.calculateTop10byDay();
+        } else if (this.key === 'by10Hour') {
+          this.calculateTop10byHour();
+        } else if (this.key === 'by10DayHour') {
+          this.calculateTop10byDayHour();
         }
       });
+  }
+
+  calculateTop10byDay() {
+    let array: any = [];
+    Object.keys(this.data).forEach((key) => {
+      const value =
+        this.data[key].counts.LosAngeles.byDay[this.selectedDay] || 0;
+      array.push({ name: this.data[key].key, value });
+    });
+    array = array.sort((a: any, b: any) => b.value - a.value);
+    this.requesterList = array.slice(0, 10);
+  }
+
+  onHourChange() {
+    if (this.key === 'byDayAndHour') {
+      this.prepareByDayandHourChart();
+    } else if (this.key === 'by10Hour') {
+      this.calculateTop10byHour();
+    } else {
+      this.calculateTop10byDayHour();
+    }
+  }
+
+  calculateTop10byHour() {
+    let array: any = [];
+    Object.keys(this.data).forEach((key) => {
+      const value =
+        this.data[key].counts.LosAngeles.byHour[String(this.selectedHour)] || 0;
+      array.push({ name: this.data[key].key, value });
+    });
+    array = array.sort((a: any, b: any) => b.value - a.value);
+    this.requesterList = array.slice(0, 10);
+  }
+
+  calculateTop10byDayHour() {
+    let array: any = [];
+    Object.keys(this.data).forEach((key) => {
+      const value =
+        this.data[key].counts.LosAngeles.byDayAndHour &&
+        this.data[key].counts.LosAngeles.byDayAndHour[this.selectedDay]
+          ? this.data[key].counts.LosAngeles.byDayAndHour[String(this.selectedDay)][
+             String( this.selectedHour)
+            ]
+          : 0 || 0;
+      array.push({ name: this.data[key].key, value: value || 0 });
+    });
+    console.log(array, 'array');
+
+    array = array.sort((a: any, b: any) => b.value - a.value);
+    this.requesterList = array.slice(0, 10);
   }
 
   prepareDayChart() {
@@ -114,6 +223,8 @@ export class DaywiseComponent {
       const hasIndex = this.data.findIndex(
         (item: any) => item.key === String(day)
       );
+      console.log(hasIndex);
+
       if (hasIndex > -1) {
         let total = 0;
         for (const key in this.data[hasIndex].counts) {
@@ -136,6 +247,8 @@ export class DaywiseComponent {
       element = Math.round((element / total) * 100);
       newArray.push(element);
     });
+    console.log(array);
+
     this.barChartData[0].data = newArray;
     this.barChartData[0].backgroundColor =
       this.chartService.customizeColors(newArray);
@@ -150,6 +263,7 @@ export class DaywiseComponent {
         backgroundColor: [],
       },
     ];
+
     this.hourCount.forEach((day) => {
       const hasIndex = this.data.findIndex(
         (item: any) => item.key === String(day)
@@ -198,11 +312,9 @@ export class DaywiseComponent {
       );
 
       if (hasIndex > -1) {
-        // let total = 0;
         for (const key in this.data[hasIndex]) {
           if (key === this.selectedHour) {
             let totalValue = 0;
-
             const value = Object.values(this.data[hasIndex][key].counts);
             const currentHourTotal: any = value.reduce(
               (acc: any, currentValue: any) => acc + currentValue,
@@ -212,7 +324,6 @@ export class DaywiseComponent {
               (item: any) =>
                 String(item.key) !== String(this.data[hasIndex].key)
             );
-
             if (otherDays.length > 0) {
               otherDays.forEach((element: any) => {
                 const matchKey = Object.keys(element).find(

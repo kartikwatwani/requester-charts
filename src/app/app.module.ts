@@ -18,9 +18,10 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import { RequesterChartComponent } from './components/requester-chart/requester-chart.component';
 
 @NgModule({
-  declarations: [AppComponent, DaywiseComponent],
+  declarations: [AppComponent, DaywiseComponent, RequesterChartComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
