@@ -85,9 +85,9 @@ export class RequesterChartComponent implements OnInit {
   ];
   barChartData: any[] = [
     {
-      data: [45, 37, 60, 70, 46, 33, 3],
+      data: [],
       label: '',
-      backgroundColor: this.chartService.customizeColors([10, 20, 30, 40, 50]),
+      backgroundColor: this.chartService.customizeColors([]),
     },
   ];
   dayChartLabels: any[] = [
@@ -129,7 +129,7 @@ export class RequesterChartComponent implements OnInit {
         this.chartData = data[0];
         if (this.filterKey === 'by10Day') {
           this.prepareDataForDay();
-        } else if (this.filterKey === 'by10DayHour') {
+        } else if (this.filterKey === 'by10Hour') {
           this.prepareDataForHour();
         } else {
           this.prepareDataForDayAndHour();
@@ -207,49 +207,67 @@ export class RequesterChartComponent implements OnInit {
         backgroundColor: [],
       },
     ];
+    let count = 0;
     this.barChartData[0].data = [];
     this.dayCount.forEach((day) => {
-      const hasIndex = this.chartData.findIndex(
-        (item: any) => item.key === String(day)
-      );
-
-      if (hasIndex > -1) {
-        for (const key in this.chartData[hasIndex]) {
+      if (this.chartData.LosAngeles.byDayAndHour[day]) {
+        for (const key in this.chartData.LosAngeles.byDayAndHour[day]) {
           if (key === this.selectedHour) {
             let totalValue = 0;
-            const value = Object.values(this.chartData[hasIndex][key].counts);
-            const currentHourTotal: any = value.reduce(
-              (acc: any, currentValue: any) => acc + currentValue,
-              0
-            );
-            const otherDays = this.chartData.filter(
-              (item: any) =>
-                String(item.key) !== String(this.chartData[hasIndex].key)
-            );
-            if (otherDays.length > 0) {
-              otherDays.forEach((element: any) => {
-                const matchKey = Object.keys(element).find(
-                  (item) => String(item) === String(this.selectedHour)
-                );
-                if (matchKey) {
-                  const value = Object.values(element[matchKey].counts);
-                  const total: any = value.reduce(
-                    (acc: any, currentValue: any) => acc + currentValue,
-                    0
-                  );
-                  totalValue += total;
+            const currentHourTotal =
+              this.chartData.LosAngeles.byDayAndHour[day][key];
+            Object.keys(this.chartData.LosAngeles.byDayAndHour).forEach(
+              (currentDay) => {
+                if (
+                  String(day) !== String(currentDay) &&
+                  Number.isFinite(
+                    this.chartData.LosAngeles.byDayAndHour[currentDay][
+                      this.selectedHour
+                    ]
+                  )
+                ) {
+                  totalValue +=
+                    this.chartData.LosAngeles.byDayAndHour[currentDay][
+                      this.selectedHour
+                    ];
                 }
-              });
-            }
+              }
+            );
+            if(totalValue!==0){
             const percentageValue = Math.round(
               (currentHourTotal / totalValue) * 100
-            );
-            array.push(percentageValue);
+            )
+            array.push(percentageValue);}
+            else{
+            array.push(currentHourTotal);
+            }
+            // if (otherDays.length > 0) {
+            //   otherDays.forEach((element: any) => {
+            //     const matchKey = Object.keys(element).find(
+            //       (item) => String(item) === String(this.selectedHour)
+            //     );
+            //     if (matchKey) {
+            //       const value = Object.values(element[matchKey].counts);
+            //       const total: any = value.reduce(
+            //         (acc: any, currentValue: any) => acc + currentValue,
+            //         0
+            //       );
+            //       totalValue += total;
+            //     }
+            //   });
+            // }
+            // const percentageValue = Math.round(
+            //   (currentHourTotal / totalValue) * 100
+            // );
+            // array.push(percentageValue);
+          } else {
+            array.push(0);
           }
         }
       } else {
         array.push(0);
       }
+      console.log(array);
     });
     this.barChartData[0].data = array;
     this.barChartData[0].backgroundColor =

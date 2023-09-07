@@ -1,4 +1,5 @@
 <div style="display: block;" class="chart-container">
+  <div style="display: flex;">
   <mat-form-field appearance="outline">
     <mat-label>Filters</mat-label>
     <mat-select name="key" [(ngModel)]="key" (selectionChange)="getData()">
@@ -42,7 +43,7 @@
       >
     </mat-select>
   </mat-form-field>
-
+</div>
   <canvas
     *ngIf="data.length > 0 && key === 'byDay'"
     baseChart

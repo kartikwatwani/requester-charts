@@ -165,7 +165,9 @@ export class DaywiseComponent {
     Object.keys(this.data).forEach((key) => {
       const value =
         this.data[key].counts.LosAngeles.byDay[this.selectedDay] || 0;
-      array.push({ name: this.data[key].key, value });
+      if (value !== 0) {
+        array.push({ name: this.data[key].key, value });
+      }
     });
     array = array.sort((a: any, b: any) => b.value - a.value);
     this.requesterList = array.slice(0, 10);
@@ -186,7 +188,9 @@ export class DaywiseComponent {
     Object.keys(this.data).forEach((key) => {
       const value =
         this.data[key].counts.LosAngeles.byHour[String(this.selectedHour)] || 0;
-      array.push({ name: this.data[key].key, value });
+      if (value !== 0) {
+        array.push({ name: this.data[key].key, value });
+      }
     });
     array = array.sort((a: any, b: any) => b.value - a.value);
     this.requesterList = array.slice(0, 10);
@@ -198,14 +202,14 @@ export class DaywiseComponent {
       const value =
         this.data[key].counts.LosAngeles.byDayAndHour &&
         this.data[key].counts.LosAngeles.byDayAndHour[this.selectedDay]
-          ? this.data[key].counts.LosAngeles.byDayAndHour[String(this.selectedDay)][
-             String( this.selectedHour)
-            ]
+          ? this.data[key].counts.LosAngeles.byDayAndHour[
+              String(this.selectedDay)
+            ][String(this.selectedHour)]
           : 0 || 0;
-      array.push({ name: this.data[key].key, value: value || 0 });
+      if (value && value !== 0) {
+        array.push({ name: this.data[key].key, value: value });
+      }
     });
-    console.log(array, 'array');
-
     array = array.sort((a: any, b: any) => b.value - a.value);
     this.requesterList = array.slice(0, 10);
   }
@@ -223,8 +227,6 @@ export class DaywiseComponent {
       const hasIndex = this.data.findIndex(
         (item: any) => item.key === String(day)
       );
-      console.log(hasIndex);
-
       if (hasIndex > -1) {
         let total = 0;
         for (const key in this.data[hasIndex].counts) {
@@ -247,8 +249,6 @@ export class DaywiseComponent {
       element = Math.round((element / total) * 100);
       newArray.push(element);
     });
-    console.log(array);
-
     this.barChartData[0].data = newArray;
     this.barChartData[0].backgroundColor =
       this.chartService.customizeColors(newArray);
