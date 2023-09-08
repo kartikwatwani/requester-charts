@@ -1,78 +1,40 @@
 <div style="display: block;" class="chart-container">
   <div style="display: flex;">
-  <mat-form-field appearance="outline">
-    <mat-label>Filters</mat-label>
-    <mat-select name="key" [(ngModel)]="key" (selectionChange)="getData()">
-      <mat-option value="byDay">By Day</mat-option>
-      <mat-option value="byHour">By Hour</mat-option>
-      <mat-option value="byDayAndHour">By Day-Hour</mat-option>
-      <mat-option value="by10Day">Top 10 Requester by Day</mat-option>
-      <mat-option value="by10Hour">Top 10 Requester by Hour</mat-option>
-      <mat-option value="by10DayHour">Top 10 Requester by Day-Hour</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field
-    *ngIf="key === 'by10Day'||key==='by10DayHour'"
-    appearance="outline"
-    style="margin-left: 20px;"
-  >
-    <mat-label>Day</mat-label>
-    <mat-select
-      name="selectedDay"
-      [(ngModel)]="selectedDay"
-      (selectionChange)="onDayChange()"
-    >
-      <mat-option [value]="item.id" *ngFor="let item of dayList"
-        >{{ item.name }}</mat-option
-      >
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field
-    *ngIf="key === 'byDayAndHour' || key === 'by10Hour'||key==='by10DayHour'"
-    appearance="outline"
-    style="margin-left: 20px;"
-  >
-    <mat-label>Hour</mat-label>
-    <mat-select
-      name="selectedHour"
-      [(ngModel)]="selectedHour"
-      (selectionChange)="onHourChange()"
-    >
-      <mat-option [value]="item.value" *ngFor="let item of hoursList"
-        >{{ item.name }}</mat-option
-      >
-    </mat-select>
-  </mat-form-field>
-</div>
-  <canvas
-    *ngIf="data.length > 0 && key === 'byDay'"
-    baseChart
-    [datasets]="barChartData"
-    [labels]="dayChartLabels"
-    [options]="barChartOptions"
-    [plugins]="barChartPlugins"
-    [legend]="barChartLegend"
-  >
+    <mat-form-field appearance="outline">
+      <mat-label>Filters</mat-label>
+      <mat-select name="key" [(ngModel)]="key" (selectionChange)="getData()">
+        <mat-option value="byDay">By Day</mat-option>
+        <mat-option value="byHour">By Hour</mat-option>
+        <mat-option value="byDayAndHour">By Day-Hour</mat-option>
+        <mat-option value="top10RequestersByDay">Top 10 Requesters by Day</mat-option>
+        <mat-option value="top10RequestersByHour">Top 10 Requesters by Hour</mat-option>
+        <mat-option value="top10RequestersByDayAndHour">Top 10 Requesters by Day & Hour</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field *ngIf="key === 'top10RequestersByDay'||key==='top10RequestersByDayAndHour'" appearance="outline"
+      style="margin-left: 20px;">
+      <mat-label>Day</mat-label>
+      <mat-select name="selectedDay" [(ngModel)]="selectedDay" (selectionChange)="onDayChange()">
+        <mat-option [value]="item.id" *ngFor="let item of dayList">{{ item.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field
+      *ngIf="key === 'byDayAndHour' || key === 'top10RequestersByHour'||key==='top10RequestersByDayAndHour'"
+      appearance="outline" style="margin-left: 20px;">
+      <mat-label>Hour</mat-label>
+      <mat-select name="selectedHour" [(ngModel)]="selectedHour" (selectionChange)="onHourChange()">
+        <mat-option [value]="item.value" *ngFor="let item of hoursList">{{ item.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <canvas *ngIf="data.length > 0 && key === 'byDay'" baseChart [datasets]="chartData" [chartType]="chartType"
+    [labels]="dayChartLabels" [options]="chartOptions" [legend]="true">
   </canvas>
-  <canvas
-    *ngIf="data.length > 0 && key === 'byHour'"
-    baseChart
-    [datasets]="barChartData"
-    [labels]="hourChartLabels"
-    [options]="barChartOptions"
-    [plugins]="barChartPlugins"
-    [legend]="barChartLegend"
-  >
+  <canvas *ngIf="data.length > 0 && key === 'byHour'" baseChart [datasets]="chartData" [labels]="hourChartLabels"
+    [chartType]="chartType" [options]="chartOptions" [legend]="true">
   </canvas>
-  <canvas
-    *ngIf="data.length > 0 && key === 'byDayAndHour'"
-    baseChart
-    [datasets]="barChartData"
-    [labels]="dayChartLabels"
-    [options]="barChartOptions"
-    [plugins]="barChartPlugins"
-    [legend]="barChartLegend"
-  >
+  <canvas *ngIf="data.length > 0 && key === 'byDayAndHour'" baseChart [datasets]="chartData" [chartType]="chartType"
+    [labels]="dayChartLabels" [options]="chartOptions" [legend]="true">
   </canvas>
   <table class="table" *ngIf="requesterList.length > 0">
     <thead>
@@ -89,11 +51,7 @@
         <td>{{ item.name }}</td>
         <td>{{ item.value }}</td>
         <td>
-          <a
-            [routerLink]="['/requester-chart', item.name]"
-            [queryParams]="{key}"
-            >View Chart</a
-          >
+          <a [routerLink]="['/requester-chart', item.name]" [queryParams]="{key}">View Chart</a>
         </td>
       </tr>
     </tbody>
