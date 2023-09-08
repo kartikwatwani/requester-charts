@@ -132,7 +132,6 @@ export class DaywiseComponent {
       this.data = data;
       console.log('data', this.data);
       this.requesterList = [];
-      console.log('key', this.key);
       switch (this.key) {
         case 'byDay':
         case 'byHour':
