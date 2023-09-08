@@ -166,26 +166,24 @@ export class DaywiseComponent {
     let array: any = [];
     let value;
     const metric = this.key.replace('top10RequestersBy', 'by');
-    console.log('metric', metric);
     Object.keys(this.data).forEach((key) => {
+      const counts = this.data[key].counts.LosAngeles;
       let selectedValue =
         metric === 'byDay' ? this.selectedDay : this.selectedHour;
       switch (metric) {
         case 'byDay':
         case 'byHour':
-          value =
-            this.data[key].counts.LosAngeles[metric][selectedValue + ''] || 0;
+          value = counts[metric][selectedValue + ''] || 0;
           if (value !== 0) {
             array.push({ name: this.data[key].key, value });
           }
           break;
         case 'byDayAndHour':
           value =
-            this.data[key].counts.LosAngeles.byDayAndHour &&
-            this.data[key].counts.LosAngeles.byDayAndHour[this.selectedDay]
-              ? this.data[key].counts.LosAngeles.byDayAndHour[
-                  String(this.selectedDay)
-                ][String(this.selectedHour)]
+            counts.byDayAndHour && counts.byDayAndHour[this.selectedDay]
+              ? counts.byDayAndHour[String(this.selectedDay)][
+                  String(this.selectedHour)
+                ]
               : 0 || 0;
           if (value && value !== 0) {
             array.push({ name: this.data[key].key, value: value });
