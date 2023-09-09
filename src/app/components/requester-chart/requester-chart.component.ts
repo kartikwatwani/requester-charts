@@ -219,7 +219,7 @@ export class RequesterChartComponent implements OnInit {
           }
        });
         this.barChartData[0].data = array;
-        this.chartData[0].backgroundColor = '#1074f6';
+        this.barChartData[0].backgroundColor = '#1074f6';
         break;
       case 'top10RequestersByDayAndHour':
         let count = 0;
