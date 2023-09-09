@@ -23,30 +23,18 @@ export class RequesterChartComponent implements OnInit {
     { name: 'Sunday', id: 7 },
   ];
   hoursList: any[] = [
-    { name: '00:00-01:00', value: '0' },
-    { name: '01:00-02:00', value: '1' },
-    { name: '02:00-03:00', value: '2' },
-    { name: '03:00-04:00', value: '3' },
-    { name: '04:00-05:00', value: '4' },
-    { name: '05:00-06:00', value: '5' },
-    { name: '06:00-07:00', value: '6' },
-    { name: '07:00-08:00', value: '7' },
-    { name: '08:00-09:00', value: '8' },
-    { name: '09:00-10:00', value: '9' },
-    { name: '10:00-11:00', value: '10' },
-    { name: '11:00-12:00', value: '11' },
-    { name: '12:00-13:00', value: '12' },
-    { name: '13:00-14:00', value: '13' },
-    { name: '14:00-15:00', value: '14' },
-    { name: '15:00-16:00', value: '15' },
-    { name: '16:00-17:00', value: '16' },
-    { name: '17:00-18:00', value: '17' },
-    { name: '18:00-19:00', value: '18' },
-    { name: '19:00-20:00', value: '19' },
-    { name: '20:00-21:00', value: '20' },
-    { name: '21:00-22:00', value: '21' },
-    { name: '22:00-23:00', value: '22' },
-    { name: '23:00-24:00', value: '23' },
+    { name: '0', value: '0' },
+    { name: '1', value: '1' },
+    { name: '2', value: '2' },
+    { name: '3', value: '3' },
+    { name: '4', value: '4' },
+    { name: '5', value: '5' },
+    { name: '6', value: '6' },
+    { name: '7', value: '7' },
+    { name: '8', value: '8' },
+    { name: '9', value: '9' },
+    { name: '10', value: '10' },
+    { name: '11', value: '11' },
   ];
   barChartType: ChartType = 'bar';
   hourCount = [
@@ -57,31 +45,19 @@ export class RequesterChartComponent implements OnInit {
   selectedDay = this.dayList[0].id;
   barChartLegend = true;
   barChartPlugins = [];
-  hourChartLabels: any[] = [
-    '00:00-01:00',
-    '01:00-02:00',
-    '02:00-03:00',
-    '03:00-04:00',
-    '04:00-05:00',
-    '05:00-06:00',
-    '06:00-07:00',
-    '07:00-08:00',
-    '08:00-09:00',
-    '09:00-10:00',
-    '10:00-11:00',
-    '11:00-12:00',
-    '12:00-13:00',
-    '13:00-14:00',
-    '14:00-15:00',
-    '15:00-16:00',
-    '16:00-17:00',
-    '17:00-18:00',
-    '18:00-19:00',
-    '19:00-20:00',
-    '20:00-21:00',
-    '21:00-22:00',
-    '22:00-23:00',
-    '23:00-24:00',
+  hourChartLabels: string[] = [
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '11',
   ];
   barChartData: any[] = [
     {
@@ -127,14 +103,18 @@ export class RequesterChartComponent implements OnInit {
       )
       .subscribe((data) => {
         this.chartData = data[0];
-        if (this.filterKey === 'by10Day') {
-          this.prepareDataForDay();
-        } else if (this.filterKey === 'by10Hour') {
-          this.prepareDataForHour();
-        } else {
-          this.prepareDataForDayAndHour();
-        }
+        this.prepareChartData();
       });
+  }
+  getMainChartLabel() {
+    switch (this.filterKey) {
+      case 'top10RequestersByDay':
+        return 'Day Wise Percentage';
+      case 'top10RequestersByHour':
+        return 'Hour Wise Percentage';
+      case 'top10RequestersByDayAndHour':
+        return 'Day and Hour Wise Percentage';
+    }
   }
 
   prepareDataForHour() {
@@ -163,114 +143,129 @@ export class RequesterChartComponent implements OnInit {
 
       this.barChartData[0].data = newArray;
       this.barChartData[0].label = 'Hour Wise percentage count';
-      this.barChartData[0].backgroundColor =
-        this.chartService.customizeColors(newArray);
+      this.barChartData[0].backgroundColor = '#1074f6';
     }
   }
 
-  prepareDataForDay() {
+  prepareChartData() {
     this.barChartData = [
       {
         data: [],
-        label: ' Day Wise Percentage Count',
+        label: this.getMainChartLabel(),
         backgroundColor: [],
       },
     ];
     const array: any[] = [];
-    if (Array.isArray(this.chartData.LosAngeles.byDay)) {
-      this.dayCount.forEach((_, index) => {
-        array.push(this.chartData.LosAngeles.byDay[index] || 0);
-      });
-      const total = array.reduce(
-        (accumulator: number, currentValue: number) =>
-          accumulator + currentValue,
-        0
-      );
-      const newArray: number[] = [];
-      array.forEach((element: number) => {
-        element = Math.round((element / total) * 100);
-        newArray.push(element);
-      });
-      this.barChartData[0].data = newArray;
-      this.barChartData[0].label = 'Day Wise percentage count';
-      this.barChartData[0].backgroundColor =
-        this.chartService.customizeColors(newArray);
-    }
-  }
-
-  prepareDataForDayAndHour() {
-    const array: any = [];
-    this.barChartData = [
-      {
-        data: [],
-        label: 'Day Hour Wise Percentage Count',
-        backgroundColor: [],
-      },
-    ];
-    let count = 0;
-    this.barChartData[0].data = [];
-    this.dayCount.forEach((day) => {
-      if (this.chartData.LosAngeles.byDayAndHour[day]) {
-        for (const key in this.chartData.LosAngeles.byDayAndHour[day]) {
-          if (key === this.selectedHour) {
-            let totalValue = 0;
-            const currentHourTotal =
-              this.chartData.LosAngeles.byDayAndHour[day][key];
-            Object.keys(this.chartData.LosAngeles.byDayAndHour).forEach(
-              (currentDay) => {
-                if (
-                  String(day) !== String(currentDay) &&
-                  Number.isFinite(
-                    this.chartData.LosAngeles.byDayAndHour[currentDay][
-                      this.selectedHour
-                    ]
-                  )
-                ) {
-                  totalValue +=
-                    this.chartData.LosAngeles.byDayAndHour[currentDay][
-                      this.selectedHour
-                    ];
+    const newArray: number[] = [];
+    switch (this.filterKey) {
+      case 'top10RequestersByDay':
+        if (this.chartData.LosAngeles.byDay) {
+          this.dayCount.forEach((_, index) => {
+            array.push(this.chartData.LosAngeles.byDay[index] || 0);
+          });
+          const total = array.reduce(
+            (accumulator: number, currentValue: number) =>
+              accumulator + currentValue,
+            0
+          );
+          array.forEach((element: number) => {
+            element = Math.round((element / total) * 100);
+            newArray.push(element);
+          });
+          this.barChartData[0].data = newArray;
+          this.barChartData[0].label = 'Day Wise percentage count';
+          this.barChartData[0].backgroundColor = '#1074f6';
+        }
+        break;
+      case 'top10RequestersByHour':
+        this.dayCount.forEach((day) => {
+          if (this.chartData.LosAngeles.byDayAndHour[day]) {
+            for (const key in this.chartData.LosAngeles.byDayAndHour[day]) {
+              if (key === this.selectedHour) {
+                let totalValue = 0;
+                const currentHourTotal =
+                  this.chartData.LosAngeles.byDayAndHour[day][key];
+                Object.keys(this.chartData.LosAngeles.byDayAndHour).forEach(
+                  (currentDay) => {
+                    if (
+                      String(day) !== String(currentDay) &&
+                      Number.isFinite(
+                        this.chartData.LosAngeles.byDayAndHour[currentDay][
+                          this.selectedHour
+                        ]
+                      )
+                    ) {
+                      totalValue +=
+                        this.chartData.LosAngeles.byDayAndHour[currentDay][
+                          this.selectedHour
+                        ];
+                    }
+                  }
+                );
+                if (totalValue !== 0) {
+                  const percentageValue = Math.round(
+                    (currentHourTotal / totalValue) * 100
+                  );
+                  array.push(percentageValue);
+                } else {
+                  array.push(currentHourTotal);
                 }
+              } else {
+                array.push(0);
               }
-            );
-            if(totalValue!==0){
-            const percentageValue = Math.round(
-              (currentHourTotal / totalValue) * 100
-            )
-            array.push(percentageValue);}
-            else{
-            array.push(currentHourTotal);
             }
-            // if (otherDays.length > 0) {
-            //   otherDays.forEach((element: any) => {
-            //     const matchKey = Object.keys(element).find(
-            //       (item) => String(item) === String(this.selectedHour)
-            //     );
-            //     if (matchKey) {
-            //       const value = Object.values(element[matchKey].counts);
-            //       const total: any = value.reduce(
-            //         (acc: any, currentValue: any) => acc + currentValue,
-            //         0
-            //       );
-            //       totalValue += total;
-            //     }
-            //   });
-            // }
-            // const percentageValue = Math.round(
-            //   (currentHourTotal / totalValue) * 100
-            // );
-            // array.push(percentageValue);
           } else {
             array.push(0);
           }
-        }
-      } else {
-        array.push(0);
-      }
-      console.log(array);
-    });
-    this.barChartData[0].data = array;
-    this.barChartData[0].backgroundColor =
-      this.chartService.customizeColors(array);
+       });
+        this.barChartData[0].data = array;
+        this.chartData[0].backgroundColor = '#1074f6';
+        break;
+      case 'top10RequestersByDayAndHour':
+        let count = 0;
+        this.barChartData[0].data = [];
+        this.dayCount.forEach((day) => {
+          if (this.chartData.LosAngeles.byDayAndHour[day]) {
+            for (const key in this.chartData.LosAngeles.byDayAndHour[day]) {
+              if (key === this.selectedHour) {
+                let totalValue = 0;
+                const currentHourTotal =
+                  this.chartData.LosAngeles.byDayAndHour[day][key];
+                Object.keys(this.chartData.LosAngeles.byDayAndHour).forEach(
+                  (currentDay) => {
+                    if (
+                      String(day) !== String(currentDay) &&
+                      Number.isFinite(
+                        this.chartData.LosAngeles.byDayAndHour[currentDay][
+                          this.selectedHour
+                        ]
+                      )
+                    ) {
+                      totalValue +=
+                        this.chartData.LosAngeles.byDayAndHour[currentDay][
+                          this.selectedHour
+                        ];
+                    }
+                  }
+                );
+                if (totalValue !== 0) {
+                  const percentageValue = Math.round(
+                    (currentHourTotal / totalValue) * 100
+                  );
+                  array.push(percentageValue);
+                } else {
+                  array.push(currentHourTotal);
+                }
+              } else {
+                array.push(0);
+              }
+            }
+          } else {
+            array.push(0);
+          }
+        });
+        this.barChartData[0].data = array;
+        this.barChartData[0].backgroundColor = '#1074f6';
+    }
   }
 }

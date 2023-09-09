@@ -7,7 +7,7 @@
 
 <div style="display: block;" class="chart-container">
   <mat-form-field
-    *ngIf="key ==='by10DayHour'"
+    *ngIf="filterKey ==='top10RequestersByDayAndHour'"
     appearance="outline"
     style="margin-left: 20px;"
   >
@@ -15,19 +15,23 @@
     <mat-select
       name="selectedDay"
       [(ngModel)]="selectedDay"
-      (selectionChange)="prepareDataForDayAndHour()"
+      (selectionChange)="prepareChartData()"
     >
       <mat-option [value]="item.id" *ngFor="let item of dayList"
         >{{ item.name }}</mat-option
       >
     </mat-select>
   </mat-form-field>
-  <mat-form-field appearance="outline" style="margin-left: 20px;">
+  <mat-form-field
+    appearance="outline"
+    *ngIf="filterKey ==='top10RequestersByDayAndHour'"
+    style="margin-left: 20px;"
+  >
     <mat-label>Hour</mat-label>
     <mat-select
       name="selectedHour"
       [(ngModel)]="selectedHour"
-      (selectionChange)="prepareDataForDayAndHour()"
+      (selectionChange)="prepareChartData()"
     >
       <mat-option [value]="item.value" *ngFor="let item of hoursList"
         >{{ item.name }}</mat-option
@@ -35,7 +39,7 @@
     </mat-select>
   </mat-form-field>
   <canvas
-    *ngIf="chartData && filterKey === 'by10Day'"
+    *ngIf="chartData && filterKey === 'top10RequestersByDay'"
     baseChart
     [datasets]="barChartData"
     [labels]="dayChartLabels"
@@ -45,7 +49,7 @@
   >
   </canvas>
   <canvas
-    *ngIf="chartData && filterKey === 'by10Hour'"
+    *ngIf="chartData && filterKey === 'top10RequestersByHour'"
     baseChart
     [datasets]="barChartData"
     [labels]="hourChartLabels"
@@ -55,7 +59,7 @@
   >
   </canvas>
   <canvas
-    *ngIf="chartData&& filterKey === 'by10DayHour'"
+    *ngIf="chartData&& filterKey === 'top10RequestersByDayAndHour'"
     baseChart
     [datasets]="barChartData"
     [labels]="dayChartLabels"

@@ -38,58 +38,34 @@ export class DaywiseComponent {
     { name: 'Staturday', id: 6 },
     { name: 'Sunday', id: 7 },
   ];
-  hourChartLabels: any[] = [
-    '00:00-01:00',
-    '01:00-02:00',
-    '02:00-03:00',
-    '03:00-04:00',
-    '04:00-05:00',
-    '05:00-06:00',
-    '06:00-07:00',
-    '07:00-08:00',
-    '08:00-09:00',
-    '09:00-10:00',
-    '10:00-11:00',
-    '11:00-12:00',
-    '12:00-13:00',
-    '13:00-14:00',
-    '14:00-15:00',
-    '15:00-16:00',
-    '16:00-17:00',
-    '17:00-18:00',
-    '18:00-19:00',
-    '19:00-20:00',
-    '20:00-21:00',
-    '21:00-22:00',
-    '22:00-23:00',
-    '23:00-24:00',
+  hourChartLabels: string[] = [
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '11',
   ];
 
   hoursList: any[] = [
-    { name: '00:00-01:00', value: '0' },
-    { name: '01:00-02:00', value: '1' },
-    { name: '02:00-03:00', value: '2' },
-    { name: '03:00-04:00', value: '3' },
-    { name: '04:00-05:00', value: '4' },
-    { name: '05:00-06:00', value: '5' },
-    { name: '06:00-07:00', value: '6' },
-    { name: '07:00-08:00', value: '7' },
-    { name: '08:00-09:00', value: '8' },
-    { name: '09:00-10:00', value: '9' },
-    { name: '10:00-11:00', value: '10' },
-    { name: '11:00-12:00', value: '11' },
-    { name: '12:00-13:00', value: '12' },
-    { name: '13:00-14:00', value: '13' },
-    { name: '14:00-15:00', value: '14' },
-    { name: '15:00-16:00', value: '15' },
-    { name: '16:00-17:00', value: '16' },
-    { name: '17:00-18:00', value: '17' },
-    { name: '18:00-19:00', value: '18' },
-    { name: '19:00-20:00', value: '19' },
-    { name: '20:00-21:00', value: '20' },
-    { name: '21:00-22:00', value: '21' },
-    { name: '22:00-23:00', value: '22' },
-    { name: '23:00-24:00', value: '23' },
+    { name: '0', value: '0' },
+    { name: '1', value: '1' },
+    { name: '2', value: '2' },
+    { name: '3', value: '3' },
+    { name: '4', value: '4' },
+    { name: '5', value: '5' },
+    { name: '6', value: '6' },
+    { name: '7', value: '7' },
+    { name: '8', value: '8' },
+    { name: '9', value: '9' },
+    { name: '10', value: '10' },
+    { name: '11', value: '11' },
   ];
   key = 'byDay';
   databasePath = '';
@@ -241,7 +217,6 @@ export class DaywiseComponent {
         const array: number[] = [];
         const selectedHourCounts: number[] = [];
         const otherDaysCounts: number[] = [];
-
         this.dayCount.forEach((day) => {
           const index = this.data.findIndex(
             (item: any) => item.key === String(day)
