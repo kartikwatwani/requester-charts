@@ -100,7 +100,7 @@
           <td>{{ item.value }}</td>
           <td>
             <a
-              [routerLink]="['/requester-base', item.name]"
+             (click)="getRequesterDetail(item)"
               [queryParams]="{key}"
               >View Chart</a
             >

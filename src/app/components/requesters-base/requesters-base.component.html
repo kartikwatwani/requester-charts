@@ -7,8 +7,14 @@
 <div
   class="container"
   style="display: flex; justify-content: space-between; flex-wrap: wrap;"
+  *ngIf="(chartData | json) != '{}'"
 >
-<div *ngFor="let chart of chartsList">
-  <app-requester-chart [filterKey]="chart.key" [key]="key" [label]="chart.label"></app-requester-chart>
-</div>
+  <div *ngFor="let chart of chartsList">
+    <app-requester-chart
+      [filterKey]="chart.key"
+      [key]="key"
+      [chartDetail]="chartData"
+      [label]="chart.label"
+    ></app-requester-chart>
+  </div>
 </div>

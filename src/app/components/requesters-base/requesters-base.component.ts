@@ -1,17 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Chart } from '../base/base.component';
+import { ChartService } from 'src/app/services/chart.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-requesters-base',
   templateUrl: './requesters-base.component.html',
   styleUrls: ['./requesters-base.component.scss'],
 })
-export class RequestersBaseComponent {
+export class RequestersBaseComponent implements OnInit,OnDestroy {
   key: string = '';
+  chartData: any = {};
   filterKey: string = '';
-  chartsList:Chart[] = [
-
+  chartsList: Chart[] = [
     {
       label: 'Top 10 Requester By Day',
       key: 'top10RequestersByDay',
@@ -25,11 +27,18 @@ export class RequestersBaseComponent {
       key: 'top10RequestersByDayAndHour',
     },
   ];
-  constructor(private route:ActivatedRoute){}
+  constructor(
+    private route: ActivatedRoute,
+    private chartService: ChartService
+  ) {}
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     this.key = this.route.snapshot.params['id'];
-     }
+    this.chartData = JSON.parse(localStorage.getItem('requesters-detail'))
+  }
+
+  ngOnDestroy() {
+    localStorage.removeItem('requesters-detail')
+  }
+
 }

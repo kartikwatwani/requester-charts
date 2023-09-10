@@ -38,31 +38,31 @@
     </mat-form-field>
   </div>
   <canvas
-    *ngIf="chartData && filterKey === 'top10RequestersByDay'"
+    *ngIf="chartDetail && filterKey === 'top10RequestersByDay'"
     baseChart
-    [datasets]="barChartData"
+    [datasets]="chartData"
     [labels]="dayChartLabels"
-    [options]="barChartOptions"
+    [options]="chartOptions"
     [plugins]="barChartPlugins"
-    [legend]="barChartLegend"
+    [legend]="chartLegend"
   >
   </canvas>
   <canvas
-    *ngIf="chartData && filterKey === 'top10RequestersByHour'"
+    *ngIf="chartDetail && filterKey === 'top10RequestersByHour'"
     baseChart
-    [datasets]="barChartData"
+    [datasets]="chartData"
     [labels]="hourChartLabels"
-    [options]="barChartOptions"
+    [options]="chartOptions"
     [plugins]="barChartPlugins"
-    [legend]="barChartLegend"
+    [legend]="chartLegend"
   >
   </canvas>
   <canvas
-    *ngIf="chartData&& filterKey === 'top10RequestersByDayAndHour'"
+    *ngIf="chartDetail&& filterKey === 'top10RequestersByDayAndHour'"
     baseChart
-    [datasets]="barChartData"
+    [datasets]="chartData"
     [labels]="dayChartLabels"
-    [options]="barChartOptions"
+    [options]="chartOptions"
     [plugins]="barChartPlugins"
     [legend]="barChartLegend"
   >
