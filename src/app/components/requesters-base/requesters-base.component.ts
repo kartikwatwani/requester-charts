@@ -29,7 +29,6 @@ export class RequestersBaseComponent implements OnInit,OnDestroy {
   ];
   constructor(
     private route: ActivatedRoute,
-    private chartService: ChartService
   ) {}
 
   ngOnInit(): void {
