@@ -1,11 +1,7 @@
-<mat-icon
-  class="cursor mt-4"
-  routerLink="../../"
-  style="position: relative; left: 30px;"
-  >arrow_back</mat-icon
->
+
 
 <div style="display: block;" class="chart-container">
+  <div style="display: flex;">
   <mat-form-field
     *ngIf="filterKey ==='top10RequestersByDayAndHour'"
     appearance="outline"
@@ -38,6 +34,7 @@
       >
     </mat-select>
   </mat-form-field>
+</div>
   <canvas
     *ngIf="chartData && filterKey === 'top10RequestersByDay'"
     baseChart

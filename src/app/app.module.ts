@@ -20,9 +20,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { RequesterChartComponent } from './components/requester-chart/requester-chart.component';
 import { BaseComponent } from './components/base/base.component';
+import { RequestersBaseComponent } from './components/requesters-base/requesters-base.component';
 
 @NgModule({
-  declarations: [AppComponent, ChartComponent, RequesterChartComponent, BaseComponent],
+  declarations: [AppComponent, ChartComponent, RequesterChartComponent, BaseComponent, RequestersBaseComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

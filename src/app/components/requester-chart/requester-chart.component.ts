@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 import { ChartService } from 'src/app/services/chart.service';
@@ -11,7 +11,7 @@ import { Chart } from '../base/base.component';
   styleUrls: ['./requester-chart.component.scss'],
 })
 export class RequesterChartComponent implements OnInit {
-  key = '';
+ @Input() key = '';
   chartsList:Chart[] = [
     {
       label: 'Top 10 Requester By Day',
@@ -116,7 +116,7 @@ export class RequesterChartComponent implements OnInit {
   barChartOptions: ChartOptions = {
     responsive: true,
   };
-  filterKey = '';
+ @Input() filterKey = '';
   dayCount = [0, 1, 2, 3, 4, 5, 6];
   constructor(
     private chartService: ChartService,
@@ -124,9 +124,7 @@ export class RequesterChartComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.key = this.route.snapshot.params['id'];
-    this.filterKey = this.route.snapshot.queryParams['key'];
-    this.getData();
+       this.getData();
   }
 
   getData() {

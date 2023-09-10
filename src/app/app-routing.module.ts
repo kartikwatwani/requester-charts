@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ChartComponent } from './components/chart/chart.component';
 import { RequesterChartComponent } from './components/requester-chart/requester-chart.component';
 import { BaseComponent } from './components/base/base.component';
+import { RequestersBaseComponent } from './components/requesters-base/requesters-base.component';
 
 const routes: Routes = [
   {
@@ -10,8 +11,8 @@ const routes: Routes = [
     component:BaseComponent
   },
   {
-    path:'requester-chart/:id',
-    component:RequesterChartComponent
+    path:'requester-base/:id',
+    component:RequestersBaseComponent
   },
   {
     path:'',
