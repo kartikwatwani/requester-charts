@@ -1,18 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ChartOptions, ChartType } from 'chart.js';
 import { map } from 'rxjs/operators';
 import { ChartService } from '../../services/chart.service';
 import 'chart.js';
 import { firstValueFrom } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 @Component({
-  selector: 'app-daywise',
-  templateUrl: './daywise.component.html',
-  styleUrls: ['./daywise.component.scss'],
+  selector: 'app-chart',
+  templateUrl: './chart.component.html',
+  styleUrls: ['./chart.component.scss'],
 })
-export class DaywiseComponent {
+export class ChartComponent {
   chartOptions: ChartOptions = {
     responsive: true,
   };
+  barChartData:any={}
   dayCount = [0, 1, 2, 3, 4, 5, 6];
   hourCount = [
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
@@ -29,6 +31,7 @@ export class DaywiseComponent {
     'Sunday',
   ];
   requesterList: any[] = [];
+  @Input() label:string=''
   dayList: any[] = [
     { name: 'Monday', id: 1 },
     { name: 'Tuesday', id: 2 },
@@ -38,20 +41,33 @@ export class DaywiseComponent {
     { name: 'Staturday', id: 6 },
     { name: 'Sunday', id: 7 },
   ];
-  hourChartLabels: string[] = [
-    '0',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    '11',
+  hourChartLabels: any[] = [
+    '12AM-1AM',
+    '1AM-2AM',
+    '2AM-3AM',
+    '3AM-4AM',
+    '4AM-5AM',
+    '5AM-6AM',
+    '6AM-7AM',
+    '7AM-8AM',
+    '8AM-9AM',
+    '9AM-10AM',
+    '10AM-11AM',
+    '11AM-12PM',
+    '12PM-1PM',
+    '1PM-2PM',
+    '2PM-3PM',
+    '3PM-4PM',
+    '4PM-5PM',
+    '5PM-6PM',
+    '6PM-7PM',
+    '7PM-8PM',
+    '8PM-9PM',
+    '9PM-10PM',
+    '10PM-11PM',
+    '11PM-12AM',
   ];
+  id=''
 
   hoursList: any[] = [
     { name: '0', value: '0' },
@@ -67,7 +83,7 @@ export class DaywiseComponent {
     { name: '10', value: '10' },
     { name: '11', value: '11' },
   ];
-  key = 'byDay';
+  @Input()key = 'byDay';
   databasePath = '';
   selectedHour = this.hoursList[0].value;
   selectedDay = this.dayList[0].id;
@@ -82,7 +98,7 @@ export class DaywiseComponent {
     },
   ];
 
-  constructor(private chartService: ChartService) {}
+  constructor(private chartService: ChartService,    private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.getData();
@@ -121,6 +137,7 @@ export class DaywiseComponent {
           break;
       }
     });
+    this.id=this.route.snapshot.params['id']
   }
 
   onDayChange() {
@@ -197,6 +214,7 @@ export class DaywiseComponent {
   }
 
   prepareDataForChart() {
+    const newArray=[];
     switch (this.key) {
       case 'byDay':
       case 'byHour':
@@ -283,7 +301,71 @@ export class DaywiseComponent {
           array.push(percentageValue);
           return percentageValue;
         });
-    }
+        case 'top10RequestersByDay':
+          if (this.barChartData.LosAngeles.byDay) {
+            this.dayCount.forEach((_, index) => {
+              array.push(this.barChartData.LosAngeles.byDay[index] || 0);
+            });
+            const total = array.reduce(
+              (accumulator: number, currentValue: number) =>
+                accumulator + currentValue,
+              0
+            );
+            array.forEach((element: number) => {
+              element = Math.round((element / total) * 100);
+              newArray.push(element);
+            });
+            this.chartData[0].data = newArray;
+            this.chartData[0].label = 'Day Wise percentage count';
+            this.chartData[0].backgroundColor = '#1074f6';
+          }
+          break;
+        case 'top10RequestersByHour':
+          this.dayCount.forEach((day) => {
+            if (this.barChartData.LosAngeles.byDayAndHour[day]) {
+              for (const key in this.barChartData.LosAngeles.byDayAndHour[day]) {
+                if (key === this.selectedHour) {
+                  let totalValue = 0;
+                  const currentHourTotal =
+                    this.barChartData.LosAngeles.byDayAndHour[day][key];
+                  Object.keys(this.barChartData.LosAngeles.byDayAndHour).forEach(
+                    (currentDay) => {
+                      if (
+                        String(day) !== String(currentDay) &&
+                        Number.isFinite(
+                          this.barChartData.LosAngeles.byDayAndHour[currentDay][
+                            this.selectedHour
+                          ]
+                        )
+                      ) {
+                        totalValue +=
+                          this.barChartData.LosAngeles.byDayAndHour[currentDay][
+                            this.selectedHour
+                          ];
+                      }
+                    }
+                  );
+                  if (totalValue !== 0) {
+                    const percentageValue = Math.round(
+                      (currentHourTotal / totalValue) * 100
+                    );
+                    array.push(percentageValue);
+                  } else {
+                    array.push(currentHourTotal);
+                  }
+                } else {
+                  array.push(0);
+                }
+              }
+            } else {
+              array.push(0);
+            }
+         });
+          this.chartData[0].data = array;
+          this.chartData[0].backgroundColor = '#1074f6';
+          break;
+        case 'top10RequestersByDayAndHour':
+      }
   }
 
   calculateTotalTasksPerPeriodForRequesters(data: any = this.data) {

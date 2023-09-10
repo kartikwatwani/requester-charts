@@ -1,0 +1,120 @@
+<div
+  style="display: block;"
+  class="chart-container"
+  [ngStyle]="key==='byHour'&&{'width':'650px'}"
+>
+  <div style="display: flex; align-items: flex-start; flex-direction: column;">
+    <h2>{{label}}</h2>
+    <!-- <mat-form-field appearance="outline">
+      <mat-label>Filters</mat-label>
+      <mat-select name="key" [(ngModel)]="key" (selectionChange)="getData()">
+        <mat-option value="byDay">By Day</mat-option>
+        <mat-option value="byHour">By Hour</mat-option>
+        <mat-option value="byDayAndHour">By Day-Hour</mat-option>
+        <mat-option value="top10RequestersByDay">Top 10 Requesters by Day</mat-option>
+        <mat-option value="top10RequestersByHour">Top 10 Requesters by Hour</mat-option>
+        <mat-option value="top10RequestersByDayAndHour">Top 10 Requesters by Day & Hour</mat-option>
+      </mat-select>
+    </mat-form-field> -->
+    <div style="display: flex;">
+      <mat-form-field
+        *ngIf="key === 'top10RequestersByDay'||key==='top10RequestersByDayAndHour'"
+        appearance="outline"
+      >
+        <mat-label>Day</mat-label>
+        <mat-select
+          name="selectedDay"
+          [(ngModel)]="selectedDay"
+          (selectionChange)="onDayChange()"
+        >
+          <mat-option [value]="item.id" *ngFor="let item of dayList"
+            >{{ item.name }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field
+        style="margin-left: 10px;"
+        *ngIf="key === 'byDayAndHour' || key === 'top10RequestersByHour'||key==='top10RequestersByDayAndHour'"
+        appearance="outline"
+      >
+        <mat-label>Hour</mat-label>
+        <mat-select
+          name="selectedHour"
+          [(ngModel)]="selectedHour"
+          (selectionChange)="onHourChange()"
+        >
+          <mat-option [value]="item.value" *ngFor="let item of hoursList"
+            >{{ item.name }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <canvas
+    *ngIf="data.length > 0 && key === 'byDay'"
+    baseChart
+    [datasets]="chartData"
+    [chartType]="chartType"
+    [labels]="dayChartLabels"
+    [options]="chartOptions"
+    [legend]="true"
+  >
+  </canvas>
+  <canvas
+    *ngIf="data.length > 0 && key === 'byHour'"
+    baseChart
+    [datasets]="chartData"
+    [labels]="hourChartLabels"
+    [chartType]="chartType"
+    [options]="chartOptions"
+    [legend]="true"
+  >
+  </canvas>
+  <canvas
+    *ngIf="data.length > 0 && key === 'byDayAndHour'"
+    baseChart
+    [datasets]="chartData"
+    [chartType]="chartType"
+    [labels]="dayChartLabels"
+    [options]="chartOptions"
+    [legend]="true"
+  >
+  </canvas>
+
+
+
+  <ng-container *ngIf="requesterList.length > 0 ;else noRequesters">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">S.No</th>
+          <th scope="col">Id</th>
+          <th scope="col">Count</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of requesterList; let i = index">
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.value }}</td>
+          <td>
+            <a
+              [routerLink]="['/requester-chart', item.name]"
+              [queryParams]="{key}"
+              >View Chart</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+  <ng-template #noRequesters>
+    <p
+      style="text-align: center;"
+      *ngIf="key !=='byDay' &&key!=='byHour' && key!=='byDayAndHour'"
+    >
+      No Requesters Found
+    </p>
+  </ng-template>
+</div>

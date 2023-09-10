@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DaywiseComponent } from './components/daywise/daywise.component';
+import { ChartComponent } from './components/chart/chart.component';
 import { RequesterChartComponent } from './components/requester-chart/requester-chart.component';
+import { BaseComponent } from './components/base/base.component';
 
 const routes: Routes = [
   {
-    path:'charts-data',
-    component:DaywiseComponent
+    path:'base',
+    component:BaseComponent
   },
   {
     path:'requester-chart/:id',
@@ -14,7 +15,7 @@ const routes: Routes = [
   },
   {
     path:'',
-    redirectTo:'charts-data',
+    redirectTo:'base',
     pathMatch:'full'
   }
 ];

@@ -9,7 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { DaywiseComponent } from './components/daywise/daywise.component';
+import { ChartComponent } from './components/chart/chart.component';
 import { NgChartsModule } from 'ng2-charts';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
@@ -19,9 +19,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { RequesterChartComponent } from './components/requester-chart/requester-chart.component';
+import { BaseComponent } from './components/base/base.component';
 
 @NgModule({
-  declarations: [AppComponent, DaywiseComponent, RequesterChartComponent],
+  declarations: [AppComponent, ChartComponent, RequesterChartComponent, BaseComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

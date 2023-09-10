@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 import { ChartService } from 'src/app/services/chart.service';
 import { ChartOptions, ChartType } from 'chart.js';
+import { Chart } from '../base/base.component';
 
 @Component({
   selector: 'app-requester-chart',
@@ -11,7 +12,20 @@ import { ChartOptions, ChartType } from 'chart.js';
 })
 export class RequesterChartComponent implements OnInit {
   key = '';
-
+  chartsList:Chart[] = [
+    {
+      label: 'Top 10 Requester By Day',
+      key: 'top10RequestersByDay',
+    },
+    {
+      label: 'Top 10 Requester By Hour',
+      key: 'top10RequestersByHour',
+    },
+    {
+      label: 'Top 10 Requester By Day And Hour',
+      key: 'top10RequestersByDayAndHour',
+    },
+  ];
   chartData: any = {};
   dayList: any[] = [
     { name: 'Monday', id: 1 },

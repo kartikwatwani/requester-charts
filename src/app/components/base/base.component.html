@@ -1,0 +1,8 @@
+<div
+  class="container"
+  style="display: flex; justify-content: space-between; flex-wrap: wrap;"
+>
+<div *ngFor="let chart of chartsList">
+  <app-chart [key]="chart.key" [label]="chart.label"></app-chart>
+</div>
+</div>
