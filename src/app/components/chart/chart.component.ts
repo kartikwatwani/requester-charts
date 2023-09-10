@@ -1,11 +1,13 @@
+//TODO: In every .ts file of the app, all imports should be relative to the current file location. For example, if you are importing a file from the same directory, use import ... from './file-name' instead of import ... from 'src/app/file-name'. If you are importing a file from a parent or child directory, use import ... from '../file-name' or import ... from '../parent-directory/file-name' instead of import ... from 'src/app/parent-directory/file-name'.
+
 import { Component, Input } from '@angular/core';
-import { ChartOptions, ChartType } from 'chart.js';
 import { map } from 'rxjs/operators';
 import { ChartService } from '../../services/chart.service';
 import 'chart.js';
 import { firstValueFrom } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ChartConstant } from 'src/app/constant';
+
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
@@ -94,6 +96,7 @@ export class ChartComponent {
       key:requester.key
     }
     localStorage.setItem('requesters-detail', JSON.stringify(obj));
+    // TODO: use wild card for navigation to specific requester chart page and change path to requester-analysis/:id
     this.router.navigate([`/requester-base/${item.name}`]);
   }
   onHourChange() {
@@ -166,9 +169,11 @@ export class ChartComponent {
   }
 
   prepareDataForChart() {
+//TODO: Calculate top 10 requesters from the data of /byDay, /byHour, /byDayAndHour data only, no need to fetch all requesters data from /byRequesterID endpoint.
     const newArray = [];
     switch (this.key) {
-      case 'byDay':
+      
+      case 'byDay': 
       case 'byHour':
         const totalTasksForEachPeriod =
           this.calculateTotalTasksPerPeriodForRequesters();
@@ -341,3 +346,8 @@ export class ChartComponent {
     return array;
   }
 }
+
+//FIXME: Can't bind to 'queryParams' since it isn't a known property of 'a'. Look into chart.component.html file.
+
+
+

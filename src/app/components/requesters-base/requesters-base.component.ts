@@ -41,3 +41,5 @@ export class RequestersBaseComponent implements OnInit,OnDestroy {
   }
 
 }
+
+// TODO: Remove local storage usage from the app, fetch fresh data from firebase for particular requester.
