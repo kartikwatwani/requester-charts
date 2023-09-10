@@ -1,40 +1,42 @@
-
-
-<div style="display: block;" class="chart-container">
+<div
+  style="display: block;"
+  class="chart-container"
+  [ngStyle]="filterKey==='top10RequestersByHour'&&{'width':'700px'}"
+>
   <div style="display: flex;">
-  <mat-form-field
-    *ngIf="filterKey ==='top10RequestersByDayAndHour'"
-    appearance="outline"
-    style="margin-left: 20px;"
-  >
-    <mat-label>Day</mat-label>
-    <mat-select
-      name="selectedDay"
-      [(ngModel)]="selectedDay"
-      (selectionChange)="prepareChartData()"
+    <mat-form-field
+      *ngIf="filterKey ==='top10RequestersByDayAndHour'"
+      appearance="outline"
+      style="margin-left: 20px;"
     >
-      <mat-option [value]="item.id" *ngFor="let item of dayList"
-        >{{ item.name }}</mat-option
+      <mat-label>Day</mat-label>
+      <mat-select
+        name="selectedDay"
+        [(ngModel)]="selectedDay"
+        (selectionChange)="prepareChartData()"
       >
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field
-    appearance="outline"
-    *ngIf="filterKey ==='top10RequestersByDayAndHour'"
-    style="margin-left: 20px;"
-  >
-    <mat-label>Hour</mat-label>
-    <mat-select
-      name="selectedHour"
-      [(ngModel)]="selectedHour"
-      (selectionChange)="prepareChartData()"
+        <mat-option [value]="item.id" *ngFor="let item of dayList"
+          >{{ item.name }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline"
+      *ngIf="filterKey ==='top10RequestersByDayAndHour'"
+      style="margin-left: 20px;"
     >
-      <mat-option [value]="item.value" *ngFor="let item of hoursList"
-        >{{ item.name }}</mat-option
+      <mat-label>Hour</mat-label>
+      <mat-select
+        name="selectedHour"
+        [(ngModel)]="selectedHour"
+        (selectionChange)="prepareChartData()"
       >
-    </mat-select>
-  </mat-form-field>
-</div>
+        <mat-option [value]="item.value" *ngFor="let item of hoursList"
+          >{{ item.name }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+  </div>
   <canvas
     *ngIf="chartData && filterKey === 'top10RequestersByDay'"
     baseChart
