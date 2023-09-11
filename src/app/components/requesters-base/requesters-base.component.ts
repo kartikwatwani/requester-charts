@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Chart } from '../base/base.component';
-import { ChartService } from 'src/app/services/chart.service';
+import { ChartService } from '../../services/chart.service';
 import { map } from 'rxjs';
 
 @Component({
@@ -9,7 +9,7 @@ import { map } from 'rxjs';
   templateUrl: './requesters-base.component.html',
   styleUrls: ['./requesters-base.component.scss'],
 })
-export class RequestersBaseComponent implements OnInit,OnDestroy {
+export class RequestersBaseComponent implements OnInit, OnDestroy {
   key: string = '';
   chartData: any = {};
   filterKey: string = '';
@@ -29,17 +29,35 @@ export class RequestersBaseComponent implements OnInit,OnDestroy {
   ];
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
+    private chartService: ChartService
   ) {}
 
   ngOnInit(): void {
-    this.key = this.route.snapshot.params['id'];
-    this.chartData = JSON.parse(localStorage.getItem('requesters-detail'))
+    const splitUrl = this.router.url.split('/');
+    this.key = splitUrl[splitUrl.length - 1];
+    this.getData();
   }
 
-  ngOnDestroy() {
-    localStorage.removeItem('requesters-detail')
-  }
+  ngOnDestroy() {}
 
+  getData() {
+    this.chartData = {};
+    console.log(this.key);
+
+    this.chartService
+      .getAll(`byRequesterID/${this.key}`)
+      .snapshotChanges()
+      .pipe(
+        map((changes) =>
+          changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
+        )
+      )
+      .subscribe((data) => {
+        this.chartData = data[0];
+        console.log(this.chartData);
+      });
+  }
 }
 
 // TODO: Remove local storage usage from the app, fetch fresh data from firebase for particular requester.

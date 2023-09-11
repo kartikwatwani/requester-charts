@@ -10,15 +10,16 @@ const routes: Routes = [
     path:'base',
     component:BaseComponent
   },
-  {
-    path:'requester-base/:id',
-    component:RequestersBaseComponent
-  },
+
   {
     path:'',
     redirectTo:'base',
     pathMatch:'full'
-  }
+  },
+  {
+    path:'**',
+    component:RequestersBaseComponent
+  },
 ];
 
 @NgModule({

@@ -6,7 +6,7 @@ import { ChartService } from '../../services/chart.service';
 import 'chart.js';
 import { firstValueFrom } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ChartConstant } from 'src/app/constant';
+import { ChartConstant } from '../../constant';
 
 @Component({
   selector: 'app-chart',
@@ -97,7 +97,7 @@ export class ChartComponent {
     }
     localStorage.setItem('requesters-detail', JSON.stringify(obj));
     // TODO: use wild card for navigation to specific requester chart page and change path to requester-analysis/:id
-    this.router.navigate([`/requester-base/${item.name}`]);
+    this.router.navigate([`/requester-analysis/${item.name}`]);
   }
   onHourChange() {
     switch (this.key) {
@@ -172,8 +172,8 @@ export class ChartComponent {
 //TODO: Calculate top 10 requesters from the data of /byDay, /byHour, /byDayAndHour data only, no need to fetch all requesters data from /byRequesterID endpoint.
     const newArray = [];
     switch (this.key) {
-      
-      case 'byDay': 
+
+      case 'byDay':
       case 'byHour':
         const totalTasksForEachPeriod =
           this.calculateTotalTasksPerPeriodForRequesters();

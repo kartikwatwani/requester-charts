@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
-import { ChartService } from 'src/app/services/chart.service';
+import { ChartService } from '../../services/chart.service';
 import { Chart } from '../base/base.component';
-import { ChartConstant } from 'src/app/constant';
+import { ChartConstant } from '../../constant';
 
 @Component({
   selector: 'app-requester-chart',
