@@ -1,5 +1,3 @@
-//TODO: In every .ts file of the app, all imports should be relative to the current file location. For example, if you are importing a file from the same directory, use import ... from './file-name' instead of import ... from 'src/app/file-name'. If you are importing a file from a parent or child directory, use import ... from '../file-name' or import ... from '../parent-directory/file-name' instead of import ... from 'src/app/parent-directory/file-name'.
-
 import { Component, Input } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { ChartService } from '../../services/chart.service';
@@ -96,7 +94,7 @@ export class ChartComponent {
       key:requester.key
     }
     localStorage.setItem('requesters-detail', JSON.stringify(obj));
-    // TODO: use wild card for navigation to specific requester chart page and change path to requester-analysis/:id
+    
     this.router.navigate([`/requester-analysis/${item.name}`]);
   }
   onHourChange() {
