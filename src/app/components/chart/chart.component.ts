@@ -7,6 +7,9 @@ import 'chart.js';
 import { firstValueFrom } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ChartConstant } from '../../constant';
+let top10RequestersByDay = [];
+let top10RequestersByHour = [];
+console.log('ss');
 
 @Component({
   selector: 'app-chart',
@@ -31,6 +34,8 @@ export class ChartComponent {
   selectedHour = this.hoursList[0].value;
   selectedDay = this.dayList[0].id;
   data: any = [];
+  dayWiseRequesterCounts: any = [];
+  hoursWiseRequestersCounts: any = [];
   chartType = ChartConstant.chartType;
   chartData: any[] = [
     {
@@ -68,7 +73,7 @@ export class ChartComponent {
         )
     ).then((data) => {
       this.data = data;
-      this.requesterList = [];
+
       switch (this.key) {
         case 'byDay':
         case 'byHour':
@@ -77,6 +82,8 @@ export class ChartComponent {
           break;
         case 'top10RequestersByDay':
         case 'top10RequestersByHour':
+          this.prepareTop10ForDayAndHour();
+          break;
         case 'top10RequestersByDayAndHour':
           this.calculateTop10Requesters();
           break;
@@ -85,18 +92,44 @@ export class ChartComponent {
     this.id = this.route.snapshot.params['id'];
   }
 
+  prepareTop10ForDayAndHour() {
+    if (this.key === 'top10RequestersByDay') {
+      const currentDay = top10RequestersByDay[this.selectedDay];
+      const arrayResult = [];
+      for (const key in currentDay) {
+        if (currentDay.hasOwnProperty(key)) {
+          arrayResult.push({ name: key, value: currentDay[key] });
+        }
+      }
+      arrayResult.sort((a, b) => b.value - a.value);
+      this.requesterList = arrayResult;
+    } else if (this.key === 'top10RequestersByHour') {
+      const currentHour = top10RequestersByHour[this.selectedHour];
+      const arrayResult = [];
+      for (const key in currentHour) {
+        if (currentHour.hasOwnProperty(key)) {
+          arrayResult.push({ name: key, value: currentHour[key] });
+        }
+      }
+      arrayResult.sort((a, b) => b.value - a.value);
+      this.requesterList = arrayResult;
+      console.log(this.requesterList);
+    }
+  }
+
   onDayChange() {
-    this.calculateTop10Requesters();
+    switch (this.key) {
+      case 'top10RequestersByDay':
+      case 'top10RequestersByHour':
+        this.prepareTop10ForDayAndHour();
+        break;
+      case 'top10RequestersByDayAndHour':
+        this.calculateTop10Requesters();
+        break;
+    }
   }
 
   getRequesterDetail(item) {
-    const requester = this.data.find((ele) => ele.key == item.name);
-    const obj={
-      ...requester.counts,
-      key:requester.key
-    }
-    localStorage.setItem('requesters-detail', JSON.stringify(obj));
-    // TODO: use wild card for navigation to specific requester chart page and change path to requester-analysis/:id
     this.router.navigate([`/requester-analysis/${item.name}`]);
   }
   onHourChange() {
@@ -104,9 +137,13 @@ export class ChartComponent {
       case 'byDayAndHour':
         this.prepareChart();
         break;
-      case 'top10RequestersByDayAndHour':
+      case 'top10RequestersByDay':
       case 'top10RequestersByHour':
+        this.prepareTop10ForDayAndHour();
+        break;
+      case 'top10RequestersByDayAndHour':
         this.calculateTop10Requesters();
+        break;
     }
   }
 
@@ -169,10 +206,9 @@ export class ChartComponent {
   }
 
   prepareDataForChart() {
-//TODO: Calculate top 10 requesters from the data of /byDay, /byHour, /byDayAndHour data only, no need to fetch all requesters data from /byRequesterID endpoint.
+    //TODO: Calculate top 10 requesters from the data of /byDay, /byHour, /byDayAndHour data only, no need to fetch all requesters data from /byRequesterID endpoint.
     const newArray = [];
     switch (this.key) {
-
       case 'byDay':
       case 'byHour':
         const totalTasksForEachPeriod =
@@ -247,6 +283,7 @@ export class ChartComponent {
           0
         );
 
+
         return this.dayCount.map((day, index) => {
           if (selectedHourCounts[index] === 0) {
             return 0;
@@ -260,6 +297,8 @@ export class ChartComponent {
         });
       case 'top10RequestersByDay':
         if (this.barChartData.LosAngeles.byDay) {
+          console.log(this.barChartData.LosAngeles.byDay);
+
           this.dayCount.forEach((_, index) => {
             array.push(this.barChartData.LosAngeles.byDay[index] || 0);
           });
@@ -332,6 +371,11 @@ export class ChartComponent {
       const index = data.findIndex((item: any) => item.key === String(period));
       if (index > -1) {
         let total = 0;
+        if (this.key === 'byDay') {
+          this.dayWiseRequesterCounts.push(data[index].counts);
+        } else {
+          this.hoursWiseRequestersCounts.push(data[index].counts);
+        }
         const countsData = data[index].counts;
         for (const requesterID in countsData) {
           if (countsData.hasOwnProperty(requesterID)) {
@@ -343,11 +387,12 @@ export class ChartComponent {
         array.push(0);
       }
     });
+    if (this.key === 'byDay') {
+      top10RequestersByDay = this.dayWiseRequesterCounts;
+    } else if (this.key === 'byHour') {
+      top10RequestersByHour = this.hoursWiseRequestersCounts;
+    }
+
     return array;
   }
 }
-
-//FIXME: Can't bind to 'queryParams' since it isn't a known property of 'a'. Look into chart.component.html file.
-
-
-

@@ -54,7 +54,9 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
         )
       )
       .subscribe((data) => {
-        this.chartData = data[0];
+        console.log(data);
+
+        this.chartData = data[0]||{};
         console.log(this.chartData);
       });
   }

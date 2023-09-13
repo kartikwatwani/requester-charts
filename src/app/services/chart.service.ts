@@ -507,7 +507,7 @@ export class ChartService {
     if (key !== 'byRequesterID') {
       path = `${key}`;
     }
-    console.log(path);
+    console.log(`/req_pre/${path}`);
 
     return this.db.list(`/req_pre/${path}`);
   }

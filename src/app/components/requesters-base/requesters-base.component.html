@@ -7,7 +7,7 @@
 <div
   class="container"
   style="display: flex; justify-content: space-between; flex-wrap: wrap;"
-  *ngIf="(chartData | json) != '{}'"
+  *ngIf="(chartData | json) != '{}';else noData"
 >
   <div *ngFor="let chart of chartsList">
     <app-requester-chart
@@ -17,4 +17,8 @@
       [label]="chart.label"
     ></app-requester-chart>
   </div>
+
 </div>
+<ng-template #noData>
+<h2 style="text-align: center;">No Data Found</h2>
+</ng-template>

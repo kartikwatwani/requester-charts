@@ -80,10 +80,8 @@
     [legend]="true"
   >
   </canvas>
-
-
-
-  <ng-container *ngIf="requesterList.length > 0 ;else noRequesters">
+  <ng-container *ngIf="requesterList.length > 0  ;else noRequesters">
+    <div style="height: 350px;overflow: auto;">
     <table class="table">
       <thead>
         <tr>
@@ -108,6 +106,7 @@
         </tr>
       </tbody>
     </table>
+  </div>
   </ng-container>
   <ng-template #noRequesters>
     <p

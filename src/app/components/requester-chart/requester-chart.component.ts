@@ -104,7 +104,7 @@ export class RequesterChartComponent implements OnInit {
     const newArray: number[] = [];
     switch (this.filterKey) {
       case 'top10RequestersByDay':
-        if (this.chartDetail.LosAngeles.byDay) {
+        if (this.chartDetail&& this.chartDetail.LosAngeles.byDay) {
           this.dayCount.forEach((_, index) => {
             array.push(this.chartDetail.LosAngeles.byDay[index] || 0);
           });
@@ -124,7 +124,7 @@ export class RequesterChartComponent implements OnInit {
         break;
       case 'top10RequestersByHour':
         this.dayCount.forEach((day) => {
-          if (this.chartDetail.LosAngeles.byDayAndHour[day]) {
+          if (this.chartDetail&& this.chartDetail.LosAngeles.byDayAndHour[day]) {
             for (const key in this.chartDetail.LosAngeles.byDayAndHour[day]) {
               if (key === this.selectedHour) {
                 let totalValue = 0;
@@ -167,10 +167,11 @@ export class RequesterChartComponent implements OnInit {
         this.chartData[0].backgroundColor = '#1074f6';
         break;
       case 'top10RequestersByDayAndHour':
+
         let count = 0;
         this.chartData[0].data = [];
         this.dayCount.forEach((day) => {
-          if (this.chartDetail.LosAngeles.byDayAndHour[day]) {
+          if (this.chartDetail&& this.chartDetail.LosAngeles.byDayAndHour[day]) {
             for (const key in this.chartDetail.LosAngeles.byDayAndHour[day]) {
               if (key === this.selectedHour) {
                 let totalValue = 0;
