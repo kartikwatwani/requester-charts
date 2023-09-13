@@ -87,4 +87,9 @@ export class ChartConstant {
     responsive: true,
   };
   static dayCount = [0, 1, 2, 3, 4, 5, 6];
+  static filterType={
+    top10RequestersByDay:'top10RequestersByDay',
+    top10RequestersByHour:'top10RequestersByHour',
+    top10RequestersByDayAndHour:'top10RequestersByDayAndHour'
+  }
 }

@@ -2,10 +2,24 @@
   width: 450px;
   margin: 20px auto;
 }
-a{
+a {
   color: #0d6efd !important;
   cursor: pointer;
-  &:hover{
+  &:hover {
     text-decoration: underline !important;
   }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
 }

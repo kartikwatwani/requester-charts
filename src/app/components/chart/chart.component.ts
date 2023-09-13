@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ChartConstant } from '../../constant';
 let top10RequestersByDay = [];
 let top10RequestersByHour = [];
-console.log('ss');
+let top10RequestersByDayAndHour = [];
 
 @Component({
   selector: 'app-chart',
@@ -82,49 +82,49 @@ export class ChartComponent {
           break;
         case 'top10RequestersByDay':
         case 'top10RequestersByHour':
-          this.prepareTop10ForDayAndHour();
-          break;
         case 'top10RequestersByDayAndHour':
-          this.calculateTop10Requesters();
+          this.prepareTop10Requester();
           break;
       }
     });
     this.id = this.route.snapshot.params['id'];
   }
 
-  prepareTop10ForDayAndHour() {
-    if (this.key === 'top10RequestersByDay') {
-      const currentDay = top10RequestersByDay[this.selectedDay];
-      const arrayResult = [];
-      for (const key in currentDay) {
-        if (currentDay.hasOwnProperty(key)) {
-          arrayResult.push({ name: key, value: currentDay[key] });
-        }
-      }
-      arrayResult.sort((a, b) => b.value - a.value);
-      this.requesterList = arrayResult;
-    } else if (this.key === 'top10RequestersByHour') {
-      const currentHour = top10RequestersByHour[this.selectedHour];
-      const arrayResult = [];
-      for (const key in currentHour) {
-        if (currentHour.hasOwnProperty(key)) {
-          arrayResult.push({ name: key, value: currentHour[key] });
-        }
-      }
-      arrayResult.sort((a, b) => b.value - a.value);
-      this.requesterList = arrayResult;
-      console.log(this.requesterList);
+  prepareTop10Requester() {
+    this.requesterList = [];
+    let data = [];
+    const requestersResult = [];
+    if (this.key === ChartConstant.filterType.top10RequestersByDay) {
+      data = top10RequestersByDay[this.selectedDay];
+    } else if (this.key === ChartConstant.filterType.top10RequestersByHour) {
+      data = top10RequestersByHour[this.selectedHour];
+    } else if (
+      this.key === ChartConstant.filterType.top10RequestersByDayAndHour
+    ) {
+      data =
+        top10RequestersByDayAndHour[this.selectedDay] &&
+        top10RequestersByDayAndHour[this.selectedDay][this.selectedHour]
+          ? top10RequestersByDayAndHour[this.selectedDay][this.selectedHour]
+              .counts
+          : {};
     }
+    if (data) {
+      for (const key in data) {
+        if (data.hasOwnProperty(key)) {
+          requestersResult.push({ name: key, value: data[key] });
+        }
+      }
+    }
+    requestersResult.sort((a, b) => b.value - a.value);
+    this.requesterList = requestersResult;
   }
 
   onDayChange() {
     switch (this.key) {
-      case 'top10RequestersByDay':
-      case 'top10RequestersByHour':
-        this.prepareTop10ForDayAndHour();
-        break;
-      case 'top10RequestersByDayAndHour':
-        this.calculateTop10Requesters();
+      case ChartConstant.filterType.top10RequestersByDay:
+      case ChartConstant.filterType.top10RequestersByHour:
+      case ChartConstant.filterType.top10RequestersByDayAndHour:
+        this.prepareTop10Requester();
         break;
     }
   }
@@ -137,12 +137,10 @@ export class ChartComponent {
       case 'byDayAndHour':
         this.prepareChart();
         break;
-      case 'top10RequestersByDay':
-      case 'top10RequestersByHour':
-        this.prepareTop10ForDayAndHour();
-        break;
-      case 'top10RequestersByDayAndHour':
-        this.calculateTop10Requesters();
+      case ChartConstant.filterType.top10RequestersByDay:
+      case ChartConstant.filterType.top10RequestersByHour:
+      case ChartConstant.filterType.top10RequestersByDayAndHour:
+        this.prepareTop10Requester();
         break;
     }
   }
@@ -228,6 +226,7 @@ export class ChartComponent {
         const array: number[] = [];
         const selectedHourCounts: number[] = [];
         const otherDaysCounts: number[] = [];
+        top10RequestersByDayAndHour = this.data;
         this.dayCount.forEach((day) => {
           const index = this.data.findIndex(
             (item: any) => item.key === String(day)
@@ -283,7 +282,6 @@ export class ChartComponent {
           0
         );
 
-
         return this.dayCount.map((day, index) => {
           if (selectedHourCounts[index] === 0) {
             return 0;
@@ -297,8 +295,6 @@ export class ChartComponent {
         });
       case 'top10RequestersByDay':
         if (this.barChartData.LosAngeles.byDay) {
-          console.log(this.barChartData.LosAngeles.byDay);
-
           this.dayCount.forEach((_, index) => {
             array.push(this.barChartData.LosAngeles.byDay[index] || 0);
           });
