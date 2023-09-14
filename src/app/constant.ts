@@ -50,7 +50,7 @@ export class ChartConstant {
     { name: 'Thursday', id: 4 },
     { name: 'Friday', id: 5 },
     { name: 'Staturday', id: 6 },
-    { name: 'Sunday', id: 7 },
+    { name: 'Sunday', id: 0 },
   ];
   static hoursList: any[] = [
     { name: '12AM-1AM', value: '0' },

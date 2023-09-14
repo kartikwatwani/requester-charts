@@ -29,8 +29,9 @@ export class ChartComponent {
   hourCount: number[] = ChartConstant.hourCount;
   @Input() key = 'byDay';
   databasePath = '';
-  selectedHour = this.hoursList[0].value;
-  selectedDay = this.dayList[0].id;
+  selectedHour = '';
+  // selectedHour = this.hoursList.find(item=>item.id===new Date().getDate).id;
+  selectedDay = '';
   data: any = [];
   dayWiseRequesterCounts: any = [];
   hoursWiseRequestersCounts: any = [];
@@ -50,6 +51,13 @@ export class ChartComponent {
   ) {}
 
   ngOnInit() {
+    const day = this.dayList.find((item) => item.id === new Date().getDay()).id;
+    this.selectedDay = day;
+    const hour = this.hoursList.find(
+      (item) => String(item.value) === String(new Date().getHours())
+    ).value;
+    this.selectedHour = hour;
+
     this.getData();
   }
 
@@ -202,7 +210,6 @@ export class ChartComponent {
   }
 
   prepareDataForChart() {
-    //TODO: Calculate top 10 requesters from the data of /byDay, /byHour, /byDayAndHour data only, no need to fetch all requesters data from /byRequesterID endpoint.
     const newArray = [];
     switch (this.key) {
       case 'byDay':

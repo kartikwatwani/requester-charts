@@ -50,6 +50,12 @@ export class RequesterChartComponent implements OnInit {
   constructor(private chartService: ChartService) {}
 
   ngOnInit(): void {
+    const day = this.dayList.find((item) => item.id === new Date().getDay()).id;
+    this.selectedDay = day;
+    const hour = this.hoursList.find(
+      (item) => String(item.value) === String(new Date().getHours())
+    ).value;
+    this.selectedHour = hour;
     this.prepareChartData();
   }
 
@@ -107,7 +113,7 @@ export class RequesterChartComponent implements OnInit {
     const newArray: number[] = [];
     switch (this.filterKey) {
       case 'top10RequestersByDay':
-        if (this.chartDetail&& this.chartDetail.LosAngeles.byDay) {
+        if (this.chartDetail && this.chartDetail.LosAngeles.byDay) {
           this.dayCount.forEach((_, index) => {
             array.push(this.chartDetail.LosAngeles.byDay[index] || 0);
           });
@@ -126,55 +132,35 @@ export class RequesterChartComponent implements OnInit {
         }
         break;
       case 'top10RequestersByHour':
-        this.dayCount.forEach((day) => {
-          if (this.chartDetail&& this.chartDetail.LosAngeles.byDayAndHour[day]) {
-            for (const key in this.chartDetail.LosAngeles.byDayAndHour[day]) {
-              if (key === this.selectedHour) {
-                let totalValue = 0;
-                const currentHourTotal =
-                  this.chartDetail.LosAngeles.byDayAndHour[day][key];
-                Object.keys(this.chartDetail.LosAngeles.byDayAndHour).forEach(
-                  (currentDay) => {
-                    if (
-                      String(day) !== String(currentDay) &&
-                      Number.isFinite(
-                        this.chartDetail.LosAngeles.byDayAndHour[currentDay][
-                          this.selectedHour
-                        ]
-                      )
-                    ) {
-                      totalValue +=
-                        this.chartDetail.LosAngeles.byDayAndHour[currentDay][
-                          this.selectedHour
-                        ];
-                    }
-                  }
-                );
-                if (totalValue !== 0) {
-                  const percentageValue = Math.round(
-                    (currentHourTotal / totalValue) * 100
-                  );
-                  array.push(percentageValue);
-                } else {
-                  array.push(currentHourTotal);
-                }
-              } else {
-                array.push(0);
-              }
-            }
-          } else {
-            array.push(0);
-          }
-        });
-        this.chartData[0].data = array;
-        this.chartData[0].backgroundColor = '#1074f6';
+        console.log( this.chartDetail.LosAngeles.byDayAndHour);
+
+        if (this.chartDetail && this.chartDetail.LosAngeles.byHour) {
+          this.hourCount.forEach((_, index) => {
+            array.push(this.chartDetail.LosAngeles.byHour[index] || 0);
+          });
+          const total = array.reduce(
+            (accumulator: number, currentValue: number) =>
+              accumulator + currentValue,
+            0
+          );
+          array.forEach((element: number) => {
+            element = Math.round((element / total) * 100);
+            newArray.push(element);
+          });
+          this.chartData[0].data = newArray;
+          this.chartData[0].label = 'Hour Wise percentage count';
+          this.chartData[0].backgroundColor = '#1074f6';
+        }
+
         break;
       case 'top10RequestersByDayAndHour':
-
         let count = 0;
         this.chartData[0].data = [];
         this.dayCount.forEach((day) => {
-          if (this.chartDetail&& this.chartDetail.LosAngeles.byDayAndHour[day]) {
+          if (
+            this.chartDetail &&
+            this.chartDetail.LosAngeles.byDayAndHour[day]
+          ) {
             for (const key in this.chartDetail.LosAngeles.byDayAndHour[day]) {
               if (key === this.selectedHour) {
                 let totalValue = 0;
@@ -218,8 +204,6 @@ export class RequesterChartComponent implements OnInit {
         this.chartData[0].backgroundColor = '#1074f6';
     }
   }
-
-
 }
 
 //TODO: Rename this component to RequesterDetailComponent and change <app-requester-chart> to <app-requester-detail> for usage purposes.

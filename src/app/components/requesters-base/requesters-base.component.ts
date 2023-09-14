@@ -34,6 +34,7 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+
     const splitUrl = this.router.url.split('/');
     this.key = splitUrl[splitUrl.length - 1];
     this.getData();
