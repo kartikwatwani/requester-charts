@@ -44,8 +44,6 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
 
   getData() {
     this.chartData = {};
-    console.log(this.key);
-
     this.chartService
       .getAll(`byRequesterID/${this.key}`)
       .snapshotChanges()
@@ -55,10 +53,7 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
         )
       )
       .subscribe((data) => {
-        console.log(data);
-
         this.chartData = data[0]||{};
-        console.log(this.chartData);
       });
   }
 }
