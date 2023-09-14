@@ -313,7 +313,7 @@ export class ChartComponent {
             newArray.push(element);
           });
           this.chartData[0].data = newArray;
-          this.chartData[0].label = 'Day Wise percentage count';
+          this.chartData[0].label = 'Day Wise percentage';
           this.chartData[0].backgroundColor = '#1074f6';
         }
         break;

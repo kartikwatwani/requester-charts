@@ -12,6 +12,7 @@ import { ChartConstant } from '../../constant';
 })
 export class RequesterChartComponent implements OnInit {
   @Input() key = '';
+  @Input() label = '';
   chartsList: Chart[] = [
     {
       label: 'Top 10 Requester By Day',
@@ -75,7 +76,7 @@ export class RequesterChartComponent implements OnInit {
     this.chartData = [
       {
         data: [],
-        label: ' Hour Wise Percentage Count',
+        label: ' Hour Wise Percentage',
         backgroundColor: [],
       },
     ];
@@ -96,7 +97,7 @@ export class RequesterChartComponent implements OnInit {
       });
 
       this.chartData[0].data = newArray;
-      this.chartData[0].label = 'Hour Wise percentage count';
+      this.chartData[0].label = 'Hour Wise percentage';
       this.chartData[0].backgroundColor = '#1074f6';
     }
   }
@@ -127,7 +128,7 @@ export class RequesterChartComponent implements OnInit {
             newArray.push(element);
           });
           this.chartData[0].data = newArray;
-          this.chartData[0].label = 'Day Wise percentage count';
+          this.chartData[0].label = 'Day Wise percentage';
           this.chartData[0].backgroundColor = '#1074f6';
         }
         break;
@@ -148,7 +149,7 @@ export class RequesterChartComponent implements OnInit {
             newArray.push(element);
           });
           this.chartData[0].data = newArray;
-          this.chartData[0].label = 'Hour Wise percentage count';
+          this.chartData[0].label = 'Hour Wise percentage';
           this.chartData[0].backgroundColor = '#1074f6';
         }
 
