@@ -210,4 +210,4 @@ export class RequesterChartComponent implements OnInit {
 
 //TODO The h2 heading for each chart is not visible.
 
-//FIXME : By Hour and By Day and Hour logic is wrong for particular requester chart. It is not showing the correct data on the chart.
+//FIXME : By Day and Hour logic is wrong for particular requester chart. It is not showing the correct data on the chart.
