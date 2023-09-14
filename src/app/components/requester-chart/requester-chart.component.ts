@@ -3,7 +3,7 @@ import { ChartService } from '../../services/chart.service';
 import { Chart } from '../base/base.component';
 import { ChartConstant } from '../../constant';
 
-//TODO: In the older versions of ng-chart property binding [chartType] is mandatory in html file other wise chart doesn't show up. But in the latest version it is not mandatory. So, add [chartType]="chartType" in html file for canvas tag now and future charts that you create.
+//FIXME: In the older versions of ng-chart property binding [chartType] is mandatory in html file other wise chart doesn't show up. But in the latest version it is not mandatory. So, add [chartType]="chartType" in html file for canvas tag now and future charts that you create. It shows error in the main application without [chartType] binding.
 
 @Component({
   selector: 'app-requester-chart',
