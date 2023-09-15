@@ -228,7 +228,7 @@ export class ChartComponent {
         });
         return percentageOfTotalTasksPerPeriod;
       case 'byDayAndHour':
-        // FIXME: A new bug has been introduced here. The day selection option is not visible in the UI. Only the hour option is visible. Please fix it. 
+        // FIXME: Calculate percentage using correct logic for byDayAndHour
         const array: number[] = [];
         const selectedHourCounts: number[] = [];
         const otherDaysCounts: number[] = [];

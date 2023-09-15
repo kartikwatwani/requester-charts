@@ -3,8 +3,6 @@ import { ChartService } from '../../services/chart.service';
 import { Chart } from '../base/base.component';
 import { ChartConstant } from '../../constant';
 
-//FIXME: In the older versions of ng-chart property binding [chartType] is mandatory in html file other wise chart doesn't show up. But in the latest version it is not mandatory. So, add [chartType]="chartType" in html file for canvas tag now and future charts that you create. It shows error in the main application without [chartType] binding.
-
 @Component({
   selector: 'app-requester-chart',
   templateUrl: './requester-chart.component.html',
@@ -71,7 +69,7 @@ export class RequesterChartComponent implements OnInit {
   }
 
   prepareDataForHour() {
-    //TODO: No "Count" at end in label key below only for Hour Wise Percentage. Change this for others also.
+
     this.chartData = [
       {
         data: [],
@@ -208,6 +206,6 @@ export class RequesterChartComponent implements OnInit {
 
 //TODO: Rename this component to RequesterDetailComponent and change <app-requester-chart> to <app-requester-detail> for usage purposes.
 
-//TODO The h2 heading for each chart is not visible.
+//FIXME The h2 heading label is wrong. It should be "Day Wise" for Day Wise Percentage chart, "Hour Wise" for Hour Wise Percentage chart and "Day and Hour Wise" for Day and Hour Wise Percentage chart.
 
-//FIXME : By Day and Hour logic is wrong for particular requester chart. It is not showing the correct data on the chart.
+//FIXME : By Day and Hour logic is wrong for particular requester chart. It is not showing the correct percentages on the chart.

@@ -57,8 +57,3 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
       });
   }
 }
-
-
-//TODO: Add padding of 16px to the left and right of the table and chart. Currently, the table and chart are touching the left and right edges of the screen.
-
-//FIXME: The chart for particular requester's data is not showing up for the by Day and Hour filter.
