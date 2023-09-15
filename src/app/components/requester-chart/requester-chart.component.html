@@ -63,14 +63,14 @@
   >
   </canvas>
   <canvas
-    *ngIf="chartDetail&& filterKey === 'top10RequestersByDayAndHour'"
+    *ngIf="chartDetail && filterKey === 'top10RequestersByDayAndHour'"
     baseChart
     [datasets]="chartData"
-    [chartType]="chartType"
     [labels]="dayChartLabels"
     [options]="chartOptions"
     [plugins]="barChartPlugins"
-    [legend]="barChartLegend"
+    [chartType]="chartType"
+    [legend]="chartLegend"
   >
   </canvas>
 </div>

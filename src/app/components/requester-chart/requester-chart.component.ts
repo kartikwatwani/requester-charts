@@ -110,7 +110,7 @@ export class RequesterChartComponent implements OnInit {
         backgroundColor: [],
       },
     ];
-    const array: any[] = [];
+    let array: any[] = [];
     const newArray: number[] = [];
     switch (this.filterKey) {
       case 'top10RequestersByDay':
@@ -157,20 +157,23 @@ export class RequesterChartComponent implements OnInit {
       case 'top10RequestersByDayAndHour':
         let count = 0;
         this.chartData[0].data = [];
+        array=[];
         this.dayCount.forEach((day) => {
           if (
             this.chartDetail &&
             this.chartDetail.LosAngeles.byDayAndHour[day]
+
           ) {
-            for (const key in this.chartDetail.LosAngeles.byDayAndHour[day]) {
-              if (key === this.selectedHour) {
+            console.log(this.chartDetail.LosAngeles.byDayAndHour[day]);
+const key=this.chartDetail.LosAngeles.byDayAndHour[day][this.selectedHour];
+
+              if (key) {
                 let totalValue = 0;
                 const currentHourTotal =
                   this.chartDetail.LosAngeles.byDayAndHour[day][key];
                 Object.keys(this.chartDetail.LosAngeles.byDayAndHour).forEach(
                   (currentDay) => {
                     if (
-                      String(day) !== String(currentDay) &&
                       this.chartDetail.LosAngeles.byDayAndHour[currentDay] &&
                       Number.isFinite(
                         this.chartDetail.LosAngeles.byDayAndHour[currentDay][
@@ -185,6 +188,9 @@ export class RequesterChartComponent implements OnInit {
                     }
                   }
                 );
+                console.log(totalValue,'totalValue');
+                console.log(key,'key');
+
                 if (totalValue !== 0) {
                   const percentageValue = Math.round(
                     (currentHourTotal / totalValue) * 100
@@ -197,10 +203,11 @@ export class RequesterChartComponent implements OnInit {
                 array.push(0);
               }
             }
-          } else {
-            array.push(0);
-          }
-        });
+          })
+
+
+        console.log(array);
+
         this.chartData[0].data = array;
         this.chartData[0].backgroundColor = '#1074f6';
     }
