@@ -20,7 +20,7 @@ export class BaseComponent {
       key: 'byHour',
     },
     {
-      label: 'By Day And Hour Wise',
+      label: 'Comparison of Hours Across All Days',
       key: 'byDayAndHour',
     },
     {

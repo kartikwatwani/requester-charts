@@ -133,8 +133,6 @@ export class RequesterChartComponent implements OnInit {
         }
         break;
       case 'top10RequestersByHour':
-        console.log( this.chartDetail.LosAngeles.byDayAndHour);
-
         if (this.chartDetail && this.chartDetail.LosAngeles.byHour) {
           this.hourCount.forEach((_, index) => {
             array.push(this.chartDetail.LosAngeles.byHour[index] || 0);
@@ -155,61 +153,41 @@ export class RequesterChartComponent implements OnInit {
 
         break;
       case 'top10RequestersByDayAndHour':
-        let count = 0;
         this.chartData[0].data = [];
-        array=[];
+        array = [];
         this.dayCount.forEach((day) => {
           if (
             this.chartDetail &&
-            this.chartDetail.LosAngeles.byDayAndHour[day]
-
+            this.chartDetail.LosAngeles.byDayAndHour[day] &&
+            day === this.selectedDay
           ) {
-            console.log(this.chartDetail.LosAngeles.byDayAndHour[day]);
-const key=this.chartDetail.LosAngeles.byDayAndHour[day][this.selectedHour];
-
-              if (key) {
-                let totalValue = 0;
-                const currentHourTotal =
-                  this.chartDetail.LosAngeles.byDayAndHour[day][key];
-                Object.keys(this.chartDetail.LosAngeles.byDayAndHour).forEach(
-                  (currentDay) => {
-                    if (
-                      this.chartDetail.LosAngeles.byDayAndHour[currentDay] &&
-                      Number.isFinite(
-                        this.chartDetail.LosAngeles.byDayAndHour[currentDay][
-                          this.selectedHour
-                        ]
-                      )
-                    ) {
-                      totalValue +=
-                        this.chartDetail.LosAngeles.byDayAndHour[currentDay][
-                          this.selectedHour
-                        ];
-                    }
-                  }
-                );
-                console.log(totalValue,'totalValue');
-                console.log(key,'key');
-
-                if (totalValue !== 0) {
-                  const percentageValue = Math.round(
-                    (currentHourTotal / totalValue) * 100
-                  );
-                  array.push(percentageValue);
-                } else {
-                  array.push(currentHourTotal);
-                }
-              } else {
-                array.push(0);
-              }
+            let sum: any = 0;
+            let selectedDay = this.chartDetail.LosAngeles.byDayAndHour[day];
+            if (Array.isArray(selectedDay)) {
+              sum = selectedDay.reduce(
+                (accumulator, currentValue) => accumulator + currentValue,
+                0
+              );
+            } else {
+              sum = Object.values(selectedDay).reduce(
+                (accumulator: number, currentValue: number) =>
+                  accumulator + currentValue
+              );
+              selectedDay = Array.from(
+                { length: 24 },
+                (_, index) => selectedDay[index] || 0
+              );
             }
-          })
-
-
-        console.log(array);
-
+            array = selectedDay.map((number) =>
+              Number((number / sum) * 100).toFixed(2)
+            );
+          }else{
+            array.push(0)
+          }
+        });
         this.chartData[0].data = array;
         this.chartData[0].backgroundColor = '#1074f6';
+        break;
     }
   }
 }
