@@ -10,6 +10,7 @@ import { ChartConstant } from '../../constant';
 })
 export class RequesterChartComponent implements OnInit {
   @Input() key = '';
+  @Input() label = '';
   chartsList: Chart[] = [
     {
       label: 'Top 10 Requester By Day',
@@ -73,7 +74,7 @@ export class RequesterChartComponent implements OnInit {
     this.chartData = [
       {
         data: [],
-        label: ' Hour Wise Percentage Count',
+        label: ' Hour Wise Percentage',
         backgroundColor: [],
       },
     ];
@@ -94,7 +95,7 @@ export class RequesterChartComponent implements OnInit {
       });
 
       this.chartData[0].data = newArray;
-      this.chartData[0].label = 'Hour Wise percentage count';
+      this.chartData[0].label = 'Hour Wise percentage';
       this.chartData[0].backgroundColor = '#1074f6';
     }
   }
@@ -107,7 +108,7 @@ export class RequesterChartComponent implements OnInit {
         backgroundColor: [],
       },
     ];
-    const array: any[] = [];
+    let array: any[] = [];
     const newArray: number[] = [];
     switch (this.filterKey) {
       case 'top10RequestersByDay':
@@ -125,13 +126,11 @@ export class RequesterChartComponent implements OnInit {
             newArray.push(element);
           });
           this.chartData[0].data = newArray;
-          this.chartData[0].label = 'Day Wise percentage count';
+          this.chartData[0].label = 'Day Wise percentage';
           this.chartData[0].backgroundColor = '#1074f6';
         }
         break;
       case 'top10RequestersByHour':
-        console.log( this.chartDetail.LosAngeles.byDayAndHour);
-
         if (this.chartDetail && this.chartDetail.LosAngeles.byHour) {
           this.hourCount.forEach((_, index) => {
             array.push(this.chartDetail.LosAngeles.byHour[index] || 0);
@@ -146,66 +145,49 @@ export class RequesterChartComponent implements OnInit {
             newArray.push(element);
           });
           this.chartData[0].data = newArray;
-          this.chartData[0].label = 'Hour Wise percentage count';
+          this.chartData[0].label = 'Hour Wise percentage';
           this.chartData[0].backgroundColor = '#1074f6';
         }
 
         break;
       case 'top10RequestersByDayAndHour':
-        let count = 0;
         this.chartData[0].data = [];
+        array = [];
         this.dayCount.forEach((day) => {
           if (
             this.chartDetail &&
-            this.chartDetail.LosAngeles.byDayAndHour[day]
+            this.chartDetail.LosAngeles.byDayAndHour[day] &&
+            day === this.selectedDay
           ) {
-            for (const key in this.chartDetail.LosAngeles.byDayAndHour[day]) {
-              if (key === this.selectedHour) {
-                let totalValue = 0;
-                const currentHourTotal =
-                  this.chartDetail.LosAngeles.byDayAndHour[day][key];
-                Object.keys(this.chartDetail.LosAngeles.byDayAndHour).forEach(
-                  (currentDay) => {
-                    if (
-                      String(day) !== String(currentDay) &&
-                      this.chartDetail.LosAngeles.byDayAndHour[currentDay] &&
-                      Number.isFinite(
-                        this.chartDetail.LosAngeles.byDayAndHour[currentDay][
-                          this.selectedHour
-                        ]
-                      )
-                    ) {
-                      totalValue +=
-                        this.chartDetail.LosAngeles.byDayAndHour[currentDay][
-                          this.selectedHour
-                        ];
-                    }
-                  }
-                );
-                if (totalValue !== 0) {
-                  const percentageValue = Math.round(
-                    (currentHourTotal / totalValue) * 100
-                  );
-                  array.push(percentageValue);
-                } else {
-                  array.push(currentHourTotal);
-                }
-              } else {
-                array.push(0);
-              }
+            let sum: any = 0;
+            let selectedDay = this.chartDetail.LosAngeles.byDayAndHour[day];
+            if (Array.isArray(selectedDay)) {
+              sum = selectedDay.reduce(
+                (accumulator, currentValue) => accumulator + currentValue,
+                0
+              );
+            } else {
+              sum = Object.values(selectedDay).reduce(
+                (accumulator: number, currentValue: number) =>
+                  accumulator + currentValue
+              );
+              selectedDay = Array.from(
+                { length: 24 },
+                (_, index) => selectedDay[index] || 0
+              );
             }
-          } else {
-            array.push(0);
+            array = selectedDay.map((number) =>
+              Number((number / sum) * 100).toFixed(2)
+            );
+          }else{
+            array.push(0)
           }
         });
         this.chartData[0].data = array;
         this.chartData[0].backgroundColor = '#1074f6';
+        break;
     }
   }
 }
 
 //TODO: Rename this component to RequesterDetailComponent and change <app-requester-chart> to <app-requester-detail> for usage purposes.
-
-//FIXME The h2 heading label is wrong. It should be "Day Wise" for Day Wise Percentage chart, "Hour Wise" for Hour Wise Percentage chart and "Day and Hour Wise" for Day and Hour Wise Percentage chart.
-
-//FIXME : By Day and Hour logic is wrong for particular requester chart. It is not showing the correct percentages on the chart.

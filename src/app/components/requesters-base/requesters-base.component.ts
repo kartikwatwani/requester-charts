@@ -15,15 +15,15 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
   filterKey: string = '';
   chartsList: Chart[] = [
     {
-      label: 'Top 10 Requester By Day',
+      label: 'By Day',
       key: 'top10RequestersByDay',
     },
     {
-      label: 'Top 10 Requester By Hour',
+      label: 'By Hour',
       key: 'top10RequestersByHour',
     },
     {
-      label: 'Top 10 Requester By Day And Hour',
+      label: 'By Day And Hour',
       key: 'top10RequestersByDayAndHour',
     },
   ];

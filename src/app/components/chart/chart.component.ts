@@ -228,77 +228,44 @@ export class ChartComponent {
         });
         return percentageOfTotalTasksPerPeriod;
       case 'byDayAndHour':
-        // FIXME: Calculate percentage using correct logic for byDayAndHour
         const array: number[] = [];
-        const selectedHourCounts: number[] = [];
-        const otherDaysCounts: number[] = [];
+        const totalHourCounts = this.data
+          .map((item) => {
+            return item[this.selectedHour].counts;
+          })
+          .reduce((total, currentObject) => {
+            for (const key in currentObject) {
+              if (currentObject.hasOwnProperty(key)) {
+                total += currentObject[key];
+              }
+            }
+            return total;
+          }, 0);
         top10RequestersByDayAndHour = this.data;
         this.dayCount.forEach((day) => {
           const index = this.data.findIndex(
             (item: any) => item.key === String(day)
           );
-
           if (index > -1) {
             const selectedHourData: any = this.data[index][this.selectedHour];
             if (selectedHourData) {
               const selectedHourTotal: any = Object.values(
                 selectedHourData.counts
               ).reduce(
-                (acc: number, currentValue: number) => acc + currentValue,
-                0
+                (acc: number, currentValue: number) => acc + currentValue
               );
-              selectedHourCounts.push(selectedHourTotal);
-
-              const otherDays = this.data.filter(
-                (item: any) => String(item.key) !== String(day)
-              );
-              if (otherDays.length > 0) {
-                let otherDaysTotal = 0;
-                otherDays.forEach((element: any) => {
-                  const matchKey = Object.keys(element).find(
-                    (item) => String(item) === String(this.selectedHour)
-                  );
-                  if (matchKey) {
-                    const value = Object.values(element[matchKey].counts);
-                    const total: any = value.reduce(
-                      (acc: any, currentValue: any) => acc + currentValue,
-                      0
-                    );
-                    otherDaysTotal += total;
-                  }
-                });
-                otherDaysCounts.push(otherDaysTotal);
-              }
+              const percentageValue: any = Number(
+                (selectedHourTotal / totalHourCounts) * 100
+              ).toFixed(2);
+              array.push(percentageValue);
             } else {
-              selectedHourCounts.push(0);
-              otherDaysCounts.push(0);
+              array.push(0);
             }
           } else {
-            selectedHourCounts.push(0);
-            otherDaysCounts.push(0);
+            array.push(0);
           }
         });
-
-        const totalSelectedHour = selectedHourCounts.reduce(
-          (acc, currentValue) => acc + currentValue,
-          0
-        );
-        const totalOtherDays = otherDaysCounts.reduce(
-          (acc, currentValue) => acc + currentValue,
-          0
-        );
-
-        return this.dayCount.map((day, index) => {
-          if (selectedHourCounts[index] === 0) {
-            return 0;
-          }
-          const percentageValue = Math.round(
-            (selectedHourCounts[index] / (totalSelectedHour + totalOtherDays)) *
-              100
-          );
-          array.push(percentageValue);
-          return percentageValue;
-        });
+        return array;
       case 'top10RequestersByDay':
         if (this.barChartData.LosAngeles.byDay) {
           this.dayCount.forEach((_, index) => {
@@ -314,7 +281,7 @@ export class ChartComponent {
             newArray.push(element);
           });
           this.chartData[0].data = newArray;
-          this.chartData[0].label = 'Day Wise percentage count';
+          this.chartData[0].label = 'Day Wise percentage';
           this.chartData[0].backgroundColor = '#1074f6';
         }
         break;
