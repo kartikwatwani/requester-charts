@@ -39,3 +39,4 @@ export class BaseComponent {
 }
 
 
+// TODO: Add a "by Day And Hour" Chart For all requesters. This should have a day selection. For each day selection, there should be a chart with 24 bars, one for each hour. Each bar should show the percentage. For any x axis position, the value will be calculated using this logic, The numerator will be sum of counts for that paticular hour on that day * 100. The denominator will be sum of counts for all hours on that day. For example, if the user selects Monday, then the first bar will show the percentage of counts for Monday 12 AM. The second bar will show the percentage of counts for Monday 1 AM. The third bar will show the percentage of counts for Monday 2 AM. And so on. The last bar will show the percentage of counts for Monday 11 PM.
