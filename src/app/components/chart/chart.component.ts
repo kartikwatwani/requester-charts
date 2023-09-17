@@ -342,3 +342,5 @@ export class ChartComponent {
 
 
 //TODO: Currently ID of the requester e.g. TPU3OO8KUVWDSZPV is visible in the top 10 table we need to replace it with the requester name. This data will be fetched from /req_id_to_name_mapping endpoint on firebase. sample data is availble in the assets folder.
+
+//FIXME: For the select options of day and hour we need to use timezone of LosAngeles for current selection. that is,  when the app loads we want by default the select options to be current day and hour of Los Angeles Time Zone not Indian Time zone.
