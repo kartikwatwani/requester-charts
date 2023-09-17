@@ -339,3 +339,6 @@ export class ChartComponent {
     return array;
   }
 }
+
+
+//TODO: Currently ID of the requester e.g. TPU3OO8KUVWDSZPV is visible in the top 10 table we need to replace it with the requester name. This data will be fetched from /req_id_to_name_mapping endpoint on firebase. sample data is availble in the assets folder.

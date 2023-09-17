@@ -189,4 +189,5 @@ export class RequesterDetailComponent implements OnInit {
   }
 }
 
-//TODO: Rename this component to RequesterDetailComponent and change <app-requester-chart> to <app-requester-detail> for usage purposes.
+//FIXME: The file is stil named requester-chart.component.ts. It should be renamed to requester-detail.component.ts.
+
