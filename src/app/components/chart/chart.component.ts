@@ -62,7 +62,6 @@ export class ChartComponent {
   }
 
   getData() {
-    //FIXME: Use the data of byDay, byHour, byDayAndHour, and byDayAndHourForAllRequesters from the database to build top 10 requester tables.
     this.data = [];
     this.databasePath =
       this.key.indexOf('top10') > -1
