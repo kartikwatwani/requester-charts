@@ -61,7 +61,7 @@ export class ChartComponent {
     this.getData();
   }
 
-  getData() {
+  async getData() {
     this.data = [];
     this.databasePath =
       this.key.indexOf('top10') > -1
@@ -69,33 +69,34 @@ export class ChartComponent {
         : this.key === 'byDayAndHourForAllRequesters'
         ? `byDayAndHour/LosAngeles`
         : `${this.key}/LosAngeles`;
-
-    firstValueFrom(
-      this.chartService
-        .getAll(this.databasePath)
-        .snapshotChanges()
-        .pipe(
-          map((changes) =>
-            changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
+    if (this.databasePath !== 'byRequesterID') {
+      this.data = await firstValueFrom(
+        this.chartService
+          .getAll(this.databasePath)
+          .snapshotChanges()
+          .pipe(
+            map((changes) =>
+              changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
+            )
           )
-        )
-    ).then((data) => {
-      this.data = data;
-
-      switch (this.key) {
-        case 'byDay':
-        case 'byHour':
-        case 'byDayAndHour':
-        case 'byDayAndHourForAllRequesters':
-          this.prepareChart();
-          break;
-        case 'top10RequestersByDay':
-        case 'top10RequestersByHour':
-        case 'top10RequestersByDayAndHour':
+      );
+    }
+    switch (this.key) {
+      case 'byDay':
+      case 'byHour':
+      case 'byDayAndHour':
+      case 'byDayAndHourForAllRequesters':
+        this.prepareChart();
+        break;
+      case 'top10RequestersByDay':
+      case 'top10RequestersByHour':
+      case 'top10RequestersByDayAndHour':
+        setTimeout(() => {
           this.prepareTop10Requester();
-          break;
-      }
-    });
+        }, 1000);
+
+        break;
+    }
     this.id = this.route.snapshot.params['id'];
   }
 
@@ -333,6 +334,7 @@ export class ChartComponent {
     } else if (this.key === 'byHour') {
       top10RequestersByHour = this.hoursWiseRequestersCounts;
     }
+    console.log(top10RequestersByDay, 'top10RequestersByDay');
 
     return array;
   }

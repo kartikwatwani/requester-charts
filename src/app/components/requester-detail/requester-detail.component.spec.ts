@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RequesterDetailComponent } from './requester-chart.component';
+import { RequesterDetailComponent } from './requester-detail.component';
 
 describe('RequesterDetailComponent', () => {
   let component: RequesterDetailComponent;
