@@ -18,12 +18,12 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
-import { RequesterChartComponent } from './components/requester-chart/requester-chart.component';
+import { RequesterDetailComponent } from './components/requester-detail/requester-chart.component';
 import { BaseComponent } from './components/base/base.component';
 import { RequestersBaseComponent } from './components/requesters-base/requesters-base.component';
 
 @NgModule({
-  declarations: [AppComponent, ChartComponent, RequesterChartComponent, BaseComponent, RequestersBaseComponent],
+  declarations: [AppComponent, ChartComponent, RequesterDetailComponent, BaseComponent, RequestersBaseComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

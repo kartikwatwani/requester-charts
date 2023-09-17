@@ -66,6 +66,8 @@ export class ChartComponent {
     this.databasePath =
       this.key.indexOf('top10') > -1
         ? 'byRequesterID'
+        : this.key === 'byDayAndHourForAllRequesters'
+        ? `byDayAndHour/LosAngeles`
         : `${this.key}/LosAngeles`;
 
     firstValueFrom(
@@ -84,6 +86,7 @@ export class ChartComponent {
         case 'byDay':
         case 'byHour':
         case 'byDayAndHour':
+        case 'byDayAndHourForAllRequesters':
           this.prepareChart();
           break;
         case 'top10RequestersByDay':
@@ -131,6 +134,9 @@ export class ChartComponent {
       case ChartConstant.filterType.top10RequestersByHour:
       case ChartConstant.filterType.top10RequestersByDayAndHour:
         this.prepareTop10Requester();
+        break;
+      case ChartConstant.filterType.byDayAndHourForAllRequesters:
+        this.prepareChart();
         break;
     }
   }
@@ -205,12 +211,13 @@ export class ChartComponent {
       case 'byHour':
         return 'Hour Wise Percentage';
       case 'byDayAndHour':
+        return 'Comparison of Hours Across All Days';
+      case 'byDayAndHourForAllRequesters':
         return 'Day and Hour Wise Percentage';
     }
   }
 
   prepareDataForChart() {
-    const newArray = [];
     switch (this.key) {
       case 'byDay':
       case 'byHour':
@@ -266,70 +273,35 @@ export class ChartComponent {
           }
         });
         return array;
-      case 'top10RequestersByDay':
-        if (this.barChartData.LosAngeles.byDay) {
-          this.dayCount.forEach((_, index) => {
-            array.push(this.barChartData.LosAngeles.byDay[index] || 0);
-          });
-          const total = array.reduce(
-            (accumulator: number, currentValue: number) =>
-              accumulator + currentValue,
-            0
-          );
-          array.forEach((element: number) => {
-            element = Math.round((element / total) * 100);
-            newArray.push(element);
-          });
-          this.chartData[0].data = newArray;
-          this.chartData[0].label = 'Day Wise percentage';
-          this.chartData[0].backgroundColor = '#1074f6';
-        }
-        break;
-      case 'top10RequestersByHour':
-        this.dayCount.forEach((day) => {
-          if (this.barChartData.LosAngeles.byDayAndHour[day]) {
-            for (const key in this.barChartData.LosAngeles.byDayAndHour[day]) {
-              if (key === this.selectedHour) {
-                let totalValue = 0;
-                const currentHourTotal =
-                  this.barChartData.LosAngeles.byDayAndHour[day][key];
-                Object.keys(this.barChartData.LosAngeles.byDayAndHour).forEach(
-                  (currentDay) => {
-                    if (
-                      String(day) !== String(currentDay) &&
-                      Number.isFinite(
-                        this.barChartData.LosAngeles.byDayAndHour[currentDay][
-                          this.selectedHour
-                        ]
-                      )
-                    ) {
-                      totalValue +=
-                        this.barChartData.LosAngeles.byDayAndHour[currentDay][
-                          this.selectedHour
-                        ];
-                    }
-                  }
-                );
-                if (totalValue !== 0) {
-                  const percentageValue = Math.round(
-                    (currentHourTotal / totalValue) * 100
-                  );
-                  array.push(percentageValue);
-                } else {
-                  array.push(currentHourTotal);
-                }
-              } else {
-                array.push(0);
+      case 'byDayAndHourForAllRequesters':
+        const newArray: number[] = [];
+        const chartData = this.data[this.selectedDay];
+        const totalCountOfHour = Object.values(chartData)
+          .map((item: any) => {
+            return item.counts;
+          })
+          .reduce((total, currentObject) => {
+            for (const key in currentObject) {
+              if (currentObject.hasOwnProperty(key)) {
+                total += currentObject[key];
               }
             }
-          } else {
-            array.push(0);
+            return total;
+          }, 0);
+        Object.keys(chartData).forEach((key: any) => {
+          const hourCount = chartData[key].counts;
+          if (hourCount) {
+            const selectedHourTotal: any = Object.values(hourCount).reduce(
+              (acc: number, currentValue: number) => acc + currentValue,
+              0
+            );
+            const percentageValue: any = Number(
+              (selectedHourTotal / totalCountOfHour) * 100
+            ).toFixed(2);
+            newArray.push(percentageValue);
           }
         });
-        this.chartData[0].data = array;
-        this.chartData[0].backgroundColor = '#1074f6';
-        break;
-      case 'top10RequestersByDayAndHour':
+        return newArray;
     }
   }
 

@@ -24,6 +24,10 @@ export class BaseComponent {
       key: 'byDayAndHour',
     },
     {
+      label: 'By Day And Hour',
+      key: 'byDayAndHourForAllRequesters',
+    },
+    {
       label: 'Top 10 Requester By Day',
       key: 'top10RequestersByDay',
     },

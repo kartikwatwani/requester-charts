@@ -1,7 +1,7 @@
 <div
   style="display: block;"
   class="chart-container"
-  [ngStyle]="key==='byHour'&&{'width':'650px'}"
+  [ngClass]="{'section':key==='byHour'||key==='byDayAndHourForAllRequesters'}"
 >
   <div style="display: flex; align-items: flex-start; flex-direction: column;">
     <h2>{{label}}</h2>
@@ -18,7 +18,7 @@
     </mat-form-field> -->
     <div style="display: flex;">
       <mat-form-field
-        *ngIf="key === 'top10RequestersByDay'||key==='top10RequestersByDayAndHour'"
+        *ngIf="key === 'top10RequestersByDay'||key==='top10RequestersByDayAndHour'|| key==='byDayAndHourForAllRequesters'"
         appearance="outline"
       >
         <mat-label>Day</mat-label>
@@ -80,38 +80,46 @@
     [legend]="true"
   >
   </canvas>
+  <canvas
+    *ngIf="data.length > 0 && key === 'byDayAndHourForAllRequesters'"
+    baseChart
+    [datasets]="chartData"
+    [chartType]="chartType"
+    [labels]="hourChartLabels"
+    [options]="chartOptions"
+    [legend]="true"
+  >
+  </canvas>
   <ng-container *ngIf="requesterList.length > 0  ;else noRequesters">
-    <div style="height: 350px;overflow: auto;">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">S.No</th>
-          <th scope="col">Id</th>
-          <th scope="col">Count</th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
-      <tbody *ngFor="let item of requesterList; let i = index">
-        <tr>
-          <td>{{ i + 1 }}</td>
-          <td>{{ item.name }}</td>
-          <td>{{ item.value }}</td>
-          <td>
-            <a
-             (click)="getRequesterDetail(item)"
-              [queryParams]="{key}"
-              >View Chart</a
-            >
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div style="height: 350px; overflow: auto;">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Id</th>
+            <th scope="col">Count</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of requesterList; let i = index">
+          <tr>
+            <td>{{ i + 1 }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.value }}</td>
+            <td>
+              <a (click)="getRequesterDetail(item)" [queryParams]="{key}"
+                >View Chart</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </ng-container>
   <ng-template #noRequesters>
     <p
       style="text-align: center;"
-      *ngIf="key !=='byDay' &&key!=='byHour' && key!=='byDayAndHour'"
+      *ngIf="key !=='byDay' &&key!=='byHour' && key!=='byDayAndHour' && key!=='byDayAndHourForAllRequesters'"
     >
       No Requesters Found
     </p>

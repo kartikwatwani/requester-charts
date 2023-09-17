@@ -90,6 +90,7 @@ export class ChartConstant {
   static filterType={
     top10RequestersByDay:'top10RequestersByDay',
     top10RequestersByHour:'top10RequestersByHour',
-    top10RequestersByDayAndHour:'top10RequestersByDayAndHour'
+    top10RequestersByDayAndHour:'top10RequestersByDayAndHour',
+    byDayAndHourForAllRequesters:'byDayAndHourForAllRequesters'
   }
 }

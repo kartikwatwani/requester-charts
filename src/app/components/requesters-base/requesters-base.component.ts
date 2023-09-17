@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import {  Router } from '@angular/router';
 import { Chart } from '../base/base.component';
 import { ChartService } from '../../services/chart.service';
 import { map } from 'rxjs';
@@ -27,14 +27,9 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
       key: 'top10RequestersByDayAndHour',
     },
   ];
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private chartService: ChartService
-  ) {}
+  constructor(private router: Router, private chartService: ChartService) {}
 
   ngOnInit(): void {
-
     const splitUrl = this.router.url.split('/');
     this.key = splitUrl[splitUrl.length - 1];
     this.getData();
@@ -53,7 +48,7 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
         )
       )
       .subscribe((data) => {
-        this.chartData = data[0]||{};
+        this.chartData = data[0] || {};
       });
   }
 }

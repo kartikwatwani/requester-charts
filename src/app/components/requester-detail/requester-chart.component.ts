@@ -1,14 +1,14 @@
-import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ChartService } from '../../services/chart.service';
 import { Chart } from '../base/base.component';
 import { ChartConstant } from '../../constant';
 
 @Component({
-  selector: 'app-requester-chart',
-  templateUrl: './requester-chart.component.html',
-  styleUrls: ['./requester-chart.component.scss'],
+  selector: 'app-requester-detail',
+  templateUrl: './requester-detail.component.html',
+  styleUrls: ['./requester-detail.component.scss'],
 })
-export class RequesterChartComponent implements OnInit {
+export class RequesterDetailComponent implements OnInit {
   @Input() key = '';
   @Input() label = '';
   chartsList: Chart[] = [
@@ -70,7 +70,6 @@ export class RequesterChartComponent implements OnInit {
   }
 
   prepareDataForHour() {
-
     this.chartData = [
       {
         data: [],
@@ -179,8 +178,8 @@ export class RequesterChartComponent implements OnInit {
             array = selectedDay.map((number) =>
               Number((number / sum) * 100).toFixed(2)
             );
-          }else{
-            array.push(0)
+          } else {
+            array.push(0);
           }
         });
         this.chartData[0].data = array;

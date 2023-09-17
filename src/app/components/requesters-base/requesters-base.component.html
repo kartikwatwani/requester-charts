@@ -15,12 +15,12 @@
   *ngIf="(chartData | json) != '{}';else noData"
 >
   <div *ngFor="let chart of chartsList">
-    <app-requester-chart
+    <app-requester-detail
       [filterKey]="chart.key"
       [key]="key"
       [chartDetail]="chartData"
       [label]="chart.label"
-    ></app-requester-chart>
+    ></app-requester-detail>
   </div>
 </div>
 <ng-template #noData>
