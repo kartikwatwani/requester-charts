@@ -18,7 +18,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
-import { RequesterDetailComponent } from './components/requester-detail/requester-chart.component';
+import { RequesterDetailComponent } from './components/requester-detail/requester-detail.component';
 import { BaseComponent } from './components/base/base.component';
 import { RequestersBaseComponent } from './components/requesters-base/requesters-base.component';
 
