@@ -189,5 +189,3 @@ export class RequesterDetailComponent implements OnInit {
   }
 }
 
-//FIXME: The file is stil named requester-chart.component.ts. It should be renamed to requester-detail.component.ts.
-

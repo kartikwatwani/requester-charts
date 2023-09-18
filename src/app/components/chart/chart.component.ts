@@ -361,3 +361,8 @@ export class ChartComponent {
 }
 
 //TODO: Currently ID of the requester e.g. TPU3OO8KUVWDSZPV is visible in the top 10 table we need to replace it with the requester name. This data will be fetched from /req_id_to_name_mapping endpoint on firebase. sample data is availble in the assets folder.
+
+//FIXME: For the select options of day and hour we need to use timezone of LosAngeles for current selection. that is,  when the app loads we want by default the select options to be current day and hour of Los Angeles Time Zone not Indian Time zone.
+
+
+//TODO: Add all charts and tables for submit time like we have for accept time. The data will be queried from 'req_pre_by_submit_time' from firebase. The sample data for this is available in the assets folder. First try to incorpate the charts for byDay, byHour and byDayAndHour in the same chart for accept time by adding a bar for submit time. If it is not possible, then add charts and tables for submit time at the end of existing charts and tables by giving a heading "Requesters Analysis by Submit Time".
