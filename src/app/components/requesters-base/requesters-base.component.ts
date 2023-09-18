@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {  Router } from '@angular/router';
+import {  ActivatedRoute, Router } from '@angular/router';
 import { Chart } from '../base/base.component';
 import { ChartService } from '../../services/chart.service';
 import { map } from 'rxjs';
@@ -13,6 +13,7 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
   key: string = '';
   chartData: any = {};
   filterKey: string = '';
+  requestersName:string=''
   chartsList: Chart[] = [
     {
       label: 'By Day',
@@ -27,11 +28,11 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
       key: 'top10RequestersByDayAndHour',
     },
   ];
-  constructor(private router: Router, private chartService: ChartService) {}
+  constructor(private router: Router, private chartService: ChartService,private route:ActivatedRoute) {}
 
   ngOnInit(): void {
-    const splitUrl = this.router.url.split('/');
-    this.key = splitUrl[splitUrl.length - 1];
+ this.requestersName=this.route.snapshot.queryParams['name']
+    this.key = this.route.snapshot.url[1].path;
     this.getData();
   }
 

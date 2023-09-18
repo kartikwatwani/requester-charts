@@ -21,6 +21,7 @@ export class ChartComponent {
   dayChartLabels: string[] = ChartConstant.dayChartLabels;
   requesterList: any[] = [];
   @Input() label: string = '';
+  @Input() employeersList: any[] = [];
   hourChartLabels: string[] = ChartConstant.hourChartLabels;
   id = '';
   dayList: any[] = ChartConstant.dayList;
@@ -93,7 +94,7 @@ export class ChartComponent {
       case 'top10RequestersByDayAndHour':
         setTimeout(() => {
           this.prepareTop10Requester();
-        }, 1000);
+        }, 1500);
 
         break;
     }
@@ -127,6 +128,25 @@ export class ChartComponent {
     }
     requestersResult.sort((a, b) => b.value - a.value);
     this.requesterList = requestersResult;
+    this.mappedNameForEmployer();
+  }
+
+  mappedNameForEmployer() {
+    this.requesterList.forEach((requester) => {
+      const index = this.employeersList.findIndex(
+        (item) => item.key === requester.name
+      );
+      if (index > -1) {
+        const obj = { ...this.employeersList[index] };
+        delete obj.key;
+        const values = Object.values(obj);
+        let concatenatedString = values.join('').replace(/ +/g, ' ');
+        if (concatenatedString.charAt(0) === ' ') {
+          concatenatedString = concatenatedString.slice(1);
+        }
+        requester.requestersName = concatenatedString;
+      }
+    });
   }
 
   onDayChange() {
@@ -143,7 +163,9 @@ export class ChartComponent {
   }
 
   getRequesterDetail(item) {
-    this.router.navigate([`/requester-analysis/${item.name}`]);
+    this.router.navigate([`/requester-analysis/${item.name}`], {
+      queryParams: { name: item.requestersName },
+    });
   }
   onHourChange() {
     switch (this.key) {
@@ -334,11 +356,8 @@ export class ChartComponent {
     } else if (this.key === 'byHour') {
       top10RequestersByHour = this.hoursWiseRequestersCounts;
     }
-    console.log(top10RequestersByDay, 'top10RequestersByDay');
-
     return array;
   }
 }
-
 
 //TODO: Currently ID of the requester e.g. TPU3OO8KUVWDSZPV is visible in the top 10 table we need to replace it with the requester name. This data will be fetched from /req_id_to_name_mapping endpoint on firebase. sample data is availble in the assets folder.

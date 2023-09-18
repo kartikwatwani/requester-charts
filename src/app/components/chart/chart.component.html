@@ -104,7 +104,7 @@
         <tbody *ngFor="let item of requesterList; let i = index">
           <tr>
             <td>{{ i + 1 }}</td>
-            <td>{{ item.name }}</td>
+            <td>{{ item.requestersName }}</td>
             <td>{{ item.value }}</td>
             <td>
               <a (click)="getRequesterDetail(item)" [queryParams]="{key}"
