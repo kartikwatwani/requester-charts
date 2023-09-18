@@ -43,8 +43,5 @@ export class BaseComponent {
 }
 
 
-//TODO: Give a main title above all charts and on all requesters page. The title should be "Requester Charts By Accept Count".
-
-//TODO: After all the charts and tables, add a new section with the title "Requester Charts By Submit Count". We will add more charts below it.
 
 
