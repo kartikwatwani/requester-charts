@@ -507,9 +507,11 @@ export class ChartService {
     if (key !== 'byRequesterID') {
       path = `${key}`;
     }
-    console.log(`/req_pre/${path}`);
-
     return this.db.list(`/req_pre/${path}`);
+  }
+
+  getEmployeeName(): AngularFireList<any> {
+    return this.db.list(`/req_id_to_name_mapping`);
   }
 
   customizeColors(data: number[]): string[] {

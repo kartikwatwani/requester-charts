@@ -1,8 +1,20 @@
 <div
   class="container"
-  style="display: flex; justify-content: space-between; flex-wrap: wrap;    padding: 0px 16px 0px 16px;"
+  style="
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 16px 0px 16px;
+  "
+  *ngIf="requesterList.length>0"
 >
-<div *ngFor="let chart of chartsList">
-  <app-chart [key]="chart.key" [label]="chart.label"></app-chart>
+  <div *ngFor="let chart of chartsList">
+    <app-chart [key]="chart.key" [label]="chart.label" [employeersList]="requesterList"></app-chart>
+  </div>
 </div>
+<div style=" padding: 0px 16px 0px 16px;margin-top: 10px;
+">
+  <h2>
+    Requester Charts By Submit Count
+  </h2>
 </div>
