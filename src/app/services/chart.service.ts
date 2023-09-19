@@ -509,6 +509,13 @@ export class ChartService {
     }
     return this.db.list(`/req_pre/${path}`);
   }
+  getAllSubmitCount(key: string): AngularFireList<any> {
+    let path = `${key}`;
+    if (key !== 'byRequesterID') {
+      path = `${key}`;
+    }
+    return this.db.list(`/req_pre_by_submit_time/${path}`);
+  }
 
   getEmployeeName(): AngularFireList<any> {
     return this.db.list(`/req_id_to_name_mapping`);

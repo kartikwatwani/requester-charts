@@ -61,7 +61,6 @@ export class BaseComponent implements OnInit {
         )
     ).then((data) => {
       this.requesterList=data
-      console.log(data);
     });
   }
 }

@@ -49,10 +49,14 @@ export class RequesterDetailComponent implements OnInit {
   constructor(private chartService: ChartService) {}
 
   ngOnInit(): void {
-    const day = this.dayList.find((item) => item.id === new Date().getDay()).id;
+    const currentDate = new Date();
+    currentDate.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+    const numericDayOfWeekInLosAngeles = currentDate.getDay();
+    const numericHourInLosAngeles = currentDate.getHours();
+    const day = this.dayList.find((item) => item.id === numericDayOfWeekInLosAngeles).id;
     this.selectedDay = day;
     const hour = this.hoursList.find(
-      (item) => String(item.value) === String(new Date().getHours())
+      (item) => String(item.value) === String(numericHourInLosAngeles)
     ).value;
     this.selectedHour = hour;
     this.prepareChartData();

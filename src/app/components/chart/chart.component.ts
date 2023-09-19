@@ -55,8 +55,9 @@ export class ChartComponent {
   ngOnInit() {
     const currentDate = new Date();
     currentDate.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+    const losAngelesTime = new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
     const numericDayOfWeekInLosAngeles = currentDate.getDay();
-    const numericHourInLosAngeles = currentDate.getHours();
+    const numericHourInLosAngeles = new Date(losAngelesTime).getHours();
     const day = this.dayList.find(
       (item) => item.id === numericDayOfWeekInLosAngeles
     ).id;
@@ -97,8 +98,6 @@ export class ChartComponent {
             )
           )
       );
-      console.log(this.submitData);
-      console.log(this.data);
     }
     switch (this.key) {
       case 'byDay':
@@ -112,7 +111,7 @@ export class ChartComponent {
       case 'top10RequestersByDayAndHour':
         setTimeout(() => {
           this.prepareTop10Requester();
-        }, 2500);
+        }, 2200);
 
         break;
     }
@@ -354,7 +353,6 @@ export class ChartComponent {
 
   calculateTotalTasksPerPeriodForRequesters(data: any = this.data) {
     const array: any = [];
-
     const periodList = this.key === 'byDay' ? this.dayCount : this.hourCount;
     periodList.forEach((period) => {
       const index = data.findIndex((item: any) => item.key === String(period));
@@ -385,9 +383,7 @@ export class ChartComponent {
   }
 }
 
-
 //FIXME: For the select options of day and hour we need to use timezone of LosAngeles for current selection. that is,  when the app loads we want by default the select options to be current day and hour of Los Angeles Time Zone not Indian Time zone.
-
 
 //TODO: Add all charts and tables for submit time like we have for accept time. The data will be queried from 'req_pre_by_submit_time' from firebase. The sample data for this is available in the assets folder. Incorpate all the 4 charts for all requesters in the same chart that we created for accept time by adding a bar for submit time.
 
