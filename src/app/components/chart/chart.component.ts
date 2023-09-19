@@ -383,8 +383,7 @@ export class ChartComponent {
   }
 }
 
-//FIXME: For the select options of day and hour we need to use timezone of LosAngeles for current selection. that is,  when the app loads we want by default the select options to be current day and hour of Los Angeles Time Zone not Indian Time zone.
 
-//TODO: Add all charts and tables for submit time like we have for accept time. The data will be queried from 'req_pre_by_submit_time' from firebase. The sample data for this is available in the assets folder. Incorpate all the 4 charts for all requesters in the same chart that we created for accept time by adding a bar for submit time.
+//TODO: Modify tables to incorporate data for both accept and submit time. The data for submit time will be queried from 'req_pre_by_submit_time' endpoint on firebase. The sample data for submit time is available in the assets folder. Use percentages instead of count in the table.
 
-//TODO: Remove count in table and replace it with accept percentage and submit percentage in all tables.
+
