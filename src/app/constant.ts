@@ -35,22 +35,24 @@ export class ChartConstant {
     '11PM-12AM',
   ];
   static dayChartLabels: any[] = [
+    'Sunday',
     'Monday',
     'Tuesday',
     'Wednesday',
     'Thursday',
     'Friday',
     'Staturday',
-    'Sunday',
+
   ];
   static dayList: any[] = [
+    { name: 'Sunday', id: 0 },
     { name: 'Monday', id: 1 },
     { name: 'Tuesday', id: 2 },
     { name: 'Wednesday', id: 3 },
     { name: 'Thursday', id: 4 },
     { name: 'Friday', id: 5 },
     { name: 'Staturday', id: 6 },
-    { name: 'Sunday', id: 0 },
+  
   ];
   static hoursList: any[] = [
     { name: '12AM-1AM', value: '0' },
