@@ -34,6 +34,7 @@ export class ChartComponent {
   // selectedHour = this.hoursList.find(item=>item.id===new Date().getDate).id;
   selectedDay = '';
   data: any = [];
+  submitData: any[] = [];
   dayWiseRequesterCounts: any = [];
   hoursWiseRequestersCounts: any = [];
   chartType = ChartConstant.chartType;
@@ -52,13 +53,18 @@ export class ChartComponent {
   ) {}
 
   ngOnInit() {
-    const day = this.dayList.find((item) => item.id === new Date().getDay()).id;
+    const currentDate = new Date();
+    currentDate.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+    const numericDayOfWeekInLosAngeles = currentDate.getDay();
+    const numericHourInLosAngeles = currentDate.getHours();
+    const day = this.dayList.find(
+      (item) => item.id === numericDayOfWeekInLosAngeles
+    ).id;
     this.selectedDay = day;
     const hour = this.hoursList.find(
-      (item) => String(item.value) === String(new Date().getHours())
+      (item) => String(item.value) === String(numericHourInLosAngeles)
     ).value;
     this.selectedHour = hour;
-
     this.getData();
   }
 
@@ -81,6 +87,18 @@ export class ChartComponent {
             )
           )
       );
+      this.submitData = await firstValueFrom(
+        this.chartService
+          .getAllSubmitCount(this.databasePath)
+          .snapshotChanges()
+          .pipe(
+            map((changes) =>
+              changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
+            )
+          )
+      );
+      console.log(this.submitData);
+      console.log(this.data);
     }
     switch (this.key) {
       case 'byDay':
@@ -94,7 +112,7 @@ export class ChartComponent {
       case 'top10RequestersByDayAndHour':
         setTimeout(() => {
           this.prepareTop10Requester();
-        }, 1500);
+        }, 2500);
 
         break;
     }
@@ -217,35 +235,43 @@ export class ChartComponent {
     this.chartData = [
       {
         data: [],
-        label: this.getMainChartLabel(),
+        label: this.getMainChartLabel('By Accept'),
+        backgroundColor: [],
+        chartType: this.chartType,
+      },
+      {
+        data: [],
+        label: this.getMainChartLabel('By Submit'),
         backgroundColor: [],
         chartType: this.chartType,
       },
     ];
 
-    this.chartData[0].data = this.prepareDataForChart();
+    this.chartData[0].data = this.prepareDataForChart(this.data);
     this.chartData[0].backgroundColor = '#1074f6';
+    this.chartData[1].data = this.prepareDataForChart(this.submitData);
+    this.chartData[1].backgroundColor = 'orange';
   }
 
-  getMainChartLabel() {
+  getMainChartLabel(value = 'By Accept') {
     switch (this.key) {
       case 'byDay':
-        return 'Day Wise Percentage';
+        return value;
       case 'byHour':
-        return 'Hour Wise Percentage';
+        return value;
       case 'byDayAndHour':
-        return 'Comparison of Hours Across All Days';
+        return value;
       case 'byDayAndHourForAllRequesters':
-        return 'Day and Hour Wise Percentage';
+        return value;
     }
   }
 
-  prepareDataForChart() {
+  prepareDataForChart(data?) {
     switch (this.key) {
       case 'byDay':
       case 'byHour':
         const totalTasksForEachPeriod =
-          this.calculateTotalTasksPerPeriodForRequesters();
+          this.calculateTotalTasksPerPeriodForRequesters(data);
         const totalTasksAcrossAllPeriods = totalTasksForEachPeriod.reduce(
           (accumulator: number, currentValue: number) =>
             accumulator + currentValue,
@@ -259,7 +285,7 @@ export class ChartComponent {
         return percentageOfTotalTasksPerPeriod;
       case 'byDayAndHour':
         const array: number[] = [];
-        const totalHourCounts = this.data
+        const totalHourCounts = data
           .map((item) => {
             return item[this.selectedHour].counts;
           })
@@ -273,11 +299,9 @@ export class ChartComponent {
           }, 0);
         top10RequestersByDayAndHour = this.data;
         this.dayCount.forEach((day) => {
-          const index = this.data.findIndex(
-            (item: any) => item.key === String(day)
-          );
+          const index = data.findIndex((item: any) => item.key === String(day));
           if (index > -1) {
-            const selectedHourData: any = this.data[index][this.selectedHour];
+            const selectedHourData: any = data[index][this.selectedHour];
             if (selectedHourData) {
               const selectedHourTotal: any = Object.values(
                 selectedHourData.counts
@@ -298,7 +322,7 @@ export class ChartComponent {
         return array;
       case 'byDayAndHourForAllRequesters':
         const newArray: number[] = [];
-        const chartData = this.data[this.selectedDay];
+        const chartData = data[this.selectedDay];
         const totalCountOfHour = Object.values(chartData)
           .map((item: any) => {
             return item.counts;
@@ -330,6 +354,7 @@ export class ChartComponent {
 
   calculateTotalTasksPerPeriodForRequesters(data: any = this.data) {
     const array: any = [];
+
     const periodList = this.key === 'byDay' ? this.dayCount : this.hourCount;
     periodList.forEach((period) => {
       const index = data.findIndex((item: any) => item.key === String(period));
@@ -363,6 +388,5 @@ export class ChartComponent {
 //TODO: Currently ID of the requester e.g. TPU3OO8KUVWDSZPV is visible in the top 10 table we need to replace it with the requester name. This data will be fetched from /req_id_to_name_mapping endpoint on firebase. sample data is availble in the assets folder.
 
 //FIXME: For the select options of day and hour we need to use timezone of LosAngeles for current selection. that is,  when the app loads we want by default the select options to be current day and hour of Los Angeles Time Zone not Indian Time zone.
-
 
 //TODO: Add all charts and tables for submit time like we have for accept time. The data will be queried from 'req_pre_by_submit_time' from firebase. The sample data for this is available in the assets folder. First try to incorpate the charts for byDay, byHour and byDayAndHour in the same chart for accept time by adding a bar for submit time. If it is not possible, then add charts and tables for submit time at the end of existing charts and tables by giving a heading "Requesters Analysis by Submit Time".
