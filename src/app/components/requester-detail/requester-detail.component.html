@@ -15,7 +15,7 @@
         <mat-select
           name="selectedDay"
           [(ngModel)]="selectedDay"
-          (selectionChange)="prepareChartData()"
+          (selectionChange)="prepareData()"
         >
           <mat-option [value]="item.id" *ngFor="let item of dayList"
             >{{ item.name }}</mat-option
