@@ -45,6 +45,7 @@ export class RequesterDetailComponent implements OnInit {
   dayChartLabels: string[] = ChartConstant.dayChartLabels;
   chartOptions = ChartConstant.chartOptions;
   @Input() filterKey = '';
+  @Input() submitData: any = {};
   dayCount = ChartConstant.dayCount;
   constructor(private chartService: ChartService) {}
 
@@ -53,13 +54,30 @@ export class RequesterDetailComponent implements OnInit {
     currentDate.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
     const numericDayOfWeekInLosAngeles = currentDate.getDay();
     const numericHourInLosAngeles = currentDate.getHours();
-    const day = this.dayList.find((item) => item.id === numericDayOfWeekInLosAngeles).id;
+    const day = this.dayList.find(
+      (item) => item.id === numericDayOfWeekInLosAngeles
+    ).id;
     this.selectedDay = day;
     const hour = this.hoursList.find(
       (item) => String(item.value) === String(numericHourInLosAngeles)
     ).value;
     this.selectedHour = hour;
-    this.prepareChartData();
+    this.prepareData();
+  }
+
+  prepareData() {
+    this.chartData = [
+      {
+        data: this.prepareChartData(this.chartDetail),
+        label: 'By Accept',
+        backgroundColor: '#1074f6',
+      },
+      {
+        data: this.prepareChartData(this.submitData),
+        label: 'By Submit',
+        backgroundColor: 'orange',
+      },
+    ];
   }
 
   getMainChartLabel() {
@@ -73,51 +91,14 @@ export class RequesterDetailComponent implements OnInit {
     }
   }
 
-  prepareDataForHour() {
-    this.chartData = [
-      {
-        data: [],
-        label: ' Hour Wise Percentage',
-        backgroundColor: [],
-      },
-    ];
-    const array: any[] = [];
-    if (Array.isArray(this.chartDetail.LosAngeles.byHour)) {
-      this.hourCount.forEach((item: any, index) => {
-        array.push(this.chartDetail.LosAngeles.byHour[index] || 0);
-      });
-      const total = array.reduce(
-        (accumulator: number, currentValue: number) =>
-          accumulator + currentValue,
-        0
-      );
-      const newArray: number[] = [];
-      array.forEach((element: number) => {
-        element = Math.round((element / total) * 100);
-        newArray.push(element);
-      });
-
-      this.chartData[0].data = newArray;
-      this.chartData[0].label = 'Hour Wise percentage';
-      this.chartData[0].backgroundColor = '#1074f6';
-    }
-  }
-
-  prepareChartData() {
-    this.chartData = [
-      {
-        data: [],
-        label: this.getMainChartLabel(),
-        backgroundColor: [],
-      },
-    ];
+  prepareChartData(chartDetail) {
     let array: any[] = [];
     const newArray: number[] = [];
     switch (this.filterKey) {
       case 'top10RequestersByDay':
-        if (this.chartDetail && this.chartDetail.LosAngeles.byDay) {
+        if (chartDetail && chartDetail.LosAngeles.byDay) {
           this.dayCount.forEach((_, index) => {
-            array.push(this.chartDetail.LosAngeles.byDay[index] || 0);
+            array.push(chartDetail.LosAngeles.byDay[index] || 0);
           });
           const total = array.reduce(
             (accumulator: number, currentValue: number) =>
@@ -128,15 +109,12 @@ export class RequesterDetailComponent implements OnInit {
             element = Math.round((element / total) * 100);
             newArray.push(element);
           });
-          this.chartData[0].data = newArray;
-          this.chartData[0].label = 'Day Wise percentage';
-          this.chartData[0].backgroundColor = '#1074f6';
         }
-        break;
+        return array;
       case 'top10RequestersByHour':
-        if (this.chartDetail && this.chartDetail.LosAngeles.byHour) {
+        if (chartDetail && chartDetail.LosAngeles.byHour) {
           this.hourCount.forEach((_, index) => {
-            array.push(this.chartDetail.LosAngeles.byHour[index] || 0);
+            array.push(chartDetail.LosAngeles.byHour[index] || 0);
           });
           const total = array.reduce(
             (accumulator: number, currentValue: number) =>
@@ -147,23 +125,19 @@ export class RequesterDetailComponent implements OnInit {
             element = Math.round((element / total) * 100);
             newArray.push(element);
           });
-          this.chartData[0].data = newArray;
-          this.chartData[0].label = 'Hour Wise percentage';
-          this.chartData[0].backgroundColor = '#1074f6';
         }
-
-        break;
+        return array;
       case 'top10RequestersByDayAndHour':
         this.chartData[0].data = [];
         array = [];
         this.dayCount.forEach((day) => {
           if (
-            this.chartDetail &&
-            this.chartDetail.LosAngeles.byDayAndHour[day] &&
+            chartDetail &&
+            chartDetail.LosAngeles.byDayAndHour[day] &&
             day === this.selectedDay
           ) {
             let sum: any = 0;
-            let selectedDay = this.chartDetail.LosAngeles.byDayAndHour[day];
+            let selectedDay = chartDetail.LosAngeles.byDayAndHour[day];
             if (Array.isArray(selectedDay)) {
               sum = selectedDay.reduce(
                 (accumulator, currentValue) => accumulator + currentValue,
@@ -186,10 +160,7 @@ export class RequesterDetailComponent implements OnInit {
             array.push(0);
           }
         });
-        this.chartData[0].data = array;
-        this.chartData[0].backgroundColor = '#1074f6';
-        break;
+        return array;
     }
   }
 }
-

@@ -31,7 +31,6 @@ export class ChartComponent {
   @Input() key = 'byDay';
   databasePath = '';
   selectedHour = '';
-  // selectedHour = this.hoursList.find(item=>item.id===new Date().getDate).id;
   selectedDay = '';
   data: any = [];
   submitData: any[] = [];
@@ -111,7 +110,7 @@ export class ChartComponent {
       case 'top10RequestersByDayAndHour':
         setTimeout(() => {
           this.prepareTop10Requester();
-        }, 2200);
+        }, 5000);
 
         break;
     }
@@ -145,6 +144,15 @@ export class ChartComponent {
     }
     requestersResult.sort((a, b) => b.value - a.value);
     this.requesterList = requestersResult;
+    if(this.requesterList.length>0){
+    const totalRequestersCount = this.requesterList
+      .map((item) => item.value)
+      .reduce((a, b) => a + b);
+    this.requesterList.forEach((item) => {
+      item.acceptPercentage =
+        Number((item.value / totalRequestersCount) * 100).toFixed(2) + '%';
+    });
+  }
     this.mappedNameForEmployer();
   }
 

@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {  ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Chart } from '../base/base.component';
 import { ChartService } from '../../services/chart.service';
-import { map } from 'rxjs';
+import { firstValueFrom, map } from 'rxjs';
 
 @Component({
   selector: 'app-requesters-base',
@@ -12,8 +12,9 @@ import { map } from 'rxjs';
 export class RequestersBaseComponent implements OnInit, OnDestroy {
   key: string = '';
   chartData: any = {};
+  submitData:any={};
   filterKey: string = '';
-  requestersName:string=''
+  requestersName: string = '';
   chartsList: Chart[] = [
     {
       label: 'By Day',
@@ -28,28 +29,50 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
       key: 'top10RequestersByDayAndHour',
     },
   ];
-  constructor(private router: Router, private chartService: ChartService,private route:ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private chartService: ChartService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
- this.requestersName=this.route.snapshot.queryParams['name']
+    this.requestersName = this.route.snapshot.queryParams['name'];
     this.key = this.route.snapshot.url[1].path;
     this.getData();
   }
 
   ngOnDestroy() {}
 
-  getData() {
+  async getData() {
     this.chartData = {};
-    this.chartService
+  const acceptData=await firstValueFrom( this.chartService
       .getAll(`byRequesterID/${this.key}`)
       .snapshotChanges()
       .pipe(
         map((changes) =>
           changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
         )
-      )
-      .subscribe((data) => {
-        this.chartData = data[0] || {};
-      });
+      ))
+      if(acceptData.length>0){
+        this.chartData=acceptData[0];
+      }
+
+    const data = await firstValueFrom(
+      this.chartService
+        .getAllSubmitCount(`byRequesterID/${this.key}`)
+        .snapshotChanges()
+        .pipe(
+          map((changes) =>
+            changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
+          )
+        )
+    );
+    if(data.length>0){
+      this.submitData=data[0];
+
+    }
+    console.log(this.submitData);
+console.log(this.chartData);
+
   }
 }
