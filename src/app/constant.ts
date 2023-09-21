@@ -52,7 +52,7 @@ export class ChartConstant {
     { name: 'Thursday', id: 4 },
     { name: 'Friday', id: 5 },
     { name: 'Staturday', id: 6 },
-  
+
   ];
   static hoursList: any[] = [
     { name: '12AM-1AM', value: '0' },
@@ -93,6 +93,9 @@ export class ChartConstant {
     top10RequestersByDay:'top10RequestersByDay',
     top10RequestersByHour:'top10RequestersByHour',
     top10RequestersByDayAndHour:'top10RequestersByDayAndHour',
+    top10RequestersByDayForSubmit:'top10RequestersByDayForSubmit',
+    top10RequestersByHourForSubmit:'top10RequestersByHourForSubmit',
+    top10RequestersByDayAndHourForSubmit:'top10RequestersByDayAndHourForSubmit',
     byDayAndHourForAllRequesters:'byDayAndHourForAllRequesters'
   }
 }

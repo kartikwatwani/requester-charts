@@ -15,7 +15,7 @@ export class BaseComponent implements OnInit {
   ngOnInit() {
     this.getEmployeeName();
   }
-  requesterList:any[]=[]
+  requesterList: any[] = [];
   chartsList: Chart[] = [
     {
       label: 'Day Wise',
@@ -34,16 +34,28 @@ export class BaseComponent implements OnInit {
       key: 'byDayAndHourForAllRequesters',
     },
     {
-      label: 'Top 10 Requester By Day',
+      label: 'Top 10 Requester By Day  For Accept',
       key: 'top10RequestersByDay',
     },
     {
-      label: 'Top 10 Requester By Hour',
+      label: 'Top 10 Requester By Hour  For Accept',
       key: 'top10RequestersByHour',
     },
     {
-      label: 'Top 10 Requester By Day And Hour',
+      label: 'Top 10 Requester By Day And Hour  For Accept',
       key: 'top10RequestersByDayAndHour',
+    },
+    {
+      label: 'Top 10 Requester By Day For Submit',
+      key: 'top10RequestersByDayForSubmit',
+    },
+    {
+      label: 'Top 10 Requester By Hour  For Submit',
+      key: 'top10RequestersByHourForSubmit',
+    },
+    {
+      label: 'Top 10 Requester By Day And Hour  For Submit',
+      key: 'top10RequestersByDayAndHourForSubmit',
     },
   ];
 
@@ -60,10 +72,7 @@ export class BaseComponent implements OnInit {
           )
         )
     ).then((data) => {
-      this.requesterList=data
+      this.requesterList = data;
     });
   }
 }
-
-
-

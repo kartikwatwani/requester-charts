@@ -1,10 +1,12 @@
 <div
-  style="display: block;"
+  style="display: block"
   class="chart-container"
-  [ngClass]="{'section':key==='byHour'||key==='byDayAndHourForAllRequesters'}"
+  [ngClass]="{
+    section: key === 'byHour' || key === 'byDayAndHourForAllRequesters'
+  }"
 >
-  <div style="display: flex; align-items: flex-start; flex-direction: column;">
-    <h2>{{label}}</h2>
+  <div style="display: flex; align-items: flex-start; flex-direction: column">
+    <h2>{{ label }}</h2>
     <!-- <mat-form-field appearance="outline">
       <mat-label>Filters</mat-label>
       <mat-select name="key" [(ngModel)]="key" (selectionChange)="getData()">
@@ -16,9 +18,15 @@
         <mat-option value="top10RequestersByDayAndHour">Top 10 Requesters by Day & Hour</mat-option>
       </mat-select>
     </mat-form-field> -->
-    <div style="display: flex;">
+    <div style="display: flex">
       <mat-form-field
-        *ngIf="key === 'top10RequestersByDay'||key==='top10RequestersByDayAndHour'|| key==='byDayAndHourForAllRequesters'"
+        *ngIf="
+          key === 'top10RequestersByDay' ||
+          key === 'top10RequestersByDayAndHour' ||
+          key === 'top10RequestersByDayForSubmit' ||
+          key === 'top10RequestersByDayAndHourForSubmit' ||
+          key === 'byDayAndHourForAllRequesters'
+        "
         appearance="outline"
       >
         <mat-label>Day</mat-label>
@@ -27,14 +35,20 @@
           [(ngModel)]="selectedDay"
           (selectionChange)="onDayChange()"
         >
-          <mat-option [value]="item.id" *ngFor="let item of dayList"
-            >{{ item.name }}</mat-option
-          >
+          <mat-option [value]="item.id" *ngFor="let item of dayList">{{
+            item.name
+          }}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field
-        style="margin-left: 10px;"
-        *ngIf="key === 'byDayAndHour' || key === 'top10RequestersByHour'||key==='top10RequestersByDayAndHour'"
+        style="margin-left: 10px"
+        *ngIf="
+          key === 'byDayAndHour' ||
+          key === 'top10RequestersByHour' ||
+          key === 'top10RequestersByHourForSubmit' ||
+          key === 'top10RequestersByDayAndHour'||
+          key === 'top10RequestersByDayAndHourForSubmit'
+        "
         appearance="outline"
       >
         <mat-label>Hour</mat-label>
@@ -43,9 +57,9 @@
           [(ngModel)]="selectedHour"
           (selectionChange)="onHourChange()"
         >
-          <mat-option [value]="item.value" *ngFor="let item of hoursList"
-            >{{ item.name }}</mat-option
-          >
+          <mat-option [value]="item.value" *ngFor="let item of hoursList">{{
+            item.name
+          }}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
@@ -90,14 +104,23 @@
     [legend]="true"
   >
   </canvas>
-  <ng-container *ngIf="requesterList.length > 0  ;else noRequesters">
-    <div style="height: 350px; overflow: auto;">
+  <ng-container *ngIf="requesterList.length > 0; else noRequesters">
+    <div style="height: 350px; overflow: auto">
       <table class="table">
         <thead>
           <tr>
             <th scope="col">S.No</th>
             <th scope="col">Id</th>
-            <th scope="col">Accept Percentage</th>
+            <th scope="col">
+              {{
+                key === "top10RequestersByDay" ||
+                key === "top10RequestersByHour" ||
+                key === "top10RequestersByDayAndHour"
+                  ? "Accept
+              Percentage"
+                  : "Submit Percentage"
+              }}
+            </th>
             <th scope="col"></th>
           </tr>
         </thead>
@@ -118,8 +141,13 @@
   </ng-container>
   <ng-template #noRequesters>
     <p
-      style="text-align: center;"
-      *ngIf="key !=='byDay' &&key!=='byHour' && key!=='byDayAndHour' && key!=='byDayAndHourForAllRequesters'"
+      style="text-align: center"
+      *ngIf="
+        key !== 'byDay' &&
+        key !== 'byHour' &&
+        key !== 'byDayAndHour' &&
+        key !== 'byDayAndHourForAllRequesters'
+      "
     >
       No Requesters Found
     </p>

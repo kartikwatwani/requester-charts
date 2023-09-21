@@ -8,6 +8,9 @@ import { ChartConstant } from '../../constant';
 let top10RequestersByDay = [];
 let top10RequestersByHour = [];
 let top10RequestersByDayAndHour = [];
+let top10RequestersByDayForSubmit = [];
+let top10RequestersByHourForSubmit = [];
+let top10RequestersByDayAndHourForSubmit = [];
 
 @Component({
   selector: 'app-chart',
@@ -54,7 +57,9 @@ export class ChartComponent {
   ngOnInit() {
     const currentDate = new Date();
     currentDate.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
-    const losAngelesTime = new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
+    const losAngelesTime = new Date().toLocaleString('en-US', {
+      timeZone: 'America/Los_Angeles',
+    });
     const numericDayOfWeekInLosAngeles = currentDate.getDay();
     const numericHourInLosAngeles = new Date(losAngelesTime).getHours();
     const day = this.dayList.find(
@@ -110,7 +115,16 @@ export class ChartComponent {
       case 'top10RequestersByDayAndHour':
         setTimeout(() => {
           this.prepareTop10Requester();
-        }, 5000);
+        }, 3000);
+
+        break;
+
+        case ChartConstant.filterType.top10RequestersByDayForSubmit:
+          case ChartConstant.filterType.top10RequestersByHourForSubmit:
+          case ChartConstant.filterType.top10RequestersByDayAndHourForSubmit:
+        setTimeout(() => {
+          this.prepareTop10RequesterForSubmit();
+        }, 3000);
 
         break;
     }
@@ -144,15 +158,62 @@ export class ChartComponent {
     }
     requestersResult.sort((a, b) => b.value - a.value);
     this.requesterList = requestersResult;
-    if(this.requesterList.length>0){
-    const totalRequestersCount = this.requesterList
-      .map((item) => item.value)
-      .reduce((a, b) => a + b);
-    this.requesterList.forEach((item) => {
-      item.acceptPercentage =
-        Number((item.value / totalRequestersCount) * 100).toFixed(2) + '%';
-    });
+    if (this.requesterList.length > 0) {
+      const totalRequestersCount = this.requesterList
+        .map((item) => item.value)
+        .reduce((a, b) => a + b);
+      this.requesterList.forEach((item) => {
+        item.acceptPercentage =
+          Number((item.value / totalRequestersCount) * 100).toFixed(2) + '%';
+      });
+    }
+    this.mappedNameForEmployer();
   }
+  prepareTop10RequesterForSubmit() {
+    this.requesterList = [];
+    let data = [];
+    const requestersResult = [];
+    console.log(top10RequestersByDayForSubmit);
+
+    if (this.key === ChartConstant.filterType.top10RequestersByDayForSubmit) {
+      data = top10RequestersByDayForSubmit[this.selectedDay];
+    } else if (
+      this.key === ChartConstant.filterType.top10RequestersByHourForSubmit
+    ) {
+      data = top10RequestersByHourForSubmit[this.selectedHour];
+    } else if (
+      this.key === ChartConstant.filterType.top10RequestersByDayAndHourForSubmit
+    ) {
+      data =
+        top10RequestersByDayAndHourForSubmit[this.selectedDay] &&
+        top10RequestersByDayAndHourForSubmit[this.selectedDay][
+          this.selectedHour
+        ]
+          ? top10RequestersByDayAndHourForSubmit[this.selectedDay][
+              this.selectedHour
+            ].counts
+          : {};
+    }
+    if (data) {
+      for (const key in data) {
+        if (data.hasOwnProperty(key)) {
+          requestersResult.push({ name: key, value: data[key] });
+        }
+      }
+    }
+    requestersResult.sort((a, b) => b.value - a.value);
+    this.requesterList = requestersResult;
+    console.log(this.requesterList);
+
+    if (this.requesterList.length > 0) {
+      const totalRequestersCount = this.requesterList
+        .map((item) => item.value)
+        .reduce((a, b) => a + b);
+      this.requesterList.forEach((item) => {
+        item.acceptPercentage =
+          Number((item.value / totalRequestersCount) * 100).toFixed(2) + '%';
+      });
+    }
     this.mappedNameForEmployer();
   }
 
@@ -181,6 +242,12 @@ export class ChartComponent {
       case ChartConstant.filterType.top10RequestersByDayAndHour:
         this.prepareTop10Requester();
         break;
+
+      case ChartConstant.filterType.top10RequestersByDayForSubmit:
+      case ChartConstant.filterType.top10RequestersByHourForSubmit:
+      case ChartConstant.filterType.top10RequestersByDayAndHourForSubmit:
+        this.prepareTop10RequesterForSubmit();
+        break;
       case ChartConstant.filterType.byDayAndHourForAllRequesters:
         this.prepareChart();
         break;
@@ -201,6 +268,11 @@ export class ChartComponent {
       case ChartConstant.filterType.top10RequestersByHour:
       case ChartConstant.filterType.top10RequestersByDayAndHour:
         this.prepareTop10Requester();
+        break;
+      case ChartConstant.filterType.top10RequestersByDayForSubmit:
+      case ChartConstant.filterType.top10RequestersByHourForSubmit:
+      case ChartConstant.filterType.top10RequestersByDayAndHourForSubmit:
+        this.prepareTop10RequesterForSubmit();
         break;
     }
   }
@@ -254,9 +326,12 @@ export class ChartComponent {
       },
     ];
 
-    this.chartData[0].data = this.prepareDataForChart(this.data);
+    this.chartData[0].data = this.prepareDataForChart(this.data, 'Accept');
     this.chartData[0].backgroundColor = '#1074f6';
-    this.chartData[1].data = this.prepareDataForChart(this.submitData);
+    this.chartData[1].data = this.prepareDataForChart(
+      this.submitData,
+      'Submit'
+    );
     this.chartData[1].backgroundColor = 'orange';
   }
 
@@ -273,12 +348,12 @@ export class ChartComponent {
     }
   }
 
-  prepareDataForChart(data?) {
+  prepareDataForChart(data?, filterKey?) {
     switch (this.key) {
       case 'byDay':
       case 'byHour':
         const totalTasksForEachPeriod =
-          this.calculateTotalTasksPerPeriodForRequesters(data);
+          this.calculateTotalTasksPerPeriodForRequesters(data, filterKey);
         const totalTasksAcrossAllPeriods = totalTasksForEachPeriod.reduce(
           (accumulator: number, currentValue: number) =>
             accumulator + currentValue,
@@ -304,7 +379,11 @@ export class ChartComponent {
             }
             return total;
           }, 0);
-        top10RequestersByDayAndHour = this.data;
+        if (filterKey === 'Accept') {
+          top10RequestersByDayAndHour = this.data;
+        } else {
+          top10RequestersByDayAndHourForSubmit = this.data;
+        }
         this.dayCount.forEach((day) => {
           const index = data.findIndex((item: any) => item.key === String(day));
           if (index > -1) {
@@ -359,17 +438,22 @@ export class ChartComponent {
     }
   }
 
-  calculateTotalTasksPerPeriodForRequesters(data: any = this.data) {
+  calculateTotalTasksPerPeriodForRequesters(
+    data: any = this.data,
+    filterkey = 'Accept'
+  ) {
     const array: any = [];
+    const dayWiseRequesterCounts: any[] = [];
+    const hoursWiseRequestersCounts: any[] = [];
     const periodList = this.key === 'byDay' ? this.dayCount : this.hourCount;
     periodList.forEach((period) => {
       const index = data.findIndex((item: any) => item.key === String(period));
       if (index > -1) {
         let total = 0;
         if (this.key === 'byDay') {
-          this.dayWiseRequesterCounts.push(data[index].counts);
+          dayWiseRequesterCounts.push(data[index].counts);
         } else {
-          this.hoursWiseRequestersCounts.push(data[index].counts);
+          hoursWiseRequestersCounts.push(data[index].counts);
         }
         const countsData = data[index].counts;
         for (const requesterID in countsData) {
@@ -382,16 +466,19 @@ export class ChartComponent {
         array.push(0);
       }
     });
-    if (this.key === 'byDay') {
-      top10RequestersByDay = this.dayWiseRequesterCounts;
-    } else if (this.key === 'byHour') {
-      top10RequestersByHour = this.hoursWiseRequestersCounts;
+    if (this.key === 'byDay' && filterkey === 'Accept') {
+      top10RequestersByDay = dayWiseRequesterCounts;
+    }
+    if (this.key === 'byDay' && filterkey === 'Submit') {
+      top10RequestersByDayForSubmit = dayWiseRequesterCounts;
+      console.log(top10RequestersByDayForSubmit);
+    } else if (this.key === 'byHour' && filterkey === 'Accept') {
+      top10RequestersByHour = hoursWiseRequestersCounts;
+    } else {
+      top10RequestersByHourForSubmit = hoursWiseRequestersCounts;
     }
     return array;
   }
 }
 
-
 //TODO: Modify tables to incorporate data for both accept and submit time. The data for submit time will be queried from 'req_pre_by_submit_time' endpoint on firebase. The sample data for submit time is available in the assets folder. Use percentages instead of count in the table.
-
-
