@@ -1,0 +1,7480 @@
+{
+     "TPU00041402TD1J6DWT7GPM": {
+    "count": 14,
+    "lastUpdatedOn": 1618950414270,
+    "max": 150,
+    "min": 2.9220779220779223,
+    "name": "Nick Lanfranchi",
+    "wageRate": 27.217418246858077
+  },
+  "TPU00205922TLN8XQZL6YP3": {
+    "count": 1,
+    "lastUpdatedOn": 1611931171442,
+    "max": 5.070422535211268,
+    "min": 5.070422535211268,
+    "name": "Eric N Schreiber",
+    "wageRate": 5.070422535211268
+  },
+  "TPU002227822VEZZEMS9FM6": {
+    "count": 18,
+    "lastUpdatedOn": 1626212021980,
+    "max": 34.61538461538462,
+    "min": 1.5018773466833542,
+    "name": "Everyday Cognition Lab",
+    "wageRate": 6.583373423692354
+  },
+  "TPU006153821C819I8MVQC9": {
+    "count": 23,
+    "lastUpdatedOn": 1657678498299,
+    "max": 67.5,
+    "min": 9.391304347826088,
+    "name": "Justin Kline",
+    "wageRate": 32.45215059942759
+  },
+  "TPU00762738TFLQ3KIF1HV": {
+    "count": 5,
+    "lastUpdatedOn": 1586349534498,
+    "name": "Sonja",
+    "wageRate": 5.366470233307395
+  },
+  "TPU007666120SOK8M5G92Y": {
+    "count": 7,
+    "lastUpdatedOn": 1604530566872,
+    "max": 9.230769230769232,
+    "min": 0.9756124000336044,
+    "name": "Kristoffer Holten Madsen",
+    "wageRate": 3.8276643513621544
+  },
+  "TPU0116879UW95FM8EHX3M": {
+    "count": 20,
+    "lastUpdatedOn": 1603918092323,
+    "max": 12.265758091993185,
+    "min": 1.3415970744239796,
+    "name": "Molden Lab",
+    "wageRate": 4.2671211834302625
+  },
+  "TPU01260733T3OGA2224POG": {
+    "count": 7,
+    "lastUpdatedOn": 1620994124813,
+    "max": 36,
+    "min": 5,
+    "name": "John Green",
+    "wageRate": 16.569392974581138
+  },
+  "TPU0145812EJBTL4M4DE85": {
+    "count": 73,
+    "lastUpdatedOn": 1674656165934,
+    "max": 47.64705882352941,
+    "min": 0.6206896551724138,
+    "name": "kunkun",
+    "wageRate": 14.115496206518277
+  },
+  "TPU0157818U1US6CKWQ0D6": {
+    "count": 5,
+    "lastUpdatedOn": 1616703412183,
+    "max": 60,
+    "min": 2.7272727272727275,
+    "name": "Cecil Carter",
+    "wageRate": 29.545454545454543
+  },
+  "TPU01644161FIQ6KDFQPNI0": {
+    "count": 17,
+    "lastUpdatedOn": 1599841562853,
+    "max": 116.11779505209174,
+    "min": 12.619004220355857,
+    "name": "Samuel Woods",
+    "wageRate": 30.771874242118596
+  },
+  "TPU0189686329JBGUW8PLCI": {
+    "count": 16,
+    "lastUpdatedOn": 1579119641232,
+    "name": "Sohyun Lee",
+    "wageRate": 5.978097116393017
+  },
+  "TPU02083613H11QIJB1H2CW": {
+    "count": 466,
+    "lastUpdatedOn": 1656625290463,
+    "max": 419.99999999999994,
+    "min": 1.7241379310344829,
+    "name": "Jane Edco",
+    "wageRate": 20.11732243914661
+  },
+  "TPU02175072U3TJQDJX7YJO": {
+    "count": 38,
+    "lastUpdatedOn": 1623085577017,
+    "max": 83.72093023255813,
+    "min": 3.2697547683923704,
+    "name": "Christophe Bouzy",
+    "wageRate": 20.03905725616316
+  },
+  "TPU02663381B0BNW30FISLP": {
+    "count": 39,
+    "lastUpdatedOn": 1629053241541,
+    "max": 150.69767441860463,
+    "min": 7.0588235294117645,
+    "name": "Science and Technology Policy Institute",
+    "wageRate": 37.66545138750514
+  },
+  "TPU02692261YXXJ5U51APU4": {
+    "count": 25,
+    "lastUpdatedOn": 1636457155118,
+    "max": 33.64485981308411,
+    "min": 4.086265607264472,
+    "name": "veronica a. munoz",
+    "wageRate": 17.38864809881906
+  },
+  "TPU02968021MHQ7UEY3X0FX": {
+    "count": 70,
+    "lastUpdatedOn": 1649264939041,
+    "max": 87.16707021791767,
+    "min": 0.30560271646859083,
+    "name": "Children's Learning Lab",
+    "wageRate": 16.15113080745643
+  },
+  "TPU03012501MKCT41SBIDJG": {
+    "count": 42,
+    "lastUpdatedOn": 1615236737204,
+    "max": 18,
+    "min": 0.15859030837004404,
+    "name": "Tadiello Matteo",
+    "wageRate": 1.6665054052386097
+  },
+  "TPU0312140TRK4T3VB1N25": {
+    "count": 36,
+    "lastUpdatedOn": 1600358740484,
+    "max": 14.713194874903785,
+    "min": 1.1636363636363636,
+    "name": "Professor de Langhe",
+    "wageRate": 5.619331219032406
+  },
+  "TPU0350307D3JZVDNVQBKM": {
+    "count": 20,
+    "lastUpdatedOn": 1606958659919,
+    "max": 360,
+    "min": 0.9577384602491982,
+    "name": "Sara Frazier",
+    "wageRate": 27.547421460351888
+  },
+  "TPU03588111HKWMHJOTJRPX": {
+    "count": 21,
+    "lastUpdatedOn": 1583372909983,
+    "name": "Christal Acosta",
+    "wageRate": 1.7754599651716663
+  },
+  "TPU03640791MTKAN02JF3EY": {
+    "count": 2,
+    "lastUpdatedOn": 1613142176725,
+    "max": 69.23076923076924,
+    "min": 40,
+    "name": "Isaac Brown",
+    "wageRate": 54.61538461538462
+  },
+  "TPU03759411Q2FP663XHUYC": {
+    "count": 9,
+    "lastUpdatedOn": 1634920112402,
+    "max": 90,
+    "min": 4.184019370460049,
+    "name": "Kerstin",
+    "wageRate": 26.130809343813382
+  },
+  "TPU04003503OYVWKW0MY2N": {
+    "count": 3,
+    "lastUpdatedOn": 1632274344911,
+    "max": 65.45454545454545,
+    "min": 13.090909090909092,
+    "name": "Jessica Ryan",
+    "wageRate": 33.22407170294494
+  },
+  "TPU04021322ZJ49D49UL16F": {
+    "count": 14,
+    "lastUpdatedOn": 1581043632513,
+    "name": "Chimes Order Desk",
+    "wageRate": 4.092559984127985
+  },
+  "TPU04398461DDTC9M4P892E": {
+    "count": 74,
+    "lastUpdatedOn": 1627327966604,
+    "max": 189.4736842105263,
+    "min": 3.802816901408451,
+    "name": "Darcie Costello",
+    "wageRate": 38.436231558961936
+  },
+  "TPU05127962JF89F85P2RSO": {
+    "count": 244,
+    "lastUpdatedOn": 1678386794883,
+    "max": 60,
+    "min": 0.14007782101167315,
+    "name": "SCN Surveys",
+    "wageRate": 6.065835543886173
+  },
+  "TPU0537086Q48GIE76OV16": {
+    "count": 118,
+    "lastUpdatedOn": 1601577891943,
+    "max": 21.181454459872914,
+    "min": 3.2388226879529296,
+    "name": "Meli",
+    "wageRate": 8.077908901231456
+  },
+  "TPU05943091VFCVUWE7F0KX": {
+    "count": 5,
+    "lastUpdatedOn": 1592428575735,
+    "name": "Ilaria",
+    "wageRate": 7.717894629892031
+  },
+  "TPU05973031XX9FPTDLRU5H": {
+    "count": 636,
+    "lastUpdatedOn": 1688616004609,
+    "max": 300,
+    "min": 0.6838645948102275,
+    "name": "Nicholas Olson",
+    "wageRate": 11.467263666269636
+  },
+  "TPU06878781WDMN65B7ZDBN": {
+    "count": 397,
+    "lastUpdatedOn": 1633605930019,
+    "max": 257.14285714285717,
+    "min": 0.2357040578417758,
+    "name": "TPUlexandra Aguirre-Rodriguez",
+    "wageRate": 21.224114325018157
+  },
+  "TPU07665612SJXVDEHUL1KJ": {
+    "count": 1,
+    "lastUpdatedOn": 1618945236058,
+    "max": 12.893982808022923,
+    "min": 12.893982808022923,
+    "name": "Sloane Rickman",
+    "wageRate": 12.893982808022923
+  },
+  "TPU0811410KFFQESXJ8U02": {
+    "count": 15,
+    "lastUpdatedOn": 1593441310283,
+    "name": "Emily",
+    "wageRate": 1.9592331318650587
+  },
+  "TPU093608229YLLO56ED5YF": {
+    "count": 348,
+    "lastUpdatedOn": 1647425994509,
+    "max": 98.18181818181817,
+    "min": 0.3103448275862069,
+    "name": "DAPR Research Lab",
+    "wageRate": 6.503233487945991
+  },
+  "TPU1005CNV71539T": {
+    "count": 11,
+    "lastUpdatedOn": 1663251165310,
+    "max": 9,
+    "min": 0.0767590618336887,
+    "name": "Hilton Christensen",
+    "wageRate": 3.414219335109729
+  },
+  "TPU1007925279MAHTWCSMEQ": {
+    "count": 57,
+    "lastUpdatedOn": 1636506708240,
+    "max": 34.66666666666667,
+    "min": 1.570469798657718,
+    "name": "Michael Pricer",
+    "wageRate": 14.76056403489838
+  },
+  "TPU100E7JNSZR2N2": {
+    "count": 697,
+    "lastUpdatedOn": 1680284261360,
+    "max": 179.99999999999997,
+    "min": 0.1058683720885095,
+    "name": "Nirajana Mishra",
+    "wageRate": 11.047939423811961
+  },
+  "TPU100HIBG4FXJ6D": {
+    "count": 5,
+    "lastUpdatedOn": 1629964144415,
+    "max": 93.10344827586206,
+    "min": 22.736842105263158,
+    "name": "Doyeon Won",
+    "wageRate": 48.986721510058956
+  },
+  "TPU100KL7TB6FWS1": {
+    "count": 40,
+    "lastUpdatedOn": 1615660644308,
+    "max": 193.84615384615387,
+    "min": 1.6825947855052203,
+    "name": "UNT Psychology Research",
+    "wageRate": 13.873841927860862
+  },
+  "TPU10116NC57VM00": {
+    "count": 2,
+    "lastUpdatedOn": 1683303318905,
+    "max": 34.285714285714285,
+    "min": 7.346938775510205,
+    "name": "Sample Test",
+    "wageRate": 20.816326530612244
+  },
+  "TPU10119MW10LQ78": {
+    "count": 407,
+    "lastUpdatedOn": 1692236942531,
+    "max": 72,
+    "min": 0.0035197629556974774,
+    "name": "GOGOX ADMIN",
+    "wageRate": 9.078498976421233
+  },
+  "TPU101649XN8V4VY": {
+    "count": 44,
+    "lastUpdatedOn": 1692967990458,
+    "max": 82.56880733944953,
+    "min": 2.1271567005436065,
+    "name": "Joshua Otani",
+    "wageRate": 22.211583396612458
+  },
+  "TPU101B0C6MV4Y9I": {
+    "count": 890,
+    "lastUpdatedOn": 1693500481168,
+    "max": 160,
+    "min": 0.5540195193388208,
+    "name": "Research Z Lab",
+    "wageRate": 12.2372258753862
+  },
+  "TPU101B29KRZMGN7": {
+    "count": 8,
+    "lastUpdatedOn": 1576348845659,
+    "name": "Joy Love",
+    "wageRate": 3.3281065315370313
+  },
+  "TPU101FO1X26AKOJ": {
+    "count": 6,
+    "lastUpdatedOn": 1688715208270,
+    "max": 37.241379310344826,
+    "min": 25.53191489361702,
+    "name": "Hasan Koc",
+    "wageRate": 31.278929888790486
+  },
+  "TPU101JIHYFX6CP0": {
+    "count": 22,
+    "lastUpdatedOn": 1585613128035,
+    "name": "Jeff Dettmer",
+    "wageRate": 2.662012018830181
+  },
+  "TPU101N4RTFPVUG1": {
+    "count": 155,
+    "lastUpdatedOn": 1631479219755,
+    "max": 75,
+    "min": 4.1512915129151295,
+    "name": "McKenna",
+    "wageRate": 15.322278373423746
+  },
+  "TPU101VNXBJUQI9J": {
+    "count": 27,
+    "lastUpdatedOn": 1573171610794,
+    "name": "Bart Wojdynski",
+    "wageRate": 4.3218160622390345
+  },
+  "TPU1020TOKBTSQOH": {
+    "count": 3,
+    "lastUpdatedOn": 1606083516624,
+    "max": 34.61538461538462,
+    "min": 19.35483870967742,
+    "name": "Colin Moynihan",
+    "wageRate": 27.365074441687344
+  },
+  "TPU10250812HG4VIDC0B2Z3": {
+    "count": 33,
+    "lastUpdatedOn": 1666116881535,
+    "max": 26.557377049180324,
+    "min": 0.6,
+    "name": "Sungyong Chun",
+    "wageRate": 5.952393697301585
+  },
+  "TPU1029N3F7340CP": {
+    "count": 11,
+    "lastUpdatedOn": 1637245652166,
+    "max": 45,
+    "min": 10.112359550561798,
+    "name": "National Taiwan University (03734301) MingJie Tsai",
+    "wageRate": 24.87541596682661
+  },
+  "TPU102BWEFLDH70S": {
+    "count": 101,
+    "lastUpdatedOn": 1643375705254,
+    "max": 6,
+    "min": 0.1988950276243094,
+    "name": "Xinghui Wu",
+    "wageRate": 1.6244272657562062
+  },
+  "TPU102EU7ZWTXAY0": {
+    "count": 101,
+    "lastUpdatedOn": 1672421754841,
+    "max": 184.8,
+    "min": 0.8664259927797834,
+    "name": "Soyoung Lee",
+    "wageRate": 7.628456125363872
+  },
+  "TPU102GO83WWZJBR": {
+    "count": 2,
+    "lastUpdatedOn": 1588435089337,
+    "name": "Brian",
+    "wageRate": 9.196718834927077
+  },
+  "TPU102IL2EF5G4Q8": {
+    "count": 44,
+    "lastUpdatedOn": 1635115273083,
+    "max": 85.71428571428571,
+    "min": 0.8581644815256256,
+    "name": "Brandon Rodgers",
+    "wageRate": 7.70472528520826
+  },
+  "TPU102JJY721B16I": {
+    "count": 21,
+    "lastUpdatedOn": 1581556118556,
+    "name": "Robbie",
+    "wageRate": 2.5190684802580394
+  },
+  "TPU102O0I0DRF3JS": {
+    "count": 6,
+    "lastUpdatedOn": 1588617632140,
+    "name": "Oliver Hinz (Goethe University Frankfurt)",
+    "wageRate": 2.5094456368060385
+  },
+  "TPU102QZN280BN5Z": {
+    "count": 105,
+    "lastUpdatedOn": 1634882139964,
+    "max": 36,
+    "min": 0.5625,
+    "name": "Minji Kim",
+    "wageRate": 8.409504833302256
+  },
+  "TPU102S9EOXS1XGC": {
+    "count": 15,
+    "lastUpdatedOn": 1573530501574,
+    "name": "Gwen Fisher",
+    "wageRate": 10.216267663954216
+  },
+  "TPU102Z4XHQKD56Q": {
+    "count": 25,
+    "lastUpdatedOn": 1694825598532,
+    "max": 48,
+    "min": 2.09668025626092,
+    "name": "Trong V. Nguyen",
+    "wageRate": 10.807276629233163
+  },
+  "TPU1033P4QEWD9X4": {
+    "count": 74,
+    "lastUpdatedOn": 1595267860380,
+    "name": "Duke Hand Surgery",
+    "wageRate": 3.835908527056727
+  },
+  "TPU1033PXH8K71XX": {
+    "count": 120,
+    "lastUpdatedOn": 1640032877802,
+    "max": 90,
+    "min": 1.267605633802817,
+    "name": "Meiqi GUO",
+    "wageRate": 14.182828745326628
+  },
+  "TPU103FKEUGRZWHN": {
+    "count": 11,
+    "lastUpdatedOn": 1619437183065,
+    "max": 49.31506849315069,
+    "min": 1.7142857142857142,
+    "name": "Tina",
+    "wageRate": 9.002637321489606
+  },
+  "TPU103HIEWKRJVX7": {
+    "count": 2,
+    "lastUpdatedOn": 1606781345501,
+    "max": 22.881355932203387,
+    "min": 17.91044776119403,
+    "name": "Gabrielle Picard",
+    "wageRate": 20.395901846698706
+  },
+  "TPU103HNZZX39062": {
+    "count": 1,
+    "lastUpdatedOn": 1615287963389,
+    "max": 25.714285714285715,
+    "min": 25.714285714285715,
+    "name": "Marius van Bergen",
+    "wageRate": 25.714285714285715
+  },
+  "TPU103I9JVS95MD6": {
+    "count": 10,
+    "lastUpdatedOn": 1565630724573,
+    "name": "SR Gubitz",
+    "wageRate": 5.834925485716792
+  },
+  "TPU103ILJQKFFJMO": {
+    "count": 32,
+    "lastUpdatedOn": 1617208964862,
+    "max": 180,
+    "min": 2.3106546854942236,
+    "name": "TPUdriana Panting",
+    "wageRate": 39.33669106755214
+  },
+  "TPU1041OQ65REGH7": {
+    "count": 2,
+    "lastUpdatedOn": 1563726440762,
+    "name": "MC Gonzalez",
+    "wageRate": 2.8783497292820117
+  },
+  "TPU1042RK9KHCUOW": {
+    "count": 134,
+    "lastUpdatedOn": 1687830701482,
+    "max": 72,
+    "min": 0.11399620012666245,
+    "name": "WashU Plastic Surgery Research Team",
+    "wageRate": 2.6799847426509964
+  },
+  "TPU1043UU3UHID1W": {
+    "count": 62,
+    "lastUpdatedOn": 1675130349735,
+    "max": 25.71428571428571,
+    "min": 0.2535211267605634,
+    "name": "Uno Mturk",
+    "wageRate": 6.223993503275664
+  },
+  "TPU1047IHGKYG2TH": {
+    "count": 38,
+    "lastUpdatedOn": 1648312009540,
+    "max": 46.753246753246756,
+    "min": 7.346938775510205,
+    "name": "RedfinNOW WSU Survey",
+    "wageRate": 19.77484475189896
+  },
+  "TPU1049VNTIYG9FY": {
+    "count": 45,
+    "lastUpdatedOn": 1643608158218,
+    "max": 28.23529411764706,
+    "min": 0.2037191765104999,
+    "name": "Bo-Hsien Tsai",
+    "wageRate": 2.558313774931459
+  },
+  "TPU104E1LHCPTQD0": {
+    "count": 26,
+    "lastUpdatedOn": 1690764053743,
+    "max": 96.42857142857143,
+    "min": 6.01823708206687,
+    "name": "Shlomit",
+    "wageRate": 48.09044011287218
+  },
+  "TPU104FPJVORK5L": {
+    "count": 16,
+    "lastUpdatedOn": 1643248771397,
+    "max": 41.860465116279066,
+    "min": 3.585657370517928,
+    "name": "Basil Rutkowski",
+    "wageRate": 17.107681258948713
+  },
+  "TPU104JE4HZ47SO": {
+    "count": 1,
+    "lastUpdatedOn": 1604288421479,
+    "max": 0.7659574468085106,
+    "min": 0.7659574468085106,
+    "name": "Zhijun",
+    "wageRate": 0.7659574468085106
+  },
+  "TPU104W6B7EEWHOO": {
+    "count": 2,
+    "lastUpdatedOn": 1563904100143,
+    "name": "Musab sulaiman",
+    "wageRate": 0.7657085208809552
+  },
+  "TPU104WP3IBULDA7": {
+    "count": 35,
+    "lastUpdatedOn": 1654875070452,
+    "max": 98.18181818181819,
+    "min": 2.42098184263618,
+    "name": "tamar avnet",
+    "wageRate": 15.096118108846962
+  },
+  "TPU104ZEQ4W75QKR": {
+    "count": 30,
+    "lastUpdatedOn": 1624048222903,
+    "max": 150,
+    "min": 0.4603580562659847,
+    "name": "Oxana",
+    "wageRate": 26.289069964412704
+  },
+  "TPU1053TFZ0N36YJ": {
+    "count": 44,
+    "lastUpdatedOn": 1608495503741,
+    "max": 15.929203539823009,
+    "min": 2.7099322404026056,
+    "name": "Maximilian",
+    "wageRate": 6.939568950830263
+  },
+  "TPU10551078VGXO": {
+    "count": 3,
+    "lastUpdatedOn": 1571086886081,
+    "name": "TPUshley Anderson",
+    "wageRate": 1.3702581195426211
+  },
+  "TPU105658H23QYW7": {
+    "count": 10,
+    "lastUpdatedOn": 1660946405863,
+    "max": 24,
+    "min": 8.633093525179856,
+    "name": "Lore",
+    "wageRate": 17.085258533806105
+  },
+  "TPU1056P0D8KZAR5": {
+    "count": 1,
+    "lastUpdatedOn": 1579523995794,
+    "name": "Vicky De Mesmaecker",
+    "wageRate": 14.198326963806098
+  },
+  "TPU105C5FMRL64T7": {
+    "count": 259,
+    "lastUpdatedOn": 1673499566307,
+    "max": 180,
+    "min": 0.32922061591690227,
+    "name": "pielah kim",
+    "wageRate": 11.653854417356317
+  },
+  "TPU105D0IIO1D4G7": {
+    "count": 27,
+    "lastUpdatedOn": 1649873767039,
+    "max": 34.851063829787236,
+    "min": 4.218931101094656,
+    "name": "CB",
+    "wageRate": 13.121421607891774
+  },
+  "TPU105EVIYTLZOKV": {
+    "count": 67,
+    "lastUpdatedOn": 1684619356589,
+    "max": 91.83673469387756,
+    "min": 2.7411167512690353,
+    "name": "Clark",
+    "wageRate": 12.879198482845464
+  },
+  "TPU105I0FDUPVWTM": {
+    "count": 25,
+    "lastUpdatedOn": 1687782380122,
+    "max": 79.41176470588235,
+    "min": 7.040417209908735,
+    "name": "Mel Stiller",
+    "wageRate": 23.476232491403877
+  },
+  "TPU105OCIQMKKQRX": {
+    "count": 11,
+    "lastUpdatedOn": 1646886212847,
+    "max": 66.3157894736842,
+    "min": 3.197969543147208,
+    "name": "TPUnna Q.",
+    "wageRate": 15.308316489996077
+  },
+  "TPU105S8QSXKL0P5": {
+    "count": 15,
+    "lastUpdatedOn": 1631135951628,
+    "max": 90,
+    "min": 1.0153927905983653,
+    "name": "Lei Jia",
+    "wageRate": 22.93927002269967
+  },
+  "TPU105ZERVMXECWL": {
+    "count": 3,
+    "lastUpdatedOn": 1614055503648,
+    "max": 6.067415730337078,
+    "min": 2.3788546255506606,
+    "name": "Simon Herold",
+    "wageRate": 4.115062441132255
+  },
+  "TPU105ZOHWWFZAC6": {
+    "count": 193,
+    "lastUpdatedOn": 1680988054417,
+    "max": 49.090909090909086,
+    "min": 0.25263157894736843,
+    "name": "Udit Sharma",
+    "wageRate": 5.255067082571753
+  },
+  "TPU1067W1KVDFRVV": {
+    "count": 1,
+    "lastUpdatedOn": 1586902456048,
+    "name": "Dhiraj Murthy",
+    "wageRate": 2.4144626311606525
+  },
+  "TPU106DJK1BEPUY5": {
+    "count": 7,
+    "lastUpdatedOn": 1642754055980,
+    "max": 45.45454545454545,
+    "min": 3.940455341506129,
+    "name": "TPUruble",
+    "wageRate": 23.11606501435125
+  },
+  "TPU106IB8G9G1OPB": {
+    "count": 3,
+    "lastUpdatedOn": 1573573348878,
+    "name": "Sanjiv Patel",
+    "wageRate": 3.430912059262996
+  },
+  "TPU106L74W4R7PIK": {
+    "count": 81,
+    "lastUpdatedOn": 1689373268535,
+    "max": 90,
+    "min": 0.8302583025830258,
+    "name": "Mark Phelan",
+    "wageRate": 11.886031988225408
+  },
+  "TPU106SCH82LKQBT": {
+    "count": 168,
+    "lastUpdatedOn": 1638237827368,
+    "max": 756,
+    "min": 1.6231884057971016,
+    "name": "Lauren Wright",
+    "wageRate": 63.22060268552913
+  },
+  "TPU106WFVBVV7BMC": {
+    "count": 1,
+    "lastUpdatedOn": 1663742539180,
+    "max": 0.12080536912751677,
+    "min": 0.12080536912751677,
+    "name": "Laticia",
+    "wageRate": 0.12080536912751677
+  },
+  "TPU106YSLCE0D0N": {
+    "count": 339,
+    "lastUpdatedOn": 1692137822640,
+    "max": 154.28571428571428,
+    "min": 2.0316027088036117,
+    "name": "Sona Klucarova",
+    "wageRate": 10.017893009020053
+  },
+  "TPU1071LKULT0PPW": {
+    "count": 22,
+    "lastUpdatedOn": 1659573648641,
+    "max": 8.307692307692308,
+    "min": 0.39999999999999997,
+    "name": "wtrevena",
+    "wageRate": 3.1620242291394685
+  },
+  "TPU1073U5ZEHWJ2V": {
+    "count": 30,
+    "lastUpdatedOn": 1607747471084,
+    "max": 300,
+    "min": 0.901269889273987,
+    "name": "Kwanho Kim",
+    "wageRate": 29.026079145819242
+  },
+  "TPU1075OW4HTZOFU": {
+    "count": 9,
+    "lastUpdatedOn": 1629353849745,
+    "max": 50.56179775280899,
+    "min": 6.460875807609476,
+    "name": "Yu Wen Hung",
+    "wageRate": 21.0018122197218
+  },
+  "TPU1075SN9WRZR1R": {
+    "count": 1751,
+    "lastUpdatedOn": 1676474532711,
+    "max": 3599.9999999999995,
+    "min": 0.20543809473971764,
+    "name": "Ma Study",
+    "wageRate": 20.75088032818837
+  },
+  "TPU107BC6CIAQYAX": {
+    "count": 14,
+    "lastUpdatedOn": 1651819071765,
+    "max": 18,
+    "min": 1.313868613138686,
+    "name": "Cole Whitelaw",
+    "wageRate": 6.715643196726234
+  },
+  "TPU107EE6S97IVQ9": {
+    "count": 10,
+    "lastUpdatedOn": 1632508026802,
+    "max": 12.949640287769785,
+    "min": 2.5974025974025974,
+    "name": "hyee0379",
+    "wageRate": 5.361461695689082
+  },
+  "TPU107ISYGOG773X": {
+    "count": 6,
+    "lastUpdatedOn": 1640806036918,
+    "max": 22.5,
+    "min": 1.2521739130434784,
+    "name": "Karen McNeil",
+    "wageRate": 8.159418266109002
+  },
+  "TPU107IUBJHWHJG3": {
+    "count": 29,
+    "lastUpdatedOn": 1666969810575,
+    "max": 39,
+    "min": 4.875,
+    "name": "Sy Henderson",
+    "wageRate": 16.838068128297973
+  },
+  "TPU107N4K4X7ZCYF": {
+    "count": 744,
+    "lastUpdatedOn": 1640287703796,
+    "max": 90,
+    "min": 1.4173228346456694,
+    "name": "Justin",
+    "wageRate": 41.29695068232679
+  },
+  "TPU107O2PRQ7UQJQ": {
+    "count": 29,
+    "lastUpdatedOn": 1598291557281,
+    "max": 7.852923468898061,
+    "min": 0.8067621006471577,
+    "name": "Coleman Lab",
+    "wageRate": 2.6239008329139004
+  },
+  "TPU107VUN5IM7AOJ": {
+    "count": 4,
+    "lastUpdatedOn": 1574727367963,
+    "name": "Na Xiao",
+    "wageRate": 8.48616964867898
+  },
+  "TPU107ZL8SCMA0C0": {
+    "count": 19,
+    "lastUpdatedOn": 1638854976390,
+    "max": 15,
+    "min": 0.3757828810020877,
+    "name": "John Vaughn",
+    "wageRate": 3.267063362966785
+  },
+  "TPU1086XSX8A481L": {
+    "count": 16,
+    "lastUpdatedOn": 1661828498786,
+    "max": 84.70588235294117,
+    "min": 2.1739130434782608,
+    "name": "Mary Tucker",
+    "wageRate": 26.639091135896976
+  },
+  "TPU108BPLG3Q0V6L": {
+    "count": 22,
+    "lastUpdatedOn": 1694214806277,
+    "max": 72,
+    "min": 18.75,
+    "name": "TPUndrea Vocino",
+    "wageRate": 40.51519880266745
+  },
+  "TPU108CBAP1NX1IX": {
+    "count": 44,
+    "lastUpdatedOn": 1651919846568,
+    "max": 61.714285714285715,
+    "min": 5.068043172219615,
+    "name": "Tom Rodriguez",
+    "wageRate": 16.918312404341933
+  },
+  "TPU108FQAPZ76X4E": {
+    "count": 2,
+    "lastUpdatedOn": 1649437177477,
+    "max": 16.513761467889907,
+    "min": 5.438066465256798,
+    "name": "Lau",
+    "wageRate": 10.975913966573351
+  },
+  "TPU108HDKAHVRFVI": {
+    "count": 1,
+    "lastUpdatedOn": 1618460093857,
+    "max": 9.574468085106382,
+    "min": 9.574468085106382,
+    "name": "dg3116",
+    "wageRate": 9.574468085106382
+  },
+  "TPU108OGEH7QD24Z": {
+    "count": 2,
+    "lastUpdatedOn": 1573085963400,
+    "name": "TPUngiolina Broadhead",
+    "wageRate": 0.6274743963216051
+  },
+  "TPU108TYBQSLDXAJ": {
+    "count": 776,
+    "lastUpdatedOn": 1652916197680,
+    "max": 72,
+    "min": 1.2100840336134455,
+    "name": "Paul Guerrero",
+    "wageRate": 22.308785885251122
+  },
+  "TPU108VQ62ZO5PWD": {
+    "count": 3,
+    "lastUpdatedOn": 1606784770060,
+    "max": 21.599999999999998,
+    "min": 9.818181818181817,
+    "name": "TPUshis Chanda",
+    "wageRate": 14.97272727272727
+  },
+  "TPU1094CZ83P62UK": {
+    "count": 1,
+    "lastUpdatedOn": 1663133692589,
+    "max": 0,
+    "min": 0,
+    "name": "TPUmerican Proof",
+    "wageRate": 0
+  },
+  "TPU1094GH9C1NXFQ": {
+    "count": 38,
+    "lastUpdatedOn": 1632791929925,
+    "max": 38.84892086330935,
+    "min": 3.5064935064935066,
+    "name": "Matthew Kushin",
+    "wageRate": 13.780091156656004
+  },
+  "TPU109565S0F8NGE": {
+    "count": 40,
+    "lastUpdatedOn": 1631332720236,
+    "max": 90,
+    "min": 2.226591564557858,
+    "name": "Bright",
+    "wageRate": 11.578369400062243
+  },
+  "TPU109FQW20R98LK": {
+    "count": 22,
+    "lastUpdatedOn": 1588871902318,
+    "name": "TPUlayna Park",
+    "wageRate": 3.1467570874442545
+  },
+  "TPU109HHMJGNZIED": {
+    "count": 2,
+    "lastUpdatedOn": 1660379053414,
+    "max": 0,
+    "min": 0,
+    "name": "Raytheon Technologies",
+    "wageRate": 0
+  },
+  "TPU109HN4Y0IICOB": {
+    "count": 3,
+    "lastUpdatedOn": 1648746234472,
+    "max": 30,
+    "min": 0.5397301349325337,
+    "name": "Marketing Department, University of Cincinnati",
+    "wageRate": 10.459956719423252
+  },
+  "TPU109KRT2Z3RL97": {
+    "count": 1,
+    "lastUpdatedOn": 1600102606886,
+    "max": 10.690317344050046,
+    "min": 10.690317344050046,
+    "name": "Jordan T Lemanski",
+    "wageRate": 10.690317344050046
+  },
+  "TPU109MQZZ8WNEPY": {
+    "count": 3,
+    "lastUpdatedOn": 1621794725421,
+    "max": 56.84210526315789,
+    "min": 4.821428571428571,
+    "name": "JOSE CLEMENTE RICOLFE",
+    "wageRate": 24.265851484381056
+  },
+  "TPU109N6X91SWB7Z": {
+    "count": 41,
+    "lastUpdatedOn": 1635604500799,
+    "max": 96,
+    "min": 1.0835214446952597,
+    "name": "Holiday Traditions",
+    "wageRate": 24.9127471057143
+  },
+  "TPU109T33JHI1DSW": {
+    "count": 3,
+    "lastUpdatedOn": 1604956816937,
+    "max": 34.17721518987342,
+    "min": 10.953346855983773,
+    "name": "Lieke Dreijerink",
+    "wageRate": 21.38154885096648
+  },
+  "TPU10AF88PGCRMYK": {
+    "count": 5,
+    "lastUpdatedOn": 1566490303420,
+    "name": "Martin Vollmann",
+    "wageRate": 3.7246389445766286
+  },
+  "TPU10AK09F5A1RB8": {
+    "count": 9,
+    "lastUpdatedOn": 1600061859658,
+    "max": 19.084213953476045,
+    "min": 0.5241476839970396,
+    "name": "Peter Levine at Tisch College",
+    "wageRate": 7.673618135161466
+  },
+  "TPU10AMVVXIHQJJ7": {
+    "count": 2,
+    "lastUpdatedOn": 1578319815085,
+    "name": "Nathalia Gjersoe",
+    "wageRate": 7.182693116420906
+  },
+  "TPU10AUAC7DLLFC3": {
+    "count": 43,
+    "lastUpdatedOn": 1657173416196,
+    "max": 37.89473684210527,
+    "min": 0.8098987626546682,
+    "name": "bestrell",
+    "wageRate": 5.773716759171014
+  },
+  "TPU10AVMU7RKIC3Y": {
+    "count": 215,
+    "lastUpdatedOn": 1680145843499,
+    "max": 76.5,
+    "min": 0.06415199556068191,
+    "name": "VB.Research",
+    "wageRate": 13.511275894471787
+  },
+  "TPU10AW0AX45YA24": {
+    "count": 101,
+    "lastUpdatedOn": 1650377765909,
+    "max": 15.882352941176471,
+    "min": 0.6146841206602163,
+    "name": "Sprout",
+    "wageRate": 3.9270393641010397
+  },
+  "TPU10AW3Y0L9ZWTC": {
+    "count": 31,
+    "lastUpdatedOn": 1641360844645,
+    "max": 54,
+    "min": 1.4304635761589404,
+    "name": "Tobias",
+    "wageRate": 16.100842955423467
+  },
+  "TPU10AXU2JCDJ9AN": {
+    "count": 2,
+    "lastUpdatedOn": 1643651887398,
+    "max": 10.588235294117647,
+    "min": 10,
+    "name": "TPUdrianna Webster",
+    "wageRate": 10.294117647058822
+  },
+  "TPU10B4N6EL5YNJA": {
+    "count": 194,
+    "lastUpdatedOn": 1690935894714,
+    "max": 899.9999999999999,
+    "min": 1.1111111111111112,
+    "name": "Bentley University",
+    "wageRate": 33.465810344437976
+  },
+  "TPU10B67IMN3PHFT": {
+    "count": 5,
+    "lastUpdatedOn": 1608663493494,
+    "max": 400,
+    "min": 218.1818181818182,
+    "name": "Ben Mouelhi",
+    "wageRate": 304.969696969697
+  },
+  "TPU10BBOW3BTRP9Q": {
+    "count": 39,
+    "lastUpdatedOn": 1681355944834,
+    "max": 190.47619047619048,
+    "min": 4.764005293339215,
+    "name": "Kuan-Jung Huang",
+    "wageRate": 31.99036728647622
+  },
+  "TPU10BEXLYZGV1KJ": {
+    "count": 24,
+    "lastUpdatedOn": 1579809481437,
+    "name": "ZHOU Guangjiu",
+    "wageRate": 2.1787156934385195
+  },
+  "TPU10BM5JQZ63E63": {
+    "count": 6,
+    "lastUpdatedOn": 1572620376399,
+    "name": "Psychology Studies at Saint Louis University",
+    "wageRate": 3.0835204759367834
+  },
+  "TPU10BOY6VF42JZU": {
+    "count": 19,
+    "lastUpdatedOn": 1672885313644,
+    "max": 22.613065326633166,
+    "min": 2.9469548133595285,
+    "name": "IHSU",
+    "wageRate": 12.960108772591292
+  },
+  "TPU10BPY6PKLY755": {
+    "count": 1,
+    "lastUpdatedOn": 1670443986324,
+    "max": 7.783783783783783,
+    "min": 7.783783783783783,
+    "name": "BRETT R CAMPBELL",
+    "wageRate": 7.783783783783783
+  },
+  "TPU10BU4BYK6OKJN": {
+    "count": 1,
+    "lastUpdatedOn": 1575761145822,
+    "name": "Nicholas Cozad",
+    "wageRate": 1.6810371999523706
+  },
+  "TPU10BYCIFSWDYYT": {
+    "count": 143,
+    "lastUpdatedOn": 1664543635977,
+    "max": 75,
+    "min": 0.9997222993612885,
+    "name": "Colin Fisher",
+    "wageRate": 6.879495022172991
+  },
+  "TPU10BYVGG5MRG4I": {
+    "count": 29,
+    "lastUpdatedOn": 1645578428994,
+    "max": 78.54545454545455,
+    "min": 9.854014598540145,
+    "name": "Lisa",
+    "wageRate": 39.84020580767487
+  },
+  "TPU10BZ0EPVZMTMA": {
+    "count": 632,
+    "lastUpdatedOn": 1682382657147,
+    "max": 87.80487804878048,
+    "min": 1.3372956909361071,
+    "name": "vissage",
+    "wageRate": 7.800263616720089
+  },
+  "TPU10C1MXSHIVCCM": {
+    "count": 17,
+    "lastUpdatedOn": 1595285013488,
+    "name": "Stephanie Vavricek",
+    "wageRate": 5.021807478368036
+  },
+  "TPU10C22MAMUQJFH": {
+    "count": 30,
+    "lastUpdatedOn": 1649698870147,
+    "max": 173.0769230769231,
+    "min": 5.546995377503852,
+    "name": "Hannah E Reese",
+    "wageRate": 27.150343096328253
+  },
+  "TPU10C7176DSNGG7": {
+    "count": 12,
+    "lastUpdatedOn": 1651248055566,
+    "max": 13.090909090909092,
+    "min": 4.840336134453782,
+    "name": "Claire Linares",
+    "wageRate": 7.0756088729478845
+  },
+  "TPU10CA7KO43YSBN": {
+    "count": 1,
+    "lastUpdatedOn": 1618105221795,
+    "max": 165,
+    "min": 165,
+    "name": "Daniel Park",
+    "wageRate": 165
+  },
+  "TPU10CFUHHFZHT09": {
+    "count": 2,
+    "lastUpdatedOn": 1584301209846,
+    "name": "Wes Exon",
+    "wageRate": 1.3140730641061056
+  },
+  "TPU10CHU2LFKS8BU": {
+    "count": 22,
+    "lastUpdatedOn": 1600618077882,
+    "max": 21.505170798845413,
+    "min": 2.5657794581415887,
+    "name": "Cassandra Boyce",
+    "wageRate": 9.81394549043428
+  },
+  "TPU10CI2TYLTKTUR": {
+    "count": 103,
+    "lastUpdatedOn": 1680219774452,
+    "max": 99.53917050691244,
+    "min": 3.2911778150236173,
+    "name": "Corey",
+    "wageRate": 22.7838527506454
+  },
+  "TPU10CJZ1OM1L90R": {
+    "count": 5,
+    "lastUpdatedOn": 1579113747046,
+    "name": "Brady Joseph Horenstein",
+    "wageRate": 13.16608978832062
+  },
+  "TPU10CKXARCP0YPP": {
+    "count": 9,
+    "lastUpdatedOn": 1664405892693,
+    "max": 69.76744186046511,
+    "min": 21.176470588235293,
+    "name": "TPUlexa Echos Study",
+    "wageRate": 37.45646886694455
+  },
+  "TPU10CQBFW6UZOZE": {
+    "count": 702,
+    "lastUpdatedOn": 1686764785527,
+    "max": 179.99999999999997,
+    "min": 0.39926062846580407,
+    "name": "Ran123",
+    "wageRate": 8.159621609605232
+  },
+  "TPU10CSH8EXB2PGR": {
+    "count": 400,
+    "lastUpdatedOn": 1637646661485,
+    "max": 450,
+    "min": 1.0477299185098952,
+    "name": "Leonie Gayer",
+    "wageRate": 22.499796121974054
+  },
+  "TPU10D9PFJ5O5FOB": {
+    "count": 5,
+    "lastUpdatedOn": 1588770733139,
+    "name": "David Murungi",
+    "wageRate": 7.556607387342059
+  },
+  "TPU10DAQPO9VPC56": {
+    "count": 5,
+    "lastUpdatedOn": 1615997647762,
+    "max": 46.55172413793103,
+    "min": 10.246679316888045,
+    "name": "Sandra Ha",
+    "wageRate": 36.50076449513315
+  },
+  "TPU10DJVYQ1N1QA": {
+    "count": 16,
+    "lastUpdatedOn": 1652084113576,
+    "max": 67.66917293233082,
+    "min": 5.893587994542974,
+    "name": "Cherie",
+    "wageRate": 20.295417034597833
+  },
+  "TPU10DKLYR67H4A5": {
+    "count": 122,
+    "lastUpdatedOn": 1602081001482,
+    "max": 360,
+    "min": 1.0695506505764654,
+    "name": "Willie Choi",
+    "wageRate": 16.256638624119734
+  },
+  "TPU10DLO7R87WZ3E": {
+    "count": 4,
+    "lastUpdatedOn": 1665388880403,
+    "max": 2.25,
+    "min": 0.21686746987951808,
+    "name": "DEANA NARAINE",
+    "wageRate": 0.7794325463896095
+  },
+  "TPU10DRGYYUX5W09": {
+    "count": 134,
+    "lastUpdatedOn": 1684502835506,
+    "max": 91.91489361702126,
+    "min": 1.0419681620839363,
+    "name": "Nathan Betancourt",
+    "wageRate": 11.546740380390448
+  },
+  "TPU10DT248P327P6": {
+    "count": 2,
+    "lastUpdatedOn": 1590769112364,
+    "name": "HAOYUE ZHU",
+    "wageRate": 1.8288628100622026
+  },
+  "TPU10DT80PLLHSUE": {
+    "count": 8,
+    "lastUpdatedOn": 1621511961625,
+    "max": 63.52941176470588,
+    "min": 0.6861499364675985,
+    "name": "nicola beckett",
+    "wageRate": 9.931940804804153
+  },
+  "TPU10E6V26L4V9OA": {
+    "count": 8,
+    "lastUpdatedOn": 1609372247849,
+    "max": 757.8947368421052,
+    "min": 6.8243825710956125,
+    "name": "Kazunori Yamaguchi",
+    "wageRate": 163.00133061202516
+  },
+  "TPU10EE7M6DMDDE0": {
+    "count": 20,
+    "lastUpdatedOn": 1663158677988,
+    "max": 93.10344827586206,
+    "min": 1.7088607594936709,
+    "name": "dulle_uni_bremen",
+    "wageRate": 14.938244050200641
+  },
+  "TPU10EHNLG17TI7Q": {
+    "count": 1,
+    "lastUpdatedOn": 1654438935186,
+    "max": 1.846153846153846,
+    "min": 1.846153846153846,
+    "name": "Kenny Soll",
+    "wageRate": 1.846153846153846
+  },
+  "TPU10EMLVJOI8K2E": {
+    "count": 24,
+    "lastUpdatedOn": 1591044667010,
+    "name": "K Baum",
+    "wageRate": 15.931812542000175
+  },
+  "TPU10EMRWQ5MRTRG": {
+    "count": 2,
+    "lastUpdatedOn": 1574207737924,
+    "name": "Derek Moskowitz",
+    "wageRate": 2.5598058544060684
+  },
+  "TPU10ESJFW5WQOPH": {
+    "count": 2,
+    "lastUpdatedOn": 1635043195828,
+    "max": 3.3749999999999996,
+    "min": 1.7532467532467533,
+    "name": "Oreo",
+    "wageRate": 2.5641233766233764
+  },
+  "TPU10ETYSUYM751D": {
+    "count": 35,
+    "lastUpdatedOn": 1668523090010,
+    "max": 88.23529411764706,
+    "min": 1.7484215638659542,
+    "name": "NYU",
+    "wageRate": 10.625901802150176
+  },
+  "TPU10EUDSDBW6B9": {
+    "count": 12,
+    "lastUpdatedOn": 1616641140089,
+    "max": 195,
+    "min": 11.670822942643392,
+    "name": "Nick Zotto",
+    "wageRate": 81.50279640966298
+  },
+  "TPU10EUX79TOLRRJ": {
+    "count": 20,
+    "lastUpdatedOn": 1667162920576,
+    "max": 3.7795478271643765,
+    "min": 0.6615214994487321,
+    "name": "Eduardo Rivera",
+    "wageRate": 2.5883326534435045
+  },
+  "TPU10EXRYM6C7PR4": {
+    "count": 4,
+    "lastUpdatedOn": 1619033944035,
+    "max": 123.28767123287672,
+    "min": 31.25,
+    "name": "Yusuf Oc",
+    "wageRate": 67.27030812408172
+  },
+  "TPU10EZ5LAAI0A8C": {
+    "count": 99,
+    "lastUpdatedOn": 1619713098279,
+    "max": 163.63636363636363,
+    "min": 5.78468130690948,
+    "name": "R-House Lab CHS",
+    "wageRate": 15.19324989347612
+  },
+  "TPU10F9MFV3YKFYA": {
+    "count": 28,
+    "lastUpdatedOn": 1648256285146,
+    "max": 104.34782608695653,
+    "min": 1.3407666429177167,
+    "name": "LANI Lab",
+    "wageRate": 15.35449794311072
+  },
+  "TPU10FEUHY7ZX3OX": {
+    "count": 6,
+    "lastUpdatedOn": 1621371301327,
+    "max": 140,
+    "min": 2.437137330754352,
+    "name": "Mary B.",
+    "wageRate": 27.77517137041522
+  },
+  "TPU10FI7A65JIFCA": {
+    "count": 567,
+    "lastUpdatedOn": 1641177776634,
+    "max": 144,
+    "min": 0.39237057220708454,
+    "name": "some-chatbot",
+    "wageRate": 23.325915655182204
+  },
+  "TPU10FQTYWT89ZW7": {
+    "count": 10,
+    "lastUpdatedOn": 1638640015799,
+    "max": 87.80487804878048,
+    "min": 21.114369501466275,
+    "name": "michelle",
+    "wageRate": 55.45220625040889
+  },
+  "TPU10FSSLD5VR4I7": {
+    "count": 141,
+    "lastUpdatedOn": 1614996459976,
+    "max": 154.28571428571428,
+    "min": 4.082604701799748,
+    "name": "Detox Turk",
+    "wageRate": 18.715025784081075
+  },
+  "TPU10GHGE2Y0RW6B": {
+    "count": 215,
+    "lastUpdatedOn": 1686760811264,
+    "max": 90,
+    "min": 1.9522776572668112,
+    "name": "IlyoungJu",
+    "wageRate": 11.040520621840495
+  },
+  "TPU10GM75H0GN6CF": {
+    "count": 76,
+    "lastUpdatedOn": 1673465124764,
+    "max": 91.52542372881355,
+    "min": 0.8680016961396106,
+    "name": "Dr. Ralph L. Piedmont",
+    "wageRate": 11.085034419606796
+  },
+  "TPU10GMR6HEHR57R": {
+    "count": 16,
+    "lastUpdatedOn": 1578945909775,
+    "name": "Denise Martz",
+    "wageRate": 3.777033234129333
+  },
+  "TPU10GQGIBD64UY7": {
+    "count": 29,
+    "lastUpdatedOn": 1685249695223,
+    "max": 3.2,
+    "min": 0.22099447513812157,
+    "name": "jsimpson",
+    "wageRate": 1.0054734961439826
+  },
+  "TPU10GRJ2EQG5ZZW": {
+    "count": 509,
+    "lastUpdatedOn": 1683311398410,
+    "max": 96.42857142857143,
+    "min": 0.48154093097913325,
+    "name": "PATH",
+    "wageRate": 12.478512237071904
+  },
+  "TPU10GSGOWDG7TTK": {
+    "count": 50,
+    "lastUpdatedOn": 1661740539191,
+    "max": 90,
+    "min": 1.745877788554801,
+    "name": "Sinh Tran",
+    "wageRate": 26.63268076862486
+  },
+  "TPU10GV5N2ZGPZAV": {
+    "count": 10,
+    "lastUpdatedOn": 1664049746058,
+    "max": 25.71428571428571,
+    "min": 0.4295942720763723,
+    "name": "Cecilia Gao",
+    "wageRate": 15.125735293629479
+  },
+  "TPU10GV6HGYBZ1LV": {
+    "count": 8,
+    "lastUpdatedOn": 1622679178940,
+    "max": 18.181818181818183,
+    "min": 4.9655172413793105,
+    "name": "Fidek Lab",
+    "wageRate": 9.341361275159834
+  },
+  "TPU10GV8J98USH5Y": {
+    "count": 22,
+    "lastUpdatedOn": 1657308666211,
+    "max": 2.278481012658228,
+    "min": 0.024439918533604887,
+    "name": "EM LLC",
+    "wageRate": 0.764542275135246
+  },
+  "TPU10GXHDTXO26ZF": {
+    "count": 65,
+    "lastUpdatedOn": 1660711584783,
+    "max": 81.81818181818181,
+    "min": 1.7408123791102514,
+    "name": "Hongnai Zhang",
+    "wageRate": 13.654549442969806
+  },
+  "TPU10GXSJ3DPMBGA": {
+    "count": 5472,
+    "lastUpdatedOn": 1695415610027,
+    "max": 71.99999999999999,
+    "min": 0.26277372262773724,
+    "name": "Engineering",
+    "wageRate": 7.8050147558505
+  },
+  "TPU10H0Y7EF1R4PT": {
+    "count": 83,
+    "lastUpdatedOn": 1649888454988,
+    "max": 94.73684210526315,
+    "min": 2.5622775800711746,
+    "name": "buddyj234",
+    "wageRate": 31.774671834945416
+  },
+  "TPU10H1I3CBLY8AT": {
+    "count": 8,
+    "lastUpdatedOn": 1634920075663,
+    "max": 56.84210526315789,
+    "min": 8.212927756653992,
+    "name": "Robert",
+    "wageRate": 27.499487940726183
+  },
+  "TPU10H63EUJ9GEDB": {
+    "count": 4,
+    "lastUpdatedOn": 1622080723850,
+    "max": 12,
+    "min": 7.783783783783784,
+    "name": "TPUJ Briggs",
+    "wageRate": 9.509488949797037
+  },
+  "TPU10HAAVCL3KIOA": {
+    "count": 10,
+    "lastUpdatedOn": 1623783296668,
+    "max": 153.1914893617021,
+    "min": 4.831799789360527,
+    "name": "Markus Brauer",
+    "wageRate": 24.639134222204085
+  },
+  "TPU10HCM1DOP1OIZ": {
+    "count": 137,
+    "lastUpdatedOn": 1691435232676,
+    "max": 87.80487804878048,
+    "min": 1.643835616438356,
+    "name": "rama k jayanti",
+    "wageRate": 12.67677429379347
+  },
+  "TPU10HI0APGFJW5X": {
+    "count": 2,
+    "lastUpdatedOn": 1568517584643,
+    "name": "Madhur",
+    "wageRate": 2.8359382128452495
+  },
+  "TPU10HIKOKD0PC3J": {
+    "count": 23,
+    "lastUpdatedOn": 1634340808794,
+    "max": 55.102040816326536,
+    "min": 2.63671875,
+    "name": "Melanie Lauener",
+    "wageRate": 15.869469427527095
+  },
+  "TPU10HTQZ20WGNJY": {
+    "count": 132,
+    "lastUpdatedOn": 1618923264297,
+    "max": 360,
+    "min": 1.549392702618603,
+    "name": "CBE Research",
+    "wageRate": 37.12496413249526
+  },
+  "TPU10HXZBAWOE618": {
+    "count": 10,
+    "lastUpdatedOn": 1571158327393,
+    "name": "Leslie A. Jeng",
+    "wageRate": 2.6495663140835144
+  },
+  "TPU10I3YBJNQQYI6": {
+    "count": 4,
+    "lastUpdatedOn": 1607970299560,
+    "max": 28.421052631578945,
+    "min": 14.025974025974026,
+    "name": "Cenny Wenner",
+    "wageRate": 19.84777065040223
+  },
+  "TPU10I6C2K39JKEM": {
+    "count": 109,
+    "lastUpdatedOn": 1615579702913,
+    "max": 180,
+    "min": 2.167369054786273,
+    "name": "MASARU SATO",
+    "wageRate": 35.214943297601586
+  },
+  "TPU10I6HW2PKO5XC": {
+    "count": 101,
+    "lastUpdatedOn": 1656951098044,
+    "max": 27.272727272727273,
+    "min": 2.290465527221335,
+    "name": "Zo Ebelt",
+    "wageRate": 8.542779573621118
+  },
+  "TPU10I7XTSACJED8": {
+    "count": 41,
+    "lastUpdatedOn": 1618456417696,
+    "max": 160,
+    "min": 1.9672131147540983,
+    "name": "psych257lab",
+    "wageRate": 30.180344614975866
+  },
+  "TPU10IAR1FYIKH6I": {
+    "count": 14,
+    "lastUpdatedOn": 1634939149920,
+    "max": 47.368421052631575,
+    "min": 7.280681754514599,
+    "name": "Zoe Walker",
+    "wageRate": 11.180578584917583
+  },
+  "TPU10IAZHZZ8G408": {
+    "count": 214,
+    "lastUpdatedOn": 1666188067121,
+    "max": 156.52173913043478,
+    "min": 0.9414225941422595,
+    "name": "mengzi",
+    "wageRate": 15.13505959614548
+  },
+  "TPU10IEFQTYZGQL9": {
+    "count": 24,
+    "lastUpdatedOn": 1618513634969,
+    "max": 144,
+    "min": 12.857142857142858,
+    "name": "Michael Weinhardt",
+    "wageRate": 59.84597069597069
+  },
+  "TPU10IJE6T3TFX7J": {
+    "count": 18,
+    "lastUpdatedOn": 1591720731028,
+    "name": "Yuan Ruan",
+    "wageRate": 7.456186575212453
+  },
+  "TPU10IOJZPXOXDZ8": {
+    "count": 60,
+    "lastUpdatedOn": 1651132902236,
+    "max": 120,
+    "min": 0.6221198156682027,
+    "name": "JinJoo Bae",
+    "wageRate": 13.079909730294652
+  },
+  "TPU10IT0IXB04KSH": {
+    "count": 164,
+    "lastUpdatedOn": 1597427860947,
+    "max": 25.28954183780037,
+    "min": 1.048126473927854,
+    "name": "Decision Lab",
+    "wageRate": 8.141729282880314
+  },
+  "TPU10J6C8R27QO66": {
+    "count": 4,
+    "lastUpdatedOn": 1564794280811,
+    "name": "TPUngelique caligiuri",
+    "wageRate": 20.604780654886994
+  },
+  "TPU10JAAWZYMUAL": {
+    "count": 12,
+    "lastUpdatedOn": 1634261890070,
+    "max": 32.142857142857146,
+    "min": 8.391608391608392,
+    "name": "Jennifer Hughes",
+    "wageRate": 16.55934311437163
+  },
+  "TPU10JEDMBR0FJGA": {
+    "count": 22,
+    "lastUpdatedOn": 1589746804342,
+    "name": "Morgan",
+    "wageRate": 12.375733055094877
+  },
+  "TPU10JEKFHQR5964": {
+    "count": 2,
+    "lastUpdatedOn": 1649873653806,
+    "max": 9.022556390977444,
+    "min": 4.41717791411043,
+    "name": "Daniel Louis",
+    "wageRate": 6.719867152543937
+  },
+  "TPU10JY7MNUB89C5": {
+    "count": 19,
+    "lastUpdatedOn": 1640988071850,
+    "max": 41.111111111111114,
+    "min": 3.0578512396694215,
+    "name": "Business Research",
+    "wageRate": 16.460844316738797
+  },
+  "TPU10JZ668SA7COH": {
+    "count": 75,
+    "lastUpdatedOn": 1648402833938,
+    "max": 44.44444444444444,
+    "min": 6.8965517241379315,
+    "name": "scct3045",
+    "wageRate": 21.848332136906265
+  },
+  "TPU10K193M99FK4I": {
+    "count": 56,
+    "lastUpdatedOn": 1670356985912,
+    "max": 67.5,
+    "min": 0.24193548387096772,
+    "name": "Tina",
+    "wageRate": 15.397139837395105
+  },
+  "TPU10K23EHLB3J6": {
+    "count": 24,
+    "lastUpdatedOn": 1650672771922,
+    "max": 67.5,
+    "min": 4.623287671232877,
+    "name": "Boston University - Product Development Team",
+    "wageRate": 20.77270966719801
+  },
+  "TPU10K5EW3VJ923J": {
+    "count": 2,
+    "lastUpdatedOn": 1672610038765,
+    "max": 0.6428571428571429,
+    "min": 0.18181818181818182,
+    "name": "ROSS DAVID KAPLAN",
+    "wageRate": 0.41233766233766234
+  },
+  "TPU10KAUYQBRKPNM": {
+    "count": 562,
+    "lastUpdatedOn": 1682148859970,
+    "max": 75,
+    "min": 0.08323699421965318,
+    "name": "MMSP Konstanz",
+    "wageRate": 8.715277919192186
+  },
+  "TPU10KCNLQLWIJ33": {
+    "count": 1,
+    "lastUpdatedOn": 1634096410691,
+    "max": 0.9729729729729729,
+    "min": 0.9729729729729729,
+    "name": "YQ",
+    "wageRate": 0.9729729729729729
+  },
+  "TPU10KFBKSUVQKNY": {
+    "count": 14,
+    "lastUpdatedOn": 1644612399604,
+    "max": 32.72727272727273,
+    "min": 0.8910891089108911,
+    "name": "SGreen",
+    "wageRate": 6.6900047601314245
+  },
+  "TPU10KIEP54MFCVA": {
+    "count": 1,
+    "lastUpdatedOn": 1595521435573,
+    "name": "matthew baumann",
+    "wageRate": 1.5193296717488243
+  },
+  "TPU10KK718VY1WSJ": {
+    "count": 26,
+    "lastUpdatedOn": 1591286158567,
+    "name": "EKeimel",
+    "wageRate": 3.198970617856412
+  },
+  "TPU10KML9X7UJETB": {
+    "count": 17,
+    "lastUpdatedOn": 1660212510850,
+    "max": 90,
+    "min": 4.147465437788019,
+    "name": "PARKER JAY",
+    "wageRate": 32.01940070097185
+  },
+  "TPU10KOIMN8BWS09": {
+    "count": 20,
+    "lastUpdatedOn": 1637397711053,
+    "max": 78.26086956521739,
+    "min": 1.2521739130434781,
+    "name": "Lauren Jacobs",
+    "wageRate": 16.004129230135437
+  },
+  "TPU10KQ5959AMUR8": {
+    "count": 35,
+    "lastUpdatedOn": 1618623559495,
+    "max": 64.28571428571429,
+    "min": 1.5450643776824033,
+    "name": "Josh Semko",
+    "wageRate": 7.256875494573596
+  },
+  "TPU10KR5MQ1XHBMW": {
+    "count": 7,
+    "lastUpdatedOn": 1596774562288,
+    "max": 14.994502015927491,
+    "min": 0.7564477716939765,
+    "name": "Ken Turk",
+    "wageRate": 6.7118766512979136
+  },
+  "TPU10KWX0CCZ9T52": {
+    "count": 16,
+    "lastUpdatedOn": 1603398849974,
+    "max": 26.865671641791046,
+    "min": 2.288282974157658,
+    "name": "Cameron Verhaal",
+    "wageRate": 7.736769470622859
+  },
+  "TPU10KYZ1AFS0CSB": {
+    "count": 45,
+    "lastUpdatedOn": 1668275766274,
+    "max": 41.860465116279066,
+    "min": 1.3043478260869565,
+    "name": "Ruoxu Wang",
+    "wageRate": 5.565982214503601
+  },
+  "TPU10L0BFLKD2UWZ": {
+    "count": 20,
+    "lastUpdatedOn": 1639113027802,
+    "max": 97.29729729729729,
+    "min": 0.7578947368421053,
+    "name": "Zheng",
+    "wageRate": 12.719410613959605
+  },
+  "TPU10L0QOT9DN0P2": {
+    "count": 80,
+    "lastUpdatedOn": 1623668249058,
+    "max": 72,
+    "min": 0.6958762886597938,
+    "name": "Fabian Müller",
+    "wageRate": 5.733173897273005
+  },
+  "TPU10L19LOB0TY2Z": {
+    "count": 125,
+    "lastUpdatedOn": 1676740279171,
+    "max": 66.66666666666667,
+    "min": 1.9643506729719897,
+    "name": "MUSC Foot and Ankle Research",
+    "wageRate": 11.701638882838408
+  },
+  "TPU10L6F22JALXGL": {
+    "count": 35,
+    "lastUpdatedOn": 1619983540557,
+    "max": 191.99999999999997,
+    "min": 4.648768897653981,
+    "name": "inssistudies",
+    "wageRate": 14.983776840231478
+  },
+  "TPU10L7JRSYDKUT": {
+    "count": 14,
+    "lastUpdatedOn": 1600843314416,
+    "max": 185.13422564070544,
+    "min": 3.3683737772101447,
+    "name": "Kan Takeuchi",
+    "wageRate": 97.14488659171617
+  },
+  "TPU10L7VNDSJIOPR": {
+    "count": 29,
+    "lastUpdatedOn": 1691257866471,
+    "max": 36.65853658536585,
+    "min": 11.153988868274581,
+    "name": "Regan Smock",
+    "wageRate": 19.663382530932605
+  },
+  "TPU10L7ZZC4IGQI6": {
+    "count": 1,
+    "lastUpdatedOn": 1585934104408,
+    "name": "Deron",
+    "wageRate": 1.4286456954706772
+  },
+  "TPU10LFHJOUZRPEF": {
+    "count": 271,
+    "lastUpdatedOn": 1690827638819,
+    "max": 142.10526315789474,
+    "min": 0.7787993510005409,
+    "name": "VCU Academic Research",
+    "wageRate": 8.851730337314242
+  },
+  "TPU10LJWXQVKFNAI": {
+    "count": 2,
+    "lastUpdatedOn": 1592019301264,
+    "name": "Randy Zeitman",
+    "wageRate": 4.484690981846124
+  },
+  "TPU10LN7L6RAAWV7": {
+    "count": 75,
+    "lastUpdatedOn": 1596150101440,
+    "max": 20.405965343868857,
+    "min": 0.12640722255288375,
+    "name": "Workplace Perceptions Researcher",
+    "wageRate": 5.239051689340294
+  },
+  "TPU10LOGMNC69OYX": {
+    "count": 2,
+    "lastUpdatedOn": 1623227848128,
+    "max": 12.203389830508474,
+    "min": 3.257918552036199,
+    "name": "Karolina Fabijanczyk",
+    "wageRate": 7.730654191272336
+  },
+  "TPU10LPBRXLTK27A": {
+    "count": 3,
+    "lastUpdatedOn": 1659998948915,
+    "max": 16.3265306122449,
+    "min": 6.315789473684211,
+    "name": "JBray",
+    "wageRate": 9.763506510637496
+  },
+  "TPU10LVIZH1P8FDC": {
+    "count": 2,
+    "lastUpdatedOn": 1613717889875,
+    "max": 52.173913043478265,
+    "min": 52.173913043478265,
+    "name": "Joey",
+    "wageRate": 52.173913043478265
+  },
+  "TPU10LXF8SSUMSWV": {
+    "count": 126,
+    "lastUpdatedOn": 1638240905040,
+    "max": 138.46153846153848,
+    "min": 1.029130540492213,
+    "name": "Frida Corona",
+    "wageRate": 9.192378839665167
+  },
+  "TPU10LZRT4Q6ARWB": {
+    "count": 2,
+    "lastUpdatedOn": 1563726440762,
+    "name": "TPUndrew Coolidge",
+    "wageRate": 0.74832158469616
+  },
+  "TPU10M1BOE9FXYSC": {
+    "count": 6,
+    "lastUpdatedOn": 1614727577456,
+    "max": 189.4736842105263,
+    "min": 18.652849740932645,
+    "name": "Fertility Within Reach",
+    "wageRate": 106.86820678639606
+  },
+  "TPU10M4ZBVYUEACC": {
+    "count": 1,
+    "lastUpdatedOn": 1604777265881,
+    "max": 1.9354838709677418,
+    "min": 1.9354838709677418,
+    "name": "Thomas Dunn",
+    "wageRate": 1.9354838709677418
+  },
+  "TPU10M6HCQLS5EU5": {
+    "count": 13,
+    "lastUpdatedOn": 1580414963982,
+    "name": "claire youjeong hong",
+    "wageRate": 2.2255902257632623
+  },
+  "TPU10M90Y8PUKQ1E": {
+    "count": 3175,
+    "lastUpdatedOn": 1684286289382,
+    "max": 1028.5714285714287,
+    "min": 0.02548625743831467,
+    "name": "PsychLabAtBC",
+    "wageRate": 15.079862463713395
+  },
+  "TPU10MN6VC2HK0YS": {
+    "count": 11,
+    "lastUpdatedOn": 1663512930860,
+    "max": 10.285714285714286,
+    "min": 0.10746268656716418,
+    "name": "Cut Above",
+    "wageRate": 1.6079349006026378
+  },
+  "TPU10N16GRZR3MJC": {
+    "count": 21,
+    "lastUpdatedOn": 1591901333343,
+    "name": "Development, Culture, & Health Lab",
+    "wageRate": 3.539203664517468
+  },
+  "TPU10N2UY6G0HB11": {
+    "count": 51,
+    "lastUpdatedOn": 1642267614731,
+    "max": 12,
+    "min": 0.3829787234042553,
+    "name": "Privacy Query",
+    "wageRate": 3.1826101747686417
+  },
+  "TPU10N75OEI3R21Z": {
+    "count": 1,
+    "lastUpdatedOn": 1606377882494,
+    "max": 185.53846153846152,
+    "min": 185.53846153846152,
+    "name": "Jason",
+    "wageRate": 185.53846153846152
+  },
+  "TPU10NDM9H57NR3": {
+    "count": 5,
+    "lastUpdatedOn": 1582155043736,
+    "name": "Lily",
+    "wageRate": 7.243457679115302
+  },
+  "TPU10NFEF64EU6HR": {
+    "count": 9,
+    "lastUpdatedOn": 1624989680404,
+    "max": 69.23076923076923,
+    "min": 8.517350157728707,
+    "name": "Rick Stout",
+    "wageRate": 25.05582025973764
+  },
+  "TPU10NH20E6G20LZ": {
+    "count": 1,
+    "lastUpdatedOn": 1663616433571,
+    "max": 0.07214428857715431,
+    "min": 0.07214428857715431,
+    "name": "pfrogner",
+    "wageRate": 0.07214428857715431
+  },
+  "TPU10NKIVL7MAOX1": {
+    "count": 120,
+    "lastUpdatedOn": 1667074153734,
+    "max": 189.4736842105263,
+    "min": 0.8097165991902834,
+    "name": "TPUbigail Riemer",
+    "wageRate": 6.903497831820331
+  },
+  "TPU10NKWR87F0TMZ": {
+    "count": 1,
+    "lastUpdatedOn": 1692906855903,
+    "max": 57.44680851063829,
+    "min": 57.44680851063829,
+    "name": "Clare K",
+    "wageRate": 57.44680851063829
+  },
+  "TPU10NMSDTHXSP3X": {
+    "count": 4,
+    "lastUpdatedOn": 1611948026094,
+    "max": 56.25,
+    "min": 7.43801652892562,
+    "name": "Jiayan Zhao",
+    "wageRate": 34.42219446340765
+  },
+  "TPU10NOMKS45R8P9": {
+    "count": 10,
+    "lastUpdatedOn": 1615810337674,
+    "max": 51.42857142857143,
+    "min": 4.724041378921658,
+    "name": "Schum Kristof",
+    "wageRate": 12.52209024599447
+  },
+  "TPU10NS4MIWH3V45": {
+    "count": 67,
+    "lastUpdatedOn": 1691859436593,
+    "max": 85.71428571428571,
+    "min": 0.8861003861003861,
+    "name": "FATIMA NISA",
+    "wageRate": 18.10737767326913
+  },
+  "TPU10NXHIOS3B0VS": {
+    "count": 107,
+    "lastUpdatedOn": 1668788247165,
+    "max": 99,
+    "min": 2.1176470588235294,
+    "name": "Evan Crothers",
+    "wageRate": 40.20962841080813
+  },
+  "TPU10O1ZPPC87PIA": {
+    "count": 5,
+    "lastUpdatedOn": 1602277998466,
+    "max": 9.2779583543376,
+    "min": 4.445398284224442,
+    "name": "David Westfall",
+    "wageRate": 6.184023465797548
+  },
+  "TPU10O55NTDRLYOZ": {
+    "count": 3,
+    "lastUpdatedOn": 1600716348775,
+    "max": 107.11416584843346,
+    "min": 61.1631186394604,
+    "name": "TPUlex Lich",
+    "wageRate": 78.88033917583878
+  },
+  "TPU10OH0P4VAZF8O": {
+    "count": 98,
+    "lastUpdatedOn": 1632423020600,
+    "max": 450,
+    "min": 0.8653846153846154,
+    "name": "Jodi Quas",
+    "wageRate": 23.201522885605574
+  },
+  "TPU10OH7MF1PZ3LU": {
+    "count": 24,
+    "lastUpdatedOn": 1602006439331,
+    "max": 6.354297920948985,
+    "min": 1.0070400491435543,
+    "name": "TPUlireza Karduni",
+    "wageRate": 4.756024129625545
+  },
+  "TPU10OT8LS42NFU": {
+    "count": 14,
+    "lastUpdatedOn": 1594009250222,
+    "name": "Lola",
+    "wageRate": 3.6640782968388894
+  },
+  "TPU10OVCRPLPV4NT": {
+    "count": 32,
+    "lastUpdatedOn": 1578014726723,
+    "name": "TPUdair Lab",
+    "wageRate": 6.121902013539208
+  },
+  "TPU10P3HFXNF240H": {
+    "count": 7,
+    "lastUpdatedOn": 1607398161895,
+    "max": 16.289592760180994,
+    "min": 2.1578421578421576,
+    "name": "Cherie",
+    "wageRate": 9.418535422229493
+  },
+  "TPU10P6Q7YVCT60E": {
+    "count": 8,
+    "lastUpdatedOn": 1565632044163,
+    "name": "Hannah Waldfogel",
+    "wageRate": 2.7861400471312834
+  },
+  "TPU10P7QP74REGQI": {
+    "count": 3,
+    "lastUpdatedOn": 1662975661040,
+    "max": 0,
+    "min": 0,
+    "name": "Vanessa Associates",
+    "wageRate": 0
+  },
+  "TPU10PJ0KYGTWMES": {
+    "count": 15,
+    "lastUpdatedOn": 1601639043982,
+    "max": 8.618224160648806,
+    "min": 2.3589377091919066,
+    "name": "Hannes Gerstel",
+    "wageRate": 4.942852483537772
+  },
+  "TPU10POZP3CJDKR2": {
+    "count": 23,
+    "lastUpdatedOn": 1693923173225,
+    "max": 67.5,
+    "min": 0.5947136563876652,
+    "name": "Shane",
+    "wageRate": 4.800252873480534
+  },
+  "TPU10PQC2CIDBXVP": {
+    "count": 38,
+    "lastUpdatedOn": 1619194853077,
+    "max": 196.36363636363635,
+    "min": 3.456,
+    "name": "J",
+    "wageRate": 35.115477051114844
+  },
+  "TPU10PSTRA0CDBNW": {
+    "count": 14,
+    "lastUpdatedOn": 1680967924344,
+    "max": 98.18181818181819,
+    "min": 4.568527918781726,
+    "name": "Haozhe Zhou",
+    "wageRate": 37.68489109688129
+  },
+  "TPU10PWEDFXVZDP": {
+    "count": 3,
+    "lastUpdatedOn": 1572382146801,
+    "name": "Trung Bui",
+    "wageRate": 12.40514055694564
+  },
+  "TPU10Q0U9KZPGGCX": {
+    "count": 58,
+    "lastUpdatedOn": 1612976010546,
+    "max": 196.36363636363635,
+    "min": 1.836734693877551,
+    "name": "zach brewster",
+    "wageRate": 26.454736266362104
+  },
+  "TPU10Q48CFTWPQ0S": {
+    "count": 17,
+    "lastUpdatedOn": 1624060676303,
+    "max": 144,
+    "min": 3.4931506303925186,
+    "name": "TPUndrew Hales",
+    "wageRate": 13.199849815399475
+  },
+  "TPU10QDRBUF3QPT": {
+    "count": 39,
+    "lastUpdatedOn": 1693105789415,
+    "max": 72,
+    "min": 0.5120910384068279,
+    "name": "TPUkindiger",
+    "wageRate": 20.326067023529568
+  },
+  "TPU10QNLMK6HCA0E": {
+    "count": 10,
+    "lastUpdatedOn": 1653168511846,
+    "max": 90,
+    "min": 0.06185567010309279,
+    "name": "MeganTsutakawa",
+    "wageRate": 10.91963411845886
+  },
+  "TPU10QQ3QAL5Z14": {
+    "count": 17,
+    "lastUpdatedOn": 1591694922686,
+    "name": "Phil mil",
+    "wageRate": 2.9087167385453707
+  },
+  "TPU10QXZEYOL3G8L": {
+    "count": 20,
+    "lastUpdatedOn": 1618451725882,
+    "max": 180,
+    "min": 1.530612244897959,
+    "name": "Paige Tomfohrde",
+    "wageRate": 47.91028123106648
+  },
+  "TPU10R1FW24PYBQ7": {
+    "count": 15,
+    "lastUpdatedOn": 1622674539202,
+    "max": 51.42857142857143,
+    "min": 0.8490566037735849,
+    "name": "Veronika",
+    "wageRate": 9.127250717762747
+  },
+  "TPU10R1X4V3PBPI6": {
+    "count": 5,
+    "lastUpdatedOn": 1627518811267,
+    "max": 65.45454545454545,
+    "min": 1.4693877551020411,
+    "name": "Jeanica Geneus",
+    "wageRate": 31.11096345019586
+  },
+  "TPU10R4AZ7RUD9F5": {
+    "count": 2,
+    "lastUpdatedOn": 1663437637102,
+    "max": 1.0588235294117647,
+    "min": 0.5538461538461539,
+    "name": "Welchil",
+    "wageRate": 0.8063348416289593
+  },
+  "TPU10R6HF7U5VPM5": {
+    "count": 60,
+    "lastUpdatedOn": 1630625782288,
+    "max": 160,
+    "min": 3.308823529411765,
+    "name": "CHAI",
+    "wageRate": 29.838897640071718
+  },
+  "TPU10R7HH34BL82E": {
+    "count": 4,
+    "lastUpdatedOn": 1622402753780,
+    "max": 128.57142857142856,
+    "min": 5.084745762711865,
+    "name": "TPUlyssa Crijns",
+    "wageRate": 63.49425748727842
+  },
+  "TPU10R7QZZ2CMBZX": {
+    "count": 11,
+    "lastUpdatedOn": 1649214387840,
+    "max": 8.910891089108912,
+    "min": 1.5075376884422111,
+    "name": "sspadaUSC",
+    "wageRate": 4.984436493104542
+  },
+  "TPU10RHIB1463VF": {
+    "count": 2,
+    "lastUpdatedOn": 1659734986346,
+    "max": 17.599999999999998,
+    "min": 14.666666666666668,
+    "name": "Yvonne Robinson",
+    "wageRate": 16.133333333333333
+  },
+  "TPU10RIOH2ZXDRDN": {
+    "count": 32,
+    "lastUpdatedOn": 1604424697349,
+    "max": 270,
+    "min": 0.4032712768539463,
+    "name": "Gabrielle Miller",
+    "wageRate": 35.060631817951055
+  },
+  "TPU10RL0WVBO5A1L": {
+    "count": 6,
+    "lastUpdatedOn": 1649094605346,
+    "max": 36,
+    "min": 10.650887573964498,
+    "name": "Henrietta Tuomaila",
+    "wageRate": 22.818878310773773
+  },
+  "TPU10RLPMKYATS7D": {
+    "count": 1841,
+    "lastUpdatedOn": 1674188661233,
+    "max": 450,
+    "min": 0.5755395683453238,
+    "name": "Mohin",
+    "wageRate": 13.12632642992484
+  },
+  "TPU10RRGXBD0OU8Y": {
+    "count": 2,
+    "lastUpdatedOn": 1601311266304,
+    "max": 1.531495198762552,
+    "min": 1.370580211955746,
+    "name": "TPUrash",
+    "wageRate": 1.370580211955746
+  },
+  "TPU10RV1G906LF73": {
+    "count": 9,
+    "lastUpdatedOn": 1635381640254,
+    "max": 72.00000000000001,
+    "min": 9.000000000000002,
+    "name": "Yan Yangqin",
+    "wageRate": 30.50454145459959
+  },
+  "TPU10RVKVYX6700Z": {
+    "count": 9,
+    "lastUpdatedOn": 1605836749853,
+    "max": 240,
+    "min": 3.68474923234391,
+    "name": "limor vink",
+    "wageRate": 47.91998546533015
+  },
+  "TPU10RVO0Y8FSMSS": {
+    "count": 33,
+    "lastUpdatedOn": 1637687153873,
+    "max": 42.63157894736842,
+    "min": 0.7131327953044755,
+    "name": "Giacomo Moserle",
+    "wageRate": 7.68663776071575
+  },
+  "TPU10RYLJWOQPDNX": {
+    "count": 2,
+    "lastUpdatedOn": 1624495500609,
+    "max": 1.5384615384615385,
+    "min": 0.4568527918781726,
+    "name": "Robert A Howard",
+    "wageRate": 0.9976571651698556
+  },
+  "TPU10RZX96R2YM5Z": {
+    "count": 32,
+    "lastUpdatedOn": 1674675798815,
+    "max": 14.136125654450261,
+    "min": 2.967032967032967,
+    "name": "elina.yhur9",
+    "wageRate": 6.51776975064178
+  },
+  "TPU10S1L7PVYNIF8": {
+    "count": 12,
+    "lastUpdatedOn": 1631910395449,
+    "max": 46.753246753246756,
+    "min": 0.24875621890547267,
+    "name": "Maria Kalantzis",
+    "wageRate": 10.308337557506782
+  },
+  "TPU10S51R6S3H30L": {
+    "count": 5,
+    "lastUpdatedOn": 1590974399457,
+    "name": "Wild Fuel",
+    "wageRate": 5.651657140962365
+  },
+  "TPU10SEPD1V3VA5M": {
+    "count": 56,
+    "lastUpdatedOn": 1666728490694,
+    "max": 93.10344827586206,
+    "min": 3.9301310043668125,
+    "name": "SeoYoon Lee",
+    "wageRate": 9.670465360392509
+  },
+  "TPU10SLDSM18QQBM": {
+    "count": 22,
+    "lastUpdatedOn": 1635757532322,
+    "max": 46.15384615384615,
+    "min": 9.448818897637794,
+    "name": "Borae Jin",
+    "wageRate": 20.051620570815263
+  },
+  "TPU10SLXHWD5HFO6": {
+    "count": 31,
+    "lastUpdatedOn": 1602542441973,
+    "max": 17.821782178217823,
+    "min": 2.382771568736548,
+    "name": "Joymallya Chakraborty",
+    "wageRate": 5.886265727628091
+  },
+  "TPU10SM9VXWU46ZG": {
+    "count": 8,
+    "lastUpdatedOn": 1564524862789,
+    "name": "Bloch School of Management",
+    "wageRate": 1.9203688393519835
+  },
+  "TPU10SRC341AJBMO": {
+    "count": 6,
+    "lastUpdatedOn": 1624618338705,
+    "max": 14.0625,
+    "min": 0.33918042702815765,
+    "name": "Kirstin Pellizzaro",
+    "wageRate": 4.791642820273576
+  },
+  "TPU10SSMTXK1F0K4": {
+    "count": 22,
+    "lastUpdatedOn": 1637536792974,
+    "max": 32.142857142857146,
+    "min": 2.1226415094339623,
+    "name": "TPUnita",
+    "wageRate": 6.714624279609719
+  },
+  "TPU10SVSEOA9FJ80": {
+    "count": 775,
+    "lastUpdatedOn": 1693333868991,
+    "max": 90,
+    "min": 1.4297061159650517,
+    "name": "CeciliaS",
+    "wageRate": 25.500669391538537
+  },
+  "TPU10SW5KVIOL9CW": {
+    "count": 1,
+    "lastUpdatedOn": 1578409084331,
+    "name": "Souriyo Dishak",
+    "wageRate": 0.11002949401714626
+  },
+  "TPU10SWTA5MZJNVP": {
+    "count": 38,
+    "lastUpdatedOn": 1602165507392,
+    "max": 27.784638182267226,
+    "min": 4.129792495134588,
+    "name": "Hillary Sackett",
+    "wageRate": 9.826060519823962
+  },
+  "TPU10T3YVYBAL3JM": {
+    "count": 3,
+    "lastUpdatedOn": 1677751896123,
+    "max": 21.686746987951807,
+    "min": 4.522613065326633,
+    "name": "Shilin",
+    "wageRate": 11.03090841801442
+  },
+  "TPU10T5W247PHF2C": {
+    "count": 67,
+    "lastUpdatedOn": 1637702387929,
+    "max": 80,
+    "min": 0.6891271056661562,
+    "name": "PBTeam",
+    "wageRate": 6.850348501757423
+  },
+  "TPU10T6KNQQ04Q1Z": {
+    "count": 42,
+    "lastUpdatedOn": 1636503426899,
+    "max": 40.67796610169492,
+    "min": 7.644733459456923,
+    "name": "Psycholinguistics Lab",
+    "wageRate": 14.953726376272765
+  },
+  "TPU10T6TJ80EF0RD": {
+    "count": 27,
+    "lastUpdatedOn": 1634147983155,
+    "max": 126.1455525606469,
+    "min": 2.854258696688394,
+    "name": "Elizabeth Chua",
+    "wageRate": 29.34039624306143
+  },
+  "TPU10T8D8KLR5VDN": {
+    "count": 33,
+    "lastUpdatedOn": 1668295762123,
+    "max": 94.73684210526315,
+    "min": 4.897959183673469,
+    "name": "LIU MTurk Studies",
+    "wageRate": 12.799181190538276
+  },
+  "TPU10TAR546J0JT6": {
+    "count": 22,
+    "lastUpdatedOn": 1618408763533,
+    "max": 180,
+    "min": 2.290076335877863,
+    "name": "Nicole Lipholt",
+    "wageRate": 38.831228490277205
+  },
+  "TPU10TCC0DDXN312": {
+    "count": 23,
+    "lastUpdatedOn": 1624040581109,
+    "max": 90,
+    "min": 5,
+    "name": "Pat Star",
+    "wageRate": 30.135175185114612
+  },
+  "TPU10TF0NQ3SQNPV": {
+    "count": 20,
+    "lastUpdatedOn": 1632684144997,
+    "max": 94.73684210526315,
+    "min": 9.45709281961471,
+    "name": "Maisee Thao",
+    "wageRate": 26.499307108432163
+  },
+  "TPU10TKGLSD36BAX": {
+    "count": 34,
+    "lastUpdatedOn": 1675609969931,
+    "max": 90,
+    "min": 1.0514018691588785,
+    "name": "TPUngela",
+    "wageRate": 10.388279893859705
+  },
+  "TPU10TU8PS18LXC3": {
+    "count": 11,
+    "lastUpdatedOn": 1662003531623,
+    "max": 9.574468085106382,
+    "min": 3.138622493461203,
+    "name": "Lauren - SLU Psychology",
+    "wageRate": 6.033216286926316
+  },
+  "TPU10TVC4AD3ZJG7": {
+    "count": 21,
+    "lastUpdatedOn": 1654870940939,
+    "max": 96.92307692307692,
+    "min": 11.25,
+    "name": "Mashael",
+    "wageRate": 42.236529675150464
+  },
+  "TPU10TWBII6TEYP8": {
+    "count": 11,
+    "lastUpdatedOn": 1632566762867,
+    "max": 9,
+    "min": 0.2857142857142857,
+    "name": "Vincent Vatter",
+    "wageRate": 2.9917215943919273
+  },
+  "TPU10TXWCP3GCFKX": {
+    "count": 24,
+    "lastUpdatedOn": 1692203813474,
+    "max": 24.387096774193548,
+    "min": 0.8373947718210014,
+    "name": "John Dunham",
+    "wageRate": 7.599318891109621
+  },
+  "TPU10UB0X7T30E72": {
+    "count": 12,
+    "lastUpdatedOn": 1608715900883,
+    "max": 50,
+    "min": 10.344827586206897,
+    "name": "Bowen Duan",
+    "wageRate": 30.16567839647368
+  },
+  "TPU10UBVUIF98JPI": {
+    "count": 76,
+    "lastUpdatedOn": 1640130869267,
+    "max": 180,
+    "min": 1.7408123791102514,
+    "name": "Nick Todd",
+    "wageRate": 31.578618436361307
+  },
+  "TPU10UFU1M85CIVW": {
+    "count": 9,
+    "lastUpdatedOn": 1664293801932,
+    "max": 85.71428571428571,
+    "min": 7.621736062103034,
+    "name": "cindy bishop",
+    "wageRate": 27.503665492642288
+  },
+  "TPU10ULM6O7KVW8Z": {
+    "count": 5,
+    "lastUpdatedOn": 1588187731656,
+    "name": "Mycal Tucker",
+    "wageRate": 5.65556499092582
+  },
+  "TPU10UT5THY789G7": {
+    "count": 31,
+    "lastUpdatedOn": 1619602644969,
+    "max": 171.42857142857142,
+    "min": 5.2249637155297535,
+    "name": "Sofia Kim",
+    "wageRate": 63.09054288724404
+  },
+  "TPU10UYNZ8YBW79J": {
+    "count": 5,
+    "lastUpdatedOn": 1613430890892,
+    "max": 58.90909090909091,
+    "min": 6.545454545454545,
+    "name": "Jordan Bennett",
+    "wageRate": 23.162463343108506
+  },
+  "TPU10VCY3JJDFS00": {
+    "count": 34,
+    "lastUpdatedOn": 1601838467974,
+    "max": 29.512634065651543,
+    "min": 0.8808675566691462,
+    "name": "Luca Bella",
+    "wageRate": 11.253172075868628
+  },
+  "TPU10VGM25EPOYFU": {
+    "count": 2,
+    "lastUpdatedOn": 1651688095819,
+    "max": 5.950413223140496,
+    "min": 4.230317273795534,
+    "name": "Nicole Melancon, BA",
+    "wageRate": 5.090365248468014
+  },
+  "TPU10VLTV6P91M37": {
+    "count": 7,
+    "lastUpdatedOn": 1662128861087,
+    "max": 0,
+    "min": 0,
+    "name": "Wink Everything",
+    "wageRate": 0
+  },
+  "TPU10VN12EL0NXLW": {
+    "count": 13,
+    "lastUpdatedOn": 1582703557046,
+    "name": "Steve Wood",
+    "wageRate": 23.869565256707883
+  },
+  "TPU10VNJ6PTH1VVE": {
+    "count": 2,
+    "lastUpdatedOn": 1663700232738,
+    "max": 10.285714285714286,
+    "min": 0.4100227790432802,
+    "name": "Stephanie Borglin",
+    "wageRate": 5.347868532378783
+  },
+  "TPU10VO928Q3Y2KY": {
+    "count": 28,
+    "lastUpdatedOn": 1653581088075,
+    "max": 29.445086705202314,
+    "min": 3.3813474941918353,
+    "name": "Tahir Abbas",
+    "wageRate": 10.55755005641864
+  },
+  "TPU10VOR0AR7S7S2": {
+    "count": 4,
+    "lastUpdatedOn": 1603286349281,
+    "max": 20.63332855709987,
+    "min": 14.570621983425918,
+    "name": "Josip Kotlar",
+    "wageRate": 17.447749191844114
+  },
+  "TPU10VP0HWTTRDZ8": {
+    "count": 34,
+    "lastUpdatedOn": 1659659061702,
+    "max": 53.73134328358209,
+    "min": 0.7753607581305191,
+    "name": "Casey George",
+    "wageRate": 6.638512265766451
+  },
+  "TPU10VPO4Z6IQ62H": {
+    "count": 1,
+    "lastUpdatedOn": 1592922130778,
+    "name": "Mechanical Turk",
+    "wageRate": 0.030039476879198748
+  },
+  "TPU10VUN81SN32DM": {
+    "count": 13,
+    "lastUpdatedOn": 1601325115648,
+    "max": 10.037221362552799,
+    "min": 4.090909090909091,
+    "name": "hiba- University of haifa",
+    "wageRate": 5.714553658925554
+  },
+  "TPU10VVHOWXVS3CJ": {
+    "count": 13,
+    "lastUpdatedOn": 1607100854120,
+    "max": 10.285714285714286,
+    "min": 0.1805224319179706,
+    "name": "TPUriel goldstien",
+    "wageRate": 3.271675611902377
+  },
+  "TPU10VX5FUMP354O": {
+    "count": 31,
+    "lastUpdatedOn": 1615848536006,
+    "max": 142.10526315789474,
+    "min": 1.884159106769016,
+    "name": "Navy Spiecker",
+    "wageRate": 18.183631610139482
+  },
+  "TPU10W3OKH3OKNQ5": {
+    "count": 21,
+    "lastUpdatedOn": 1582913575593,
+    "name": "OSU Personality Lab",
+    "wageRate": 2.9691915603869448
+  },
+  "TPU10W4OU4FC38C4": {
+    "count": 3,
+    "lastUpdatedOn": 1617797538112,
+    "max": 27,
+    "min": 18.840465151630312,
+    "name": "kanesharan karunananthan",
+    "wageRate": 21.560310101086873
+  },
+  "TPU10W7S4D8QBOCB": {
+    "count": 89,
+    "lastUpdatedOn": 1678751408188,
+    "max": 180,
+    "min": 2.68389662027833,
+    "name": "Brian",
+    "wageRate": 26.38690099824616
+  },
+  "TPU10W9Y7WB17NVN": {
+    "count": 7,
+    "lastUpdatedOn": 1686831603400,
+    "max": 12.857142857142858,
+    "min": 2.7692307692307696,
+    "name": "RHI2 Data Collection Team",
+    "wageRate": 6.150163055335589
+  },
+  "TPU10WCU9J22CH5P": {
+    "count": 9,
+    "lastUpdatedOn": 1650534534403,
+    "max": 4.8,
+    "min": 0.12020033388981637,
+    "name": "TPUnthony Kimm",
+    "wageRate": 2.574924011763377
+  },
+  "TPU10WGCNCW4HKK": {
+    "count": 22,
+    "lastUpdatedOn": 1581713285525,
+    "name": "TPUlexa",
+    "wageRate": 3.8572196627204174
+  },
+  "TPU10WGCU9HIMEPS": {
+    "count": 4,
+    "lastUpdatedOn": 1601993190609,
+    "max": 9.771870047803683,
+    "min": 5.667232690277337,
+    "name": "Phong Tuan Nguyen",
+    "wageRate": 9.771870047803683
+  },
+  "TPU10WPGMP3YV09L": {
+    "count": 2,
+    "lastUpdatedOn": 1591989714898,
+    "name": "MT User44",
+    "wageRate": 0.0026472001302874576
+  },
+  "TPU10WXQ1QT2T7G1": {
+    "count": 84,
+    "lastUpdatedOn": 1686278543933,
+    "max": 101.73913043478261,
+    "min": 0.6605392477283643,
+    "name": "Sam Fairlamb",
+    "wageRate": 5.878108427802731
+  },
+  "TPU10X2E10VNJEYC": {
+    "count": 28,
+    "lastUpdatedOn": 1620770419298,
+    "max": 180,
+    "min": 0.47318611987381703,
+    "name": "Seyit Can Bahar",
+    "wageRate": 28.08956520719382
+  },
+  "TPU10X70YHIXS6BH": {
+    "count": 7,
+    "lastUpdatedOn": 1605135927265,
+    "max": 49.090909090909086,
+    "min": 1.5001708527915678,
+    "name": "PM TEAM",
+    "wageRate": 9.267335713717289
+  },
+  "TPU10XCF7FEMQNDB": {
+    "count": 3,
+    "lastUpdatedOn": 1613254987148,
+    "max": 36,
+    "min": 0.680786686838124,
+    "name": "Wankyo Chung",
+    "wageRate": 18.433825447336847
+  },
+  "TPU10XF6LJRNLJWD": {
+    "count": 67,
+    "lastUpdatedOn": 1663197902287,
+    "max": 91.52542372881355,
+    "min": 2.0579268292682924,
+    "name": "Susan Zhong",
+    "wageRate": 12.166678310693754
+  },
+  "TPU10XFZV7I6LX28": {
+    "count": 9,
+    "lastUpdatedOn": 1574382492368,
+    "name": "Q Marketing",
+    "wageRate": 2.8617031243431024
+  },
+  "TPU10XH11MEFY5W8": {
+    "count": 40,
+    "lastUpdatedOn": 1642039486866,
+    "max": 78.26086956521739,
+    "min": 1.2658227848101264,
+    "name": "Matthew Gozun",
+    "wageRate": 11.860379190610848
+  },
+  "TPU10XI5Y1UEGBQ8": {
+    "count": 71,
+    "lastUpdatedOn": 1676033522946,
+    "max": 140.625,
+    "min": 8.845208845208845,
+    "name": "Frank Krueger",
+    "wageRate": 29.814755203289344
+  },
+  "TPU10XNW2OTNYZD4": {
+    "count": 141,
+    "lastUpdatedOn": 1616205497049,
+    "max": 163.63636363636363,
+    "min": 3.125,
+    "name": "Sarah Towers",
+    "wageRate": 30.30047040460114
+  },
+  "TPU10XSR8QQE6MFY": {
+    "count": 1,
+    "lastUpdatedOn": 1620824983518,
+    "max": 3.829787234042553,
+    "min": 3.829787234042553,
+    "name": "Joshua",
+    "wageRate": 3.829787234042553
+  },
+  "TPU10XXUHF858MDF": {
+    "count": 17,
+    "lastUpdatedOn": 1660668611438,
+    "max": 92.3076923076923,
+    "min": 29.110512129380055,
+    "name": "Survey",
+    "wageRate": 42.85777489472572
+  },
+  "TPU10Y3EZJEWF9Q2": {
+    "count": 10,
+    "lastUpdatedOn": 1636944036223,
+    "max": 86.74698795180723,
+    "min": 18.48523748395379,
+    "name": "DGretz",
+    "wageRate": 39.99798767149933
+  },
+  "TPU10Y4JAT45L3XA": {
+    "count": 22,
+    "lastUpdatedOn": 1593478813858,
+    "name": "Bailey",
+    "wageRate": 11.066681577237517
+  },
+  "TPU10Y4LRP94NXD6": {
+    "count": 1,
+    "lastUpdatedOn": 1616112415948,
+    "max": 4.004449388209121,
+    "min": 4.004449388209121,
+    "name": "Deepika Padmanabhan",
+    "wageRate": 4.004449388209121
+  },
+  "TPU10Y8D85E4RGUN": {
+    "count": 8,
+    "lastUpdatedOn": 1654885837263,
+    "max": 52.94117647058823,
+    "min": 22.6139114164111,
+    "name": "Zachary S Brooks",
+    "wageRate": 36.95196410077167
+  },
+  "TPU10YD9RJXTA215": {
+    "count": 36,
+    "lastUpdatedOn": 1649258352053,
+    "max": 30,
+    "min": 3.278688524590164,
+    "name": "Robin Bergh",
+    "wageRate": 12.036664440779937
+  },
+  "TPU10YH76VW75WMD": {
+    "count": 146,
+    "lastUpdatedOn": 1654966481239,
+    "max": 95.57522123893806,
+    "min": 0.1487603305785124,
+    "name": "Getup Solutions",
+    "wageRate": 15.974997559929212
+  },
+  "TPU10YTLUAAC6886": {
+    "count": 366,
+    "lastUpdatedOn": 1684739074219,
+    "max": 89.99999999999999,
+    "min": 1.0325047801147227,
+    "name": "Marwah",
+    "wageRate": 50.2624101765719
+  },
+  "TPU10Z09QPP08KWR": {
+    "count": 24,
+    "lastUpdatedOn": 1642794929937,
+    "max": 157.5,
+    "min": 3.134328358208955,
+    "name": "Jinghui Zhang",
+    "wageRate": 26.41687509337406
+  },
+  "TPU10Z2MC5BMVOXU": {
+    "count": 13,
+    "lastUpdatedOn": 1652233264373,
+    "max": 17.999999999999996,
+    "min": 0.6362297496318114,
+    "name": "MarkusHoffmannContent5",
+    "wageRate": 6.56472777946751
+  },
+  "TPU10Z4NFG9AV226": {
+    "count": 153,
+    "lastUpdatedOn": 1679924366152,
+    "max": 96,
+    "min": 0.4235294117647059,
+    "name": "progsi",
+    "wageRate": 15.064765799698366
+  },
+  "TPU10Z5DRQXWLRTF": {
+    "count": 23,
+    "lastUpdatedOn": 1689017456742,
+    "max": 48.52173913043478,
+    "min": 2.016260162601626,
+    "name": "Jenna R Dawley",
+    "wageRate": 8.313171503725178
+  },
+  "TPU10Z86VVNT4ZPO": {
+    "count": 13,
+    "lastUpdatedOn": 1646276189380,
+    "max": 81.81818181818181,
+    "min": 0.6545454545454545,
+    "name": "wcm_phs",
+    "wageRate": 21.761910506498545
+  },
+  "TPU10ZIOYLCIMLWB": {
+    "count": 35,
+    "lastUpdatedOn": 1690926341853,
+    "max": 39.130434782608695,
+    "min": 1.8953068592057762,
+    "name": "Ciara Peebles",
+    "wageRate": 10.209374815325233
+  },
+  "TPU10ZS68GDT2LY3": {
+    "count": 5,
+    "lastUpdatedOn": 1604376024387,
+    "max": 10.344827586206897,
+    "min": 0.335543779763976,
+    "name": "Nilay N. Shah",
+    "wageRate": 3.740589143533808
+  },
+  "TPU10ZSNY46F5NCD": {
+    "count": 180,
+    "lastUpdatedOn": 1616168775782,
+    "max": 2160,
+    "min": 1.0687239999489389,
+    "name": "Psychology Mythbusters",
+    "wageRate": 25.731699518298896
+  },
+  "TPU1102LCKT0UPDL": {
+    "count": 41,
+    "lastUpdatedOn": 1625775924644,
+    "max": 180,
+    "min": 2.0134228187919465,
+    "name": "Rony Hanselmann",
+    "wageRate": 42.173035682080126
+  },
+  "TPU1102PGDVVOYQS": {
+    "count": 29,
+    "lastUpdatedOn": 1603208619638,
+    "max": 14.021024058207814,
+    "min": 3.3523646542634498,
+    "name": "Lifespan Social Cognition Lab",
+    "wageRate": 7.083956195461353
+  },
+  "TPU11032EZVTCO3K": {
+    "count": 11,
+    "lastUpdatedOn": 1642523151199,
+    "max": 3.1578947368421053,
+    "min": 0.6844106463878328,
+    "name": "FirstStep",
+    "wageRate": 1.5985170137091416
+  },
+  "TPU1107UQSHIHXI1": {
+    "count": 2376,
+    "lastUpdatedOn": 1691484157294,
+    "max": 180,
+    "min": 0.19629225736095965,
+    "name": "Timothy Osborne",
+    "wageRate": 25.516780782960904
+  },
+  "TPU110AGL8CPH247": {
+    "count": 8,
+    "lastUpdatedOn": 1563726440762,
+    "name": "Catherine Ni Chunhong",
+    "wageRate": 5.058446986066693
+  },
+  "TPU110I80B6YQ832": {
+    "count": 2,
+    "lastUpdatedOn": 1576164924452,
+    "name": "Jaylin Herskovitz",
+    "wageRate": 5.038227830133007
+  },
+  "TPU110MBJBI3XXOW": {
+    "count": 2,
+    "lastUpdatedOn": 1584488524678,
+    "name": "Mayra",
+    "wageRate": 0.42023686780798614
+  },
+  "TPU110TV8NJ9L01T": {
+    "count": 961,
+    "lastUpdatedOn": 1680595932346,
+    "max": 36,
+    "min": 0.06818181818181818,
+    "name": "Grips Intelligence",
+    "wageRate": 13.92212756909008
+  },
+  "TPU110TZRREW4XKW": {
+    "count": 3,
+    "lastUpdatedOn": 1593185306054,
+    "name": "Christian Mehle",
+    "wageRate": 2.1499615909237173
+  },
+  "TPU110U4JVLMTUR2": {
+    "count": 18,
+    "lastUpdatedOn": 1625309235649,
+    "max": 138.46153846153848,
+    "min": 0.7049148227922459,
+    "name": "Mariam",
+    "wageRate": 21.053508216546092
+  },
+  "TPU110ZG94PRHH9T": {
+    "count": 13,
+    "lastUpdatedOn": 1646923741179,
+    "max": 45,
+    "min": 6.923076923076923,
+    "name": "RandomAmzUser",
+    "wageRate": 18.498187431297797
+  },
+  "TPU110ZNPQX5QYNI": {
+    "count": 5,
+    "lastUpdatedOn": 1614120211856,
+    "max": 16.513761467889907,
+    "min": 4.639175257731959,
+    "name": "Xi Yu",
+    "wageRate": 10.486242855811703
+  },
+  "TPU1114J6ETXC56J": {
+    "count": 1,
+    "lastUpdatedOn": 1564148952647,
+    "name": "Chinmay Kulkarni",
+    "wageRate": 5.507905374185671
+  },
+  "TPU1117RCT9IWKLD": {
+    "count": 285,
+    "lastUpdatedOn": 1640701801747,
+    "max": 720,
+    "min": 0.33436532507739936,
+    "name": "Icy",
+    "wageRate": 15.92946641953524
+  },
+  "TPU111E0MLK4PXK": {
+    "count": 1,
+    "lastUpdatedOn": 1572278411750,
+    "name": "Bonnie van der Heijden",
+    "wageRate": 4.8970708261539855
+  },
+  "TPU111G0KO4015IY": {
+    "count": 104,
+    "lastUpdatedOn": 1690056772156,
+    "max": 83.72093023255813,
+    "min": 4.887983706720977,
+    "name": "Georgi M Karadzhov",
+    "wageRate": 12.799609804733448
+  },
+  "TPU111IFVOVP9RVL": {
+    "count": 32,
+    "lastUpdatedOn": 1600542411144,
+    "max": 4.884076666436783,
+    "min": 0.0714047386802762,
+    "name": "TTM Study",
+    "wageRate": 1.774123923686816
+  },
+  "TPU111PICPL4G0TF": {
+    "count": 130,
+    "lastUpdatedOn": 1613709260709,
+    "max": 225,
+    "min": 0.11513103190664666,
+    "name": "Christina Rader",
+    "wageRate": 27.251037507758365
+  },
+  "TPU111PKHI5KV0CZ": {
+    "count": 1,
+    "lastUpdatedOn": 1587265053714,
+    "name": "TPUmrit",
+    "wageRate": 8.92480848848452
+  },
+  "TPU111V1BE8LGXB7": {
+    "count": 1,
+    "lastUpdatedOn": 1662051590905,
+    "max": 1.5737704918032787,
+    "min": 1.5737704918032787,
+    "name": "JasonHill",
+    "wageRate": 1.5737704918032787
+  },
+  "TPU111Z8Y6T6GAZW": {
+    "count": 18,
+    "lastUpdatedOn": 1591993400513,
+    "name": "Madavi",
+    "wageRate": 2.4117821665129298
+  },
+  "TPU1123DF0MPQDQ6": {
+    "count": 973,
+    "lastUpdatedOn": 1695164267647,
+    "max": 675,
+    "min": 0.5444977144708435,
+    "name": "Yuval Rottenstreich",
+    "wageRate": 14.740088229026751
+  },
+  "TPU1124EAL05RVAE": {
+    "count": 93,
+    "lastUpdatedOn": 1639179751673,
+    "max": 96,
+    "min": 1.900739176346357,
+    "name": "Mind-Body Medicine Research Lab",
+    "wageRate": 12.346142845215574
+  },
+  "TPU1125TLMTGFG9C": {
+    "count": 32,
+    "lastUpdatedOn": 1671212850546,
+    "max": 32.72727272727273,
+    "min": 1.2786108918705603,
+    "name": "James David Fuller",
+    "wageRate": 12.36098478159475
+  },
+  "TPU1128Z2W71T4V": {
+    "count": 2,
+    "lastUpdatedOn": 1574330007399,
+    "name": "Kyle Dadgar",
+    "wageRate": 0.6193270327492395
+  },
+  "TPU112A1WEOXR8NB": {
+    "count": 2224,
+    "lastUpdatedOn": 1690326719658,
+    "max": 96,
+    "min": 0.057600000000000005,
+    "name": "HHU Dialog Systems and Machine Learning",
+    "wageRate": 10.926178967016394
+  },
+  "TPU112G1ABMZ4AUE": {
+    "count": 41,
+    "lastUpdatedOn": 1598632306388,
+    "max": 26.289285594749447,
+    "min": 3.649061633664621,
+    "name": "Edward Walker",
+    "wageRate": 10.311935541571046
+  },
+  "TPU112GZ4R9QCRC2": {
+    "count": 19,
+    "lastUpdatedOn": 1597273677267,
+    "max": 15.93740142883231,
+    "min": 0.03354626514520687,
+    "name": "Vassilis Fatinas",
+    "wageRate": 3.3003885543778764
+  },
+  "TPU112K4PWIK51DD": {
+    "count": 10,
+    "lastUpdatedOn": 1638488884175,
+    "max": 15.652173913043478,
+    "min": 1.5319148936170213,
+    "name": "Sarah",
+    "wageRate": 6.070520694637757
+  },
+  "TPU112M34UH70JUO": {
+    "count": 93,
+    "lastUpdatedOn": 1660239818843,
+    "max": 56.9620253164557,
+    "min": 5.244755244755245,
+    "name": "Mary Whipple",
+    "wageRate": 18.28771184956529
+  },
+  "TPU112QQP5ANJ9F8": {
+    "count": 1,
+    "lastUpdatedOn": 1588885089698,
+    "name": "TPUmber",
+    "wageRate": 5.355389604593735
+  },
+  "TPU112V23NZQA8TN": {
+    "count": 6,
+    "lastUpdatedOn": 1563726440762,
+    "name": "Research Study Participate",
+    "wageRate": 6.923709927789507
+  },
+  "TPU112WKOW9FWVLO": {
+    "count": 29,
+    "lastUpdatedOn": 1687906941033,
+    "max": 33.10344827586207,
+    "min": 5.660377358490566,
+    "name": "University of Massachusetts - Amherst",
+    "wageRate": 13.789342470453388
+  },
+  "TPU112XJ22HXNM19": {
+    "count": 7,
+    "lastUpdatedOn": 1563726440762,
+    "name": "Uma Millner",
+    "wageRate": 14.69325225430745
+  },
+  "TPU112XQHRPCLI9R": {
+    "count": 121,
+    "lastUpdatedOn": 1642999352553,
+    "max": 90,
+    "min": 0.46827576239340946,
+    "name": "Justin Sola",
+    "wageRate": 8.501621169658822
+  },
+  "TPU1130HUTIWXHOJ": {
+    "count": 128,
+    "lastUpdatedOn": 1650701784967,
+    "max": 180,
+    "min": 1.019830028328612,
+    "name": "Lena Mamykina",
+    "wageRate": 16.565805972467512
+  },
+  "TPU1136ATBJMH04R": {
+    "count": 12,
+    "lastUpdatedOn": 1620133665859,
+    "max": 193.5483870967742,
+    "min": 26.986506746626684,
+    "name": "Porfirio Liechty",
+    "wageRate": 121.96744778170671
+  },
+  "TPU1138LLJWTRCWX": {
+    "count": 1,
+    "lastUpdatedOn": 1589937355666,
+    "name": "Kuan-Hao Huang",
+    "wageRate": 0.9840205988312023
+  },
+  "TPU113BB7D7UFDDH": {
+    "count": 2,
+    "lastUpdatedOn": 1563759972686,
+    "name": "Hugo Neri",
+    "wageRate": 8.345507811963845
+  },
+  "TPU113O1ZOLR7KIS": {
+    "count": 21,
+    "lastUpdatedOn": 1666719994110,
+    "max": 27.857142857142858,
+    "min": 4.9893390191897655,
+    "name": "Jing Ma",
+    "wageRate": 10.48720056813845
+  },
+  "TPU113RTQOS3KIE5": {
+    "count": 15,
+    "lastUpdatedOn": 1567111796122,
+    "name": "Jonathan C. Dinu",
+    "wageRate": 9.303218439885178
+  },
+  "TPU113V7TL78BKGS": {
+    "count": 9,
+    "lastUpdatedOn": 1621111401442,
+    "max": 21.355932203389827,
+    "min": 6.176470588235294,
+    "name": "luca degiorgi",
+    "wageRate": 11.937433054546725
+  },
+  "TPU1146E8W5DHO3W": {
+    "count": 14,
+    "lastUpdatedOn": 1617130138097,
+    "max": 180,
+    "min": 12.857142857142858,
+    "name": "Matt Ho",
+    "wageRate": 46.50064328439372
+  },
+  "TPU114IB7SO4VIPS": {
+    "count": 158,
+    "lastUpdatedOn": 1678261295815,
+    "max": 141.88235294117646,
+    "min": 1.952482162680814,
+    "name": "Levin Lab",
+    "wageRate": 17.08053280172132
+  },
+  "TPU114IONI3OBNIO": {
+    "count": 75,
+    "lastUpdatedOn": 1660220853247,
+    "max": 55.38461538461539,
+    "min": 1.1933701657458564,
+    "name": "Ning",
+    "wageRate": 5.837974477652183
+  },
+  "TPU114LX6MZIHRQH": {
+    "count": 14,
+    "lastUpdatedOn": 1651377769637,
+    "max": 15.230769230769232,
+    "min": 0.8237986270022883,
+    "name": "xiaoliy",
+    "wageRate": 4.03915250223697
+  },
+  "TPU114QAPJAO3KUP": {
+    "count": 9,
+    "lastUpdatedOn": 1664748735947,
+    "max": 43.90243902439025,
+    "min": 0.5772314270443614,
+    "name": "Somtoo",
+    "wageRate": 14.154948749912737
+  },
+  "TPU114QE4CTMITD": {
+    "count": 23,
+    "lastUpdatedOn": 1689785724543,
+    "max": 40.909090909090914,
+    "min": 8.653846153846153,
+    "name": "TPUlyssa Joaquin",
+    "wageRate": 16.936976138706836
+  },
+  "TPU114TQHR2BT6Y8": {
+    "count": 78,
+    "lastUpdatedOn": 1643772055835,
+    "max": 179.99999999999997,
+    "min": 1.3043478260869568,
+    "name": "Scott Matthews",
+    "wageRate": 8.089506829605599
+  },
+  "TPU114ZV21XHUCEC": {
+    "count": 6,
+    "lastUpdatedOn": 1590331007204,
+    "name": "Hengyun Li",
+    "wageRate": 3.111090910981627
+  },
+  "TPU11549GKFQYNH6": {
+    "count": 14,
+    "lastUpdatedOn": 1576261921645,
+    "name": "Yiwen",
+    "wageRate": 3.0411876906240782
+  },
+  "TPU115A2Q3QZA1OT": {
+    "count": 17,
+    "lastUpdatedOn": 1623442851763,
+    "max": 56.57142857142858,
+    "min": 0.9061784897025171,
+    "name": "Shivam Goyal",
+    "wageRate": 6.933543060183909
+  },
+  "TPU115DZH519S9T3": {
+    "count": 63,
+    "lastUpdatedOn": 1685548276297,
+    "max": 87.88235294117648,
+    "min": 3.373983739837399,
+    "name": "ieso digital health studies",
+    "wageRate": 20.28439334945175
+  },
+  "TPU115EASRW6Z31X": {
+    "count": 8,
+    "lastUpdatedOn": 1655749671949,
+    "max": 1.4851485148514851,
+    "min": 0.35307963907414674,
+    "name": "Ruth King",
+    "wageRate": 0.9344754433714375
+  },
+  "TPU115I6YMW7K1IO": {
+    "count": 15,
+    "lastUpdatedOn": 1652899477883,
+    "max": 49.090909090909086,
+    "min": 0.6553398058252426,
+    "name": "Marina Mainescu",
+    "wageRate": 17.952352996595224
+  },
+  "TPU115ICEPODWFKH": {
+    "count": 8,
+    "lastUpdatedOn": 1568767618765,
+    "name": "Mika Colson",
+    "wageRate": 3.1401793264009843
+  },
+  "TPU115KZBB8K5WL1": {
+    "count": 181,
+    "lastUpdatedOn": 1674753843261,
+    "max": 90,
+    "min": 0.8846657929226737,
+    "name": "TPUSU Sustainability",
+    "wageRate": 15.015746519214511
+  },
+  "TPU115N93Q7VPWXO": {
+    "count": 7,
+    "lastUpdatedOn": 1571521997007,
+    "name": "Ritsuya Niwayama",
+    "wageRate": 6.889666125435726
+  },
+  "TPU115RLIE0XXN1R": {
+    "count": 26,
+    "lastUpdatedOn": 1614788749675,
+    "max": 144,
+    "min": 2.773497688751926,
+    "name": "Bridget Galaty",
+    "wageRate": 26.96294904962271
+  },
+  "TPU1165NJPZ7NRHY": {
+    "count": 578,
+    "lastUpdatedOn": 1694179913675,
+    "max": 224.99999999999997,
+    "min": 0.23112811148729825,
+    "name": "Betterment Labs",
+    "wageRate": 13.027930068449573
+  },
+  "TPU1166IQWPQKSLI": {
+    "count": 20,
+    "lastUpdatedOn": 1645577040356,
+    "max": 8.845208845208845,
+    "min": 3.0620924298270484,
+    "name": "Lena Hildenbrand",
+    "wageRate": 5.508207103817477
+  },
+  "TPU1168LJUTXX1CQ": {
+    "count": 9,
+    "lastUpdatedOn": 1635899248800,
+    "max": 48,
+    "min": 1.6666666666666667,
+    "name": "Omar El-esses",
+    "wageRate": 10.218815091831868
+  },
+  "TPU116ER5AZOH3QV": {
+    "count": 21,
+    "lastUpdatedOn": 1616691428940,
+    "max": 171.42857142857142,
+    "min": 7.317073170731708,
+    "name": "Kevin Lim",
+    "wageRate": 40.34978737763304
+  },
+  "TPU116LG5UWT9CLO": {
+    "count": 5,
+    "lastUpdatedOn": 1604338303855,
+    "max": 138.46153846153848,
+    "min": 1.322556943423953,
+    "name": "Erwin Fisher",
+    "wageRate": 53.47602249493275
+  },
+  "TPU116TU1LSVEHEK": {
+    "count": 20,
+    "lastUpdatedOn": 1602301954701,
+    "max": 19.78060337304537,
+    "min": 0.18581462040441277,
+    "name": "Meg p",
+    "wageRate": 5.014831412545943
+  },
+  "TPU116XPE56JVGXQ": {
+    "count": 70008,
+    "lastUpdatedOn": 1695439577852,
+    "max": 1080,
+    "min": 0.032951945080091534,
+    "name": "TPUmazon Requester Inc. - RVD Team",
+    "wageRate": 13.563248000733607
+  },
+  "TPU1172S3A8HFFCW": {
+    "count": 30,
+    "lastUpdatedOn": 1628685750047,
+    "max": 81.81818181818181,
+    "min": 4.976958525345623,
+    "name": "Mingyue Liu",
+    "wageRate": 24.018889619420968
+  },
+  "TPU1174D07YJ9GGC": {
+    "count": 1,
+    "lastUpdatedOn": 1664657059923,
+    "max": 3.6,
+    "min": 3.6,
+    "name": "626282413627",
+    "wageRate": 3.6
+  },
+  "TPU117DMXTT2XEVX": {
+    "count": 27,
+    "lastUpdatedOn": 1630539314759,
+    "max": 180,
+    "min": 2.9220779220779223,
+    "name": "TPUpplication Laboratory",
+    "wageRate": 26.070738282561408
+  },
+  "TPU117KL6MBVRHOW": {
+    "count": 1,
+    "lastUpdatedOn": 1626289536611,
+    "max": 22.5,
+    "min": 22.5,
+    "name": "JSuper MSU",
+    "wageRate": 22.5
+  },
+  "TPU117LZKYG79I5B": {
+    "count": 32,
+    "lastUpdatedOn": 1606521944353,
+    "max": 720,
+    "min": 2.608695652173913,
+    "name": "Jerome Kirtley",
+    "wageRate": 54.43990891948146
+  },
+  "TPU117MG8OYDHDAR": {
+    "count": 332,
+    "lastUpdatedOn": 1684849203219,
+    "max": 225,
+    "min": 0.7747633743527498,
+    "name": "Ryan Elder",
+    "wageRate": 13.554326547943967
+  },
+  "TPU117RD51I8QUSP": {
+    "count": 1,
+    "lastUpdatedOn": 1569525919897,
+    "name": "George",
+    "wageRate": 0.22639772294201327
+  },
+  "TPU117T5FWL5TEG7": {
+    "count": 2,
+    "lastUpdatedOn": 1663224680850,
+    "max": 0,
+    "min": 0,
+    "name": "Vector Casanova",
+    "wageRate": 0
+  },
+  "TPU117T6BLPCCCOE": {
+    "count": 68,
+    "lastUpdatedOn": 1678320917762,
+    "max": 26.21359223300971,
+    "min": 3.0201342281879193,
+    "name": "Transparency and Governance Center",
+    "wageRate": 10.151286919537684
+  },
+  "TPU117TYC8OASD0O": {
+    "count": 45,
+    "lastUpdatedOn": 1678254219680,
+    "max": 97.29729729729729,
+    "min": 5.783132530120482,
+    "name": "Kevin Davis",
+    "wageRate": 37.57532114954021
+  },
+  "TPU117UUQ2HRY0EH": {
+    "count": 22,
+    "lastUpdatedOn": 1587420125551,
+    "name": "Dr. Ozias Moore",
+    "wageRate": 6.918059352883101
+  },
+  "TPU117Y0640NZEGM": {
+    "count": 44,
+    "lastUpdatedOn": 1658692637047,
+    "max": 52,
+    "min": 3.9493670886075956,
+    "name": "bleepy3",
+    "wageRate": 12.743428122521548
+  },
+  "TPU118A86OBRCO9Q": {
+    "count": 12,
+    "lastUpdatedOn": 1597344638974,
+    "max": 12.459851589323293,
+    "min": 0.4979969456187336,
+    "name": "TPUrnaud De Bruyn",
+    "wageRate": 4.3366492891319615
+  },
+  "TPU118AXJ9FMBSRF": {
+    "count": 52837,
+    "lastUpdatedOn": 1695451494589,
+    "max": 180,
+    "min": 0.0031751631681072503,
+    "name": "Hotel Photos",
+    "wageRate": 17.04898136579479
+  },
+  "TPU118C1HMZGY5K1": {
+    "count": 426,
+    "lastUpdatedOn": 1637265832891,
+    "max": 98.70967741935483,
+    "min": 0.9503695881731784,
+    "name": "Cindy Kam",
+    "wageRate": 28.88007729619422
+  },
+  "TPU118DWOXWSI8VC": {
+    "count": 134,
+    "lastUpdatedOn": 1670952832055,
+    "max": 237.6,
+    "min": 0.4405669117116147,
+    "name": "Mark Benton",
+    "wageRate": 20.78716217920261
+  },
+  "TPU118MOG1HTMUAV": {
+    "count": 13,
+    "lastUpdatedOn": 1637205813551,
+    "max": 58.53658536585366,
+    "min": 8.275862068965518,
+    "name": "Katherine Sheppard",
+    "wageRate": 24.590139527090596
+  },
+  "TPU118OA6H31YA25": {
+    "count": 4,
+    "lastUpdatedOn": 1587494503154,
+    "name": "Yuxin Zhang",
+    "wageRate": 6.869816363798758
+  },
+  "TPU118S3LJ66JQ3A": {
+    "count": 150,
+    "lastUpdatedOn": 1681160785760,
+    "max": 800,
+    "min": 1.119713552390775,
+    "name": "Christopher Modica",
+    "wageRate": 32.815569981176054
+  },
+  "TPU118S6D9JGS8E8": {
+    "count": 164,
+    "lastUpdatedOn": 1682623737987,
+    "max": 92.3076923076923,
+    "min": 0.783289817232376,
+    "name": "Lata McGinn",
+    "wageRate": 15.305383182093045
+  },
+  "TPU118WZ8E595A2V": {
+    "count": 88,
+    "lastUpdatedOn": 1644012754251,
+    "max": 85.71428571428571,
+    "min": 0.49820094104622203,
+    "name": "Yale Research Study",
+    "wageRate": 6.944493257234132
+  },
+  "TPU118YI9W7LVH5H": {
+    "count": 2,
+    "lastUpdatedOn": 1599335504455,
+    "max": 3.195489389199956,
+    "min": 0.9458167837290088,
+    "name": "Brent Dixon",
+    "wageRate": 2.0706530864644823
+  },
+  "TPU1194FERLIRBWB": {
+    "count": 111,
+    "lastUpdatedOn": 1654179388605,
+    "max": 72.72727272727273,
+    "min": 3.975704030922142,
+    "name": "Yu-Che Chen",
+    "wageRate": 16.13163927442799
+  },
+  "TPU1196JQF2KGT5Q": {
+    "count": 131,
+    "lastUpdatedOn": 1624582176140,
+    "max": 189.4736842105263,
+    "min": 0.13394850424170263,
+    "name": "VF Lab",
+    "wageRate": 26.837851224275735
+  },
+  "TPU11998A5HSSVN2": {
+    "count": 74,
+    "lastUpdatedOn": 1603896446969,
+    "max": 257.14285714285717,
+    "min": 1.2822955940679581,
+    "name": "Vitor",
+    "wageRate": 16.634681160288018
+  },
+  "TPU1199TQVB7UVQO": {
+    "count": 151,
+    "lastUpdatedOn": 1670786814210,
+    "max": 45,
+    "min": 1.5652173913043481,
+    "name": "Tiffany",
+    "wageRate": 16.03257204595593
+  },
+  "TPU119EC7VRBPZH4": {
+    "count": 145,
+    "lastUpdatedOn": 1646776344725,
+    "max": 771.4285714285714,
+    "min": 0.7533361806650829,
+    "name": "Nathan M",
+    "wageRate": 46.55764428361019
+  },
+  "TPU119PRLU1Q4ZKB": {
+    "count": 8,
+    "lastUpdatedOn": 1585522937943,
+    "name": "Melanie Kartalija",
+    "wageRate": 4.153429576114595
+  },
+  "TPU119UPE1TILOOT": {
+    "count": 15,
+    "lastUpdatedOn": 1605230991924,
+    "max": 80,
+    "min": 1.1250235551806866,
+    "name": "Mimi Li",
+    "wageRate": 15.697288744314106
+  },
+  "TPU119WLJGZQ20I": {
+    "count": 3,
+    "lastUpdatedOn": 1579811607841,
+    "name": "Brian Burgess",
+    "wageRate": 4.2931621180117405
+  },
+  "TPU119WSZC3Q95I8": {
+    "count": 53,
+    "lastUpdatedOn": 1617901543406,
+    "max": 123.11111111111111,
+    "min": 3.612644254892122,
+    "name": "Mrinmaya Sachan",
+    "wageRate": 23.527116308452566
+  },
+  "TPU119YMF19KC2WW": {
+    "count": 1,
+    "lastUpdatedOn": 1575444617446,
+    "name": "TPUnthonie Dirk Hollaar",
+    "wageRate": 14.399308833176008
+  },
+  "TPU11A22KS5UNII3": {
+    "count": 116,
+    "lastUpdatedOn": 1665877428822,
+    "max": 66.12244897959184,
+    "min": 0.965435041716329,
+    "name": "NatBsu",
+    "wageRate": 6.797097609696749
+  },
+  "TPU11A74ZFWL1LXJ": {
+    "count": 417,
+    "lastUpdatedOn": 1671482219907,
+    "max": 150,
+    "min": 0.8466603951081845,
+    "name": "lyra_shi",
+    "wageRate": 8.447764781091518
+  },
+  "TPU11A9T5FDUW7J6": {
+    "count": 85,
+    "lastUpdatedOn": 1674596002573,
+    "max": 81.81818181818181,
+    "min": 0.38643194504079004,
+    "name": "Brenda Reyes Ayala",
+    "wageRate": 35.15341677646148
+  },
+  "TPU11A9Z4OTU0SDF": {
+    "count": 13,
+    "lastUpdatedOn": 1628151454155,
+    "max": 138.46153846153848,
+    "min": 2.8059236165237724,
+    "name": "Daniel",
+    "wageRate": 25.128188355076063
+  },
+  "TPU11AA3A3I7RQDL": {
+    "count": 3,
+    "lastUpdatedOn": 1588253678524,
+    "name": "Jordan Whitwell-Mak",
+    "wageRate": 4.215827130798754
+  },
+  "TPU11AB6XDJFAQTO": {
+    "count": 96,
+    "lastUpdatedOn": 1683057928468,
+    "max": 46.588235294117645,
+    "min": 0.3713080168776371,
+    "name": "Luna",
+    "wageRate": 15.24036558615353
+  },
+  "TPU11AC2Q3TNEFY9": {
+    "count": 328,
+    "lastUpdatedOn": 1662491836878,
+    "max": 194.59459459459458,
+    "min": 1.9416386567312298,
+    "name": "dupsychstudy@gmail.com",
+    "wageRate": 18.024703123027336
+  },
+  "TPU11AD09VR26HYN": {
+    "count": 2,
+    "lastUpdatedOn": 1603151385134,
+    "max": 0.7557484113538604,
+    "min": 0.6390086899363238,
+    "name": "Quantified Results",
+    "wageRate": 0.6390086899363238
+  },
+  "TPU11AD2Y7LBO42A": {
+    "count": 34,
+    "lastUpdatedOn": 1627472285689,
+    "max": 90,
+    "min": 1.0771992818671454,
+    "name": "Mr Angus H Jenner",
+    "wageRate": 14.031156266174362
+  },
+  "TPU11AER449EOC9G": {
+    "count": 53,
+    "lastUpdatedOn": 1622828171551,
+    "max": 192.85714285714286,
+    "min": 13.202933985330073,
+    "name": "LexBlog",
+    "wageRate": 66.16996979714784
+  },
+  "TPU11AF7USBVD5IN": {
+    "count": 8,
+    "lastUpdatedOn": 1680408519399,
+    "max": 11.076923076923078,
+    "min": 0.8333333333333334,
+    "name": "yeesim77",
+    "wageRate": 3.5302503905738765
+  },
+  "TPU11AH6S5YR34ID": {
+    "count": 14,
+    "lastUpdatedOn": 1663061871649,
+    "max": 0,
+    "min": 0,
+    "name": "HTorres INC",
+    "wageRate": 0
+  },
+  "TPU11AITVC7ZS772": {
+    "count": 137,
+    "lastUpdatedOn": 1674812082680,
+    "max": 61.802575107296136,
+    "min": 0.2155688622754491,
+    "name": "Petros Isaakidis",
+    "wageRate": 3.635662877392503
+  },
+  "TPU11AM918ROA61L": {
+    "count": 1,
+    "lastUpdatedOn": 1630108502099,
+    "max": 3,
+    "min": 3,
+    "name": "Damian Gabiriel Gambacorta",
+    "wageRate": 3
+  },
+  "TPU11AUZYOE8GG9W": {
+    "count": 22,
+    "lastUpdatedOn": 1662640153206,
+    "max": 81.81818181818181,
+    "min": 6.182911120652641,
+    "name": "Rate meaning of images",
+    "wageRate": 16.22534426783022
+  },
+  "TPU11AYKL9AUN275": {
+    "count": 10,
+    "lastUpdatedOn": 1580600781851,
+    "name": "Nikkita Sarna",
+    "wageRate": 10.061469166133834
+  },
+  "TPU11B933E98OVUS": {
+    "count": 1,
+    "lastUpdatedOn": 1663220140836,
+    "max": 0,
+    "min": 0,
+    "name": "Kristen LLC",
+    "wageRate": 0
+  },
+  "TPU11B98GO0YAESS": {
+    "count": 7,
+    "lastUpdatedOn": 1588435721277,
+    "name": "Korbinian",
+    "wageRate": 4.562385964822213
+  },
+  "TPU11BCU61KIZWKC": {
+    "count": 3,
+    "lastUpdatedOn": 1576126297181,
+    "name": "Kenneth Cutshall",
+    "wageRate": 2.001899533055821
+  },
+  "TPU11BEMGNB4JS0U": {
+    "count": 111,
+    "lastUpdatedOn": 1665466885184,
+    "max": 62.60869565217391,
+    "min": 2.975206611570248,
+    "name": "Brain Team",
+    "wageRate": 13.937098310729496
+  },
+  "TPU11BL2F6O09PI4": {
+    "count": 9,
+    "lastUpdatedOn": 1589307406366,
+    "name": "Elisa Macchi",
+    "wageRate": 5.332505605663001
+  },
+  "TPU11BN4N7JAG7E9": {
+    "count": 12,
+    "lastUpdatedOn": 1565288107859,
+    "name": "Sarah Ainsworth",
+    "wageRate": 3.4198619115064925
+  },
+  "TPU11BRIZRLSAZV2": {
+    "count": 112,
+    "lastUpdatedOn": 1615061322849,
+    "max": 180,
+    "min": 2.063037249283668,
+    "name": "Melanie Boninsegni",
+    "wageRate": 11.388015395568214
+  },
+  "TPU11BT7UOW9QX2V": {
+    "count": 75,
+    "lastUpdatedOn": 1651888527631,
+    "max": 83.72093023255813,
+    "min": 4.022346368715084,
+    "name": "jack haman",
+    "wageRate": 16.568559518532144
+  },
+  "TPU11BU30MHYF9S5": {
+    "count": 8,
+    "lastUpdatedOn": 1620858685823,
+    "max": 94.73684210526315,
+    "min": 3.6217303822937628,
+    "name": "wellbeingandretirement",
+    "wageRate": 29.116006491785573
+  },
+  "TPU11BV8RF54TR5Y": {
+    "count": 42,
+    "lastUpdatedOn": 1611441753446,
+    "max": 2297.8723404255315,
+    "min": 7.806502816846433,
+    "name": "Les Nelson",
+    "wageRate": 210.14589709121356
+  },
+  "TPU11BWAHFWFY3OB": {
+    "count": 91,
+    "lastUpdatedOn": 1645211993531,
+    "max": 65.45454545454545,
+    "min": 1.4905017048222113,
+    "name": "Dr. Piehlmaier",
+    "wageRate": 9.578043402667895
+  },
+  "TPU11BZL5ZOUAONG": {
+    "count": 10,
+    "lastUpdatedOn": 1598215484587,
+    "max": 3.684595808405317,
+    "min": 0.044482843572694934,
+    "name": "Zuzi Yong",
+    "wageRate": 2.623478434709437
+  },
+  "TPU11C6B31U8TL4H": {
+    "count": 1,
+    "lastUpdatedOn": 1591730805226,
+    "name": "uxrfiles",
+    "wageRate": 5.034019584733336
+  },
+  "TPU11C7PHV8POYMF": {
+    "count": 252,
+    "lastUpdatedOn": 1688998575789,
+    "max": 18,
+    "min": 0.1323529411764706,
+    "name": "ryerson",
+    "wageRate": 4.861534059582192
+  },
+  "TPU11C87X6OSQ9EV": {
+    "count": 10,
+    "lastUpdatedOn": 1618396408358,
+    "max": 13.846153846153847,
+    "min": 0.9290322580645162,
+    "name": "Roark Jones",
+    "wageRate": 4.259553785864294
+  },
+  "TPU11C9YL41JR438": {
+    "count": 17,
+    "lastUpdatedOn": 1648639938463,
+    "max": 64.28571428571429,
+    "min": 2.238805970149254,
+    "name": "Felicia",
+    "wageRate": 11.331216902523414
+  },
+  "TPU11CALTW1NVNVX": {
+    "count": 9,
+    "lastUpdatedOn": 1589904503862,
+    "name": "Konstantinos Apostolopoulos",
+    "wageRate": 4.28338999801604
+  },
+  "TPU11CIIOWTATNDQ": {
+    "count": 30,
+    "lastUpdatedOn": 1629489653179,
+    "max": 48.648648648648646,
+    "min": 0.07052270449086624,
+    "name": "Gissel Perez",
+    "wageRate": 6.379480257958983
+  },
+  "TPU11CO0R0YQHGG9": {
+    "count": 31,
+    "lastUpdatedOn": 1656059135346,
+    "max": 45,
+    "min": 0.13926499032882012,
+    "name": "DU YONGZHI",
+    "wageRate": 5.963561660063459
+  },
+  "TPU11D69RHXIWTUB": {
+    "count": 2,
+    "lastUpdatedOn": 1610487974057,
+    "max": 33.75,
+    "min": 29.18918918918919,
+    "name": "Zach Beims",
+    "wageRate": 31.469594594594597
+  },
+  "TPU11D7XSPTIFXN9": {
+    "count": 197,
+    "lastUpdatedOn": 1660152103723,
+    "max": 514.2857142857143,
+    "min": 1.0606734687263375,
+    "name": "Professor L. Maaike Helmus",
+    "wageRate": 22.338257689885562
+  },
+  "TPU11DEOOJZHXUQT": {
+    "count": 18,
+    "lastUpdatedOn": 1591304503483,
+    "name": "FutureProject",
+    "wageRate": 12.77749203588542
+  },
+  "TPU11DL3IRDRO5VX": {
+    "count": 9,
+    "lastUpdatedOn": 1656042727973,
+    "max": 28.125,
+    "min": 3.125,
+    "name": "The Moderating Effects of EI",
+    "wageRate": 10.706625410029314
+  },
+  "TPU11DM5CGK3XVRE": {
+    "count": 5,
+    "lastUpdatedOn": 1671168374299,
+    "max": 189.4736842105263,
+    "min": 7.30138706072523,
+    "name": "Jad Abi Esber",
+    "wageRate": 87.23742918645954
+  },
+  "TPU11DRABOQWCYJE": {
+    "count": 165,
+    "lastUpdatedOn": 1628185671327,
+    "max": 180,
+    "min": 0.682489555066101,
+    "name": "Dr. William Hampton",
+    "wageRate": 15.999282323179164
+  },
+  "TPU11DRC8CTML60O": {
+    "count": 9,
+    "lastUpdatedOn": 1611672217083,
+    "max": 857.1428571428571,
+    "min": 34.09090909090909,
+    "name": "Jeongyeon",
+    "wageRate": 215.607763243337
+  },
+  "TPU11DTAEYG1VP79": {
+    "count": 434,
+    "lastUpdatedOn": 1693406072269,
+    "max": 90,
+    "min": 0.6741573033707865,
+    "name": "Marc Hurley",
+    "wageRate": 9.786681371424164
+  },
+  "TPU11DY7ARMWUVBO": {
+    "count": 28,
+    "lastUpdatedOn": 1587494638549,
+    "name": "Stephanie Chan-Ahuja",
+    "wageRate": 4.207078263611713
+  },
+  "TPU11DYMJ37K07SO": {
+    "count": 128,
+    "lastUpdatedOn": 1677512054081,
+    "max": 85.71428571428571,
+    "min": 8,
+    "name": "Ken",
+    "wageRate": 21.030939262968698
+  },
+  "TPU11E39ZODO1U39": {
+    "count": 45,
+    "lastUpdatedOn": 1605315396867,
+    "max": 900,
+    "min": 3.8641162068547277,
+    "name": "Jessica Austin",
+    "wageRate": 104.4298752572881
+  },
+  "TPU11ECOQMG1DRHH": {
+    "count": 2,
+    "lastUpdatedOn": 1572016738975,
+    "name": "Xu Ningran",
+    "wageRate": 12.473427250451731
+  },
+  "TPU11EH4OSFQJWJG": {
+    "count": 29,
+    "lastUpdatedOn": 1662261010579,
+    "max": 92.3076923076923,
+    "min": 2.1176470588235294,
+    "name": "Erik",
+    "wageRate": 18.730065833958644
+  },
+  "TPU11EHW4M4PKMME": {
+    "count": 3,
+    "lastUpdatedOn": 1612825380264,
+    "max": 77.14285714285714,
+    "min": 11.203319502074688,
+    "name": "Inhwa Kim",
+    "wageRate": 33.68900823382298
+  },
+  "TPU11ERJOB83C6MT": {
+    "count": 6,
+    "lastUpdatedOn": 1587170128224,
+    "name": "Ben Yan",
+    "wageRate": 2.0030428639523508
+  },
+  "TPU11ERXCX8JN1SK": {
+    "count": 23,
+    "lastUpdatedOn": 1669764907165,
+    "max": 75,
+    "min": 1.3215859030837003,
+    "name": "Cassidy Porter",
+    "wageRate": 17.09143032229093
+  },
+  "TPU11EZ0V81PF33O": {
+    "count": 52,
+    "lastUpdatedOn": 1674058383911,
+    "max": 166.15384615384616,
+    "min": 1.9131975199291407,
+    "name": "Zarema Khon",
+    "wageRate": 13.224346958750205
+  },
+  "TPU11F4VSWS8F9OC": {
+    "count": 47,
+    "lastUpdatedOn": 1648219811521,
+    "max": 63.1578947368421,
+    "min": 3.0431107354184275,
+    "name": "TPUdriana Mucedola",
+    "wageRate": 15.86176343785331
+  },
+  "TPU11F89N4MYN92O": {
+    "count": 77,
+    "lastUpdatedOn": 1599419851515,
+    "max": 4.681079769066732,
+    "min": 1.8523135480816584,
+    "name": "Clara Colombatto",
+    "wageRate": 1.8523135480816584
+  },
+  "TPU11F8NHKOP4V86": {
+    "count": 8,
+    "lastUpdatedOn": 1563726440762,
+    "name": "Elliot",
+    "wageRate": 1.64586856964857
+  },
+  "TPU11FEE686G8J7U": {
+    "count": 158,
+    "lastUpdatedOn": 1679788559032,
+    "max": 98.18181818181817,
+    "min": 0.2523364485981308,
+    "name": "LUOceanSpray",
+    "wageRate": 7.785290315434954
+  },
+  "TPU11FIUQ8SJ1AYL": {
+    "count": 5,
+    "lastUpdatedOn": 1611716938013,
+    "max": 6.923076923076923,
+    "min": 1.5652173913043481,
+    "name": "Label_Img",
+    "wageRate": 3.0854739889266742
+  },
+  "TPU11FVLZ41NT962": {
+    "count": 13,
+    "lastUpdatedOn": 1580227043124,
+    "name": "Lili ZOU",
+    "wageRate": 4.498134753046291
+  },
+  "TPU11G18WHHD58C5": {
+    "count": 1,
+    "lastUpdatedOn": 1565237458675,
+    "name": "Knowledge",
+    "wageRate": 1.6073581283207572
+  },
+  "TPU11G6P1QIYWPJY": {
+    "count": 5,
+    "lastUpdatedOn": 1582874074724,
+    "name": "Dan",
+    "wageRate": 11.629966347550283
+  },
+  "TPU11GAKCZF816DL": {
+    "count": 9,
+    "lastUpdatedOn": 1626176743088,
+    "max": 187.82608695652172,
+    "min": 3.323076923076923,
+    "name": "YANGFEI LIN",
+    "wageRate": 29.07574368862997
+  },
+  "TPU11GFOWVK6C2NZ": {
+    "count": 13,
+    "lastUpdatedOn": 1652899909283,
+    "max": 30.461538461538463,
+    "min": 0.4356435643564357,
+    "name": "Jamie Mullins",
+    "wageRate": 3.9034501159490116
+  },
+  "TPU11GHI230IYIUR": {
+    "count": 89,
+    "lastUpdatedOn": 1682017907690,
+    "max": 73.82022471910112,
+    "min": 2.4638247946812672,
+    "name": "Kawakami Social Cognition Lab",
+    "wageRate": 11.739750297657997
+  },
+  "TPU11GI3Z4T72XRX": {
+    "count": 401,
+    "lastUpdatedOn": 1636552763627,
+    "max": 900,
+    "min": 2.011004664413597,
+    "name": "Itai Librider",
+    "wageRate": 70.62271528868321
+  },
+  "TPU11GK2EVYE379E": {
+    "count": 22,
+    "lastUpdatedOn": 1626791295650,
+    "max": 148.23529411764704,
+    "min": 1.4240506329113924,
+    "name": "Hean Tat Keh",
+    "wageRate": 12.148154975350854
+  },
+  "TPU11GN2MXQGSY5S": {
+    "count": 988,
+    "lastUpdatedOn": 1647341302754,
+    "max": 65.45454545454545,
+    "min": 0.23136246786632392,
+    "name": "Roberto Navigli",
+    "wageRate": 18.179987908612247
+  },
+  "TPU11GSSAJWY2GQQ": {
+    "count": 2,
+    "lastUpdatedOn": 1606939193767,
+    "max": 207.6923076923077,
+    "min": 15.34090909090909,
+    "name": "Neil Fasching",
+    "wageRate": 111.5166083916084
+  },
+  "TPU11GT30VYXMIHB": {
+    "count": 21,
+    "lastUpdatedOn": 1606148121238,
+    "max": 6012,
+    "min": 3.3832301631963984,
+    "name": "Katherine Stasaski",
+    "wageRate": 308.33089545374395
+  },
+  "TPU11GVLUVVPYY3A": {
+    "count": 1,
+    "lastUpdatedOn": 1616456413548,
+    "max": 3.404011461318052,
+    "min": 3.404011461318052,
+    "name": "greg mackin",
+    "wageRate": 3.404011461318052
+  },
+  "TPU11GX3VN8109A1": {
+    "count": 51,
+    "lastUpdatedOn": 1662148300802,
+    "max": 58.8235294117647,
+    "min": 4.016064257028112,
+    "name": "sb_berkeley",
+    "wageRate": 16.24532884658041
+  },
+  "TPU11H0Z97SXJIT3": {
+    "count": 1,
+    "lastUpdatedOn": 1647959417637,
+    "max": 14.264150943396226,
+    "min": 14.264150943396226,
+    "name": "WFM",
+    "wageRate": 14.264150943396226
+  },
+  "TPU11H1Z8FEO8E1M": {
+    "count": 19,
+    "lastUpdatedOn": 1611345577572,
+    "max": 171.42857142857142,
+    "min": 1.123279627046202,
+    "name": "Williams Politics Research",
+    "wageRate": 15.21994575786291
+  },
+  "TPU11H2ER6DUIC8": {
+    "count": 58,
+    "lastUpdatedOn": 1679166187651,
+    "max": 62.06896551724138,
+    "min": 0.35946080878681974,
+    "name": "Cattie",
+    "wageRate": 8.715535528943677
+  },
+  "TPU11H8622WYLWQB": {
+    "count": 9,
+    "lastUpdatedOn": 1648109795704,
+    "max": 26.470588235294116,
+    "min": 2.7252081756245268,
+    "name": "Inhwa Kim",
+    "wageRate": 11.661599855550527
+  },
+  "TPU11H8VX4U4R43U": {
+    "count": 93,
+    "lastUpdatedOn": 1666279926794,
+    "max": 61.165048543689316,
+    "min": 0.9905441554317865,
+    "name": "FBL",
+    "wageRate": 9.29904290246834
+  },
+  "TPU11HCIV9FH0K1U": {
+    "count": 7,
+    "lastUpdatedOn": 1594155809864,
+    "name": "Timothy Barron",
+    "wageRate": 1.7095587391914313
+  },
+  "TPU11HHTX7SJ4EGG": {
+    "count": 1,
+    "lastUpdatedOn": 1589817990574,
+    "name": "Ronald Robertson",
+    "wageRate": 12.552301255230123
+  },
+  "TPU11I1V4BX0FOX4": {
+    "count": 1056,
+    "lastUpdatedOn": 1675113755034,
+    "max": 540,
+    "min": 1.5389635650375977,
+    "name": "Daniela Goya Tocchetto",
+    "wageRate": 21.94871686067328
+  },
+  "TPU11I4W34OBH8FI": {
+    "count": 34,
+    "lastUpdatedOn": 1621150085472,
+    "max": 218.1818181818182,
+    "min": 2.1988432252265953,
+    "name": "TPUngus Hughes",
+    "wageRate": 25.57799436128199
+  },
+  "TPU11IJELJX7NFLC": {
+    "count": 56,
+    "lastUpdatedOn": 1603914255910,
+    "max": 63,
+    "min": 0.457365906509708,
+    "name": "TPUndrea Sanders",
+    "wageRate": 5.986798438994931
+  },
+  "TPU11IQRV2PKGWBH": {
+    "count": 1,
+    "lastUpdatedOn": 1637724599504,
+    "max": 31.30434782608696,
+    "min": 31.30434782608696,
+    "name": "Dan Smith",
+    "wageRate": 31.30434782608696
+  },
+  "TPU11IRJPZ3Y831X": {
+    "count": 6,
+    "lastUpdatedOn": 1608179693560,
+    "max": 11.410459587955625,
+    "min": 2.53989576549989,
+    "name": "PART Study",
+    "wageRate": 6.37493373357741
+  },
+  "TPU11IWU6CAX2LQT": {
+    "count": 116,
+    "lastUpdatedOn": 1640194145654,
+    "max": 1440,
+    "min": 4.624648735447612,
+    "name": "LabShimritBIU",
+    "wageRate": 52.83443637371023
+  },
+  "TPU11IXBOJ3TBSOS": {
+    "count": 7,
+    "lastUpdatedOn": 1622105567050,
+    "max": 90,
+    "min": 6.315789473684211,
+    "name": "Juanjo",
+    "wageRate": 35.46034041146823
+  },
+  "TPU11J0B655EF1VV": {
+    "count": 3,
+    "lastUpdatedOn": 1614964155131,
+    "max": 12.949640287769785,
+    "min": 4.477611940298508,
+    "name": "Jung Kim",
+    "wageRate": 9.133183799014455
+  },
+  "TPU11J2LOQ3XDC0": {
+    "count": 16,
+    "lastUpdatedOn": 1637268073721,
+    "max": 93.91304347826086,
+    "min": 3.02945301542777,
+    "name": "lina",
+    "wageRate": 20.724817264635156
+  },
+  "TPU11J3YPCA3LW0N": {
+    "count": 31,
+    "lastUpdatedOn": 1647015690503,
+    "max": 18.947368421052634,
+    "min": 0.21037253469685904,
+    "name": "SaraB",
+    "wageRate": 3.0200383078273947
+  },
+  "TPU11J530JMR0EVG": {
+    "count": 1292,
+    "lastUpdatedOn": 1694723253308,
+    "max": 900,
+    "min": 0.19070338648601642,
+    "name": "Textual Choreography",
+    "wageRate": 28.060040918172145
+  },
+  "TPU11J63JFNGPDUA": {
+    "count": 12,
+    "lastUpdatedOn": 1623915601433,
+    "max": 3.272727272727273,
+    "min": 0.6976744186046512,
+    "name": "Justyn",
+    "wageRate": 1.300018860180524
+  },
+  "TPU11JA0G9KDDJ04": {
+    "count": 1,
+    "lastUpdatedOn": 1664453874408,
+    "max": 7.2,
+    "min": 7.2,
+    "name": "latham",
+    "wageRate": 7.2
+  },
+  "TPU11JC0KCY589Y8": {
+    "count": 10,
+    "lastUpdatedOn": 1692102311054,
+    "max": 12.311901504787963,
+    "min": 5.678233438485805,
+    "name": "Danielle Lindner",
+    "wageRate": 8.224134187555174
+  },
+  "TPU11JFIVVFUN9P6": {
+    "count": 1,
+    "lastUpdatedOn": 1586643356850,
+    "name": "VideoDataset",
+    "wageRate": 0.33436956939701096
+  },
+  "TPU11JKL6BGOL60M": {
+    "count": 148,
+    "lastUpdatedOn": 1656528569367,
+    "max": 97.82608695652175,
+    "min": 0.06405693950177936,
+    "name": "Le Nguyen",
+    "wageRate": 14.41367658472241
+  },
+  "TPU11JKX2BDI8DT3": {
+    "count": 3,
+    "lastUpdatedOn": 1602532104769,
+    "max": 10.358539752814549,
+    "min": 3.0434760554521336,
+    "name": "Culture Diversity and Health Lab",
+    "wageRate": 6.137548279022531
+  },
+  "TPU11JRP732NZ8JG": {
+    "count": 8,
+    "lastUpdatedOn": 1680035093145,
+    "max": 92.3076923076923,
+    "min": 8.035714285714286,
+    "name": "Teng",
+    "wageRate": 33.710721362658795
+  },
+  "TPU11JVT8B8XLK2Y": {
+    "count": 76,
+    "lastUpdatedOn": 1657321697302,
+    "max": 90,
+    "min": 2.1686746987951806,
+    "name": "CK",
+    "wageRate": 36.898674756513905
+  },
+  "TPU11JZIRDZI329O": {
+    "count": 1,
+    "lastUpdatedOn": 1617402837974,
+    "max": 13.846153846153847,
+    "min": 13.846153846153847,
+    "name": "Denise Schiffer",
+    "wageRate": 13.846153846153847
+  },
+  "TPU11K128LENRAMM": {
+    "count": 109,
+    "lastUpdatedOn": 1579893732294,
+    "name": "Pexman Lab",
+    "wageRate": 7.964249425846337
+  },
+  "TPU11K65825FHHRK": {
+    "count": 1,
+    "lastUpdatedOn": 1586362258338,
+    "name": "Olivia Hoerle",
+    "wageRate": 1.6180938854029954
+  },
+  "TPU11K7FN2RYYK4I": {
+    "count": 41,
+    "lastUpdatedOn": 1650219124406,
+    "max": 52.173913043478265,
+    "min": 2.6143790849673203,
+    "name": "M2uFL",
+    "wageRate": 11.038932680190129
+  },
+  "TPU11K9XT997MMS1": {
+    "count": 5,
+    "lastUpdatedOn": 1642346824457,
+    "max": 3.711340206185567,
+    "min": 2.535211267605634,
+    "name": "Jake",
+    "wageRate": 3.233314467067501
+  },
+  "TPU11KC1N6W7XI65": {
+    "count": 53,
+    "lastUpdatedOn": 1648044474397,
+    "max": 144,
+    "min": 1.6528925619834711,
+    "name": "DASEUL KIM",
+    "wageRate": 31.08279096088358
+  },
+  "TPU11KFQ8ATPOSBD": {
+    "count": 2,
+    "lastUpdatedOn": 1614287397035,
+    "max": 18.947368421052634,
+    "min": 6.666666666666667,
+    "name": "Ibraheem Badahdah",
+    "wageRate": 12.80701754385965
+  },
+  "TPU11KPCTU74JTHB": {
+    "count": 9,
+    "lastUpdatedOn": 1626197398004,
+    "max": 109.0909090909091,
+    "min": 2.254226675015654,
+    "name": "Consumer Insight Lab",
+    "wageRate": 17.003751800693003
+  },
+  "TPU11KTTMQOJDFTH": {
+    "count": 2,
+    "lastUpdatedOn": 1656295979381,
+    "max": 5.753862546616942,
+    "min": 5.616224648985959,
+    "name": "Pawan Sinha",
+    "wageRate": 5.68504359780145
+  },
+  "TPU11KZDRP3KDG17": {
+    "count": 55,
+    "lastUpdatedOn": 1677081751444,
+    "max": 67.5,
+    "min": 1.7728168089297438,
+    "name": "nina.sirola",
+    "wageRate": 8.168222867157649
+  },
+  "TPU11L2PN1F7SBGM": {
+    "count": 1,
+    "lastUpdatedOn": 1664454813342,
+    "max": 9,
+    "min": 9,
+    "name": "mduryea",
+    "wageRate": 9
+  },
+  "TPU11L69M2SBDCWM": {
+    "count": 24,
+    "lastUpdatedOn": 1607849532177,
+    "max": 12,
+    "min": 3.6,
+    "name": "Teng Andrea Xu",
+    "wageRate": 9.859090909090911
+  },
+  "TPU11LBPWH0P81JC": {
+    "count": 4,
+    "lastUpdatedOn": 1603088917693,
+    "max": 4.290285482746498,
+    "min": 1.4015853487611545,
+    "name": "Wen.Q",
+    "wageRate": 2.869629068214293
+  },
+  "TPU11LE5P06BPMPJ": {
+    "count": 16,
+    "lastUpdatedOn": 1587565377416,
+    "name": "TPUndrew Jebb",
+    "wageRate": 9.189923286650433
+  },
+  "TPU11LIVG3LHX6ZK": {
+    "count": 3,
+    "lastUpdatedOn": 1666838652434,
+    "max": 25.495750708215297,
+    "min": 6.488824801730353,
+    "name": "TPUmy Li",
+    "wageRate": 12.913777422234135
+  },
+  "TPU11LMG39BN76JN": {
+    "count": 14,
+    "lastUpdatedOn": 1620219173313,
+    "max": 128.57142857142858,
+    "min": 5.48780487804878,
+    "name": "Wouter Torsin",
+    "wageRate": 41.579169404110075
+  },
+  "TPU11LOP9YAUVV6X": {
+    "count": 1,
+    "lastUpdatedOn": 1563977842966,
+    "name": "Gary Leavitt",
+    "wageRate": 22.445261618228542
+  },
+  "TPU11LPM8ZR6RTI": {
+    "count": 7,
+    "lastUpdatedOn": 1638685360315,
+    "max": 6,
+    "min": 2.783505154639175,
+    "name": "reina",
+    "wageRate": 4.288273060837128
+  },
+  "TPU11LVLAA0LI04B": {
+    "count": 20,
+    "lastUpdatedOn": 1680688385285,
+    "max": 10.86206896551724,
+    "min": 0.4974338728780103,
+    "name": "michelle",
+    "wageRate": 4.284739984380928
+  },
+  "TPU11MGGYJO56H6E": {
+    "count": 1,
+    "lastUpdatedOn": 1623188551712,
+    "max": 3.950617283950617,
+    "min": 3.950617283950617,
+    "name": "Yilin",
+    "wageRate": 3.950617283950617
+  },
+  "TPU11ML35GY3BHTH": {
+    "count": 6,
+    "lastUpdatedOn": 1675205166758,
+    "max": 6.180257510729614,
+    "min": 2.732447817836812,
+    "name": "Zoe Chuang",
+    "wageRate": 4.912347589916248
+  },
+  "TPU11MMCI3W7JTYU": {
+    "count": 7,
+    "lastUpdatedOn": 1649604127948,
+    "max": 7.868852459016393,
+    "min": 2.378048780487805,
+    "name": "HyesooLee",
+    "wageRate": 5.2123158553041815
+  },
+  "TPU11MPNBS4JIOSN": {
+    "count": 199,
+    "lastUpdatedOn": 1664212555549,
+    "max": 171.42857142857142,
+    "min": 0.0017761018419401116,
+    "name": "Heidi Brown",
+    "wageRate": 18.879896602603473
+  },
+  "TPU11MPPV82LADIK": {
+    "count": 39,
+    "lastUpdatedOn": 1634393366745,
+    "max": 174.19354838709677,
+    "min": 8.372093023255815,
+    "name": "Vishal Mehrotra",
+    "wageRate": 28.37825569819546
+  },
+  "TPU11MQ0I686ZHTD": {
+    "count": 132,
+    "lastUpdatedOn": 1684766550973,
+    "max": 93.10344827586206,
+    "min": 2.255639097744361,
+    "name": "maipham",
+    "wageRate": 27.94729817938608
+  },
+  "TPU11MZ0OSELLDZK": {
+    "count": 23,
+    "lastUpdatedOn": 1617450125686,
+    "max": 120,
+    "min": 3.339517625231911,
+    "name": "TPUngus Eglinton",
+    "wageRate": 25.29000148457463
+  },
+  "TPU11NGMP9VQQQJ5": {
+    "count": 3,
+    "lastUpdatedOn": 1650296463540,
+    "max": 0,
+    "min": 0,
+    "name": "Maya McKenzie",
+    "wageRate": 0
+  },
+  "TPU11NIQ1OF9TLMX": {
+    "count": 6,
+    "lastUpdatedOn": 1563726440762,
+    "name": "Patience",
+    "wageRate": 5.184411420609633
+  },
+  "TPU11NJ57ZCW1HP0": {
+    "count": 19,
+    "lastUpdatedOn": 1640479450280,
+    "max": 138.46153846153848,
+    "min": 4.390243902439025,
+    "name": "Torun Lindholm",
+    "wageRate": 31.019881384393376
+  },
+  "TPU11NMUBOSXFBUX": {
+    "count": 7,
+    "lastUpdatedOn": 1591800518538,
+    "name": "Leanne",
+    "wageRate": 11.605490556339257
+  },
+  "TPU11NN9RY73MPYU": {
+    "count": 16,
+    "lastUpdatedOn": 1629278280344,
+    "max": 196.36363636363635,
+    "min": 2.1538461538461537,
+    "name": "Jappy Fanggidae",
+    "wageRate": 28.435040920217414
+  },
+  "TPU11NR60ZA0LPPI": {
+    "count": 34,
+    "lastUpdatedOn": 1678218616307,
+    "max": 11.25,
+    "min": 0.31195840554592724,
+    "name": "TPUmh0422",
+    "wageRate": 3.335083364598068
+  },
+  "TPU11NSQILYUNLSX": {
+    "count": 1,
+    "lastUpdatedOn": 1587271674034,
+    "name": "SaveSpeciesOrg",
+    "wageRate": 1.9980297206920952
+  },
+  "TPU11NY479FGM9JT": {
+    "count": 29,
+    "lastUpdatedOn": 1633209092183,
+    "max": 193.84615384615384,
+    "min": 2.8346456692913384,
+    "name": "moore",
+    "wageRate": 28.136410117363504
+  },
+  "TPU11O0XY9LWKC8D": {
+    "count": 87,
+    "lastUpdatedOn": 1619452118905,
+    "max": 158.8235294117647,
+    "min": 1.8493150684931507,
+    "name": "Ian",
+    "wageRate": 10.763635556739857
+  },
+  "TPU11O6K4YYMUEZQ": {
+    "count": 1,
+    "lastUpdatedOn": 1661513467051,
+    "max": 19.3756727664155,
+    "min": 19.3756727664155,
+    "name": "rn-exp",
+    "wageRate": 19.3756727664155
+  },
+  "TPU11O788J713KX4": {
+    "count": 34,
+    "lastUpdatedOn": 1574541300773,
+    "name": "TPUnnie",
+    "wageRate": 2.264079510834112
+  },
+  "TPU11O7LPUNSD4CD": {
+    "count": 1,
+    "lastUpdatedOn": 1576772893009,
+    "name": "Colin Conwell",
+    "wageRate": 1.8424321332446918
+  },
+  "TPU11O9YB9ZKD5HO": {
+    "count": 5,
+    "lastUpdatedOn": 1677645792127,
+    "max": 45,
+    "min": 7.5,
+    "name": "Kento Masui",
+    "wageRate": 21.664285714285715
+  },
+  "TPU11OFNAP3SGTME": {
+    "count": 20,
+    "lastUpdatedOn": 1636190512498,
+    "max": 77.14285714285714,
+    "min": 0.6809583858764187,
+    "name": "X.W.",
+    "wageRate": 13.16293779702023
+  },
+  "TPU11OHQTYDCQ3G5": {
+    "count": 1,
+    "lastUpdatedOn": 1624965132912,
+    "max": 10.90909090909091,
+    "min": 10.90909090909091,
+    "name": "TPUidan Maddox",
+    "wageRate": 10.90909090909091
+  },
+  "TPU11OJB2KBKGTAG": {
+    "count": 138,
+    "lastUpdatedOn": 1631217231768,
+    "max": 72,
+    "min": 0.6611570247933884,
+    "name": "Carissa Baker",
+    "wageRate": 8.865078069462713
+  },
+  "TPU11OMCOXCZ9L3L": {
+    "count": 12,
+    "lastUpdatedOn": 1636556499939,
+    "max": 24,
+    "min": 1,
+    "name": "Christina Hsu",
+    "wageRate": 6.606074223319093
+  },
+  "TPU11OQTG8PNGWSM": {
+    "count": 3,
+    "lastUpdatedOn": 1564761342485,
+    "name": "Benjamin Tabak",
+    "wageRate": 2.2701325042921483
+  },
+  "TPU11OTU2WU3RKXR": {
+    "count": 8,
+    "lastUpdatedOn": 1616121900953,
+    "max": 23.076923076923077,
+    "min": 3.0092971855389523,
+    "name": "Valeriia",
+    "wageRate": 10.354062332844661
+  },
+  "TPU11P3OL64VTCZG": {
+    "count": 49,
+    "lastUpdatedOn": 1651905745118,
+    "max": 90,
+    "min": 4.173913043478261,
+    "name": "Venti",
+    "wageRate": 33.731247667053545
+  },
+  "TPU11P5B9HQNLVF3": {
+    "count": 9,
+    "lastUpdatedOn": 1683166412028,
+    "max": 20.168067226890756,
+    "min": 6.76056338028169,
+    "name": "Human Factors Research",
+    "wageRate": 15.02192940829452
+  },
+  "TPU11P5E9MLLZ1BK": {
+    "count": 162,
+    "lastUpdatedOn": 1677879366204,
+    "max": 43.199999999999996,
+    "min": 0.4121350887235261,
+    "name": "MWC",
+    "wageRate": 5.691999822465713
+  },
+  "TPU11P68PLTSDQFM": {
+    "count": 42,
+    "lastUpdatedOn": 1609793572939,
+    "max": 411.42857142857144,
+    "min": 1.369315912592001,
+    "name": "Jacqueline Kurz",
+    "wageRate": 32.072773403100896
+  },
+  "TPU11P6SNPZ1ZYQX": {
+    "count": 27,
+    "lastUpdatedOn": 1601753397613,
+    "max": 5.532874596361759,
+    "min": 1.5411559268790007,
+    "name": "UCSD Stein Institute",
+    "wageRate": 5.415829981870628
+  },
+  "TPU11PLWRH7TB12": {
+    "count": 5,
+    "lastUpdatedOn": 1604339788650,
+    "max": 736.3636363636364,
+    "min": 11.554921540656206,
+    "name": "Beverly Osborn",
+    "wageRate": 159.9122170121924
+  },
+  "TPU11PLZHTEH9XAR": {
+    "count": 47,
+    "lastUpdatedOn": 1692652038400,
+    "max": 27.428571428571427,
+    "min": 0.9750812567713976,
+    "name": "STS Lab",
+    "wageRate": 8.178483022958522
+  },
+  "TPU11PUWE4A6D5SL": {
+    "count": 12,
+    "lastUpdatedOn": 1582314972024,
+    "name": "William Black",
+    "wageRate": 5.955602928134899
+  },
+  "TPU11PVS6MO3140Y": {
+    "count": 16,
+    "lastUpdatedOn": 1584632163733,
+    "name": "TPUlaina Rasheed",
+    "wageRate": 3.499843258023156
+  },
+  "TPU11PXEOARPQDEZ": {
+    "count": 1,
+    "lastUpdatedOn": 1599571005446,
+    "max": 0.036520675267285696,
+    "min": 0.036520675267285696,
+    "name": "Jorge Pena",
+    "wageRate": 0.036520675267285696
+  },
+  "TPU11Q05ZEMYPI1E": {
+    "count": 13,
+    "lastUpdatedOn": 1593103220408,
+    "name": "Willa Jean Maryam",
+    "wageRate": 2.664083401174155
+  },
+  "TPU11Q2V1OJBCBOD": {
+    "count": 109,
+    "lastUpdatedOn": 1688061464476,
+    "max": 64.28571428571429,
+    "min": 0.6298110566829951,
+    "name": "Impact Research",
+    "wageRate": 10.803066922252018
+  },
+  "TPU11Q5K36RLFIF3": {
+    "count": 31,
+    "lastUpdatedOn": 1641473278259,
+    "max": 64.28571428571429,
+    "min": 1.906779661016949,
+    "name": "Shrabani Nanda",
+    "wageRate": 12.99083066386685
+  },
+  "TPU11QF2QCC19DJ7": {
+    "count": 38,
+    "lastUpdatedOn": 1654333377145,
+    "max": 31.858407079646017,
+    "min": 3.0025020850708923,
+    "name": "CKlimach",
+    "wageRate": 12.1885152856021
+  },
+  "TPU11QG7AZP8KSEM": {
+    "count": 108,
+    "lastUpdatedOn": 1676996452460,
+    "max": 215.99999999999997,
+    "min": 1.6563924324951067,
+    "name": "Mandy Lin",
+    "wageRate": 59.752857247613754
+  },
+  "TPU11QH2OWNBPXXQ": {
+    "count": 773,
+    "lastUpdatedOn": 1689687925726,
+    "max": 98.18181818181817,
+    "min": 0.39066739012479657,
+    "name": "Johnson",
+    "wageRate": 8.450024908906233
+  },
+  "TPU11QL5ULKYYM6Y": {
+    "count": 1,
+    "lastUpdatedOn": 1623104984740,
+    "max": 0.8780487804878049,
+    "min": 0.8780487804878049,
+    "name": "Madison Young",
+    "wageRate": 0.8780487804878049
+  },
+  "TPU11QPQD75AMKGW": {
+    "count": 16,
+    "lastUpdatedOn": 1604342936174,
+    "max": 79.29515418502203,
+    "min": 10.422372854103193,
+    "name": "Guillermo Horga",
+    "wageRate": 14.72692168728562
+  },
+  "TPU11QQ5527BBRG6": {
+    "count": 26,
+    "lastUpdatedOn": 1616717111553,
+    "max": 198,
+    "min": 1.9662363455809337,
+    "name": "TPUrpine Markosyan",
+    "wageRate": 36.309761637302685
+  },
+  "TPU11QQJI3QC7ILY": {
+    "count": 154,
+    "lastUpdatedOn": 1683383917946,
+    "max": 327.27272727272725,
+    "min": 2.42098184263618,
+    "name": "Lily2008",
+    "wageRate": 20.358307382280444
+  },
+  "TPU11QQYMMZQPIWE": {
+    "count": 11,
+    "lastUpdatedOn": 1618941573504,
+    "max": 24.324324324324323,
+    "min": 3.103448275862069,
+    "name": "Madge S. Waterman",
+    "wageRate": 10.803796680988311
+  },
+  "TPU11QRDA1F7IY8U": {
+    "count": 2,
+    "lastUpdatedOn": 1573650779644,
+    "name": "RL",
+    "wageRate": 21.735534498592774
+  },
+  "TPU11QWMRH6RKMI6": {
+    "count": 7,
+    "lastUpdatedOn": 1570320023779,
+    "name": "Tianjun Sun",
+    "wageRate": 3.6956659033622827
+  },
+  "TPU11QYJCZEA2RT9": {
+    "count": 1,
+    "lastUpdatedOn": 1601873163324,
+    "max": 3.7635330375475147,
+    "min": 3.7635330375475147,
+    "name": "Shawn",
+    "wageRate": 3.7635330375475147
+  },
+  "TPU11R41SP6OLLJ": {
+    "count": 1,
+    "lastUpdatedOn": 1644412988747,
+    "max": 1.1428571428571428,
+    "min": 1.1428571428571428,
+    "name": "Doctomail",
+    "wageRate": 1.1428571428571428
+  },
+  "TPU11R5GD9OYGWVP": {
+    "count": 15,
+    "lastUpdatedOn": 1590701656366,
+    "name": "squareandsquare",
+    "wageRate": 3.093636846434815
+  },
+  "TPU11R7FVYAS18T2": {
+    "count": 1,
+    "lastUpdatedOn": 1613990903632,
+    "max": 1,
+    "min": 1,
+    "name": "Tagziria Juba",
+    "wageRate": 1
+  },
+  "TPU11R91M1UH5SD1": {
+    "count": 57,
+    "lastUpdatedOn": 1675975814725,
+    "max": 66.66666666666667,
+    "min": 3.3962264150943393,
+    "name": "emilmirzayev",
+    "wageRate": 16.07371543312832
+  },
+  "TPU11RAO5NHABLBG": {
+    "count": 37,
+    "lastUpdatedOn": 1674147387134,
+    "max": 39.130434782608695,
+    "min": 0.5027932960893855,
+    "name": "Daria Plotkina",
+    "wageRate": 5.937847368366633
+  },
+  "TPU11RCU80TPAIIB": {
+    "count": 34,
+    "lastUpdatedOn": 1579049270983,
+    "name": "Katie Greenaway",
+    "wageRate": 6.174322144388221
+  },
+  "TPU11RFC59BZOQCZ": {
+    "count": 57,
+    "lastUpdatedOn": 1681793894996,
+    "max": 145.16129032258064,
+    "min": 3.841229193341869,
+    "name": "USC-CAIS",
+    "wageRate": 24.368644859527983
+  },
+  "TPU11RFGCL3S6RTS": {
+    "count": 40,
+    "lastUpdatedOn": 1628617419692,
+    "max": 96,
+    "min": 1.5483870967741935,
+    "name": "MOMOgmail",
+    "wageRate": 10.634236831378262
+  },
+  "TPU11RI2UR1J36J": {
+    "count": 168,
+    "lastUpdatedOn": 1641971586214,
+    "max": 41.53846153846154,
+    "min": 0.12996389891696752,
+    "name": "The Guy",
+    "wageRate": 3.8526362795011098
+  },
+  "TPU11RPOATN5RNNL": {
+    "count": 6,
+    "lastUpdatedOn": 1650423224599,
+    "max": 4.81283422459893,
+    "min": 0.9443861490031479,
+    "name": "Sara",
+    "wageRate": 2.9483781896214953
+  },
+  "TPU11RS29SVEUPJS": {
+    "count": 2,
+    "lastUpdatedOn": 1599179922917,
+    "max": 67.61604603901446,
+    "min": 14.710028561972125,
+    "name": "TPUlistair",
+    "wageRate": 41.16303730049329
+  },
+  "TPU11RS30GW3XCE3": {
+    "count": 2,
+    "lastUpdatedOn": 1654519359408,
+    "max": 28.272251308900522,
+    "min": 23.2258064516129,
+    "name": "Jane",
+    "wageRate": 25.74902888025671
+  },
+  "TPU11RVM0NUUZ03N": {
+    "count": 171,
+    "lastUpdatedOn": 1671242437574,
+    "max": 69.23076923076924,
+    "min": 3.8176033934252387,
+    "name": "Samantha Martinez",
+    "wageRate": 25.953383499512153
+  },
+  "TPU11SCJYDIRZGM6": {
+    "count": 303,
+    "lastUpdatedOn": 1682706760648,
+    "max": 90,
+    "min": 0.7292370020256582,
+    "name": "Jonas Görgen",
+    "wageRate": 7.775541271213345
+  },
+  "TPU11SF441C7PFWP": {
+    "count": 4,
+    "lastUpdatedOn": 1612391298265,
+    "max": 6.230769230769231,
+    "min": 4.8467812275824995,
+    "name": "Olivia Goldstein",
+    "wageRate": 4.8467812275824995
+  },
+  "TPU11SHCDZOM5EU": {
+    "count": 23,
+    "lastUpdatedOn": 1620018104061,
+    "max": 180,
+    "min": 14.210526315789474,
+    "name": "Zachary Wright",
+    "wageRate": 91.8567331970332
+  },
+  "TPU11SKTVECO7QMJ": {
+    "count": 8,
+    "lastUpdatedOn": 1634529289159,
+    "max": 52.94117647058823,
+    "min": 1.3888888888888888,
+    "name": "TPUnabel Marquez",
+    "wageRate": 14.156820987935298
+  },
+  "TPU11SPRPQLX8G5G": {
+    "count": 18,
+    "lastUpdatedOn": 1618944474206,
+    "max": 75.34883720930232,
+    "min": 7.422680412371134,
+    "name": "Ruben Pinuelas",
+    "wageRate": 25.706598469685964
+  },
+  "TPU11T1VM3H21SH1": {
+    "count": 88,
+    "lastUpdatedOn": 1692465077309,
+    "max": 49.411764705882355,
+    "min": 0.8966542750929368,
+    "name": "Scott Roberts",
+    "wageRate": 4.449129587854814
+  },
+  "TPU11T57NYECN6N9": {
+    "count": 84,
+    "lastUpdatedOn": 1631915795015,
+    "max": 42.35294117647059,
+    "min": 3.8176033934252387,
+    "name": "Liam Chew",
+    "wageRate": 11.70588442181419
+  },
+  "TPU11T7E1FITS6MX": {
+    "count": 91,
+    "lastUpdatedOn": 1694631015165,
+    "max": 17.142857142857142,
+    "min": 1.2784090909090908,
+    "name": "Megan Edwards",
+    "wageRate": 6.805660299464468
+  },
+  "TPU11T8FV5IJG5KU": {
+    "count": 745,
+    "lastUpdatedOn": 1619209914203,
+    "max": 514.2857142857143,
+    "min": 0.879409505830485,
+    "name": "GEMS Lab",
+    "wageRate": 14.348224524202916
+  },
+  "TPU11TASTC6107FK": {
+    "count": 1,
+    "lastUpdatedOn": 1593290787672,
+    "name": "TPUmy Mickelson",
+    "wageRate": 3.3789914336309765
+  },
+  "TPU11TB6A07KUJSA": {
+    "count": 1,
+    "lastUpdatedOn": 1600793074522,
+    "max": 7.914262159934048,
+    "min": 7.914262159934048,
+    "name": "TPUrikah Andrew",
+    "wageRate": 7.914262159934048
+  },
+  "TPU11TD9Z66ASW0E": {
+    "count": 93,
+    "lastUpdatedOn": 1666820800796,
+    "max": 45,
+    "min": 7.89041095890411,
+    "name": "Richard HUAMAN",
+    "wageRate": 14.888365994005738
+  },
+  "TPU11TDD9XOC0XWS": {
+    "count": 534,
+    "lastUpdatedOn": 1682024188448,
+    "max": 192.85714285714286,
+    "min": 0.8884501480750246,
+    "name": "Rebecca Dyer",
+    "wageRate": 18.34668282028092
+  },
+  "TPU11TDVK56W8042": {
+    "count": 647,
+    "lastUpdatedOn": 1673910814093,
+    "max": 190,
+    "min": 0.6498194945848376,
+    "name": "TPUlice Lee",
+    "wageRate": 9.347682277412313
+  },
+  "TPU11TFY5VCWW0K3": {
+    "count": 86,
+    "lastUpdatedOn": 1689732157367,
+    "max": 29.508196721311474,
+    "min": 1.79215930304916,
+    "name": "TPUnna Sutton",
+    "wageRate": 8.97647386135657
+  },
+  "TPU11TG4TV99K7J6": {
+    "count": 9,
+    "lastUpdatedOn": 1569959917860,
+    "name": "Matt Rocklloff",
+    "wageRate": 6.058704125314063
+  },
+  "TPU11THJ4K6T3ERG": {
+    "count": 31,
+    "lastUpdatedOn": 1607194248045,
+    "max": 9000,
+    "min": 67.16417910447761,
+    "name": "TPUnand Kannappan",
+    "wageRate": 764.4656033320481
+  },
+  "TPU11TKFZ8JM56XK": {
+    "count": 6,
+    "lastUpdatedOn": 1616139952636,
+    "max": 3.629032258064516,
+    "min": 2.5069637883008355,
+    "name": "Theresa",
+    "wageRate": 2.900032870155972
+  },
+  "TPU11TM7W8HJD8P0": {
+    "count": 74,
+    "lastUpdatedOn": 1664429797284,
+    "max": 92.78350515463917,
+    "min": 10.297482837528603,
+    "name": "CCHT",
+    "wageRate": 41.40646384165813
+  },
+  "TPU11TMPH2SEX590": {
+    "count": 38,
+    "lastUpdatedOn": 1643411051703,
+    "max": 51.42857142857143,
+    "min": 3.2628398791540785,
+    "name": "Novotx",
+    "wageRate": 14.249528215384448
+  },
+  "TPU11TX9EM9G6452": {
+    "count": 172,
+    "lastUpdatedOn": 1692819015342,
+    "max": 28.125,
+    "min": 0.18967334035827188,
+    "name": "pblythe",
+    "wageRate": 4.872755133502664
+  },
+  "TPU11U0YDLFFRXZM": {
+    "count": 56,
+    "lastUpdatedOn": 1647146116109,
+    "max": 25.233644859813083,
+    "min": 1.8274111675126903,
+    "name": "g2022",
+    "wageRate": 6.778962861371674
+  },
+  "TPU11UEII1A4BWRG": {
+    "count": 4,
+    "lastUpdatedOn": 1567981637608,
+    "name": "Dante",
+    "wageRate": 4.007508515217072
+  },
+  "TPU11UGS5G8E3K5Z": {
+    "count": 11,
+    "lastUpdatedOn": 1661451409157,
+    "max": 55.38461538461539,
+    "min": 7.929515418502202,
+    "name": "TPUnnie Tsui",
+    "wageRate": 16.636645021002458
+  },
+  "TPU11UGSBCEASYRV": {
+    "count": 15,
+    "lastUpdatedOn": 1638298540576,
+    "max": 62.06896551724138,
+    "min": 9.523809523809524,
+    "name": "Customer Insights",
+    "wageRate": 27.852368224479882
+  },
+  "TPU11UKGNY8WQXGE": {
+    "count": 22,
+    "lastUpdatedOn": 1605994683774,
+    "max": 49.26315789473684,
+    "min": 3.5320754716981133,
+    "name": "Mehmet Konar-Steenberg",
+    "wageRate": 16.159721671382506
+  },
+  "TPU11UM4W5LATAE5": {
+    "count": 10,
+    "lastUpdatedOn": 1603148171035,
+    "max": 3.17932075578342,
+    "min": 0.7830072349868513,
+    "name": "TPUeleah M. Granger",
+    "wageRate": 1.880919558052052
+  },
+  "TPU11US2HA7E70NY": {
+    "count": 1,
+    "lastUpdatedOn": 1657227863488,
+    "max": 64.28571428571428,
+    "min": 64.28571428571428,
+    "name": "research-insights",
+    "wageRate": 64.28571428571428
+  },
+  "TPU11USHJTJ9AOKY": {
+    "count": 31,
+    "lastUpdatedOn": 1642689707053,
+    "max": 8,
+    "min": 0.09703504043126684,
+    "name": "Jason H Hitchings",
+    "wageRate": 0.9742009191215986
+  },
+  "TPU11UTAH3YX76FL": {
+    "count": 27,
+    "lastUpdatedOn": 1648427988400,
+    "max": 89.99999999999999,
+    "min": 12.237960339943342,
+    "name": "TPUlan Aguilar",
+    "wageRate": 33.22753242153255
+  },
+  "TPU11UWMXNSU7OPD": {
+    "count": 14,
+    "lastUpdatedOn": 1662961586668,
+    "max": 0,
+    "min": 0,
+    "name": "Parkway Silverstar",
+    "wageRate": 0
+  },
+  "TPU11V5HHDLZ69SD": {
+    "count": 2,
+    "lastUpdatedOn": 1590514198775,
+    "name": "Jacob Jackson",
+    "wageRate": 0.2996310186058486
+  },
+  "TPU11V6SD7KRXE4O": {
+    "count": 1,
+    "lastUpdatedOn": 1605910685454,
+    "max": 3.571428571428571,
+    "min": 3.571428571428571,
+    "name": "TPUno",
+    "wageRate": 3.571428571428571
+  },
+  "TPU11V7B29INO6FJ": {
+    "count": 69,
+    "lastUpdatedOn": 1625689023952,
+    "max": 266.6666666666667,
+    "min": 2.830188679245283,
+    "name": "Warren Pettine",
+    "wageRate": 36.309597691345125
+  },
+  "TPU11VHZ8KLRJPLT": {
+    "count": 18,
+    "lastUpdatedOn": 1669400116483,
+    "max": 11.25,
+    "min": 1.565217391304348,
+    "name": "Erin M",
+    "wageRate": 4.509542963705755
+  },
+  "TPU11VJQT2R25ZBS": {
+    "count": 3,
+    "lastUpdatedOn": 1673204270240,
+    "max": 2.4,
+    "min": 1.0285714285714285,
+    "name": "Stacy Alice Thompson",
+    "wageRate": 1.5428571428571427
+  },
+  "TPU11VO1G9O6JDA6": {
+    "count": 83,
+    "lastUpdatedOn": 1600264575984,
+    "max": 14.31101411423767,
+    "min": 2.827261396808493,
+    "name": "Gerianne Alexander",
+    "wageRate": 5.708565475245306
+  },
+  "TPU11VO5APXHLOYC": {
+    "count": 2,
+    "lastUpdatedOn": 1594152942343,
+    "name": "Lukas Huppertz",
+    "wageRate": 6.96627952311035
+  },
+  "TPU11VTDZHFU3TTF": {
+    "count": 115,
+    "lastUpdatedOn": 1648259675916,
+    "max": 72,
+    "min": 0.4031354983202688,
+    "name": "John Marvel",
+    "wageRate": 15.54426638960446
+  },
+  "TPU11W2FFHKF6VO5": {
+    "count": 4,
+    "lastUpdatedOn": 1611843968971,
+    "max": 654.5454545454545,
+    "min": 142.60157352577772,
+    "name": "Dr. Babajide Osatuyi",
+    "wageRate": 270.58754378069693
+  },
+  "TPU11W47EPZ7R190": {
+    "count": 36,
+    "lastUpdatedOn": 1625863321315,
+    "max": 180,
+    "min": 3.753910323253389,
+    "name": "Emily Prinsloo",
+    "wageRate": 29.128992926827323
+  },
+  "TPU11WF2JHELK7UA": {
+    "count": 18,
+    "lastUpdatedOn": 1619106720059,
+    "max": 9.671641791044777,
+    "min": 0.6352941176470588,
+    "name": "Yao",
+    "wageRate": 3.525981842473028
+  },
+  "TPU11WGN4PXKS7V5": {
+    "count": 55,
+    "lastUpdatedOn": 1689631591743,
+    "max": 101.40845070422536,
+    "min": 4.708581918311152,
+    "name": "TPUmin Shoja",
+    "wageRate": 22.46666067160706
+  },
+  "TPU11WRKMY0HPCQ0": {
+    "count": 13,
+    "lastUpdatedOn": 1590083191344,
+    "name": "JeffandNatalie",
+    "wageRate": 2.4517379139216304
+  },
+  "TPU11WS91HI34SMU": {
+    "count": 525,
+    "lastUpdatedOn": 1693787140477,
+    "max": 167.44186046511626,
+    "min": 0.33003300330033003,
+    "name": "Jon Maner",
+    "wageRate": 6.103141809219871
+  },
+  "TPU11WYVG9EG7Q9N": {
+    "count": 332,
+    "lastUpdatedOn": 1654369095536,
+    "max": 2025,
+    "min": 2.2734449005367856,
+    "name": "Research Team",
+    "wageRate": 42.078490396047556
+  },
+  "TPU11X147JBFT25T": {
+    "count": 1907,
+    "lastUpdatedOn": 1687687014956,
+    "max": 177.04918032786884,
+    "min": 0,
+    "name": "Crowd4U",
+    "wageRate": 12.622021467761682
+  },
+  "TPU11X3V2OE14K1Z": {
+    "count": 5,
+    "lastUpdatedOn": 1663666067166,
+    "max": 49.090909090909086,
+    "min": 16.615384615384617,
+    "name": "Damien",
+    "wageRate": 32.56451455521223
+  },
+  "TPU11X725KW7XHU1": {
+    "count": 19,
+    "lastUpdatedOn": 1616884293554,
+    "max": 132.95454545454544,
+    "min": 7.989074769545921,
+    "name": "HEC Montreal Research",
+    "wageRate": 42.10146543934303
+  },
+  "TPU11XBZGM2M39MZ": {
+    "count": 4,
+    "lastUpdatedOn": 1616088043810,
+    "max": 65.45454545454545,
+    "min": 24,
+    "name": "Yujie Xing",
+    "wageRate": 44.727272727272734
+  },
+  "TPU11XGB59ME0X78": {
+    "count": 9,
+    "lastUpdatedOn": 1584659362179,
+    "name": "TPUbigail Saguy",
+    "wageRate": 2.876084221257887
+  },
+  "TPU11XJ7P9RV8YVE": {
+    "count": 17,
+    "lastUpdatedOn": 1611113130290,
+    "max": 35.93394495412844,
+    "min": 5.049481411245896,
+    "name": "Sarah Halabieh",
+    "wageRate": 14.226021839552768
+  },
+  "TPU11XKWVBFRRO1A": {
+    "count": 127,
+    "lastUpdatedOn": 1660588914118,
+    "max": 225,
+    "min": 0.7109940750493745,
+    "name": "Noelle Chung",
+    "wageRate": 16.4796282591821
+  },
+  "TPU11XLXEXBQNZKY": {
+    "count": 37,
+    "lastUpdatedOn": 1605118975038,
+    "max": 900,
+    "min": 0.5928111764667137,
+    "name": "Hallie Klein",
+    "wageRate": 34.09482958015106
+  },
+  "TPU11XNRYUJRKBZY": {
+    "count": 20,
+    "lastUpdatedOn": 1621977011382,
+    "max": 26.086956521739133,
+    "min": 4.026845637583893,
+    "name": "TPUlexandre Fortier-Chouinard",
+    "wageRate": 16.76416321734569
+  },
+  "TPU11XO2R2VLD1FG": {
+    "count": 12,
+    "lastUpdatedOn": 1620865418721,
+    "max": 42.35294117647059,
+    "min": 5.9016393442622945,
+    "name": "Sergei",
+    "wageRate": 16.608071898719018
+  },
+  "TPU11XZD9BGNC2IP": {
+    "count": 2,
+    "lastUpdatedOn": 1612798938122,
+    "max": 95.57522123893806,
+    "min": 80,
+    "name": "Sofia",
+    "wageRate": 87.78761061946904
+  },
+  "TPU11Y3AGJ51IW8F": {
+    "count": 26,
+    "lastUpdatedOn": 1636045078802,
+    "max": 47.368421052631575,
+    "min": 1.2605042016806722,
+    "name": "Calvin Spanbauer",
+    "wageRate": 6.663937576226504
+  },
+  "TPU11Y691QL22CR6": {
+    "count": 279,
+    "lastUpdatedOn": 1603202266937,
+    "max": 8.962684769944739,
+    "min": 1.5936482361760345,
+    "name": "Maryam K",
+    "wageRate": 5.35932837556686
+  },
+  "TPU11Y8RJ0C82APZ": {
+    "count": 19,
+    "lastUpdatedOn": 1658422141698,
+    "max": 60,
+    "min": 14.693877551020408,
+    "name": "bwagner42",
+    "wageRate": 30.66081982485261
+  },
+  "TPU11YC1ASP2IX7D": {
+    "count": 7,
+    "lastUpdatedOn": 1571344487904,
+    "name": "Dikshith Kasimahanthi",
+    "wageRate": 5.864122954455442
+  },
+  "TPU11YDAOUZOYN0M": {
+    "count": 4,
+    "lastUpdatedOn": 1636616057474,
+    "max": 31.30434782608696,
+    "min": 12,
+    "name": "Stephen Xu ZHANG",
+    "wageRate": 19.298973718882188
+  },
+  "TPU11YIFVZRYIAB9": {
+    "count": 4,
+    "lastUpdatedOn": 1691103924044,
+    "max": 85.03937007874015,
+    "min": 14.022331861854063,
+    "name": "Censio Analytics LLC",
+    "wageRate": 41.835443058280276
+  },
+  "TPU11YJ1GMG7ADUB": {
+    "count": 30,
+    "lastUpdatedOn": 1678945594465,
+    "max": 87.27272727272728,
+    "min": 3.1304347826086962,
+    "name": "Eunjoo Cho",
+    "wageRate": 12.214743262734082
+  },
+  "TPU11YJMP86TYMRH": {
+    "count": 2,
+    "lastUpdatedOn": 1692018204942,
+    "max": 2.1176470588235294,
+    "min": 2.1176470588235294,
+    "name": "TMFactory",
+    "wageRate": 2.1176470588235294
+  },
+  "TPU11YKWVEOXDSI3": {
+    "count": 20,
+    "lastUpdatedOn": 1691076961993,
+    "max": 4.911323328785812,
+    "min": 4.817360859991727,
+    "name": "Daniel Halgin",
+    "wageRate": 4.817360859991727
+  },
+  "TPU11YLBV9APXKLL": {
+    "count": 41,
+    "lastUpdatedOn": 1666048948537,
+    "max": 40,
+    "min": 0.4768211920529801,
+    "name": "Muhammet Kesgin",
+    "wageRate": 9.266929205078494
+  },
+  "TPU11YLXK75HHUP6": {
+    "count": 3,
+    "lastUpdatedOn": 1602130761962,
+    "max": 0.19629079463420937,
+    "min": 0.05407005180737034,
+    "name": "Celeste Lee",
+    "wageRate": 0.1487651168722058
+  },
+  "TPU11YQR5PO2E135": {
+    "count": 2,
+    "lastUpdatedOn": 1631498182820,
+    "max": 14.28099173553719,
+    "min": 6.352941176470589,
+    "name": "Michael Polonsky",
+    "wageRate": 10.31696645600389
+  },
+  "TPU11YX1W4HZGWJ9": {
+    "count": 1,
+    "lastUpdatedOn": 1592924577252,
+    "name": "TPUllister Furey",
+    "wageRate": 7.886919106499698
+  },
+  "TPU11Z0W29C5I7M": {
+    "count": 152,
+    "lastUpdatedOn": 1674664578612,
+    "max": 90,
+    "min": 0.5247813411078718,
+    "name": "Brittany",
+    "wageRate": 20.484017936973423
+  },
+  "TPU11Z1VBPID78EA": {
+    "count": 66,
+    "lastUpdatedOn": 1601549384248,
+    "max": 71.19342594631225,
+    "min": 0.6901707555300538,
+    "name": "Stanford CERC",
+    "wageRate": 17.403799696082988
+  },
+  "TPU11Z4XLH9TFA2K": {
+    "count": 139,
+    "lastUpdatedOn": 1659003136954,
+    "max": 56.544502617801044,
+    "min": 0.7883211678832117,
+    "name": "Workplace Researcher",
+    "wageRate": 11.129909987007713
+  },
+  "TPU11ZBT7TOXTM2D": {
+    "count": 157,
+    "lastUpdatedOn": 1601416422417,
+    "max": 11.801019083559082,
+    "min": 1.2768493034077688,
+    "name": "Matthew N Grizzard",
+    "wageRate": 4.491263136940037
+  },
+  "TPU11ZJ0MPD0UYKI": {
+    "count": 2,
+    "lastUpdatedOn": 1689877125802,
+    "max": 50,
+    "min": 27.272727272727273,
+    "name": "Benjamin Gadbaw",
+    "wageRate": 38.63636363636364
+  },
+  "TPU11ZLC6AWXPOS3": {
+    "count": 16,
+    "lastUpdatedOn": 1572358810095,
+    "name": "TPUmber A. Diaz",
+    "wageRate": 7.025762872309272
+  },
+  "TPU11ZM29ALWQLO0": {
+    "count": 6,
+    "lastUpdatedOn": 1600871523975,
+    "max": 1.8048460115409877,
+    "min": 0.819300908741258,
+    "name": "Colby Jenkins",
+    "wageRate": 1.4217444341834213
+  },
+  "TPU11ZOZSGMS2KCH": {
+    "count": 84,
+    "lastUpdatedOn": 1661872389936,
+    "max": 240,
+    "min": 1.6363636363636362,
+    "name": "James A Mead",
+    "wageRate": 17.384714007321396
+  },
+  "TPU11ZQ1PQA47IC5": {
+    "count": 20,
+    "lastUpdatedOn": 1632231934078,
+    "max": 900,
+    "min": 9.26470588235294,
+    "name": "Sadrac Cénophat",
+    "wageRate": 132.91629891198576
+  },
+  "TPU11ZZXQ7YUYM2F": {
+    "count": 1,
+    "lastUpdatedOn": 1669861791110,
+    "max": 1.9565217391304348,
+    "min": 1.9565217391304348,
+    "name": "Catherine303",
+    "wageRate": 1.9565217391304348
+  },
+  "TPU1204DTJJQCX6G": {
+    "count": 53,
+    "lastUpdatedOn": 1598810878723,
+    "max": 7.075561628340713,
+    "min": 0.0011251544186034544,
+    "name": "Fredrick Rice",
+    "wageRate": 7.075561628340713
+  },
+  "TPU1204MIXFZYLRL": {
+    "count": 117,
+    "lastUpdatedOn": 1627339900634,
+    "max": 90,
+    "min": 6.923076923076923,
+    "name": "Bryan Giese",
+    "wageRate": 30.467097433150922
+  },
+  "TPU120D6AG53F44J": {
+    "count": 83,
+    "lastUpdatedOn": 1642972368100,
+    "max": 600,
+    "min": 0.6548593107532992,
+    "name": "SNaC lab",
+    "wageRate": 22.215191510291532
+  },
+  "TPU120NXQVV0IBNN": {
+    "count": 39,
+    "lastUpdatedOn": 1694612165857,
+    "max": 40.90909090909091,
+    "min": 4.793608521970706,
+    "name": "Koichi Miyazaki",
+    "wageRate": 15.098707155789212
+  },
+  "TPU120OVDLWCYVZF": {
+    "count": 4,
+    "lastUpdatedOn": 1566834909416,
+    "name": "Damian Canagasuriam",
+    "wageRate": 9.703054520195028
+  },
+  "TPU120RS4CX3OXDV": {
+    "count": 1,
+    "lastUpdatedOn": 1606790640885,
+    "max": 32.72727272727273,
+    "min": 32.72727272727273,
+    "name": "Ruben Munoz",
+    "wageRate": 32.72727272727273
+  },
+  "TPU120SE866NP05Y": {
+    "count": 3,
+    "lastUpdatedOn": 1601665215423,
+    "max": 29.53125,
+    "min": 2.909590255797628,
+    "name": "PsyMem Study",
+    "wageRate": 12.445105884600073
+  },
+  "TPU120SJQ5JLEUZ1": {
+    "count": 11,
+    "lastUpdatedOn": 1585754656449,
+    "name": "Lafayette Waters",
+    "wageRate": 1.3543651720669239
+  },
+  "TPU120XWN2U6SWU3": {
+    "count": 699,
+    "lastUpdatedOn": 1662046786006,
+    "max": 91.52542372881355,
+    "min": 1.8947368421052633,
+    "name": "Real Time Research (Joshua Becker, PhD)",
+    "wageRate": 27.215364078215362
+  },
+  "TPU120YXN6FISEJH": {
+    "count": 13,
+    "lastUpdatedOn": 1650295514699,
+    "max": 21.333333333333336,
+    "min": 2.6387434554973823,
+    "name": "CSS_LAB",
+    "wageRate": 11.468238798982968
+  },
+  "TPU1215FRRIUMMFK": {
+    "count": 15,
+    "lastUpdatedOn": 1618557567355,
+    "max": 21.599999999999998,
+    "min": 0.375,
+    "name": "Jantra Kaewsainguan",
+    "wageRate": 5.05723280306706
+  },
+  "TPU1216289LABNI4": {
+    "count": 1,
+    "lastUpdatedOn": 1620947347585,
+    "max": 33.949453036589965,
+    "min": 33.949453036589965,
+    "name": "Jerrad Pierce",
+    "wageRate": 33.949453036589965
+  },
+  "TPU12177MFDV7G60": {
+    "count": 75,
+    "lastUpdatedOn": 1662814795811,
+    "max": 179.99999999999997,
+    "min": 1.275841701122268,
+    "name": "Tingting Mo",
+    "wageRate": 12.00960186846615
+  },
+  "TPU1219PKNBC7I13": {
+    "count": 17,
+    "lastUpdatedOn": 1649641179461,
+    "max": 15.584415584415586,
+    "min": 2.0642201834862384,
+    "name": "Brenna",
+    "wageRate": 7.085802706075258
+  },
+  "TPU121R8GAFMH0MC": {
+    "count": 1,
+    "lastUpdatedOn": 1600166945660,
+    "max": 0.8557785017029992,
+    "min": 0.8557785017029992,
+    "name": "SSAI",
+    "wageRate": 0.8557785017029992
+  },
+  "TPU121RA00O6LSFX": {
+    "count": 1,
+    "lastUpdatedOn": 1591642755984,
+    "name": "Thomas George Miller",
+    "wageRate": 14.906655940184084
+  },
+  "TPU121XPF2BYW1FM": {
+    "count": 13,
+    "lastUpdatedOn": 1579291651979,
+    "name": "Olivia Miller",
+    "wageRate": 4.972267166364785
+  },
+  "TPU121ZEG25P5DE0": {
+    "count": 1,
+    "lastUpdatedOn": 1587638804488,
+    "name": "Steven Proudfoot",
+    "wageRate": 1.3146650890685596
+  },
+  "TPU121ZZBLAVUKS2": {
+    "count": 27,
+    "lastUpdatedOn": 1602090790480,
+    "max": 10.057870003892768,
+    "min": 1.522867118845396,
+    "name": "Matthew Normand",
+    "wageRate": 4.489651576783584
+  },
+  "TPU1222HEPAJ3ZT0": {
+    "count": 311,
+    "lastUpdatedOn": 1678293704260,
+    "max": 144,
+    "min": 0.4635364223743881,
+    "name": "Taylor",
+    "wageRate": 11.410677478700416
+  },
+  "TPU1229FB4YJ500I": {
+    "count": 1,
+    "lastUpdatedOn": 1664455846645,
+    "max": 7.2,
+    "min": 7.2,
+    "name": "xixianx",
+    "wageRate": 7.2
+  },
+  "TPU122B95EXHV8FA": {
+    "count": 3,
+    "lastUpdatedOn": 1580944560299,
+    "name": "Bailey",
+    "wageRate": 0.13739363426854742
+  },
+  "TPU122FK3DY3RWYJ": {
+    "count": 24,
+    "lastUpdatedOn": 1603926107644,
+    "max": 4.30622009569378,
+    "min": 0.7627739205901497,
+    "name": "Lena Press",
+    "wageRate": 1.8404317483102035
+  },
+  "TPU122GHZH20E7GC": {
+    "count": 7,
+    "lastUpdatedOn": 1637685967886,
+    "max": 10,
+    "min": 0.5660377358490566,
+    "name": "Jie He",
+    "wageRate": 2.9889798849225335
+  },
+  "TPU122K1IVOYQJ8Q": {
+    "count": 97,
+    "lastUpdatedOn": 1600264432238,
+    "max": 29.415369530579724,
+    "min": 4.322333195458909,
+    "name": "Phoebe Dinh",
+    "wageRate": 10.379480562913221
+  },
+  "TPU122NNV7H4CSMQ": {
+    "count": 15,
+    "lastUpdatedOn": 1653723467610,
+    "max": 31.499999999999996,
+    "min": 6.363636363636363,
+    "name": "Trang",
+    "wageRate": 12.328448739564866
+  },
+  "TPU122NZA6MENULR": {
+    "count": 328,
+    "lastUpdatedOn": 1664319999634,
+    "max": 120,
+    "min": 0.1289706233580129,
+    "name": "Consumer Research",
+    "wageRate": 7.360592017196835
+  },
+  "TPU122S1XMUP06Q9": {
+    "count": 58,
+    "lastUpdatedOn": 1639743946169,
+    "max": 72.97297297297297,
+    "min": 1.1664326601144832,
+    "name": "Kansas State University",
+    "wageRate": 19.316929427134372
+  },
+  "TPU12319C08DWB6X": {
+    "count": 39,
+    "lastUpdatedOn": 1625775454622,
+    "max": 174.19354838709677,
+    "min": 4.597701149425288,
+    "name": "TPUrnab Mitra",
+    "wageRate": 33.40690372167574
+  },
+  "TPU123B6YGVOCKT5": {
+    "count": 1,
+    "lastUpdatedOn": 1611441837144,
+    "max": 300,
+    "min": 300,
+    "name": "Erik Fisher",
+    "wageRate": 300
+  },
+  "TPU123DOELEF7Z1B": {
+    "count": 15,
+    "lastUpdatedOn": 1650342673650,
+    "max": 55.38461538461539,
+    "min": 0.436099333737129,
+    "name": "GrindLocal",
+    "wageRate": 12.560447241018178
+  },
+  "TPU123HWNHQA9LVI": {
+    "count": 12,
+    "lastUpdatedOn": 1645993255352,
+    "max": 7.200000000000001,
+    "min": 0.6463195691202872,
+    "name": "Lori",
+    "wageRate": 2.7254794833250044
+  },
+  "TPU123M36V43C9PJ": {
+    "count": 5,
+    "lastUpdatedOn": 1619375570242,
+    "max": 194.59459459459458,
+    "min": 9.89010989010989,
+    "name": "Olivia Valle",
+    "wageRate": 76.65626101025535
+  },
+  "TPU123PQ7CJSIE24": {
+    "count": 5,
+    "lastUpdatedOn": 1592224006491,
+    "name": "Issy Perkin",
+    "wageRate": 8.18160651228225
+  },
+  "TPU123U3ZGLC1WXF": {
+    "count": 1026,
+    "lastUpdatedOn": 1694027537323,
+    "max": 90,
+    "min": 0,
+    "name": "Social Innovations Lab",
+    "wageRate": 19.157516095287708
+  },
+  "TPU123UH500PQLMK": {
+    "count": 5,
+    "lastUpdatedOn": 1612742617081,
+    "max": 81.81818181818181,
+    "min": 2.5,
+    "name": "Glenn Sparks",
+    "wageRate": 45.377861864163236
+  },
+  "TPU123VOOXH34DN9": {
+    "count": 40,
+    "lastUpdatedOn": 1672638131557,
+    "max": 83.07692307692308,
+    "min": 0.5042016806722689,
+    "name": "H_Shin",
+    "wageRate": 14.188010952537372
+  },
+  "TPU1246CZUI1XDD8": {
+    "count": 5,
+    "lastUpdatedOn": 1583946268190,
+    "name": "Sally McGrath",
+    "wageRate": 2.9819569889180944
+  },
+  "TPU1246KY87X0H9D": {
+    "count": 14,
+    "lastUpdatedOn": 1584219564108,
+    "name": "Sarah McGuinness",
+    "wageRate": 4.183227201925062
+  },
+  "TPU124C87QGFFJYF": {
+    "count": 4,
+    "lastUpdatedOn": 1688143036539,
+    "max": 0.225,
+    "min": 0.059602649006622516,
+    "name": "Prospecto",
+    "wageRate": 0.12033131587413368
+  },
+  "TPU124E58O0ZL0UW": {
+    "count": 35,
+    "lastUpdatedOn": 1675263660160,
+    "max": 98.18181818181819,
+    "min": 8.157099697885197,
+    "name": "mstandis",
+    "wageRate": 22.07709957485556
+  },
+  "TPU124LLUKX2WIL3": {
+    "count": 8,
+    "lastUpdatedOn": 1592495783654,
+    "name": "Dominik Portmann",
+    "wageRate": 2.90276489193511
+  },
+  "TPU124OZW5TUVKE1": {
+    "count": 8,
+    "lastUpdatedOn": 1633236782688,
+    "max": 30,
+    "min": 1.3600302228938421,
+    "name": "Katherine Kirkinis",
+    "wageRate": 7.62476536966147
+  },
+  "TPU124SVN2KCLOWM": {
+    "count": 32,
+    "lastUpdatedOn": 1645823411485,
+    "max": 96,
+    "min": 0.9137055837563451,
+    "name": "seebe",
+    "wageRate": 41.008419380692274
+  },
+  "TPU124XLL9TKQ3CU": {
+    "count": 28,
+    "lastUpdatedOn": 1646262311742,
+    "max": 96.42857142857143,
+    "min": 10.227272727272727,
+    "name": "TRSUsability",
+    "wageRate": 38.79912910587
+  },
+  "TPU1253JH5EK0GGP": {
+    "count": 16,
+    "lastUpdatedOn": 1590258852102,
+    "name": "kush Bhatia",
+    "wageRate": 4.120932476728997
+  },
+  "TPU1253TT7OEZDBY": {
+    "count": 1,
+    "lastUpdatedOn": 1605468500857,
+    "max": 49.09090909090909,
+    "min": 49.09090909090909,
+    "name": "menachem",
+    "wageRate": 49.09090909090909
+  },
+  "TPU1258O61A0U00E": {
+    "count": 13,
+    "lastUpdatedOn": 1694033336991,
+    "max": 52.173913043478265,
+    "min": 22.929936305732483,
+    "name": "CDuncan",
+    "wageRate": 34.519395656088946
+  },
+  "TPU12591KRBAEIKX": {
+    "count": 24,
+    "lastUpdatedOn": 1614124046353,
+    "max": 140.8695652173913,
+    "min": 1.384749125342875,
+    "name": "Molly",
+    "wageRate": 19.447177939853784
+  },
+  "TPU125F7KO6R7QAV": {
+    "count": 47,
+    "lastUpdatedOn": 1613667602553,
+    "max": 553.8461538461539,
+    "min": 16.43835616438356,
+    "name": "SCCN Lab",
+    "wageRate": 65.2441534720399
+  },
+  "TPU125FFVHGH5K7P": {
+    "count": 1,
+    "lastUpdatedOn": 1609482013331,
+    "max": 39.56043956043956,
+    "min": 39.56043956043956,
+    "name": "ECOM SOLUTIONS",
+    "wageRate": 39.56043956043956
+  },
+  "TPU125M1NSN5YQ11": {
+    "count": 5,
+    "lastUpdatedOn": 1639108373919,
+    "max": 41.53846153846154,
+    "min": 3.8779174147217232,
+    "name": "JWhatleyEventResearch",
+    "wageRate": 17.069948060215967
+  },
+  "TPU125MFRH84D1ZT": {
+    "count": 5,
+    "lastUpdatedOn": 1563726440762,
+    "name": "Ismini",
+    "wageRate": 4.260997747225063
+  },
+  "TPU125NAA2WHX5TA": {
+    "count": 3,
+    "lastUpdatedOn": 1610263093445,
+    "max": 53.99999999999999,
+    "min": 8,
+    "name": "TPUmaria Dudley",
+    "wageRate": 31.916666666666668
+  },
+  "TPU125OJJK81X8E5": {
+    "count": 4,
+    "lastUpdatedOn": 1603631030361,
+    "max": 4,
+    "min": 0.4531599816578103,
+    "name": "LeeEunJu",
+    "wageRate": 2.329079469098663
+  },
+  "TPU125UPTOBU2CLB": {
+    "count": 38,
+    "lastUpdatedOn": 1620605701468,
+    "max": 189.4736842105263,
+    "min": 5.691699604743083,
+    "name": "John Alexander Evans",
+    "wageRate": 35.215439600285464
+  },
+  "TPU125VUZ76E6G7H": {
+    "count": 40,
+    "lastUpdatedOn": 1634847512533,
+    "max": 81.81818181818181,
+    "min": 7.692307692307692,
+    "name": "Tyler C. Burch",
+    "wageRate": 34.47807497212308
+  },
+  "TPU125ZUTO0UN22Y": {
+    "count": 3,
+    "lastUpdatedOn": 1588892227310,
+    "name": "Susan Franck",
+    "wageRate": 2.817113190389433
+  },
+  "TPU1267AF2OUDC39": {
+    "count": 6,
+    "lastUpdatedOn": 1587664222060,
+    "name": "Jennifer Shi",
+    "wageRate": 2.365196218943853
+  },
+  "TPU126A6HXLV791": {
+    "count": 1160,
+    "lastUpdatedOn": 1693863043057,
+    "max": 180,
+    "min": 0.44346171139265456,
+    "name": "deepak sirwani",
+    "wageRate": 12.612513201567491
+  },
+  "TPU126BFIHK5T9SV": {
+    "count": 85,
+    "lastUpdatedOn": 1663262213842,
+    "max": 60,
+    "min": 1.8181818181818181,
+    "name": "Rotem Dvir",
+    "wageRate": 12.65573915298736
+  },
+  "TPU126G2ALY0JX4H": {
+    "count": 8,
+    "lastUpdatedOn": 1642020495682,
+    "max": 23.376623376623378,
+    "min": 5.625,
+    "name": "Eindani Kyaw",
+    "wageRate": 12.031359668972648
+  },
+  "TPU126GYC4EXQBFH": {
+    "count": 99,
+    "lastUpdatedOn": 1628904758719,
+    "max": 90,
+    "min": 1.7061611374407584,
+    "name": "TPUnil Ramakrishna",
+    "wageRate": 54.97392232751708
+  },
+  "TPU126I3WIGB179N": {
+    "count": 3,
+    "lastUpdatedOn": 1582625058319,
+    "name": "TPUlessandro",
+    "wageRate": 2.9722421042073743
+  },
+  "TPU126KW963EC0LO": {
+    "count": 3,
+    "lastUpdatedOn": 1607321671397,
+    "max": 16.53061224489796,
+    "min": 4.2297650130548305,
+    "name": "Meisam Vosoughpour",
+    "wageRate": 8.536892219716798
+  },
+  "TPU126LY4RW9MIZK": {
+    "count": 9,
+    "lastUpdatedOn": 1628606550314,
+    "max": 26.666666666666668,
+    "min": 1.8701298701298703,
+    "name": "eoincampbell@cowryconsulting.com",
+    "wageRate": 6.866912154138678
+  },
+  "TPU126UT3C4P0M4X": {
+    "count": 89,
+    "lastUpdatedOn": 1675810458611,
+    "max": 18,
+    "min": 0.8372093023255813,
+    "name": "Nick Hollinger",
+    "wageRate": 6.334805100439341
+  },
+  "TPU126VXDQCP9YBI": {
+    "count": 21,
+    "lastUpdatedOn": 1643589577146,
+    "max": 6.666666666666667,
+    "min": 0.31347962382445144,
+    "name": "Research Survey - EV",
+    "wageRate": 2.3731014527334735
+  },
+  "TPU126X0X8WDSFBA": {
+    "count": 7,
+    "lastUpdatedOn": 1650533590893,
+    "max": 3.6,
+    "min": 0.2011173184357542,
+    "name": "TPUddie Antshel",
+    "wageRate": 1.9763762574217483
+  },
+  "TPU1273260T3ZYQI": {
+    "count": 404,
+    "lastUpdatedOn": 1648673683175,
+    "max": 168,
+    "min": 1.1803001350241495,
+    "name": "USC - Alyssa Han",
+    "wageRate": 12.84102377775693
+  },
+  "TPU1273DDVNUIXAW": {
+    "count": 1,
+    "lastUpdatedOn": 1588109284093,
+    "name": "Kaiwen Yang",
+    "wageRate": 0.41506278208896485
+  },
+  "TPU1274MQA8BWV5X": {
+    "count": 3,
+    "lastUpdatedOn": 1612969041287,
+    "max": 51.42857142857143,
+    "min": 6.545454545454546,
+    "name": "dan dan",
+    "wageRate": 24.324675324675326
+  },
+  "TPU1275ZCK8VFPDV": {
+    "count": 147,
+    "lastUpdatedOn": 1658493125570,
+    "max": 180,
+    "min": 0.9679058550238347,
+    "name": "Holly Fairbairn",
+    "wageRate": 17.58746076873438
+  },
+  "TPU1276XBSPGO5PX": {
+    "count": 6,
+    "lastUpdatedOn": 1620776847756,
+    "max": 46.95652173913043,
+    "min": 5.675675675675675,
+    "name": "Christina Pan",
+    "wageRate": 21.22581725764739
+  },
+  "TPU127742MSB27SZ": {
+    "count": 59,
+    "lastUpdatedOn": 1652719237846,
+    "max": 42.35294117647059,
+    "min": 0.6206896551724138,
+    "name": "Rachael Houston",
+    "wageRate": 7.7780228528458855
+  },
+  "TPU1277M4PJQR0JJ": {
+    "count": 28,
+    "lastUpdatedOn": 1600995454000,
+    "max": 28.842271232718673,
+    "min": 1.6644387845306319,
+    "name": "Hussein",
+    "wageRate": 9.147162448909569
+  },
+  "TPU1279NVXMHMJKN": {
+    "count": 17,
+    "lastUpdatedOn": 1629827211739,
+    "max": 21.81818181818182,
+    "min": 3.5467980295566504,
+    "name": "TPUIHERD",
+    "wageRate": 10.02740239285052
+  },
+  "TPU127GAPWGHMCR1": {
+    "count": 2,
+    "lastUpdatedOn": 1612980893425,
+    "max": 132.35294117647058,
+    "min": 64.28571428571428,
+    "name": "Yazan Altwil",
+    "wageRate": 98.31932773109243
+  },
+  "TPU127KX23RN0Z8V": {
+    "count": 15,
+    "lastUpdatedOn": 1567191127886,
+    "name": "Heewon Kim",
+    "wageRate": 2.7763548606428583
+  },
+  "TPU127NKJ251VGSK": {
+    "count": 62,
+    "lastUpdatedOn": 1661269287968,
+    "max": 190,
+    "min": 1.2303485987696514,
+    "name": "BingbingZhang",
+    "wageRate": 19.56032054509092
+  },
+  "TPU127RVIRSJWLBB": {
+    "count": 10,
+    "lastUpdatedOn": 1637461260405,
+    "max": 8.571428571428571,
+    "min": 0.5365126676602087,
+    "name": "Pari",
+    "wageRate": 3.573041680174063
+  },
+  "TPU127TWY32U08M2": {
+    "count": 232,
+    "lastUpdatedOn": 1691424633194,
+    "max": 91.52542372881355,
+    "min": 1.1553273427471116,
+    "name": "TPUSKlab",
+    "wageRate": 9.814075698532632
+  },
+  "TPU127WPD9RHRL76": {
+    "count": 15,
+    "lastUpdatedOn": 1662052551133,
+    "max": 78.75,
+    "min": 4.1042345276872965,
+    "name": "Francesco Rizzi",
+    "wageRate": 37.64042154083648
+  },
+  "TPU1281ECPUKM6R3": {
+    "count": 1,
+    "lastUpdatedOn": 1587074583956,
+    "name": "Drew Macphee",
+    "wageRate": 6.444129398118314
+  },
+  "TPU1288Z6L399NVX": {
+    "count": 5,
+    "lastUpdatedOn": 1672933377751,
+    "max": 91.83673469387756,
+    "min": 6.7064083457526085,
+    "name": "ToddBranch",
+    "wageRate": 51.358724360236465
+  },
+  "TPU128AKKPUYKZJ": {
+    "count": 1,
+    "lastUpdatedOn": 1577889924041,
+    "name": "Gal Golan",
+    "wageRate": 0.8907528717501438
+  },
+  "TPU128B4OJDEN10W": {
+    "count": 43,
+    "lastUpdatedOn": 1690796254525,
+    "max": 34.83870967741935,
+    "min": 1.6901408450704227,
+    "name": "TPUzel",
+    "wageRate": 11.332806617276177
+  },
+  "TPU128BJLTMQU5F9": {
+    "count": 55,
+    "lastUpdatedOn": 1654786221707,
+    "max": 36,
+    "min": 0.3234501347708895,
+    "name": "Yerin Lee",
+    "wageRate": 7.479860323023574
+  },
+  "TPU128CP64H99MJ0": {
+    "count": 1,
+    "lastUpdatedOn": 1652090915433,
+    "max": 92.90322580645162,
+    "min": 92.90322580645162,
+    "name": "Luda Studios UX",
+    "wageRate": 92.90322580645162
+  },
+  "TPU128KPMVYVV3CR": {
+    "count": 6,
+    "lastUpdatedOn": 1663422072973,
+    "max": 0,
+    "min": 0,
+    "name": "Midland Engineering",
+    "wageRate": 0
+  },
+  "TPU128O3DQ56H8Q": {
+    "count": 20,
+    "lastUpdatedOn": 1600627125946,
+    "max": 16.224401499855784,
+    "min": 1.0782140462537853,
+    "name": "Neil Williams",
+    "wageRate": 4.017418858601447
+  },
+  "TPU128RNCSA8V58Z": {
+    "count": 33,
+    "lastUpdatedOn": 1683125110424,
+    "max": 90,
+    "min": 3.4615384615384617,
+    "name": "Chris_TD",
+    "wageRate": 37.646315422363266
+  },
+  "TPU128VK9DCJ5C1T": {
+    "count": 361,
+    "lastUpdatedOn": 1686073160670,
+    "max": 378.9473684210526,
+    "min": 0.8518693800283956,
+    "name": "David Voschina",
+    "wageRate": 15.861811274303946
+  },
+  "TPU128W1VCVCD4OX": {
+    "count": 70,
+    "lastUpdatedOn": 1636377239152,
+    "max": 62.06896551724138,
+    "min": 2.724177071509648,
+    "name": "Jinha Yoon",
+    "wageRate": 13.44193641560494
+  },
+  "TPU128WXZJW04HFK": {
+    "count": 138,
+    "lastUpdatedOn": 1679450037400,
+    "max": 90,
+    "min": 0.42278332354668235,
+    "name": "zeehen",
+    "wageRate": 23.994493798232973
+  },
+  "TPU12953G2QYPP4I": {
+    "count": 13,
+    "lastUpdatedOn": 1611923995553,
+    "max": 17.142857142857142,
+    "min": 2.903225806451613,
+    "name": "FCR Media",
+    "wageRate": 6.845708420310489
+  },
+  "TPU129HUHCW60TG4": {
+    "count": 40,
+    "lastUpdatedOn": 1659650162089,
+    "max": 83.07692307692308,
+    "min": 1.1398416886543536,
+    "name": "Sukhmani",
+    "wageRate": 12.490764040769152
+  },
+  "TPU129NVKCW2FYFA": {
+    "count": 1,
+    "lastUpdatedOn": 1660174434348,
+    "max": 16.071428571428573,
+    "min": 16.071428571428573,
+    "name": "TPUI Company",
+    "wageRate": 16.071428571428573
+  },
+  "TPU129PGWWSVI58Q": {
+    "count": 10,
+    "lastUpdatedOn": 1692948230323,
+    "max": 3,
+    "min": 0,
+    "name": "Leon L Bob",
+    "wageRate": 1.521076620121733
+  },
+  "TPU129WVEBTWOX2B": {
+    "count": 100,
+    "lastUpdatedOn": 1669819682846,
+    "max": 77.6978417266187,
+    "min": 1.8274111675126905,
+    "name": "Exercise4Good Research Study",
+    "wageRate": 6.235823157351391
+  },
+  "TPU12A1X2JG2FLSP": {
+    "count": 6,
+    "lastUpdatedOn": 1634742502987,
+    "max": 8,
+    "min": 1.0588235294117647,
+    "name": "Dmitiy",
+    "wageRate": 4.537425404944587
+  },
+  "TPU12A4ON58E4MQH": {
+    "count": 10,
+    "lastUpdatedOn": 1617370509796,
+    "max": 771.4285714285714,
+    "min": 4.949587534372135,
+    "name": "Natalie Croitoru",
+    "wageRate": 188.2011785712705
+  },
+  "TPU12AB2J4RKXEPJ": {
+    "count": 22,
+    "lastUpdatedOn": 1592414419118,
+    "name": "darrien hawkins",
+    "wageRate": 3.1265922869135947
+  },
+  "TPU12AFR6CLTHM5K": {
+    "count": 14,
+    "lastUpdatedOn": 1638499162109,
+    "max": 31.57894736842105,
+    "min": 6.185567010309279,
+    "name": "Lavina",
+    "wageRate": 19.686697507187937
+  },
+  "TPU12AYX3YXSONPN": {
+    "count": 2,
+    "lastUpdatedOn": 1591887843345,
+    "name": "Elberfeld",
+    "wageRate": 5.007489578029688
+  },
+  "TPU12AZUBVUH60DA": {
+    "count": 1,
+    "lastUpdatedOn": 1646582918637,
+    "max": 8.689655172413792,
+    "min": 8.689655172413792,
+    "name": "valdes song",
+    "wageRate": 8.689655172413792
+  },
+  "TPU12B5YWNS9J8FS": {
+    "count": 517,
+    "lastUpdatedOn": 1695336599226,
+    "max": 96.42857142857143,
+    "min": 0,
+    "name": "CM-Research",
+    "wageRate": 27.355042025408206
+  },
+  "TPU12B61VJ7DMLRF": {
+    "count": 24,
+    "lastUpdatedOn": 1663624780485,
+    "max": 28.110359187922956,
+    "min": 0.24770056469536236,
+    "name": "SAGE Lab",
+    "wageRate": 8.549031059988025
+  },
+  "TPU12B65600K6K7Q": {
+    "count": 10,
+    "lastUpdatedOn": 1608530315617,
+    "max": 2.7480916030534353,
+    "min": 0.19305360937854438,
+    "name": "K M",
+    "wageRate": 0.9255556770395594
+  },
+  "TPU12B7B5XW6WC7L": {
+    "count": 55,
+    "lastUpdatedOn": 1638372293663,
+    "max": 90,
+    "min": 1.355421686746988,
+    "name": "tilottama",
+    "wageRate": 11.212723897766146
+  },
+  "TPU12BF599SL6QFC": {
+    "count": 103,
+    "lastUpdatedOn": 1659032992501,
+    "max": 18,
+    "min": 0.03163444639718805,
+    "name": "Nunnie",
+    "wageRate": 5.730274271435836
+  },
+  "TPU12BH5VC1U0XX3": {
+    "count": 55,
+    "lastUpdatedOn": 1657556405663,
+    "max": 45,
+    "min": 0.26153287322920454,
+    "name": "JLSDEVRIES_SURVEYS",
+    "wageRate": 4.355339599664083
+  },
+  "TPU12BMVDR6WRWOV": {
+    "count": 1889,
+    "lastUpdatedOn": 1692209498539,
+    "max": 180,
+    "min": 0.061003163126976956,
+    "name": "Robyn @ 2Kay Marketing",
+    "wageRate": 30.96238803705639
+  },
+  "TPU12BSIAZVANGZ1": {
+    "count": 23,
+    "lastUpdatedOn": 1661899812020,
+    "max": 16.017797552836484,
+    "min": 6.563354603463993,
+    "name": "Selen Turkay",
+    "wageRate": 10.53196057390623
+  },
+  "TPU12BSZ56RUH2HN": {
+    "count": 162,
+    "lastUpdatedOn": 1646091513616,
+    "max": 144,
+    "min": 0.0022002728738691026,
+    "name": "Herrison Chicas",
+    "wageRate": 15.159870723947593
+  },
+  "TPU12C2ZGDBWGBJW": {
+    "count": 9,
+    "lastUpdatedOn": 1638227566723,
+    "max": 58.69565217391304,
+    "min": 8.023774145616642,
+    "name": "Eisen Montalvo",
+    "wageRate": 30.119780239267712
+  },
+  "TPU12CAVDYCA17LO": {
+    "count": 21,
+    "lastUpdatedOn": 1681256941634,
+    "max": 86.95652173913044,
+    "min": 1.3777597931931522,
+    "name": "TPU. Mustafa Canan",
+    "wageRate": 37.888421755086426
+  },
+  "TPU12CKNF0G5N6C6": {
+    "count": 1,
+    "lastUpdatedOn": 1605965674332,
+    "max": 20.57142857142857,
+    "min": 20.57142857142857,
+    "name": "TPUndrew B",
+    "wageRate": 20.57142857142857
+  },
+  "TPU12CW8JTG8RTVP": {
+    "count": 2,
+    "lastUpdatedOn": 1649204221044,
+    "max": 3,
+    "min": 2.4000000000000004,
+    "name": "yulia",
+    "wageRate": 2.7
+  },
+  "TPU12D1H7D4Q4QU": {
+    "count": 2,
+    "lastUpdatedOn": 1663263523780,
+    "max": 0,
+    "min": 0,
+    "name": "TPUlliance Bucks",
+    "wageRate": 0
+  },
+  "TPU12D2MM3478VPU": {
+    "count": 15,
+    "lastUpdatedOn": 1643419022152,
+    "max": 92.3076923076923,
+    "min": 7.287449392712551,
+    "name": "Yongfeng Zhang",
+    "wageRate": 38.66150248372053
+  },
+  "TPU12D304Y57QSRT": {
+    "count": 5,
+    "lastUpdatedOn": 1590490374969,
+    "name": "TPUnne-Sophie Riegger",
+    "wageRate": 1.8355275903383768
+  },
+  "TPU12D4EQ1HM2NVV": {
+    "count": 1,
+    "lastUpdatedOn": 1569517635414,
+    "name": "rybn",
+    "wageRate": 0.3120611639881417
+  },
+  "TPU12D87NEK5O77T": {
+    "count": 2,
+    "lastUpdatedOn": 1581881379768,
+    "name": "TPUlexis",
+    "wageRate": 3.709781793296447
+  },
+  "TPU12DCF36BK6LIP": {
+    "count": 2,
+    "lastUpdatedOn": 1621214414479,
+    "max": 34.285714285714285,
+    "min": 32.72727272727273,
+    "name": "Ryan Geary",
+    "wageRate": 33.506493506493506
+  },
+  "TPU12DE09BPE7FI4": {
+    "count": 55,
+    "lastUpdatedOn": 1628031130098,
+    "max": 169.811320754717,
+    "min": 2.2545090180360723,
+    "name": "TPUDAPT Lab",
+    "wageRate": 21.67040908259131
+  },
+  "TPU12DHW00ZZ4IKD": {
+    "count": 1,
+    "lastUpdatedOn": 1573575106176,
+    "name": "Pan",
+    "wageRate": 4.895068762118694
+  },
+  "TPU12DJG42753SJY": {
+    "count": 2,
+    "lastUpdatedOn": 1581531388643,
+    "name": "Rebecca L. Berren",
+    "wageRate": 1.7658565877501284
+  },
+  "TPU12DKT1PYD300X": {
+    "count": 14,
+    "lastUpdatedOn": 1607976623672,
+    "max": 360,
+    "min": 9.523809523809524,
+    "name": "Wenqi luo",
+    "wageRate": 86.26922979723925
+  },
+  "TPU12DLN58OODDPA": {
+    "count": 5,
+    "lastUpdatedOn": 1648591426424,
+    "max": 57.87781350482315,
+    "min": 16.635859519408502,
+    "name": "Ruisong",
+    "wageRate": 33.97628291537334
+  },
+  "TPU12DMAXZ12DHVG": {
+    "count": 5,
+    "lastUpdatedOn": 1643230319140,
+    "max": 94.73684210526315,
+    "min": 21.984732824427482,
+    "name": "TPUllegraayalahfac",
+    "wageRate": 59.88777657782892
+  },
+  "TPU12DTBMQZUFYWW": {
+    "count": 1,
+    "lastUpdatedOn": 1588098588950,
+    "name": "Kai Jiang",
+    "wageRate": 0.6581593476909576
+  },
+  "TPU12DTJU41ZGLQ1": {
+    "count": 1,
+    "lastUpdatedOn": 1589280538819,
+    "name": "Kevin Ouyang",
+    "wageRate": 0.36708366594221054
+  },
+  "TPU12DU0UYON426H": {
+    "count": 16,
+    "lastUpdatedOn": 1625027258998,
+    "max": 125.5813953488372,
+    "min": 1.820633850303439,
+    "name": "Kholekile Gwebu",
+    "wageRate": 22.422798002850236
+  },
+  "TPU12DWLY5TD1002": {
+    "count": 43969,
+    "lastUpdatedOn": 1695453914772,
+    "max": 360,
+    "min": 0.11214953271028037,
+    "name": "TPUlexandria",
+    "wageRate": 33.2637190590754
+  },
+  "TPU12E1AOGT4OMUJ": {
+    "count": 1,
+    "lastUpdatedOn": 1606272591975,
+    "max": 9,
+    "min": 9,
+    "name": "Ericka",
+    "wageRate": 9
+  },
+  "TPU12E4EPKKYZ7XX": {
+    "count": 37,
+    "lastUpdatedOn": 1626345621981,
+    "max": 125.21739130434783,
+    "min": 3.3566433566433567,
+    "name": "Oleksii Didovets",
+    "wageRate": 24.67249664410931
+  },
+  "TPU12E6J14M9FYN9": {
+    "count": 1,
+    "lastUpdatedOn": 1586469299724,
+    "name": "TPUdams",
+    "wageRate": 1.472322785503837
+  },
+  "TPU12E9DFH176579": {
+    "count": 11,
+    "lastUpdatedOn": 1608564260149,
+    "max": 600,
+    "min": 9.162310327450792,
+    "name": "NAJIB",
+    "wageRate": 174.09545615773607
+  },
+  "TPU12E9G7PSSZ1PP": {
+    "count": 1,
+    "lastUpdatedOn": 1582749423832,
+    "name": "dan anahory",
+    "wageRate": 0.34742163446631064
+  },
+  "TPU12EFR9FFY3VSC": {
+    "count": 2,
+    "lastUpdatedOn": 1662487182703,
+    "max": 0,
+    "min": 0,
+    "name": "Bulldozer",
+    "wageRate": 0
+  },
+  "TPU12EG3HASTKQ3C": {
+    "count": 33,
+    "lastUpdatedOn": 1603226884972,
+    "max": 200,
+    "min": 1.5673098635453595,
+    "name": "Jose Carlo de Pano",
+    "wageRate": 13.933307582108098
+  },
+  "TPU12EJZ4ZW8B48A": {
+    "count": 151,
+    "lastUpdatedOn": 1695308512188,
+    "max": 48,
+    "min": 1.8614270941054807,
+    "name": "Jessie Goldblatt (Duke University)",
+    "wageRate": 23.282486402342364
+  },
+  "TPU12EL5UXKXMHI1": {
+    "count": 256,
+    "lastUpdatedOn": 1678291413501,
+    "max": 163.63636363636363,
+    "min": 0.4703013412297509,
+    "name": "Hans Baumgartner",
+    "wageRate": 19.803919184815268
+  },
+  "TPU12EN0BUIACUGN": {
+    "count": 35,
+    "lastUpdatedOn": 1618669229950,
+    "max": 189.4736842105263,
+    "min": 1.8108651911468814,
+    "name": "GSUNG",
+    "wageRate": 23.41760034579242
+  },
+  "TPU12EVU9A0UF0DD": {
+    "count": 3,
+    "lastUpdatedOn": 1660819967265,
+    "max": 38.068965517241374,
+    "min": 11.604765241765941,
+    "name": "ceferra",
+    "wageRate": 22.11123017251954
+  },
+  "TPU12EYKXCWY0VDV": {
+    "count": 11,
+    "lastUpdatedOn": 1590087071440,
+    "name": "Klint Kanopka",
+    "wageRate": 3.935991611281903
+  },
+  "TPU12F1P48EUCYAE": {
+    "count": 1,
+    "lastUpdatedOn": 1588804451742,
+    "name": "TPUmanda Korff",
+    "wageRate": 6.754942929488654
+  },
+  "TPU12F2OY69V57WW": {
+    "count": 109,
+    "lastUpdatedOn": 1638437036849,
+    "max": 180,
+    "min": 3.5502958579881656,
+    "name": "Ricerca Tesi di Laurea",
+    "wageRate": 35.78940970008062
+  },
+  "TPU12F3CP49ME2OZ": {
+    "count": 339,
+    "lastUpdatedOn": 1635948518644,
+    "max": 90,
+    "min": 1.5,
+    "name": "Goluck Konuko",
+    "wageRate": 26.66417320101007
+  },
+  "TPU12FB6XSR3BSGB": {
+    "count": 62,
+    "lastUpdatedOn": 1584754212285,
+    "name": "Shon Reed",
+    "wageRate": 4.451422708137501
+  },
+  "TPU12FGIJLZD6NBE": {
+    "count": 2,
+    "lastUpdatedOn": 1580278159843,
+    "name": "Weihua Zheng",
+    "wageRate": 0.08239670046418422
+  },
+  "TPU12FH6TXD09A50": {
+    "count": 2,
+    "lastUpdatedOn": 1614912915057,
+    "max": 13.846153846153847,
+    "min": 1.2410925751636692,
+    "name": "Ricky Zhao",
+    "wageRate": 7.543623210658758
+  },
+  "TPU12FHAR3ZJEYBZ": {
+    "count": 3,
+    "lastUpdatedOn": 1587749692178,
+    "name": "Nora",
+    "wageRate": 3.5764478089007445
+  },
+  "TPU12FHOQFO2QYBO": {
+    "count": 7,
+    "lastUpdatedOn": 1627073216317,
+    "max": 55.129957389137104,
+    "min": 17.92828685258964,
+    "name": "TPUlyson",
+    "wageRate": 31.306328789703933
+  },
+  "TPU12FO4Z2R6QBXU": {
+    "count": 163,
+    "lastUpdatedOn": 1646938137173,
+    "max": 1107.6923076923078,
+    "min": 2.3457862728062553,
+    "name": "Kneeland Lab",
+    "wageRate": 23.839439526328682
+  },
+  "TPU12FSJJDPVNA9E": {
+    "count": 7,
+    "lastUpdatedOn": 1622890914021,
+    "max": 77.14285714285714,
+    "min": 8.181818181818182,
+    "name": "Eri Quesada",
+    "wageRate": 20.766248764673048
+  },
+  "TPU12FVV7A56G5VG": {
+    "count": 17,
+    "lastUpdatedOn": 1613567549443,
+    "max": 31.23644251626898,
+    "min": 4.235294117647059,
+    "name": "Eldar Dadon",
+    "wageRate": 12.17820500790447
+  },
+  "TPU12FW4OTJAIPT9": {
+    "count": 105,
+    "lastUpdatedOn": 1669680038277,
+    "max": 72,
+    "min": 0.2813599062133646,
+    "name": "Natalia Zhang",
+    "wageRate": 5.984763426443193
+  },
+  "TPU12G0C3I7P9BG5": {
+    "count": 48,
+    "lastUpdatedOn": 1617747178179,
+    "max": 198,
+    "min": 2.058212058212058,
+    "name": "Kiera",
+    "wageRate": 30.784098572174717
+  },
+  "TPU12G2XPT6FQUMJ": {
+    "count": 20,
+    "lastUpdatedOn": 1582764091417,
+    "name": "Jason Greene",
+    "wageRate": 2.702249946951117
+  },
+  "TPU12G3GYMO5NVYV": {
+    "count": 44,
+    "lastUpdatedOn": 1633364589450,
+    "max": 22.78481012658228,
+    "min": 2.619542619542619,
+    "name": "feitairan",
+    "wageRate": 4.752959139693974
+  },
+  "TPU12G5M1QCVNRK3": {
+    "count": 101,
+    "lastUpdatedOn": 1677613143469,
+    "max": 180,
+    "min": 2.6607538802660753,
+    "name": "Scott Abramson",
+    "wageRate": 18.129630895232644
+  },
+  "TPU12G6X999KLMY5": {
+    "count": 12,
+    "lastUpdatedOn": 1645651918683,
+    "max": 12,
+    "min": 0.8780487804878049,
+    "name": "Jocelyn",
+    "wageRate": 4.1556706565989785
+  },
+  "TPU12GFI61BCACNC": {
+    "count": 27,
+    "lastUpdatedOn": 1608138228151,
+    "max": 60,
+    "min": 0.2814836901052228,
+    "name": "richard",
+    "wageRate": 13.671441662914468
+  },
+  "TPU12GLUUERIAG9O": {
+    "count": 8,
+    "lastUpdatedOn": 1601990923716,
+    "max": 8.41467519353753,
+    "min": 3.2104904559253167,
+    "name": "Logan Watts",
+    "wageRate": 5.834902518255617
+  },
+  "TPU12GP3J96QJLUB": {
+    "count": 75,
+    "lastUpdatedOn": 1626747612145,
+    "max": 180,
+    "min": 0.4433497536945813,
+    "name": "Cynthia Hartung",
+    "wageRate": 39.4274170442033
+  },
+  "TPU12GTFC9496OFH": {
+    "count": 18,
+    "lastUpdatedOn": 1639593588832,
+    "max": 44.57142857142857,
+    "min": 7.905405405405405,
+    "name": "Jonas",
+    "wageRate": 18.520541532212185
+  },
+  "TPU12GZLJ4LT8D7V": {
+    "count": 33,
+    "lastUpdatedOn": 1593386143007,
+    "name": "LeoneV",
+    "wageRate": 4.027790755199134
+  },
+  "TPU12GZTYA6G1RR3": {
+    "count": 2,
+    "lastUpdatedOn": 1570528447295,
+    "name": "TSO Hella",
+    "wageRate": 1.3496649131288674
+  },
+  "TPU12H0TOHXWVJ14": {
+    "count": 65,
+    "lastUpdatedOn": 1642099194511,
+    "max": 120,
+    "min": 1.0477299185098952,
+    "name": "Hameed Schaker",
+    "wageRate": 10.404985858251074
+  },
+  "TPU12H0VUWY640T1": {
+    "count": 105,
+    "lastUpdatedOn": 1679288961444,
+    "max": 85.71428571428571,
+    "min": 2.158273381294964,
+    "name": "BYU Law School",
+    "wageRate": 17.290862593371838
+  },
+  "TPU12H19L0S5QK6U": {
+    "count": 22,
+    "lastUpdatedOn": 1648664691192,
+    "max": 21.538461538461537,
+    "min": 3.2898172323759787,
+    "name": "Doug Murdoch",
+    "wageRate": 11.734991943559633
+  },
+  "TPU12H82AI3J3IFT": {
+    "count": 2,
+    "lastUpdatedOn": 1647569502387,
+    "max": 1.3235294117647058,
+    "min": 1.094890510948905,
+    "name": "JDstudent",
+    "wageRate": 1.2092099613568055
+  },
+  "TPU12HAO6ZUG99GL": {
+    "count": 200,
+    "lastUpdatedOn": 1616552127358,
+    "max": 411.42857142857144,
+    "min": 1.6062465142219746,
+    "name": "Habashi Lab",
+    "wageRate": 35.81236966500766
+  },
+  "TPU12HI7OE69E3MH": {
+    "count": 4,
+    "lastUpdatedOn": 1637741487499,
+    "max": 13.846153846153845,
+    "min": 0,
+    "name": "Sally Duan",
+    "wageRate": 7.363272565584705
+  },
+  "TPU12HJ0GMECNU82": {
+    "count": 2,
+    "lastUpdatedOn": 1611894111016,
+    "max": 83.07692307692308,
+    "min": 83.07692307692308,
+    "name": "Katherina",
+    "wageRate": 83.07692307692308
+  },
+  "TPU12HKVC3XHWIP3": {
+    "count": 240,
+    "lastUpdatedOn": 1693665227288,
+    "max": 95.29411764705883,
+    "min": 1.610738255033557,
+    "name": "Ronald Cardenas",
+    "wageRate": 13.947210794487422
+  },
+  "TPU12HN9N238IKCN": {
+    "count": 35,
+    "lastUpdatedOn": 1689640541148,
+    "max": 62.60869565217392,
+    "min": 3.214285714285714,
+    "name": "Haleykucera",
+    "wageRate": 20.47656429415748
+  },
+  "TPU12HSCCM89GDDM": {
+    "count": 54,
+    "lastUpdatedOn": 1654130704729,
+    "max": 75,
+    "min": 0.5176132278936018,
+    "name": "Koen Brouwer",
+    "wageRate": 6.570439432772245
+  },
+  "TPU12HT8JETO0R1C": {
+    "count": 34,
+    "lastUpdatedOn": 1628276219955,
+    "max": 90,
+    "min": 8.571428571428571,
+    "name": "Brandon Mullins",
+    "wageRate": 36.42998451581835
+  },
+  "TPU12HURKA6CCZVF": {
+    "count": 1,
+    "lastUpdatedOn": 1575763011706,
+    "name": "sarah",
+    "wageRate": 1.1637835134472143
+  },
+  "TPU12I393Z47XGYU": {
+    "count": 43,
+    "lastUpdatedOn": 1649850547547,
+    "max": 194.59459459459458,
+    "min": 5.529953917050691,
+    "name": "Bettina Casad",
+    "wageRate": 46.46797614879315
+  },
+  "TPU12I3PM67I6UFM": {
+    "count": 1,
+    "lastUpdatedOn": 1620424481619,
+    "max": 1.5,
+    "min": 1.5,
+    "name": "Carnegie Mellon University-026",
+    "wageRate": 1.5
+  },
+  "TPU12I5PYF9773AI": {
+    "count": 465,
+    "lastUpdatedOn": 1632813508042,
+    "max": 28.800000000000004,
+    "min": 0.45801526717557256,
+    "name": "BE Data Science",
+    "wageRate": 8.818619514153925
+  },
+  "TPU12IC6R5FOH7PI": {
+    "count": 47,
+    "lastUpdatedOn": 1635419024949,
+    "max": 90,
+    "min": 1.2040133779264215,
+    "name": "Tacita Privacy",
+    "wageRate": 27.91136044444007
+  },
+  "TPU12ICC42KCBA6W": {
+    "count": 93,
+    "lastUpdatedOn": 1636477290174,
+    "max": 586.046511627907,
+    "min": 1.5399657785382548,
+    "name": "hcislab",
+    "wageRate": 32.32383527447783
+  },
+  "TPU12IDYBH8X6BYS": {
+    "count": 1,
+    "lastUpdatedOn": 1664612203233,
+    "max": 7.2,
+    "min": 7.2,
+    "name": "ernesthclintonhh",
+    "wageRate": 7.2
+  },
+  "TPU12IHRZOCM77CU": {
+    "count": 3,
+    "lastUpdatedOn": 1662121465729,
+    "max": 0,
+    "min": 0,
+    "name": "Casanova Hut",
+    "wageRate": 0
+  },
+  "TPU12INYOOF7LIU": {
+    "count": 15,
+    "lastUpdatedOn": 1638247466693,
+    "max": 55.38461538461539,
+    "min": 1.1483253588516746,
+    "name": "Heather Rhodes",
+    "wageRate": 7.044293495510834
+  },
+  "TPU12IRIJYYJOEMJ": {
+    "count": 12,
+    "lastUpdatedOn": 1636470619487,
+    "max": 55.63636363636364,
+    "min": 4.516605166051661,
+    "name": "TPUashay Patel",
+    "wageRate": 28.04207881303023
+  },
+  "TPU12J2JNFQAGQIU": {
+    "count": 87,
+    "lastUpdatedOn": 1631297465845,
+    "max": 51.724137931034484,
+    "min": 1.2765957446808511,
+    "name": "University Researcher",
+    "wageRate": 11.856965138594905
+  },
+  "TPU12J6JXK08EKZI": {
+    "count": 21,
+    "lastUpdatedOn": 1623883923550,
+    "max": 198,
+    "min": 18,
+    "name": "Mike",
+    "wageRate": 130.8505494505495
+  },
+  "TPU12JBBV74FQFWK": {
+    "count": 28,
+    "lastUpdatedOn": 1623258115059,
+    "max": 187.5,
+    "min": 5.033557046979866,
+    "name": "PS Survey",
+    "wageRate": 32.69729806268072
+  },
+  "TPU12JBXY95D2WT6": {
+    "count": 4,
+    "lastUpdatedOn": 1636315566010,
+    "max": 20,
+    "min": 0.5042016806722689,
+    "name": "Jim Wanlass",
+    "wageRate": 8.876050420168067
+  },
+  "TPU12JRIPOR36BR2": {
+    "count": 27,
+    "lastUpdatedOn": 1593181627963,
+    "name": "Miaolei Jia",
+    "wageRate": 1.7698243205018118
+  },
+  "TPU12K29MECQL9EE": {
+    "count": 2,
+    "lastUpdatedOn": 1563831376832,
+    "name": "Ryan",
+    "wageRate": 0.47299237465800464
+  },
+  "TPU12KG09ED4CXPJ": {
+    "count": 452,
+    "lastUpdatedOn": 1631278966705,
+    "max": 216,
+    "min": 0.6266726938653756,
+    "name": "Plaks Lab",
+    "wageRate": 21.087280430203727
+  },
+  "TPU12KMLZQXLQNA7": {
+    "count": 218,
+    "lastUpdatedOn": 1640704846227,
+    "max": 31.304347826086957,
+    "min": 0.4058624577226607,
+    "name": "The Dyrt",
+    "wageRate": 11.78961785717456
+  },
+  "TPU12KOAGBBCULG5": {
+    "count": 852,
+    "lastUpdatedOn": 1677113338645,
+    "max": 210.85714285714286,
+    "min": 0.7182124245224732,
+    "name": "Clara Lab",
+    "wageRate": 25.76707220523647
+  },
+  "TPU12KTFJGJLU4CF": {
+    "count": 56,
+    "lastUpdatedOn": 1678138750163,
+    "max": 37.5,
+    "min": 1.7208413001912046,
+    "name": "Polly Merck",
+    "wageRate": 8.347446081309778
+  },
+  "TPU12KUMJPQ847UU": {
+    "count": 1,
+    "lastUpdatedOn": 1568249135894,
+    "name": "Sisi",
+    "wageRate": 1.219169406975681
+  },
+  "TPU12KXD7R2G0GFU": {
+    "count": 4,
+    "lastUpdatedOn": 1613498007284,
+    "max": 35.064935064935064,
+    "min": 1.8973998594518622,
+    "name": "Daniel Cunningham",
+    "wageRate": 15.945382087361764
+  },
+  "TPU12KZTD8SOL6D1": {
+    "count": 4,
+    "lastUpdatedOn": 1627688478509,
+    "max": 6.666666666666667,
+    "min": 1.7821782178217822,
+    "name": "Weston",
+    "wageRate": 3.8730807863395036
+  },
+  "TPU12L3SI4V65KS8": {
+    "count": 2,
+    "lastUpdatedOn": 1597099431785,
+    "max": 3.9187000365745335,
+    "min": 2.8299484006074955,
+    "name": "Usable Security & Privacy Research Lab",
+    "wageRate": 3.3743242185910143
+  },
+  "TPU12L77AVFBSI5R": {
+    "count": 1,
+    "lastUpdatedOn": 1685153671943,
+    "max": 3.1802120141342756,
+    "min": 3.1802120141342756,
+    "name": "Noah Turk",
+    "wageRate": 3.1802120141342756
+  },
+  "TPU12LA0SGD1TWRY": {
+    "count": 28,
+    "lastUpdatedOn": 1648086075411,
+    "max": 70.81967213114753,
+    "min": 5.588615782664942,
+    "name": "Brennan Leyda",
+    "wageRate": 30.827925049140074
+  },
+  "TPU12LEVSZVG3W03": {
+    "count": 2,
+    "lastUpdatedOn": 1630267715858,
+    "max": 58.53658536585366,
+    "min": 32.28699551569507,
+    "name": "Shay Lavie",
+    "wageRate": 45.41179044077437
+  },
+  "TPU12LF5EQ22FFAH": {
+    "count": 401,
+    "lastUpdatedOn": 1644268075279,
+    "max": 63.00000000000001,
+    "min": 0.46666666666666673,
+    "name": "MBTA Customer Technology",
+    "wageRate": 20.52799678123424
+  },
+  "TPU12LKMIRAAR28I": {
+    "count": 4,
+    "lastUpdatedOn": 1567661397973,
+    "name": "Happy Nguyen",
+    "wageRate": 5.595866684638574
+  },
+  "TPU12LKT9CLGHOAM": {
+    "count": 3,
+    "lastUpdatedOn": 1592587086597,
+    "name": "Dr. Abby Girard, LMFT",
+    "wageRate": 2.324469208367332
+  },
+  "TPU12LPOB0EA1RX2": {
+    "count": 110,
+    "lastUpdatedOn": 1668281448795,
+    "max": 62.608695652173914,
+    "min": 0.22936488544657502,
+    "name": "Christopher Stout",
+    "wageRate": 6.128735288196729
+  },
+  "TPU12LQ9CTLRQ715": {
+    "count": 7,
+    "lastUpdatedOn": 1664656650405,
+    "max": 20.454545454545453,
+    "min": 0.5714285714285714,
+    "name": "jacinta",
+    "wageRate": 6.863268460073859
+  },
+  "TPU12LS4A68QIPKK": {
+    "count": 16,
+    "lastUpdatedOn": 1587058999974,
+    "name": "Kim O'Connor",
+    "wageRate": 3.057711984092648
+  },
+  "TPU12LTT37YB9MVQ": {
+    "count": 28,
+    "lastUpdatedOn": 1617900465148,
+    "max": 186.20689655172413,
+    "min": 6.4209274673008325,
+    "name": "Jody C S Wong",
+    "wageRate": 22.710214139674765
+  },
+  "TPU12LTZ01U1E9YI": {
+    "count": 3,
+    "lastUpdatedOn": 1575938572439,
+    "name": "Caitlyn Young",
+    "wageRate": 4.534908672598788
+  },
+  "TPU12LYYCM0EN5UD": {
+    "count": 6,
+    "lastUpdatedOn": 1599866492680,
+    "max": 4.531864673485445,
+    "min": 0.24454499092890927,
+    "name": "TPUndrew Kitchner",
+    "wageRate": 1.6137470075417333
+  },
+  "TPU12M02THYVK6UG": {
+    "count": 50,
+    "lastUpdatedOn": 1653419380637,
+    "max": 70.3125,
+    "min": 8.906481939633844,
+    "name": "Randi L Garcia",
+    "wageRate": 25.50870393509472
+  },
+  "TPU12M1LV50HTW9G": {
+    "count": 2,
+    "lastUpdatedOn": 1585569401056,
+    "name": "Naoya Inoue",
+    "wageRate": 4.805326106318175
+  },
+  "TPU12M7GRU9SQS7B": {
+    "count": 5,
+    "lastUpdatedOn": 1581559518286,
+    "name": "Christian Baudry",
+    "wageRate": 2.751992480638817
+  },
+  "TPU12MA4NS33Z0U0": {
+    "count": 523,
+    "lastUpdatedOn": 1667430182469,
+    "max": 100.8,
+    "min": 0.16104937482153717,
+    "name": "EMP Lab",
+    "wageRate": 9.044851891644154
+  },
+  "TPU12MGYU6UMD6M7": {
+    "count": 4,
+    "lastUpdatedOn": 1594406125768,
+    "name": "David Stahr",
+    "wageRate": 9.73006600841704
+  },
+  "TPU12MM2GN32NNO": {
+    "count": 35,
+    "lastUpdatedOn": 1598915636051,
+    "max": 12.88733604444699,
+    "min": 0.5534020699696982,
+    "name": "Julia Laura Rankine",
+    "wageRate": 3.9436429860058477
+  },
+  "TPU12MMBBHBLXOLA": {
+    "count": 7,
+    "lastUpdatedOn": 1624430033510,
+    "max": 0,
+    "min": 0,
+    "name": "Teresa Koch",
+    "wageRate": 0
+  },
+  "TPU12MOGBABGRCLQ": {
+    "count": 28,
+    "lastUpdatedOn": 1617721470674,
+    "max": 34.285714285714285,
+    "min": 4.444444444444445,
+    "name": "Moritz Cleve",
+    "wageRate": 12.545233520771193
+  },
+  "TPU12N01QUR0DOQY": {
+    "count": 9,
+    "lastUpdatedOn": 1571267253383,
+    "name": "Linda Lin",
+    "wageRate": 1.7240446576414032
+  },
+  "TPU12N2FHORLFB5W": {
+    "count": 94,
+    "lastUpdatedOn": 1666711212784,
+    "max": 827.9999999999999,
+    "min": 2.21490631953044,
+    "name": "Toni van der Meer",
+    "wageRate": 35.11127320123389
+  },
+  "TPU12N3EU51LL20T": {
+    "count": 28,
+    "lastUpdatedOn": 1653346486141,
+    "max": 23.893805309734514,
+    "min": 3.4659820282413354,
+    "name": "DecisionMaking",
+    "wageRate": 9.403665773317353
+  },
+  "TPU12N4875TOWIJW": {
+    "count": 4565,
+    "lastUpdatedOn": 1665267102507,
+    "max": 54,
+    "min": 0.07635206786850476,
+    "name": "Jwala Dhamala",
+    "wageRate": 11.043059242178876
+  },
+  "TPU12N49JT3B6H3E": {
+    "count": 25,
+    "lastUpdatedOn": 1652887516928,
+    "max": 75,
+    "min": 0.40178571428571425,
+    "name": "D_Labs",
+    "wageRate": 13.282246804311779
+  },
+  "TPU12N49ZSH0WGLR": {
+    "count": 2,
+    "lastUpdatedOn": 1621615380534,
+    "max": 1.6744186046511627,
+    "min": 0.22712933753943218,
+    "name": "Ozlem Hersek",
+    "wageRate": 0.9507739710952974
+  },
+  "TPU12N88OSDDKWA2": {
+    "count": 12,
+    "lastUpdatedOn": 1606856066505,
+    "max": 81.81818181818181,
+    "min": 1.1984021304926764,
+    "name": "Sean",
+    "wageRate": 21.522279616693993
+  },
+  "TPU12NGMH7M10DIC": {
+    "count": 7,
+    "lastUpdatedOn": 1619981316568,
+    "max": 94.73684210526315,
+    "min": 4.71821756225426,
+    "name": "TPUlexandra Dylman",
+    "wageRate": 24.073098947193422
+  },
+  "TPU12NL4APZ654OS": {
+    "count": 272,
+    "lastUpdatedOn": 1646763554575,
+    "max": 90,
+    "min": 4.931506849315069,
+    "name": "Zion Me MGMT",
+    "wageRate": 32.20301555720054
+  },
+  "TPU12NNWR3ZDAPIQ": {
+    "count": 54,
+    "lastUpdatedOn": 1674786924281,
+    "max": 82.28571428571429,
+    "min": 2.150537634408602,
+    "name": "michael coleman",
+    "wageRate": 8.93285379618784
+  },
+  "TPU12NQ12Z9EN3ZR": {
+    "count": 113,
+    "lastUpdatedOn": 1649879485165,
+    "max": 90,
+    "min": 0.5542725173210162,
+    "name": "Christie",
+    "wageRate": 14.03757163988415
+  },
+  "TPU12NSESE692EPT": {
+    "count": 13,
+    "lastUpdatedOn": 1633025703304,
+    "max": 19.6875,
+    "min": 1.2745244809853087,
+    "name": "Language Research Laboratory",
+    "wageRate": 5.904528375845926
+  },
+  "TPU12NT6GNDIAU42": {
+    "count": 150,
+    "lastUpdatedOn": 1670863183419,
+    "max": 1200,
+    "min": 0.7275666936135813,
+    "name": "TPUrslan",
+    "wageRate": 51.64543761743558
+  },
+  "TPU12O04DA4LZGNR": {
+    "count": 9,
+    "lastUpdatedOn": 1585126323359,
+    "name": "chloe",
+    "wageRate": 2.1916132380895137
+  },
+  "TPU12O19WLTOZ9FI": {
+    "count": 43,
+    "lastUpdatedOn": 1651174252179,
+    "max": 45.762711864406775,
+    "min": 2.6719445818901533,
+    "name": "Fredlund Policy Studies",
+    "wageRate": 15.012256684494115
+  },
+  "TPU12OBR96YOLLBL": {
+    "count": 109,
+    "lastUpdatedOn": 1691994039250,
+    "max": 32.14285714285714,
+    "min": 3.7921348314606744,
+    "name": "Kimele Persaud",
+    "wageRate": 12.814907510176546
+  },
+  "TPU12OGJV48VIJJA": {
+    "count": 20,
+    "lastUpdatedOn": 1618842162075,
+    "max": 124.13793103448276,
+    "min": 7.886089813800657,
+    "name": "Org Research Studies",
+    "wageRate": 38.84951038110931
+  },
+  "TPU12OZWXP57IMKC": {
+    "count": 3,
+    "lastUpdatedOn": 1633809434067,
+    "max": 6.857142857142857,
+    "min": 4.235294117647059,
+    "name": "Oliver",
+    "wageRate": 5.784435513335769
+  },
+  "TPU12P9S1SBLAUIX": {
+    "count": 11,
+    "lastUpdatedOn": 1574275905283,
+    "name": "Rikki Sargent",
+    "wageRate": 1.096552517971559
+  },
+  "TPU12PC4BU7PSJB4": {
+    "count": 1,
+    "lastUpdatedOn": 1606829737419,
+    "max": 25.11627906976744,
+    "min": 25.11627906976744,
+    "name": "TPUnna",
+    "wageRate": 25.11627906976744
+  },
+  "TPU12PHY948L9OSK": {
+    "count": 183,
+    "lastUpdatedOn": 1617140496522,
+    "max": 675,
+    "min": 1.0278777579245093,
+    "name": "Sheryl Kline",
+    "wageRate": 28.33941247013826
+  },
+  "TPU12PI7QYMQUOKY": {
+    "count": 99,
+    "lastUpdatedOn": 1598651051594,
+    "max": 7.578405792343183,
+    "min": 1.2428368225565383,
+    "name": "Eric van Holm",
+    "wageRate": 6.902365174817004
+  },
+  "TPU12PS87V0078PM": {
+    "count": 58,
+    "lastUpdatedOn": 1621272443743,
+    "max": 144,
+    "min": 0.7999999999999999,
+    "name": "Liu Yiran",
+    "wageRate": 15.221289400058561
+  },
+  "TPU12PZDAPEQQMZ2": {
+    "count": 37,
+    "lastUpdatedOn": 1630955069186,
+    "max": 14.090019569471623,
+    "min": 3.01381331100879,
+    "name": "Timothy Lawrence",
+    "wageRate": 4.9776657891894835
+  },
+  "TPU12Q2IAS1AGLOT": {
+    "count": 22,
+    "lastUpdatedOn": 1636160045355,
+    "max": 28.799999999999997,
+    "min": 2.254226675015654,
+    "name": "Jane M Martin",
+    "wageRate": 11.009997539718546
+  },
+  "TPU12Q3NI8BXVNWQ": {
+    "count": 3,
+    "lastUpdatedOn": 1606253931049,
+    "max": 85.71428571428571,
+    "min": 16.513761467889907,
+    "name": "lb3477",
+    "wageRate": 61.34874300011915
+  }
+}

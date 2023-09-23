@@ -67,3 +67,4 @@ export class BaseComponent implements OnInit {
 
 
 
+//TODO Add tables for reactions and wage rates. Sample data in reacts.json and reqs.json in assets folder. This data will be queried from firebase fron endpoints /reacts and /reqs. Name will also be mapped
