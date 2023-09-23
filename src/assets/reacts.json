@@ -1,0 +1,500 @@
+{
+
+    "requester": {
+    "TPU002227822VEZZEMS9FM6": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 3,
+        "thumbs_up": 0
+      }
+    },
+    "TPU0145812EJBTL4M4DE85": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 2,
+        "thumbs_up": 2
+      }
+    },
+    "TPU02083613H11QIJB1H2CW": {
+  
+      "summary": {
+        "angry": 6,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 9,
+        "thumbs_up": 3
+      }
+    },
+    "TPU04398461DDTC9M4P892E": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 1
+      }
+    },
+    "TPU05127962JF89F85P2RSO": {
+
+      "summary": {
+        "angry": 2,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 4,
+        "thumbs_up": 0
+      }
+    },
+    "TPU05973031XX9FPTDLRU5H": {
+
+      "summary": {
+        "angry": 1,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 4,
+        "thumbs_up": 3
+      }
+    },
+    "TPU06878781WDMN65B7ZDBN": {
+   
+      "summary": {
+        "angry": 1,
+        "love": 2,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 1,
+        "thumbs_up": 0
+      }
+    },
+    "TPU07665612SJXVDEHUL1KJ": {
+
+      "summary": {
+        "angry": 1,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 1,
+        "thumbs_up": 0
+      }
+    },
+    "TPU093608229YLLO56ED5YF": {
+
+      "summary": {
+        "angry": 2,
+        "love": 1,
+        "party": 1,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 2
+      }
+    },
+    "TPU100E7JNSZR2N2": {
+
+      "summary": {
+        "angry": 2,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 21,
+        "thumbs_up": 2
+      }
+    },
+    "TPU100KL7TB6FWS1": {
+  
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 5,
+        "thumbs_up": 2
+      }
+    },
+    "TPU10116NC57VM00": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 1,
+        "thumbs_up": 0
+      }
+    },
+    "TPU10119MW10LQ78": {
+
+      "summary": {
+        "angry": 0,
+        "love": 1,
+        "party": 1,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 1
+      }
+    },
+    "TPU101649XN8V4VY": {
+
+      "summary": {
+        "angry": 0,
+        "love": 1,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 0
+      }
+    },
+    "TPU101B0C6MV4Y9I": {
+ 
+      "summary": {
+        "angry": 0,
+        "love": 3,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 9,
+        "thumbs_up": 10
+      }
+    },
+    "TPU101N4RTFPVUG1": {
+
+      "summary": {
+        "angry": 1,
+        "love": 0,
+        "party": 2,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 1
+      }
+    },
+    "TPU101TPGEET64IQ": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 2,
+        "thumbs_up": 0
+      }
+    },
+    "TPU101XRRB1H6LC6": {
+
+      "summary": {
+        "angry": 1,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 0
+      }
+    },
+    "TPU1029N3F7340CP": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 1
+      }
+    },
+    "TPU102BWEFLDH70S": {
+
+      "summary": {
+        "angry": 1,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 2,
+        "thumbs_up": 0
+      }
+    },
+    "TPU102EU7ZWTXAY0": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 1,
+        "thumbs_up": 0
+      }
+    },
+    "TPU102IL2EF5G4Q8": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 1,
+        "thumbs_down": 0,
+        "thumbs_up": 0
+      }
+    },
+    "TPU103ILJQKFFJMO": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 2,
+        "thumbs_up": 0
+      }
+    },
+    "TPU1043UU3UHID1W": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 10,
+        "thumbs_up": 0
+      }
+    },
+    "TPU1047IHGKYG2TH": {
+
+      "summary": {
+        "angry": 0,
+        "love": 1,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 0
+      }
+    },
+    "TPU104WP3IBULDA7": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 1,
+        "thumbs_up": 1
+      }
+    },
+    "TPU105C5FMRL64T7": {
+
+      "summary": {
+        "angry": 0,
+        "love": 1,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 0
+      }
+    },
+    "TPU105EVIYTLZOKV": {
+
+      "summary": {
+        "angry": 3,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 3,
+        "thumbs_up": 0
+      }
+    },
+    "TPU105ZOHWWFZAC6": {
+
+      "summary": {
+        "angry": 0,
+        "love": 2,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 1,
+        "thumbs_up": 0
+      }
+    },
+    "TPU106L74W4R7PIK": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 1
+      }
+    },
+    "TPU106SCH82LKQBT": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 4
+      }
+    },
+    "TPU106YSLCE0D0N": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 1
+      }
+    },
+    "TPU1075SN9WRZR1R": {
+ 
+      "summary": {
+        "angry": 8,
+        "love": 5,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 8,
+        "thumbs_up": 14
+      }
+    },
+    "TPU107BC6CIAQYAX": {
+
+      "summary": {
+        "angry": 1,
+        "love": 1,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 1,
+        "thumbs_up": 0
+      }
+    },
+  
+    "TPU112XQHRPCLI9R": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 2
+      }
+    },
+    "TPU1130HUTIWXHOJ": {
+  
+      "summary": {
+        "angry": 0,
+        "love": 1,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 0
+      }
+    },
+    "TPU114IB7SO4VIPS": {
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 2,
+        "thumbs_up": 4
+      }
+    },
+    "TPU114IONI3OBNIO": {
+
+      "summary": {
+        "angry": 0,
+        "love": 2,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 0
+      }
+    },
+    "TPU114QE4CTMITD": {
+
+      "summary": {
+        "angry": 0,
+        "love": 1,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 0
+      }
+    },
+    "TPU114TQHR2BT6Y8": {
+
+      "summary": {
+        "angry": 1,
+        "love": 0,
+        "party": 0,
+        "sad": 1,
+        "thumbs_down": 0,
+        "thumbs_up": 1
+      }
+    },
+    "TPU115A2Q3QZA1OT": {
+
+      "summary": {
+        "angry": 1,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 3,
+        "thumbs_up": 0
+      }
+    },
+    "TPU115DZH519S9T3": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 0,
+        "thumbs_up": 1
+      }
+    },
+    "TPU115EASRW6Z31X": {
+
+      "summary": {
+        "angry": 0,
+        "love": 0,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 1,
+        "thumbs_up": 0
+      }
+    },
+    "TPU115KZBB8K5WL1": {
+
+      "summary": {
+        "angry": 6,
+        "love": 0,
+        "party": 0,
+        "sad": 1,
+        "thumbs_down": 7,
+        "thumbs_up": 6
+      }
+    },
+    "TPU1165NJPZ7NRHY": {
+
+      "summary": {
+        "angry": 8,
+        "love": 1,
+        "party": 0,
+        "sad": 0,
+        "thumbs_down": 35,
+        "thumbs_up": 7
+      }
+    }
+  }
+}
