@@ -292,7 +292,9 @@ export class ChartComponent {
         if (concatenatedString.charAt(0) === ' ') {
           concatenatedString = concatenatedString.slice(1);
         }
-        requester.requestersName = concatenatedString;
+        requester.requestersName = concatenatedString
+      }else{
+        requester.requestersName = requester[key]
       }
     });
   }
