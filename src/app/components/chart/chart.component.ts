@@ -27,6 +27,33 @@ export class ChartComponent {
   @Input() employeersList: any[] = [];
   hourChartLabels: string[] = ChartConstant.hourChartLabels;
   id = '';
+  reactionList: any[] = [
+    {
+      name: 'Angry',
+      id: 'angry',
+    },
+    {
+      name: 'Love',
+      id: 'love',
+    },
+    {
+      name: 'Party',
+      id: 'party',
+    },
+    {
+      name: 'Sad',
+      id: 'sad',
+    },
+    {
+      name: 'Thumbs Down',
+      id: 'thumbs_down',
+    },
+    {
+      name: 'Thumbs Up',
+      id: 'thumbs_up',
+    },
+  ];
+  selectedReaction=this.reactionList[0].id;
   dayList: any[] = ChartConstant.dayList;
   hoursList: any[] = ChartConstant.hoursList;
   barChartType = ChartConstant.chartType;
@@ -81,7 +108,12 @@ export class ChartComponent {
         : this.key === 'byDayAndHourForAllRequesters'
         ? `byDayAndHour/LosAngeles`
         : `${this.key}/LosAngeles`;
-    if (this.databasePath !== 'byRequesterID') {
+
+    if (
+      this.databasePath !== 'byRequesterID' &&
+      this.key !== 'top100RequestersByWageRate' &&
+      this.key !== 'top10RequestersByDayReactions'
+    ) {
       this.data = await firstValueFrom(
         this.chartService
           .getAll(this.databasePath)
@@ -102,6 +134,22 @@ export class ChartComponent {
             )
           )
       );
+    } else if (
+      this.key === 'top100RequestersByWageRate' ||
+      this.key === 'top100RequestersByDayReactions'
+    ) {
+      const databasePath =
+        this.key === 'top100RequestersByWageRate' ? 'reqs' : 'reacts/requester';
+      this.data = await firstValueFrom(
+        this.chartService
+          .getOthersEmployeeData(databasePath)
+          .snapshotChanges()
+          .pipe(
+            map((changes) =>
+              changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
+            )
+          )
+      );
     }
     switch (this.key) {
       case 'byDay':
@@ -109,6 +157,10 @@ export class ChartComponent {
       case 'byDayAndHour':
       case 'byDayAndHourForAllRequesters':
         this.prepareChart();
+        break;
+      case 'top100RequestersByWageRate':
+      case 'top100RequestersByDayReactions':
+        this.prepareDataForTop100Requesters();
         break;
       case 'top10RequestersByDay':
       case 'top10RequestersByHour':
@@ -119,9 +171,9 @@ export class ChartComponent {
 
         break;
 
-        case ChartConstant.filterType.top10RequestersByDayForSubmit:
-          case ChartConstant.filterType.top10RequestersByHourForSubmit:
-          case ChartConstant.filterType.top10RequestersByDayAndHourForSubmit:
+      case ChartConstant.filterType.top10RequestersByDayForSubmit:
+      case ChartConstant.filterType.top10RequestersByHourForSubmit:
+      case ChartConstant.filterType.top10RequestersByDayAndHourForSubmit:
         setTimeout(() => {
           this.prepareTop10RequesterForSubmit();
         }, 3000);
@@ -129,6 +181,19 @@ export class ChartComponent {
         break;
     }
     this.id = this.route.snapshot.params['id'];
+  }
+
+  prepareDataForTop100Requesters() {
+    if (this.key === 'top100RequestersByWageRate') {
+      this.requesterList = this.data
+        .sort((a, b) => b.wageRate - a.wageRate)
+        .slice(0, 100);
+    } else {
+      this.requesterList = this.data.sort(
+        (a, b) => b.summary[this.selectedReaction] - a.summary[this.selectedReaction]
+      ).filter(item=>item.summary[this.selectedReaction]!==0);
+      this.mappedNameForEmployer('key')
+    }
   }
 
   prepareTop10Requester() {
@@ -169,12 +234,11 @@ export class ChartComponent {
     }
     this.mappedNameForEmployer();
   }
+
   prepareTop10RequesterForSubmit() {
     this.requesterList = [];
     let data = [];
     const requestersResult = [];
-    console.log(top10RequestersByDayForSubmit);
-
     if (this.key === ChartConstant.filterType.top10RequestersByDayForSubmit) {
       data = top10RequestersByDayForSubmit[this.selectedDay];
     } else if (
@@ -203,8 +267,6 @@ export class ChartComponent {
     }
     requestersResult.sort((a, b) => b.value - a.value);
     this.requesterList = requestersResult;
-    console.log(this.requesterList);
-
     if (this.requesterList.length > 0) {
       const totalRequestersCount = this.requesterList
         .map((item) => item.value)
@@ -217,10 +279,10 @@ export class ChartComponent {
     this.mappedNameForEmployer();
   }
 
-  mappedNameForEmployer() {
+  mappedNameForEmployer(key='name') {
     this.requesterList.forEach((requester) => {
       const index = this.employeersList.findIndex(
-        (item) => item.key === requester.name
+        (item) => item.key === requester[key]
       );
       if (index > -1) {
         const obj = { ...this.employeersList[index] };
@@ -254,11 +316,13 @@ export class ChartComponent {
     }
   }
 
-  getRequesterDetail(item) {
-    this.router.navigate([`/requester-analysis/${item.name}`], {
-      queryParams: { name: item.requestersName },
+  getRequesterDetail(item, key = 'name', query = 'requestersName') {
+    console.log(item);
+    this.router.navigate([`/requester-analysis/${item[key]}`], {
+      queryParams: { name: item[query] },
     });
   }
+
   onHourChange() {
     switch (this.key) {
       case 'byDayAndHour':
@@ -380,9 +444,9 @@ export class ChartComponent {
             return total;
           }, 0);
         if (filterKey === 'Accept') {
-          top10RequestersByDayAndHour = this.data;
+          top10RequestersByDayAndHour = data;
         } else {
-          top10RequestersByDayAndHourForSubmit = this.data;
+          top10RequestersByDayAndHourForSubmit = data;
         }
         this.dayCount.forEach((day) => {
           const index = data.findIndex((item: any) => item.key === String(day));
@@ -471,7 +535,6 @@ export class ChartComponent {
     }
     if (this.key === 'byDay' && filterkey === 'Submit') {
       top10RequestersByDayForSubmit = dayWiseRequesterCounts;
-      console.log(top10RequestersByDayForSubmit);
     } else if (this.key === 'byHour' && filterkey === 'Accept') {
       top10RequestersByHour = hoursWiseRequestersCounts;
     } else {

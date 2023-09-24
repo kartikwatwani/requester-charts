@@ -521,6 +521,10 @@ export class ChartService {
     return this.db.list(`/req_id_to_name_mapping`);
   }
 
+  getOthersEmployeeData(key:string): AngularFireList<any> {
+    return this.db.list(`/${key}`);
+  }
+
   customizeColors(data: number[]): string[] {
     return data.map((value) => {
       if (value < 20) {

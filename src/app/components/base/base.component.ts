@@ -57,6 +57,14 @@ export class BaseComponent implements OnInit {
       label: 'Top 10 Requester By Day And Hour  For Submit',
       key: 'top10RequestersByDayAndHourForSubmit',
     },
+    {
+      label: 'Top 100 Requester By Wage Rate',
+      key: 'top100RequestersByWageRate',
+    },
+    {
+      label: 'Top 100 Requester By Reactions',
+      key: 'top100RequestersByDayReactions',
+    },
   ];
 
   constructor(private chartService: ChartService) {}
