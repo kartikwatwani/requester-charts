@@ -24,10 +24,12 @@ export class ChartComponent {
   dayChartLabels: string[] = ChartConstant.dayChartLabels;
   requesterList: any[] = [];
   @Input() label: string = '';
+  @Input() isShow=false
   @Input() employeersList: any[] = [];
   hourChartLabels: string[] = ChartConstant.hourChartLabels;
   id = '';
- @Input() selectedFilter:string=''
+  @Input() requesterType = 'accept';
+  @Input() selectedFilter: string = '';
   reactionList: any[] = [
     {
       name: 'Angry',
@@ -54,7 +56,7 @@ export class ChartComponent {
       id: 'thumbs_up',
     },
   ];
-  selectedReaction=this.reactionList[0].id;
+  selectedReaction = this.reactionList[0].id;
   dayList: any[] = ChartConstant.dayList;
   hoursList: any[] = ChartConstant.hoursList;
   barChartType = ChartConstant.chartType;
@@ -184,16 +186,54 @@ export class ChartComponent {
     this.id = this.route.snapshot.params['id'];
   }
 
+  onTypeChange() {
+    console.log(this.key);
+    const type = this.key.includes('ByDayAndHour')
+      ? 'byDayAndHour'
+      : this.key.includes('ByHour')
+      ? 'hour'
+      : 'day';
+    if (type === 'day' && this.requesterType === 'submit') {
+      this.key = 'top10RequestersByDayForSubmit';
+      this.prepareTop10RequesterForSubmit();
+    } else if (type === 'day' && this.requesterType === 'accept') {
+      this.key = 'top10RequestersByDay';
+      this.prepareTop10Requester();
+    } else if (type === 'hour' && this.requesterType === 'submit') {
+      this.key = 'top10RequestersByHourForSubmit';
+      this.prepareTop10RequesterForSubmit();
+    } else if (type === 'hour' && this.requesterType === 'accept') {
+      this.key = 'top10RequestersByHour';
+      this.prepareTop10Requester();
+    }
+    else if (type === 'byDayAndHour' && this.requesterType === 'submit') {
+      this.key = 'top10RequestersByDayAndHourForSubmit';
+      this.prepareTop10RequesterForSubmit();
+    }
+    else if (type === 'byDayAndHour' && this.requesterType === 'accept') {
+      this.key = 'top10RequestersByDayAndHour';
+      this.prepareTop10Requester();
+    }
+    if(this.requesterType==='submit'){
+    this.label = this.label.replace('Submit',this.requesterType.toUpperCase());
+    }else{
+      this.label = this.label.replace('Accept',this.requesterType.toUpperCase());
+    }
+
+  }
   prepareDataForTop100Requesters() {
     if (this.key === 'top100RequestersByWageRate') {
       this.requesterList = this.data
         .sort((a, b) => b.wageRate - a.wageRate)
         .slice(0, 100);
     } else {
-      this.requesterList = this.data.sort(
-        (a, b) => b.summary[this.selectedReaction] - a.summary[this.selectedReaction]
-      ).filter(item=>item.summary[this.selectedReaction]!==0);
-      this.mappedNameForEmployer('key')
+      this.requesterList = this.data
+        .sort(
+          (a, b) =>
+            b.summary[this.selectedReaction] - a.summary[this.selectedReaction]
+        )
+        .filter((item) => item.summary[this.selectedReaction] !== 0);
+      this.mappedNameForEmployer('key');
     }
   }
 
@@ -280,7 +320,7 @@ export class ChartComponent {
     this.mappedNameForEmployer();
   }
 
-  mappedNameForEmployer(key='name') {
+  mappedNameForEmployer(key = 'name') {
     this.requesterList.forEach((requester) => {
       const index = this.employeersList.findIndex(
         (item) => item.key === requester[key]
@@ -293,9 +333,9 @@ export class ChartComponent {
         if (concatenatedString.charAt(0) === ' ') {
           concatenatedString = concatenatedString.slice(1);
         }
-        requester.requestersName = concatenatedString
-      }else{
-        requester.requestersName = requester[key]
+        requester.requestersName = concatenatedString;
+      } else {
+        requester.requestersName = requester[key];
       }
     });
   }

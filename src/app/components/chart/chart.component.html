@@ -1,14 +1,17 @@
 <div
   style="display: block;"
-  *ngIf="selectedFilter === 'requesters-presence' && key !== 'top100RequestersByWageRate' &&
-  key !== 'top100RequestersByDayReactions'"
+  *ngIf="
+    selectedFilter === 'requesters-presence' &&
+    key !== 'top100RequestersByWageRate' &&
+    key !== 'top100RequestersByDayReactions' &&
+    isShow
+  "
   class="chart-container"
   [ngClass]="{
     section: key === 'byHour' || key === 'byDayAndHourForAllRequesters',
     'new-section':
-     ( selectedFilter === 'requesters-wage' ||
-      selectedFilter === 'requesters-reaction'),
-    'common-margin':key==='top10RequestersByDayAndHourForSubmit'
+      selectedFilter === 'requesters-wage' ||
+      selectedFilter === 'requesters-reaction',
   }"
 >
   <div style="display: flex; align-items: flex-start; flex-direction: column;">
@@ -82,6 +85,28 @@
             <mat-option [value]="item.value" *ngFor="let item of hoursList"
               >{{ item.name }}</mat-option
             >
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field
+        style="position: relative;margin-left: 20px;"
+          *ngIf="
+            key === 'top10RequestersByDay' ||
+            key === 'top10RequestersByHour' ||
+            key === 'top10RequestersByDayAndHour'||
+            key === 'top10RequestersByDayForSubmit' ||
+            key === 'top10RequestersByHourForSubmit' ||
+            key === 'top10RequestersByDayAndHourForSubmit'
+          "
+          appearance="outline"
+        >
+          <mat-label>Requester Type</mat-label>
+          <mat-select
+            name="requesterType"
+            [(ngModel)]="requesterType"
+            (selectionChange)="onTypeChange()"
+          >
+            <mat-option value="accept">By Accept</mat-option>
+            <mat-option value="submit">By Submit</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
