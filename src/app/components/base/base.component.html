@@ -1,3 +1,13 @@
+<div style="padding: 20px 0px 0px 45px;">
+  <mat-form-field appearance="outline">
+    <mat-label>Selected Filter</mat-label>
+    <mat-select name="selectedDay" [(ngModel)]="selectedFilter">
+      <mat-option [value]="filter.id" *ngFor="let filter of filters"
+        >{{ filter.name }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+</div>
 <div
   class="container"
   style="
@@ -9,9 +19,12 @@
   *ngIf="requesterList.length>0"
 >
   <div *ngFor="let chart of chartsList">
-    <app-chart [key]="chart.key" [label]="chart.label" [employeersList]="requesterList"></app-chart>
+    <app-chart
+      [selectedFilter]="selectedFilter"
+      [key]="chart.key"
+      [label]="chart.label"
+      [employeersList]="requesterList"
+    ></app-chart>
   </div>
 </div>
-<div style=" padding: 0px 16px 0px 16px;margin-top: 10px;
-">
-</div>
+<div style="padding: 0px 16px 0px 16px; margin-top: 10px;"></div>

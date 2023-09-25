@@ -66,6 +66,21 @@ export class BaseComponent implements OnInit {
       key: 'top100RequestersByDayReactions',
     },
   ];
+  filters:any[]=[
+    {
+      id:'requesters-presence',
+      name:'By Requester presence'
+    },
+    {
+      id:'requesters-wage',
+      name:'By Requesterswage'
+    },
+    {
+      id:'requesters-reaction',
+      name:'By Requesters reaction'
+    },
+  ]
+  selectedFilter=this.filters[0].id
 
   constructor(private chartService: ChartService) {}
 

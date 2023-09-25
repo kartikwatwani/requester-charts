@@ -1,131 +1,131 @@
 <div
   style="display: block;"
+  *ngIf="selectedFilter==='requesters-presence'"
   class="chart-container"
   [ngClass]="{
-    section: key === 'byHour' || key === 'byDayAndHourForAllRequesters'
+    section: key === 'byHour' || key === 'byDayAndHourForAllRequesters',
+    'new-section':selectedFilter==='requesters-wage'||selectedFilter==='requesters-reaction'
   }"
 >
   <div style="display: flex; align-items: flex-start; flex-direction: column;">
-    <h2>{{ label }}</h2>
-    <!-- <mat-form-field appearance="outline">
-      <mat-label>Filters</mat-label>
-      <mat-select name="key" [(ngModel)]="key" (selectionChange)="getData()">
-        <mat-option value="byDay">By Day</mat-option>
-        <mat-option value="byHour">By Hour</mat-option>
-        <mat-option value="byDayAndHour">By Day-Hour</mat-option>
-        <mat-option value="top10RequestersByDay">Top 10 Requesters by Day</mat-option>
-        <mat-option value="top10RequestersByHour">Top 10 Requesters by Hour</mat-option>
-        <mat-option value="top10RequestersByDayAndHour">Top 10 Requesters by Day & Hour</mat-option>
-      </mat-select>
-    </mat-form-field> -->
-    <div style="display: flex;">
-      <mat-form-field
-        *ngIf="
+    <h2
+      *ngIf="key!=='top100RequestersByWageRate' &&key!=='top100RequestersByDayReactions'"
+    >
+      {{ label }}
+    </h2>
+
+    <ng-container *ngIf="selectedFilter==='requesters-presence'">
+      <div style="display: flex;">
+        <mat-form-field
+          *ngIf="
           key === 'top10RequestersByDay' ||
           key === 'top10RequestersByDayAndHour' ||
           key === 'top10RequestersByDayForSubmit' ||
           key === 'top10RequestersByDayAndHourForSubmit' ||
           key === 'byDayAndHourForAllRequesters'
         "
-        appearance="outline"
-      >
-        <mat-label>Day</mat-label>
-        <mat-select
-          name="selectedDay"
-          [(ngModel)]="selectedDay"
-          (selectionChange)="onDayChange()"
+          appearance="outline"
         >
-          <mat-option [value]="item.id" *ngFor="let item of dayList"
-            >{{ item.name }}</mat-option
+          <mat-label>Day</mat-label>
+          <mat-select
+            name="selectedDay"
+            [(ngModel)]="selectedDay"
+            (selectionChange)="onDayChange()"
           >
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field
-      *ngIf="
-        key === 'top100RequestersByDayReactions'
+            <mat-option [value]="item.id" *ngFor="let item of dayList"
+              >{{ item.name }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field
+          *ngIf="
+        key === 'top100RequestersByDayReactions' &&selectedFilter==='requesters-reaction'
       "
-      appearance="outline"
-    >
-      <mat-label>Reactions</mat-label>
-      <mat-select
-        name="selectedReaction"
-        [(ngModel)]="selectedReaction"
-        (selectionChange)="prepareDataForTop100Requesters()"
-      >
-        <mat-option [value]="item.id" *ngFor="let item of reactionList"
-          >{{ item.name }}</mat-option
+          appearance="outline"
         >
-      </mat-select>
-    </mat-form-field>
-      <mat-form-field
-        style="margin-left: 10px;"
-        *ngIf="
+          <mat-label>Reactions</mat-label>
+          <mat-select
+            name="selectedReaction"
+            [(ngModel)]="selectedReaction"
+            (selectionChange)="prepareDataForTop100Requesters()"
+          >
+            <mat-option [value]="item.id" *ngFor="let item of reactionList"
+              >{{ item.name }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field
+          style="margin-left: 10px;"
+          *ngIf="
           key === 'byDayAndHour' ||
           key === 'top10RequestersByHour' ||
           key === 'top10RequestersByHourForSubmit' ||
           key === 'top10RequestersByDayAndHour'||
           key === 'top10RequestersByDayAndHourForSubmit'
         "
-        appearance="outline"
-      >
-        <mat-label>Hour</mat-label>
-        <mat-select
-          name="selectedHour"
-          [(ngModel)]="selectedHour"
-          (selectionChange)="onHourChange()"
+          appearance="outline"
         >
-          <mat-option [value]="item.value" *ngFor="let item of hoursList"
-            >{{ item.name }}</mat-option
+          <mat-label>Hour</mat-label>
+          <mat-select
+            name="selectedHour"
+            [(ngModel)]="selectedHour"
+            (selectionChange)="onHourChange()"
           >
-        </mat-select>
-      </mat-form-field>
-    </div>
+            <mat-option [value]="item.value" *ngFor="let item of hoursList"
+              >{{ item.name }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </ng-container>
   </div>
-  <canvas
-    *ngIf="data.length > 0 && key === 'byDay'"
-    baseChart
-    [datasets]="chartData"
-    [chartType]="chartType"
-    [labels]="dayChartLabels"
-    [options]="chartOptions"
-    [legend]="true"
-  >
-  </canvas>
-  <canvas
-    *ngIf="data.length > 0 && key === 'byHour'"
-    baseChart
-    [datasets]="chartData"
-    [labels]="hourChartLabels"
-    [chartType]="chartType"
-    [options]="chartOptions"
-    [legend]="true"
-  >
-  </canvas>
-  <canvas
-    *ngIf="data.length > 0 && key === 'byDayAndHour'"
-    baseChart
-    [datasets]="chartData"
-    [chartType]="chartType"
-    [labels]="dayChartLabels"
-    [options]="chartOptions"
-    [legend]="true"
-  >
-  </canvas>
-  <canvas
-    *ngIf="data.length > 0 && key === 'byDayAndHourForAllRequesters'"
-    baseChart
-    [datasets]="chartData"
-    [chartType]="chartType"
-    [labels]="hourChartLabels"
-    [options]="chartOptions"
-    [legend]="true"
-  >
-  </canvas>
+  <ng-container *ngIf="selectedFilter==='requesters-presence'">
+    <canvas
+      *ngIf="data.length > 0 && key === 'byDay'"
+      baseChart
+      [datasets]="chartData"
+      [chartType]="chartType"
+      [labels]="dayChartLabels"
+      [options]="chartOptions"
+      [legend]="true"
+    >
+    </canvas>
+    <canvas
+      *ngIf="data.length > 0 && key === 'byHour'"
+      baseChart
+      [datasets]="chartData"
+      [labels]="hourChartLabels"
+      [chartType]="chartType"
+      [options]="chartOptions"
+      [legend]="true"
+    >
+    </canvas>
+    <canvas
+      *ngIf="data.length > 0 && key === 'byDayAndHour'"
+      baseChart
+      [datasets]="chartData"
+      [chartType]="chartType"
+      [labels]="dayChartLabels"
+      [options]="chartOptions"
+      [legend]="true"
+    >
+    </canvas>
+    <canvas
+      *ngIf="data.length > 0 && key === 'byDayAndHourForAllRequesters'"
+      baseChart
+      [datasets]="chartData"
+      [chartType]="chartType"
+      [labels]="hourChartLabels"
+      [options]="chartOptions"
+      [legend]="true"
+    >
+    </canvas>
+  </ng-container>
   <ng-container *ngIf="requesterList.length > 0; else noRequesters">
     <div style="height: 350px; overflow: auto;">
       <table
         class="table"
-        *ngIf="key!=='top100RequestersByWageRate' &&key!=='top100RequestersByDayReactions'"
+        *ngIf="key!=='top100RequestersByWageRate' &&key!=='top100RequestersByDayReactions' &&selectedFilter==='requesters-presence'"
       >
         <thead>
           <tr>
@@ -152,63 +152,6 @@
           </tr>
         </tbody>
       </table>
-
-      <table class="table" *ngIf="key==='top100RequestersByWageRate'">
-        <thead>
-          <tr>
-            <th scope="col">S.No</th>
-            <th scope="col">Id</th>
-            <th scope="col">
-              Minimum Wage
-            </th>
-            <th scope="col">Avergare Wage</th>
-            <th scope="col">Maximum Wage</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let item of requesterList; let i = index">
-          <tr>
-            <td>{{ i + 1 }}</td>
-            <td>{{ item.name }}</td>
-            <td>{{ item.min|number : '.2-2' }}</td>
-            <td>{{ item.wageRate|number : '.2-2' }}</td>
-            <td>{{ item.max |number : '.2-2'}}</td>
-            <td>
-              <a
-                (click)="getRequesterDetail(item,'key','name')"
-                [queryParams]="{key}"
-                >View Chart</a
-              >
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="table" *ngIf="key==='top100RequestersByDayReactions'">
-        <thead>
-          <tr>
-            <th scope="col">S.No</th>
-            <th scope="col">Id</th>
-            <th scope="col">
-              Reactions
-            </th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let item of requesterList; let i = index">
-          <tr>
-            <td>{{ i + 1 }}</td>
-            <td>{{ item.requestersName||'-' }}</td>
-            <td>{{ item.summary[selectedReaction]}}</td>
-            <td>
-              <a
-                (click)="getRequesterDetail(item,'key','requestersName')"
-                [queryParams]="{key}"
-                >View Chart</a
-              >
-            </td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </ng-container>
   <ng-template #noRequesters>
@@ -224,4 +167,83 @@
       No Requesters Found
     </p>
   </ng-template>
+</div>
+<div
+  style="position: absolute; left: 3%;"
+  *ngIf="selectedFilter!=='requesters-presence'"
+>
+  <h2
+    *ngIf="selectedFilter==='requesters-wage'&&key==='top100RequestersByWageRate'"
+  >
+    {{ label }}
+  </h2>
+  <h2
+    *ngIf="selectedFilter==='requesters-reaction' &&key==='top100RequestersByDayReactions'"
+  >
+    {{ label }}
+  </h2>
+  <div style="height: 350px; overflow: auto;">
+    <table
+      class="table"
+      *ngIf="key==='top100RequestersByWageRate' &&selectedFilter==='requesters-wage'"
+    >
+      <thead>
+        <tr>
+          <th scope="col">S.No</th>
+          <th scope="col">Id</th>
+          <th scope="col">
+            Minimum Wage
+          </th>
+          <th scope="col">Avergare Wage</th>
+          <th scope="col">Maximum Wage</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of requesterList; let i = index">
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.min|number : '.2-2' }}</td>
+          <td>{{ item.wageRate|number : '.2-2' }}</td>
+          <td>{{ item.max |number : '.2-2'}}</td>
+          <td>
+            <a
+              (click)="getRequesterDetail(item,'key','name')"
+              [queryParams]="{key}"
+              >View Chart</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table
+      class="table"
+      *ngIf="key==='top100RequestersByDayReactions' &&selectedFilter==='requesters-reaction'"
+    >
+      <thead>
+        <tr>
+          <th scope="col">S.No</th>
+          <th scope="col">Id</th>
+          <th scope="col">
+            Reactions
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of requesterList; let i = index">
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.requestersName||'-' }}</td>
+          <td>{{ item.summary[selectedReaction]}}</td>
+          <td>
+            <a
+              (click)="getRequesterDetail(item,'key','requestersName')"
+              [queryParams]="{key}"
+              >View Chart</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

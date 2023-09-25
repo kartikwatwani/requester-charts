@@ -27,6 +27,7 @@ export class ChartComponent {
   @Input() employeersList: any[] = [];
   hourChartLabels: string[] = ChartConstant.hourChartLabels;
   id = '';
+ @Input() selectedFilter:string=''
   reactionList: any[] = [
     {
       name: 'Angry',
