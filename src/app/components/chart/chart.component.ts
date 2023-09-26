@@ -582,4 +582,10 @@ export class ChartComponent {
 
 // TODO: In "ByPresence", For the By Day & Hour table, there are three select options. Increase the width of the table to match the width of the total width of 3 select options.
 
-// TODO: Move reactionList to constants.ts
+// TODO: Move reactionList to constants.ts.
+
+// TODO: Rename "Id" header to "Name" in table columns for all tables.
+
+// TODO: Rename "Requester Type" select to "Presence Type" in tables.
+
+// TODO: You don't need to update the title of the table If "Presence Type" select option value is changed from "by Accept" to "by Submit" or vice versa. Just keep it as "Top Requesters By Day & Hour", "Top Requesters By Hour", "Top Requesters By Day" and "Top Requesters By Day" no matter what the value of "Presence Type" select option is.
