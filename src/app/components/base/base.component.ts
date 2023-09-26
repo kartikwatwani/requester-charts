@@ -40,32 +40,32 @@ export class BaseComponent implements OnInit {
     },
     {
       label: 'Top 10 Requester By Day  For Accept',
-      key: 'top10RequestersByDay',
+      key: 'topRequestersByDay',
       isShow:true,
     },
     {
       label: 'Top 10 Requester By Hour  For Accept',
-      key: 'top10RequestersByHour',
+      key: 'topRequestersByHour',
       isShow:true,
     },
     {
       label: 'Top 10 Requester By Day And Hour  For Accept',
-      key: 'top10RequestersByDayAndHour',
+      key: 'topRequestersByDayAndHour',
       isShow:true,
     },
     {
       label: 'Top 10 Requester By Day For Submit',
-      key: 'top10RequestersByDayForSubmit',
+      key: 'topRequestersByDayForSubmit',
       isShow:false,
     },
     {
       label: 'Top 10 Requester By Hour  For Submit',
-      key: 'top10RequestersByHourForSubmit',
+      key: 'topRequestersByHourForSubmit',
       isShow:false,
     },
     {
       label: 'Top 10 Requester By Day And Hour  For Submit',
-      key: 'top10RequestersByDayAndHourForSubmit',
+      key: 'topRequestersByDayAndHourForSubmit',
       isShow:false,
     },
     {
@@ -75,7 +75,7 @@ export class BaseComponent implements OnInit {
     },
     {
       label: 'Top 100 Requester By Reactions',
-      key: 'top100RequestersByDayReactions',
+      key: 'topRequestersByReactions',
       isShow:true,
     },
   ];

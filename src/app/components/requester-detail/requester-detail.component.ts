@@ -14,15 +14,15 @@ export class RequesterDetailComponent implements OnInit {
   chartsList: Chart[] = [
     {
       label: 'Top 10 Requester By Day',
-      key: 'top10RequestersByDay',
+      key: 'topRequestersByDay',
     },
     {
       label: 'Top 10 Requester By Hour',
-      key: 'top10RequestersByHour',
+      key: 'topRequestersByHour',
     },
     {
       label: 'Top 10 Requester By Day And Hour',
-      key: 'top10RequestersByDayAndHour',
+      key: 'topRequestersByDayAndHour',
     },
   ];
   @Input() chartDetail: any = {};
@@ -82,11 +82,11 @@ export class RequesterDetailComponent implements OnInit {
 
   getMainChartLabel() {
     switch (this.filterKey) {
-      case 'top10RequestersByDay':
+      case 'topRequestersByDay':
         return 'Day Wise Percentage';
-      case 'top10RequestersByHour':
+      case 'topRequestersByHour':
         return 'Hour Wise Percentage';
-      case 'top10RequestersByDayAndHour':
+      case 'topRequestersByDayAndHour':
         return 'Day and Hour Wise Percentage';
     }
   }
@@ -95,7 +95,7 @@ export class RequesterDetailComponent implements OnInit {
     let array: any[] = [];
     const newArray: number[] = [];
     switch (this.filterKey) {
-      case 'top10RequestersByDay':
+      case 'topRequestersByDay':
         if (chartDetail && chartDetail.LosAngeles.byDay) {
           this.dayCount.forEach((_, index) => {
             array.push(chartDetail.LosAngeles.byDay[index] || 0);
@@ -111,7 +111,7 @@ export class RequesterDetailComponent implements OnInit {
           });
         }
         return array;
-      case 'top10RequestersByHour':
+      case 'topRequestersByHour':
         if (chartDetail && chartDetail.LosAngeles.byHour) {
           this.hourCount.forEach((_, index) => {
             array.push(chartDetail.LosAngeles.byHour[index] || 0);
@@ -127,7 +127,7 @@ export class RequesterDetailComponent implements OnInit {
           });
         }
         return array;
-      case 'top10RequestersByDayAndHour':
+      case 'topRequestersByDayAndHour':
         this.chartData[0].data = [];
         array = [];
         this.dayCount.forEach((day) => {

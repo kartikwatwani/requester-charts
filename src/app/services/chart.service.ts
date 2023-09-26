@@ -502,17 +502,36 @@ export class ChartService {
     // this.tutorialsRef = db.list(this.dbPath);
   }
 
-  getAll(key: string): AngularFireList<any> {
-    let path = `${key}`;
-    if (key !== 'byRequesterID') {
-      path = `${key}`;
+  getAll(key: string, singleRequester = false): AngularFireList<any> {
+    const newKey = this.getFilterCondition(key);
+
+    let path;
+    if (!singleRequester) {
+      path = `${newKey}`;
+    } else {
+      path = key;
     }
     return this.db.list(`/req_pre/${path}`);
   }
-  getAllSubmitCount(key: string): AngularFireList<any> {
-    let path = `${key}`;
-    if (key !== 'byRequesterID') {
-      path = `${key}`;
+
+  getFilterCondition(key) {
+    return key.indexOf('top10') > -1
+      ? 'byRequesterID'
+      : key === 'byDayAndHourForAllRequesters'
+      ? `byDayAndHour/LosAngeles`
+      : `${key}/LosAngeles`;
+  }
+
+  getAllSubmitCount(
+    key: string,
+    singleRequester = false
+  ): AngularFireList<any> {
+    const newKey = this.getFilterCondition(key);
+    let path;
+    if (!singleRequester) {
+      path = `${newKey}`;
+    } else {
+      path = key;
     }
     return this.db.list(`/req_pre_by_submit_time/${path}`);
   }
@@ -521,7 +540,7 @@ export class ChartService {
     return this.db.list(`/req_id_to_name_mapping`);
   }
 
-  getOthersEmployeeData(key:string): AngularFireList<any> {
+  getOthersEmployeeData(key: string): AngularFireList<any> {
     return this.db.list(`/${key}`);
   }
 

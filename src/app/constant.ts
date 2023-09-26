@@ -90,12 +90,12 @@ export class ChartConstant {
   };
   static dayCount = [0, 1, 2, 3, 4, 5, 6];
   static filterType={
-    top10RequestersByDay:'top10RequestersByDay',
-    top10RequestersByHour:'top10RequestersByHour',
-    top10RequestersByDayAndHour:'top10RequestersByDayAndHour',
-    top10RequestersByDayForSubmit:'top10RequestersByDayForSubmit',
-    top10RequestersByHourForSubmit:'top10RequestersByHourForSubmit',
-    top10RequestersByDayAndHourForSubmit:'top10RequestersByDayAndHourForSubmit',
+    topRequestersByDay:'topRequestersByDay',
+    topRequestersByHour:'topRequestersByHour',
+    topRequestersByDayAndHour:'topRequestersByDayAndHour',
+    topRequestersByDayForSubmit:'topRequestersByDayForSubmit',
+    topRequestersByHourForSubmit:'topRequestersByHourForSubmit',
+    topRequestersByDayAndHourForSubmit:'topRequestersByDayAndHourForSubmit',
     byDayAndHourForAllRequesters:'byDayAndHourForAllRequesters'
   }
 }

@@ -18,7 +18,7 @@
   "
   *ngIf="requesterList.length>0"
 >
-  <div *ngFor="let chart of chartsList">
+  <div *ngFor="let chart of chartsList" style="flex: 45%;">
     <app-chart
       [selectedFilter]="selectedFilter"
       [key]="chart.key"

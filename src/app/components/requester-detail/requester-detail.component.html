@@ -1,13 +1,13 @@
 <div
   style="display: block;"
   class="chart-container"
-  [ngClass]="{'section':filterKey==='top10RequestersByHour'|| filterKey==='top10RequestersByDayAndHour'}"
+  [ngClass]="{'section':filterKey==='topRequestersByHour'|| filterKey==='topRequestersByDayAndHour'}"
 >
   <div style="display: flex; flex-direction: column;">
     <h2>{{label}}</h2>
     <div style="display: flex;">
       <mat-form-field
-        *ngIf="filterKey ==='top10RequestersByDayAndHour'"
+        *ngIf="filterKey ==='topRequestersByDayAndHour'"
         appearance="outline"
         style="margin-left: 20px;"
       >
@@ -24,7 +24,7 @@
       </mat-form-field>
       <!-- <mat-form-field
         appearance="outline"
-        *ngIf="filterKey ==='top10RequestersByDayAndHour'"
+        *ngIf="filterKey ==='topRequestersByDayAndHour'"
         style="margin-left: 20px;"
       >
         <mat-label>Hour</mat-label>
@@ -41,7 +41,7 @@
     </div>
   </div>
   <canvas
-    *ngIf="chartDetail && filterKey === 'top10RequestersByDay'"
+    *ngIf="chartDetail && filterKey === 'topRequestersByDay'"
     baseChart
     [datasets]="chartData"
     [labels]="dayChartLabels"
@@ -52,7 +52,7 @@
   >
   </canvas>
   <canvas
-    *ngIf="chartDetail && filterKey === 'top10RequestersByHour'"
+    *ngIf="chartDetail && filterKey === 'topRequestersByHour'"
     baseChart
     [datasets]="chartData"
     [labels]="hourChartLabels"
@@ -63,7 +63,7 @@
   >
   </canvas>
   <canvas
-    *ngIf="chartDetail && filterKey === 'top10RequestersByDayAndHour'"
+    *ngIf="chartDetail && filterKey === 'topRequestersByDayAndHour'"
     baseChart
     [datasets]="chartData"
     [labels]="hourChartLabels"

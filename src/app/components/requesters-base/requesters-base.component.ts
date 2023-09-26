@@ -18,15 +18,15 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
   chartsList: Chart[] = [
     {
       label: 'By Day',
-      key: 'top10RequestersByDay',
+      key: 'topRequestersByDay',
     },
     {
       label: 'By Hour',
-      key: 'top10RequestersByHour',
+      key: 'topRequestersByHour',
     },
     {
       label: 'By Day And Hour',
-      key: 'top10RequestersByDayAndHour',
+      key: 'topRequestersByDayAndHour',
     },
   ];
   constructor(
@@ -46,20 +46,22 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
   async getData() {
     this.chartData = {};
   const acceptData=await firstValueFrom( this.chartService
-      .getAll(`byRequesterID/${this.key}`)
+      .getAll(`byRequesterID/${this.key}`,true)
       .snapshotChanges()
       .pipe(
         map((changes) =>
           changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
         )
       ))
+      console.log(acceptData);
+
       if(acceptData.length>0){
         this.chartData=acceptData[0];
       }
 
     const data = await firstValueFrom(
       this.chartService
-        .getAllSubmitCount(`byRequesterID/${this.key}`)
+        .getAllSubmitCount(`byRequesterID/${this.key}`,true)
         .snapshotChanges()
         .pipe(
           map((changes) =>
@@ -71,8 +73,5 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
       this.submitData=data[0];
 
     }
-    console.log(this.submitData);
-console.log(this.chartData);
-
   }
 }
