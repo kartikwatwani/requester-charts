@@ -76,5 +76,3 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
 
 
 // TODO: When viewing a particular requester data, add a card to show details about requesters average, min and max wage rate. Also, add data about reactions.
-
-// TODO: In particular requester component rename the title from *{Requester Name} Charts By Accept & Submit Count* to *{Requester Name}* without asteriks.

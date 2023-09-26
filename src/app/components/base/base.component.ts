@@ -39,42 +39,27 @@ export class BaseComponent implements OnInit {
       isShow:true,
     },
     {
-      label: 'Top  Requester By Day',
+      label: 'Top Requesters By Day',
       key: 'topRequestersByDay',
       isShow:true,
     },
     {
-      label: 'Top  Requester By Hour',
+      label: 'Top Requesters By Hour',
       key: 'topRequestersByHour',
       isShow:true,
     },
     {
-      label: 'Top  Requester By Day And Hour',
+      label: 'Top Requesters By Day And Hour',
       key: 'topRequestersByDayAndHour',
       isShow:true,
     },
     {
-      label: 'Top  Requester By Day',
-      key: 'topRequestersByDayForSubmit',
-      isShow:false,
-    },
-    {
-      label: 'Top  Requester By Hour',
-      key: 'topRequestersByHourForSubmit',
-      isShow:false,
-    },
-    {
-      label: 'Top 10 Requester By Day And Hour',
-      key: 'topRequestersByDayAndHourForSubmit',
-      isShow:false,
-    },
-    {
-      label: 'Top 100 Requester By Wage Rate',
+      label: 'Top Requesters By Wage Rate',
       key: 'top100RequestersByWageRate',
       isShow:true,
     },
     {
-      label: 'Top 100 Requester By Reactions',
+      label: 'Top Requesters By Reactions',
       key: 'topRequestersByReactions',
       isShow:true,
     },
