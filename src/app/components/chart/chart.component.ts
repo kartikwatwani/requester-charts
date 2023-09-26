@@ -579,4 +579,7 @@ export class ChartComponent {
   }
 }
 
-//TODO: Modify tables to incorporate data for both accept and submit time. The data for submit time will be queried from 'req_pre_by_submit_time' endpoint on firebase. The sample data for submit time is available in the assets folder. Use percentages instead of count in the table.
+
+// TODO: In "ByPresence", For the By Day & Hour table, there are three select options. Increase the width of the table to match the width of the total width of 3 select options.
+
+// TODO: Move reactionList to constants.ts

@@ -116,4 +116,17 @@ export class BaseComponent implements OnInit {
 
 
 
-//TODO Add tables for reactions and wage rates. Sample data in reacts.json and reqs.json in assets folder. This data will be queried from firebase fron endpoints /reacts and /reqs. Name will also be mapped
+
+// TODO: Rename select options to "By Presence", "By Wage Rate", "By Reaction".
+
+// TODO: Move logic and template of wage rate table and reaction table to their own components. The components for it have already been created with name "requesters-reactions","requesters-wage-rate". You need to move the logic and template to their respective components and make appropriate change in base component to show them when the select option is clicked.
+
+// TODO: Make the data fetch for each of the "By Presence", "By Wage Rate", "By Reaction" option only when it is shown for the first time. Don't load data for all three in one go.
+
+// EXPERIMENT: Improve the visibility of the main select option. You can try centering it and see If it looks good. You can try different things and see what looks best.
+
+
+// TODO: Update path from /base to /requester-analysis.
+
+// TODO: When "by Presence" is selected, the path should by "/requester-analysis/by-presence", similary for "by Wage Rate" -> "requester-analysis/by-wage-rate" and "by Reaction" -> "requester-analysis/by-reaction".
+

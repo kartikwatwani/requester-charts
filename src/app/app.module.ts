@@ -21,9 +21,11 @@ import { FormsModule } from '@angular/forms';
 import { RequesterDetailComponent } from './components/requester-detail/requester-detail.component';
 import { BaseComponent } from './components/base/base.component';
 import { RequestersBaseComponent } from './components/requesters-base/requesters-base.component';
+import { RequestersWageRateComponent } from './components/requesters-wage-rate/requesters-wage-rate.component';
+import { RequestersReactionsComponent } from './components/requesters-reactions/requesters-reactions.component';
 
 @NgModule({
-  declarations: [AppComponent, ChartComponent, RequesterDetailComponent, BaseComponent, RequestersBaseComponent],
+  declarations: [AppComponent, ChartComponent, RequesterDetailComponent, BaseComponent, RequestersBaseComponent, RequestersWageRateComponent, RequestersReactionsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
