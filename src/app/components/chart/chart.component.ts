@@ -588,4 +588,4 @@ export class ChartComponent {
 
 // TODO: Rename "Requester Type" select to "Presence Type" in tables.
 
-// TODO: You don't need to update the title of the table If "Presence Type" select option value is changed from "by Accept" to "by Submit" or vice versa. Just keep it as "Top Requesters By Day & Hour", "Top Requesters By Hour", "Top Requesters By Day" and "Top Requesters By Day" no matter what the value of "Presence Type" select option is.
+// TODO: You don't need to update the title of the table If "Presence Type" select option value is changed from "by Accept" to "by Submit" or vice versa. Just keep it as "Top Requesters By Day & Hour", "Top Requesters By Hour", "Top Requesters By Day" no matter what the value of "Presence Type" select option is.
