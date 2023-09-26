@@ -5,13 +5,13 @@ import { RequestersBaseComponent } from './components/requesters-base/requesters
 
 const routes: Routes = [
   {
-    path:'base',
+    path:'requester-analysis',
     component:BaseComponent
   },
 
   {
     path:'',
-    redirectTo:'base',
+    redirectTo:'requester-analysis',
     pathMatch:'full'
   },
   {

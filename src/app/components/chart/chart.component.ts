@@ -30,32 +30,7 @@ export class ChartComponent {
   id = '';
   @Input() requesterType = 'accept';
   @Input() selectedFilter: string = '';
-  reactionList: any[] = [
-    {
-      name: 'Angry',
-      id: 'angry',
-    },
-    {
-      name: 'Love',
-      id: 'love',
-    },
-    {
-      name: 'Party',
-      id: 'party',
-    },
-    {
-      name: 'Sad',
-      id: 'sad',
-    },
-    {
-      name: 'Thumbs Down',
-      id: 'thumbs_down',
-    },
-    {
-      name: 'Thumbs Up',
-      id: 'thumbs_up',
-    },
-  ];
+  reactionList: any[] =ChartConstant.reactionList
   selectedReaction = this.reactionList[0].id;
   dayList: any[] = ChartConstant.dayList;
   hoursList: any[] = ChartConstant.hoursList;

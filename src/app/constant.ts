@@ -8,6 +8,32 @@ export class ChartConstant {
       backgroundColor: [],
     },
   ];
+  static reactionList:any[]=[
+    {
+      name: 'Angry',
+      id: 'angry',
+    },
+    {
+      name: 'Love',
+      id: 'love',
+    },
+    {
+      name: 'Party',
+      id: 'party',
+    },
+    {
+      name: 'Sad',
+      id: 'sad',
+    },
+    {
+      name: 'Thumbs Down',
+      id: 'thumbs_down',
+    },
+    {
+      name: 'Thumbs Up',
+      id: 'thumbs_up',
+    },
+  ];
   static hourChartLabels: string[] = [
     '12AM-1AM',
     '1AM-2AM',

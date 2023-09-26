@@ -53,8 +53,6 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
           changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
         )
       ))
-      console.log(acceptData);
-
       if(acceptData.length>0){
         this.chartData=acceptData[0];
       }

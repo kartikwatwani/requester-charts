@@ -39,32 +39,32 @@ export class BaseComponent implements OnInit {
       isShow:true,
     },
     {
-      label: 'Top 10 Requester By Day  For Accept',
+      label: 'Top  Requester By Day',
       key: 'topRequestersByDay',
       isShow:true,
     },
     {
-      label: 'Top 10 Requester By Hour  For Accept',
+      label: 'Top  Requester By Hour',
       key: 'topRequestersByHour',
       isShow:true,
     },
     {
-      label: 'Top 10 Requester By Day And Hour  For Accept',
+      label: 'Top  Requester By Day And Hour',
       key: 'topRequestersByDayAndHour',
       isShow:true,
     },
     {
-      label: 'Top 10 Requester By Day For Submit',
+      label: 'Top  Requester By Day',
       key: 'topRequestersByDayForSubmit',
       isShow:false,
     },
     {
-      label: 'Top 10 Requester By Hour  For Submit',
+      label: 'Top  Requester By Hour',
       key: 'topRequestersByHourForSubmit',
       isShow:false,
     },
     {
-      label: 'Top 10 Requester By Day And Hour  For Submit',
+      label: 'Top 10 Requester By Day And Hour',
       key: 'topRequestersByDayAndHourForSubmit',
       isShow:false,
     },
@@ -82,15 +82,15 @@ export class BaseComponent implements OnInit {
   filters:any[]=[
     {
       id:'requesters-presence',
-      name:'By Requester presence'
+      name:'By Presence'
     },
     {
       id:'requesters-wage',
-      name:'By Requesterswage'
+      name:'By Wage Rate'
     },
     {
       id:'requesters-reaction',
-      name:'By Requesters reaction'
+      name:'By Reaction'
     },
   ]
   requesterType='accept';
@@ -128,5 +128,5 @@ export class BaseComponent implements OnInit {
 
 // TODO: Update path from /base to /requester-analysis.
 
-// TODO: When "by Presence" is selected, the path should by "/requester-analysis/by-presence", similary for "by Wage Rate" -> "requester-analysis/by-wage-rate" and "by Reaction" -> "requester-analysis/by-reaction".
+// TODO: When "by Presence" is selected, the path should by "/requester-analysis/by-presence", similary for "by Wage Rate" -> "requester-analysis/by-wage-rate" and "by Reaction" -> "requester-analysis/by-reaction". use hash
 
