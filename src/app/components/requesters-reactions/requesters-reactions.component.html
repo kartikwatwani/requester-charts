@@ -4,14 +4,9 @@
   </h2>
   <mat-form-field appearance="outline">
     <mat-label>Reactions</mat-label>
-    <mat-select
-      name="selectedReaction"
-      [(ngModel)]="selectedReaction"
-      (selectionChange)="prepareDataForRequesterReaction()"
-    >
-      <mat-option [value]="item.id" *ngFor="let item of reactionList"
-        >{{ item.name }}</mat-option
-      >
+    <mat-select name="selectedReaction" [(ngModel)]="selectedReaction"
+      (selectionChange)="prepareDataForRequesterReaction()">
+      <mat-option [value]="item.id" *ngFor="let item of reactionList">{{ item.name }}</mat-option>
     </mat-select>
   </mat-form-field>
   <div class="table-container">
@@ -30,11 +25,7 @@
           <td>{{ item.requestersName || "-" }}</td>
           <td>{{ item.summary[selectedReaction] }}</td>
           <td>
-            <a
-              (click)="getRequesterDetail(item, 'key', 'requestersName')"
-              [queryParams]="{key}"
-              >Requester Detail</a
-            >
+            <a (click)="getRequesterDetail(item, 'key', 'requestersName')" [queryParams]="{key}">Requester Details</a>
           </td>
         </tr>
       </tbody>
