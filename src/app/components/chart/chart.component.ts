@@ -518,3 +518,5 @@ export class ChartComponent {
     return array;
   }
 }
+//TODO: Rename Chart component to RequestersPresence component with files named as follows: requesters-presence.component.ts and so on for html , scss files.
+

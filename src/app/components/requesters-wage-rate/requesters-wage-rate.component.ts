@@ -38,3 +38,5 @@ export class RequestersWageRateComponent {
     });
   }
 }
+
+//FIXME: When clicking "Requesters Details" button from from the table of this component the charts are not showing up on the requester-detail component.

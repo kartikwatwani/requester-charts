@@ -76,3 +76,6 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
 
 
 // TODO: When viewing a particular requester data, add a card to show details about requesters average, min and max wage rate. Also, add data about reactions.
+
+
+
