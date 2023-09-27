@@ -17,7 +17,7 @@ export class RequestersWageRateComponent {
   async ngOnInit() {
     this.data = await firstValueFrom(
       this.chartService
-        .getOthersEmployeeData('reqs')
+        .getLimitedData('reqs','wageRate',100)
         .snapshotChanges()
         .pipe(
           map((changes) =>
@@ -39,4 +39,4 @@ export class RequestersWageRateComponent {
   }
 }
 
-//FIXME: When clicking "Requesters Details" button from from the table of this component the charts are not showing up on the requester-detail component.
+//FIXME: When clicking "Requesters Details" button from from the table of wage rate component the charts are not showing up on the requester-detail component.

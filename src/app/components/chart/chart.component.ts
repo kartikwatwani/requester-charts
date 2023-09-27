@@ -21,20 +21,19 @@ export class ChartComponent {
   chartOptions = ChartConstant.chartOptions;
   barChartData: any = {};
   dayCount = ChartConstant.dayCount;
-  dayChartLabels: string[] = ChartConstant.dayChartLabels;
   requesterList: any[] = [];
   @Input() label: string = '';
+  @Input() xAxisLabels: string[] = [];
   @Input() isShow=false
   @Input() employeersList: any[] = [];
-  hourChartLabels: string[] = ChartConstant.hourChartLabels;
+
   id = '';
-  @Input() requesterType = 'accept';
+  @Input() presenceType = 'accept';
   @Input() selectedFilter: string = '';
   reactionList: any[] =ChartConstant.reactionList
   selectedReaction = this.reactionList[0].id;
   dayList: any[] = ChartConstant.dayList;
   hoursList: any[] = ChartConstant.hoursList;
-  barChartType = ChartConstant.chartType;
   hourCount: number[] = ChartConstant.hourCount;
   @Input() key = 'byDay';
   databasePath = '';
@@ -44,7 +43,7 @@ export class ChartComponent {
   submitData: any[] = [];
   dayWiseRequesterCounts: any = [];
   hoursWiseRequestersCounts: any = [];
-  chartType = ChartConstant.chartType;
+  chartType = ChartConstant.barChartType;
   chartData: any[] = [
     {
       data: [45, 37, 60, 70, 46, 33, 3],
@@ -141,31 +140,31 @@ export class ChartComponent {
       : this.key.includes('ByHour')
       ? 'hour'
       : 'day';
-    if (type === 'day' && this.requesterType === 'submit') {
+    if (type === 'day' && this.presenceType === 'submit') {
       this.key = 'topRequestersByDayForSubmit';
       this.prepareTopRequesterForSubmit();
-    } else if (type === 'day' && this.requesterType === 'accept') {
+    } else if (type === 'day' && this.presenceType === 'accept') {
       this.key = 'topRequestersByDay';
       this.prepareTopRequester();
-    } else if (type === 'hour' && this.requesterType === 'submit') {
+    } else if (type === 'hour' && this.presenceType === 'submit') {
       this.key = 'topRequestersByHourForSubmit';
       this.prepareTopRequesterForSubmit();
-    } else if (type === 'hour' && this.requesterType === 'accept') {
+    } else if (type === 'hour' && this.presenceType === 'accept') {
       this.key = 'topRequestersByHour';
       this.prepareTopRequester();
     }
-    else if (type === 'byDayAndHour' && this.requesterType === 'submit') {
+    else if (type === 'byDayAndHour' && this.presenceType === 'submit') {
       this.key = 'topRequestersByDayAndHourForSubmit';
       this.prepareTopRequesterForSubmit();
     }
-    else if (type === 'byDayAndHour' && this.requesterType === 'accept') {
+    else if (type === 'byDayAndHour' && this.presenceType === 'accept') {
       this.key = 'topRequestersByDayAndHour';
       this.prepareTopRequester();
     }
-    if(this.requesterType==='submit'){
-    this.label = this.label.replace('Submit',this.requesterType.toUpperCase());
+    if(this.presenceType==='submit'){
+    this.label = this.label.replace('Submit',this.presenceType.toUpperCase());
     }else{
-      this.label = this.label.replace('Accept',this.requesterType.toUpperCase());
+      this.label = this.label.replace('Accept',this.presenceType.toUpperCase());
     }
 
   }
@@ -518,9 +517,12 @@ export class ChartComponent {
     return array;
   }
 }
-//TODO: Rename Chart component to RequestersPresence component with files named as follows: requesters-presence.component.ts and so on for html , scss files.
 
 
-// TODO: In "ByPresence", For the "Top Requesters By Day & Hour" table, there are three select options. Increase the width of the table to match the width of the total width of 3 select options. Also, experiment If other tables need to be increased in width to improve the UI or only increasing the width of "Top Requesters By Day & Hour" table keeps the aesthetics of the whole base component good.
+// TODO: In "ByPresence" view, For the "Top Requesters By Day & Hour" table, there are three select options. Increase the width of the table to match the width of the total width of 3 select options. Also, experiment If other tables need to be increased in width to improve the UI or only increasing the width of "Top Requesters By Day & Hour" table keeps the aesthetics of the whole base component good.
 
-//TODO: Set minimum width for the table to avoid the table from shrinking too much when multiple tables are shown on the same row.
+//TODO: Set min-width:480px instead of width for the table to avoid the table from shrinking too much when multiple tables are shown on the same row.
+
+//TODO: Show only top 100 requesters on the table for byDay, byHour and byDayAndHour charts.
+
+//TODO: Replace View Chart button with "Requester Detail" button.

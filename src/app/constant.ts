@@ -107,7 +107,7 @@ export class ChartConstant {
     { name: '11PM-12PM', value: '22' },
     { name: '11AM-12AM', value: '23' },
   ];
-  static chartType: ChartType = 'bar';
+  static barChartType: ChartType = 'bar';
   static hourCount = [
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
     21, 22, 23,

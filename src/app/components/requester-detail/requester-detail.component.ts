@@ -28,7 +28,7 @@ export class RequesterDetailComponent implements OnInit {
   @Input() chartDetail: any = {};
   dayList: any[] = ChartConstant.dayList;
   hoursList: any[] = ChartConstant.hoursList;
-  chartType = ChartConstant.chartType;
+  chartType = ChartConstant.barChartType;
   hourCount: number[] = ChartConstant.hourCount;
   selectedHour = this.hoursList[0].value;
   selectedDay = this.dayList[0].id;
@@ -39,7 +39,7 @@ export class RequesterDetailComponent implements OnInit {
     {
       data: [],
       label: '',
-      backgroundColor: this.chartService.customizeColors([]),
+      backgroundColor: [],
     },
   ];
   dayChartLabels: string[] = ChartConstant.dayChartLabels;

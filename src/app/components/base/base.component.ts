@@ -3,11 +3,13 @@ import { firstValueFrom, map } from 'rxjs';
 import { ChartService } from '../../services/chart.service';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { ChartConstant } from 'src/app/constant';
 
 export interface Chart {
   label: string;
   key: string;
   isShow?: boolean;
+  xAxisLabels?: string[];
 }
 
 @Component({
@@ -16,28 +18,33 @@ export interface Chart {
   styleUrls: ['./base.component.scss'],
 })
 export class BaseComponent implements OnInit {
-
+  dayChartLabels: string[] = ChartConstant.dayChartLabels;
+  hourChartLabels: string[] = ChartConstant.hourChartLabels;
   requesterList: any[] = [];
   chartsList: Chart[] = [
     {
       label: 'Day Wise',
       key: 'byDay',
       isShow: true,
+      xAxisLabels: this.dayChartLabels,
     },
     {
       label: 'Hour Wise',
       key: 'byHour',
       isShow: true,
+      xAxisLabels: this.hourChartLabels,
     },
     {
       label: 'Hour Comparison Across All Days',
       key: 'byDayAndHour',
       isShow: true,
+      xAxisLabels: this.dayChartLabels,
     },
     {
       label: 'By Day And Hour',
       key: 'byDayAndHourForAllRequesters',
       isShow: true,
+      xAxisLabels: this.hourChartLabels,
     },
     {
       label: 'Top Requesters By Day',
@@ -53,12 +60,7 @@ export class BaseComponent implements OnInit {
       label: 'Top Requesters By Day And Hour',
       key: 'topRequestersByDayAndHour',
       isShow: true,
-    },
-    {
-      label: 'Top Requesters By Wage Rate',
-      key: 'top100RequestersByWageRate',
-      isShow: true,
-    },
+    }
   ];
   filters: any[] = [
     {
@@ -74,7 +76,7 @@ export class BaseComponent implements OnInit {
       name: 'By Reaction',
     },
   ];
-  requesterType = 'accept';
+  presenceType = 'accept';
   selectedFilter = this.filters[0].id;
 
   constructor(private chartService: ChartService, private location: Location,private route:ActivatedRoute) {}
@@ -109,3 +111,4 @@ export class BaseComponent implements OnInit {
   }
 }
 
+//TODO: Rename Base component to RequestersPresence component with files named as follows: requesters-presence.component.ts and so on for html , scss files.

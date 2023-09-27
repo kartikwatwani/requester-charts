@@ -494,12 +494,9 @@ export class ChartService {
     },
   };
 
-  private dbPath = '';
-
-  // tutorialsRef: AngularFireList<any>;
 
   constructor(private db: AngularFireDatabase) {
-    // this.tutorialsRef = db.list(this.dbPath);
+  
   }
 
   getAll(key: string, singleRequester = false): AngularFireList<any> {
@@ -544,15 +541,9 @@ export class ChartService {
     return this.db.list(`/${key}`);
   }
 
-  customizeColors(data: number[]): string[] {
-    return data.map((value) => {
-      if (value < 20) {
-        return 'red'; // Red for values less than 20
-      } else if (value < 40) {
-        return 'yellow'; // Yellow for values between 20 and 40
-      } else {
-        return 'green'; // Green for values greater than or equal to 40
-      }
-    });
+  getLimitedData(key: string,orderBy:string,limit:number): AngularFireList<any> {
+    return this.db.list(`/${key}`,ref=>ref.orderByChild(orderBy).limitToLast(limit));
   }
+
+  
 }

@@ -1,88 +1,50 @@
-<div
-  style="display: block;"
-  *ngIf="
-    key !== 'top100RequestersByWageRate' &&
-    key !== 'topRequestersByReactions' &&
+<div style="display: flex;flex-direction: column;" *ngIf="
+   
     isShow
-  "
-  class="chart-container"
-  [ngClass]="{
-    section: key === 'byHour' || key === 'byDayAndHourForAllRequesters'}"
->
+  " class="chart-container" [ngClass]="{
+    section: key === 'byHour' || key === 'byDayAndHourForAllRequesters'}">
   <div style="display: flex; align-items: flex-start; flex-direction: column;">
-    <h2
-      *ngIf="
-        key !== 'top100RequestersByWageRate' &&
-        key !== 'topRequestersByReactions'
-      "
-    >
+    <h2>
       {{ label }}
     </h2>
 
     <ng-container>
       <div style="display: flex;">
-        <mat-form-field
-          *ngIf="
+        <mat-form-field *ngIf="
             key === 'topRequestersByDay' ||
             key === 'topRequestersByDayAndHour' ||
             key === 'topRequestersByDayForSubmit' ||
             key === 'topRequestersByDayAndHourForSubmit' ||
             key === 'byDayAndHourForAllRequesters'
-          "
-          appearance="outline"
-        >
+          " appearance="outline">
           <mat-label>Day</mat-label>
-          <mat-select
-            name="selectedDay"
-            [(ngModel)]="selectedDay"
-            (selectionChange)="onDayChange()"
-          >
-            <mat-option [value]="item.id" *ngFor="let item of dayList"
-              >{{ item.name }}</mat-option
-            >
+          <mat-select name="selectedDay" [(ngModel)]="selectedDay" (selectionChange)="onDayChange()">
+            <mat-option [value]="item.id" *ngFor="let item of dayList">{{ item.name }}</mat-option>
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field
-          style="margin-left: 10px;"
-          *ngIf="
+        <mat-form-field style="margin-left: 10px;" *ngIf="
             key === 'byDayAndHour' ||
             key === 'topRequestersByHour' ||
             key === 'topRequestersByHourForSubmit' ||
             key === 'topRequestersByDayAndHour' ||
             key === 'topRequestersByDayAndHourForSubmit'
-          "
-          appearance="outline"
-        >
+          " appearance="outline">
           <mat-label>Hour</mat-label>
-          <mat-select
-            name="selectedHour"
-            [(ngModel)]="selectedHour"
-            (selectionChange)="onHourChange()"
-          >
-            <mat-option [value]="item.value" *ngFor="let item of hoursList"
-              >{{ item.name }}</mat-option
-            >
+          <mat-select name="selectedHour" [(ngModel)]="selectedHour" (selectionChange)="onHourChange()">
+            <mat-option [value]="item.value" *ngFor="let item of hoursList">{{ item.name }}</mat-option>
           </mat-select>
         </mat-form-field>
-        <mat-form-field
-          style="position: relative; margin-left: 20px;"
-          *ngIf="
+        <mat-form-field style="position: relative; margin-left: 20px;" *ngIf="
             key === 'topRequestersByDay' ||
             key === 'topRequestersByHour' ||
             key === 'topRequestersByDayAndHour' ||
             key === 'topRequestersByDayForSubmit' ||
             key === 'topRequestersByHourForSubmit' ||
             key === 'topRequestersByDayAndHourForSubmit'
-          "
-          appearance="outline"
-        >
+          " appearance="outline">
           <mat-label>Presence Type</mat-label>
-          <mat-select
-            name="requesterType"
-            [(ngModel)]="requesterType"
-            (selectionChange)="onTypeChange()"
-          >
+          <mat-select name="presenceType" [(ngModel)]="presenceType" (selectionChange)="onTypeChange()">
             <mat-option value="accept">By Accept</mat-option>
             <mat-option value="submit">By Submit</mat-option>
           </mat-select>
@@ -91,52 +53,14 @@
     </ng-container>
   </div>
   <ng-container>
-    <canvas
-      *ngIf="data.length > 0 && key === 'byDay'"
-      baseChart
-      [datasets]="chartData"
-      [chartType]="chartType"
-      [labels]="dayChartLabels"
-      [options]="chartOptions"
-      [legend]="true"
-    >
+    <canvas *ngIf="data.length > 0" baseChart [datasets]="chartData" [chartType]="chartType" [labels]="xAxisLabels"
+      [options]="chartOptions" [legend]="true">
     </canvas>
-    <canvas
-      *ngIf="data.length > 0 && key === 'byHour'"
-      baseChart
-      [datasets]="chartData"
-      [labels]="hourChartLabels"
-      [chartType]="chartType"
-      [options]="chartOptions"
-      [legend]="true"
-    >
-    </canvas>
-    <canvas
-      *ngIf="data.length > 0 && key === 'byDayAndHour'"
-      baseChart
-      [datasets]="chartData"
-      [chartType]="chartType"
-      [labels]="dayChartLabels"
-      [options]="chartOptions"
-      [legend]="true"
-    >
-    </canvas>
-    <canvas
-      *ngIf="data.length > 0 && key === 'byDayAndHourForAllRequesters'"
-      baseChart
-      [datasets]="chartData"
-      [chartType]="chartType"
-      [labels]="hourChartLabels"
-      [options]="chartOptions"
-      [legend]="true"
-    >
-    </canvas>
+
   </ng-container>
   <ng-container *ngIf="requesterList.length > 0; else noRequesters">
     <div class="table-container">
-      <table
-        class="table"
-      >
+      <table class="table">
         <thead>
           <tr>
             <th scope="col">S.No</th>
@@ -155,9 +79,7 @@
             <td>{{ item.requestersName }}</td>
             <td>{{ item.acceptPercentage }}</td>
             <td>
-              <a (click)="getRequesterDetail(item)" [queryParams]="{key}"
-                >View Chart</a
-              >
+              <a (click)="getRequesterDetail(item)" [queryParams]="{key}">View Chart</a>
             </td>
           </tr>
         </tbody>
@@ -165,15 +87,12 @@
     </div>
   </ng-container>
   <ng-template #noRequesters>
-    <p
-      style="text-align: center;"
-      *ngIf="
+    <p style="text-align: center;" *ngIf="
         key !== 'byDay' &&
         key !== 'byHour' &&
         key !== 'byDayAndHour' &&
         key !== 'byDayAndHourForAllRequesters'
-      "
-    >
+      ">
       No Requesters Found
     </p>
   </ng-template>
