@@ -29,7 +29,7 @@ export class BaseComponent implements OnInit {
       isShow:true,
     },
     {
-      label: 'Comparison of Hours Across All Days',
+      label: 'Hour Comparison Across All Days',
       key: 'byDayAndHour',
       isShow:true,
     },
