@@ -1,1 +1,43 @@
-<p>requesters-reactions works!</p>
+<div class="section">
+  <h2>
+    Top Requesters By Reactions
+  </h2>
+  <mat-form-field appearance="outline">
+    <mat-label>Reactions</mat-label>
+    <mat-select
+      name="selectedReaction"
+      [(ngModel)]="selectedReaction"
+      (selectionChange)="prepareDataForRequesterReaction()"
+    >
+      <mat-option [value]="item.id" *ngFor="let item of reactionList"
+        >{{ item.name }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">S.No</th>
+          <th scope="col">Name</th>
+          <th scope="col">Reactions</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of requesterList; let i = index">
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.requestersName || "-" }}</td>
+          <td>{{ item.summary[selectedReaction] }}</td>
+          <td>
+            <a
+              (click)="getRequesterDetail(item, 'key', 'requestersName')"
+              [queryParams]="{key}"
+              >Requester Detail</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,1 +1,33 @@
-<p>requesters-wage-rate works!</p>
+<div class="section"
+  >
+  <h2 >
+    Top Requesters By Wage Rate
+  </h2>
+
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">S.No</th>
+          <th scope="col">Name</th>
+          <th scope="col">Minimum Wage</th>
+          <th scope="col">Avergare Wage</th>
+          <th scope="col">Maximum Wage</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of requesterList; let i = index">
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.min | number : ".2-2" }}</td>
+          <td>{{ item.wageRate | number : ".2-2" }}</td>
+          <td>{{ item.max | number : ".2-2" }}</td>
+          <td>
+            <a (click)="getRequesterDetail(item, 'key', 'name')" [queryParams]="{key}">Requester Detail</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -82,9 +82,7 @@ export class ChartComponent {
     this.data = [];
 
     if (
-      this.key.indexOf('top') === -1 &&
-      this.key !== 'top100RequestersByWageRate' &&
-      this.key !== 'topRequestersByReactions'
+      this.key.indexOf('top') === -1
     ) {
       this.data = await firstValueFrom(
         this.chartService
@@ -96,25 +94,11 @@ export class ChartComponent {
             )
           )
       );
+      console.log(this.data);
+
       this.submitData = await firstValueFrom(
         this.chartService
           .getAllSubmitCount(this.key)
-          .snapshotChanges()
-          .pipe(
-            map((changes) =>
-              changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
-            )
-          )
-      );
-    } else if (
-      this.key === 'top100RequestersByWageRate' ||
-      this.key === 'topRequestersByReactions'
-    ) {
-      const databasePath =
-        this.key === 'top100RequestersByWageRate' ? 'reqs' : 'reacts/requester';
-      this.data = await firstValueFrom(
-        this.chartService
-          .getOthersEmployeeData(databasePath)
           .snapshotChanges()
           .pipe(
             map((changes) =>
@@ -129,10 +113,6 @@ export class ChartComponent {
       case 'byDayAndHour':
       case 'byDayAndHourForAllRequesters':
         this.prepareChart();
-        break;
-      case 'top100RequestersByWageRate':
-      case 'topRequestersByReactions':
-        this.prepareDataForTop100Requesters();
         break;
       case 'topRequestersByDay':
       case 'topRequestersByHour':
@@ -188,21 +168,6 @@ export class ChartComponent {
       this.label = this.label.replace('Accept',this.requesterType.toUpperCase());
     }
 
-  }
-  prepareDataForTop100Requesters() {
-    if (this.key === 'top100RequestersByWageRate') {
-      this.requesterList = this.data
-        .sort((a, b) => b.wageRate - a.wageRate)
-        .slice(0, 100);
-    } else {
-      this.requesterList = this.data
-        .sort(
-          (a, b) =>
-            b.summary[this.selectedReaction] - a.summary[this.selectedReaction]
-        )
-        .filter((item) => item.summary[this.selectedReaction] !== 0);
-      this.mappedNameForEmployer('key');
-    }
   }
 
   prepareTopRequester() {

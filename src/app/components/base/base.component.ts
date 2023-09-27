@@ -1,10 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { firstValueFrom, map } from 'rxjs';
 import { ChartService } from '../../services/chart.service';
+import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+
 export interface Chart {
   label: string;
   key: string;
-  isShow?:boolean
+  isShow?: boolean;
 }
 
 @Component({
@@ -13,76 +16,76 @@ export interface Chart {
   styleUrls: ['./base.component.scss'],
 })
 export class BaseComponent implements OnInit {
-  ngOnInit() {
-    this.getEmployeeName();
-  }
+
   requesterList: any[] = [];
   chartsList: Chart[] = [
     {
       label: 'Day Wise',
       key: 'byDay',
-      isShow:true,
+      isShow: true,
     },
     {
       label: 'Hour Wise',
       key: 'byHour',
-      isShow:true,
+      isShow: true,
     },
     {
       label: 'Hour Comparison Across All Days',
       key: 'byDayAndHour',
-      isShow:true,
+      isShow: true,
     },
     {
       label: 'By Day And Hour',
       key: 'byDayAndHourForAllRequesters',
-      isShow:true,
+      isShow: true,
     },
     {
       label: 'Top Requesters By Day',
       key: 'topRequestersByDay',
-      isShow:true,
+      isShow: true,
     },
     {
       label: 'Top Requesters By Hour',
       key: 'topRequestersByHour',
-      isShow:true,
+      isShow: true,
     },
     {
       label: 'Top Requesters By Day And Hour',
       key: 'topRequestersByDayAndHour',
-      isShow:true,
+      isShow: true,
     },
     {
       label: 'Top Requesters By Wage Rate',
       key: 'top100RequestersByWageRate',
-      isShow:true,
-    },
-    {
-      label: 'Top Requesters By Reactions',
-      key: 'topRequestersByReactions',
-      isShow:true,
+      isShow: true,
     },
   ];
-  filters:any[]=[
+  filters: any[] = [
     {
-      id:'requesters-presence',
-      name:'By Presence'
+      id: 'by-presence',
+      name: 'By Presence',
     },
     {
-      id:'requesters-wage',
-      name:'By Wage Rate'
+      id: 'by-wage',
+      name: 'By Wage Rate',
     },
     {
-      id:'requesters-reaction',
-      name:'By Reaction'
+      id: 'by-reaction',
+      name: 'By Reaction',
     },
-  ]
-  requesterType='accept';
-  selectedFilter=this.filters[0].id
+  ];
+  requesterType = 'accept';
+  selectedFilter = this.filters[0].id;
 
-  constructor(private chartService: ChartService) {}
+  constructor(private chartService: ChartService, private location: Location,private route:ActivatedRoute) {}
+  ngOnInit() {
+    this.getEmployeeName();
+    console.log(this.route.snapshot.fragment);
 
+    this.selectedFilter = this.route.snapshot.fragment!=='null' &&this.route.snapshot.fragment!==null?this.route.snapshot.fragment:this.filters[0].id;
+
+    this.addFragmentToUrl()
+  }
   getEmployeeName() {
     firstValueFrom(
       this.chartService
@@ -97,10 +100,14 @@ export class BaseComponent implements OnInit {
       this.requesterList = data;
     });
   }
+  addFragmentToUrl() {
+    const currentUrl = this.location.path();
+    const updatedUrl = `${currentUrl}#${this.selectedFilter}`;
+
+    // Replace the current URL without triggering a route change
+    this.location.replaceState(updatedUrl);
+  }
 }
-
-
-
 
 // TODO: Move logic and template of wage rate table and reaction table to their own components. The components for it have already been created with name "requesters-reactions","requesters-wage-rate". You need to move the logic and template to their respective components and make appropriate change in base component to show them when the select option is clicked.
 
@@ -109,4 +116,3 @@ export class BaseComponent implements OnInit {
 // EXPERIMENT: Improve the visibility of the main select option. You can try centering it and see If it looks good. You can try different things and see what looks best.
 
 // TODO: When "by Presence" is selected, the path should by "/requester-analysis#by-presence", similary for "by Wage Rate" -> "requester-analysis#by-wage-rate" and "by Reaction" -> "requester-analysis#by-reaction". use hash
-

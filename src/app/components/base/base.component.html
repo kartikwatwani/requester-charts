@@ -1,21 +1,51 @@
-<div style="padding: 20px 0px 0px 45px;">
-  <mat-form-field appearance="outline">
+<div style="display: flex; justify-content: center; margin: 16px 0px;">
+  <mat-form-field appearance="outline" class="w-50">
     <mat-label>Requester Analysis</mat-label>
-    <mat-select name="selectedDay" [(ngModel)]="selectedFilter">
-      <mat-option [value]="filter.id" *ngFor="let filter of filters">{{ filter.name }}</mat-option>
+    <mat-select
+      name="selectedDay"
+      [(ngModel)]="selectedFilter"
+      (selectionChange)="addFragmentToUrl()"
+    >
+      <mat-option [value]="filter.id" *ngFor="let filter of filters"
+        >{{ filter.name }}</mat-option
+      >
     </mat-select>
   </mat-form-field>
 </div>
-<div class="container" style="
+<div
+  class="container"
+  style="
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0px 16px 0px 16px;
-  " *ngIf="requesterList.length>0">
+  "
+  *ngIf="requesterList.length>0 &&selectedFilter!=='by-reaction' &&selectedFilter!=='by-wage'"
+>
   <div *ngFor="let chart of chartsList" style="flex: 45%;">
-    <app-chart [selectedFilter]="selectedFilter" [key]="chart.key" [isShow]="chart.isShow"
-      [requesterType]="requesterType" [label]="chart.label" [employeersList]="requesterList">
-
+    <app-chart
+      [selectedFilter]="selectedFilter"
+      [key]="chart.key"
+      [isShow]="chart.isShow"
+      [requesterType]="requesterType"
+      [label]="chart.label"
+      [employeersList]="requesterList"
+    >
     </app-chart>
   </div>
 </div>
+<app-requesters-wage-rate
+  *ngIf="selectedFilter==='by-wage'"
+  [selectedFilter]="selectedFilter"
+  [requesterType]="requesterType"
+  [employeersList]="requesterList"
+>
+</app-requesters-wage-rate>
+
+<app-requesters-reactions
+  *ngIf="selectedFilter==='by-reaction'"
+  [selectedFilter]="selectedFilter"
+  [requesterType]="requesterType"
+  [employeersList]="requesterList"
+>
+</app-requesters-reactions>
