@@ -522,3 +522,5 @@ export class ChartComponent {
 
 
 // TODO: In "ByPresence", For the "Top Requesters By Day & Hour" table, there are three select options. Increase the width of the table to match the width of the total width of 3 select options. Also, experiment If other tables need to be increased in width to improve the UI or only increasing the width of "Top Requesters By Day & Hour" table keeps the aesthetics of the whole base component good.
+
+//TODO: Set minimum width for the table to avoid the table from shrinking too much when multiple tables are shown on the same row.
