@@ -520,3 +520,5 @@ export class ChartComponent {
 }
 //TODO: Rename Chart component to RequestersPresence component with files named as follows: requesters-presence.component.ts and so on for html , scss files.
 
+
+// TODO: In "ByPresence", For the "Top Requesters By Day & Hour" table, there are three select options. Increase the width of the table to match the width of the total width of 3 select options. Also, experiment If other tables need to be increased in width to improve the UI or only increasing the width of "Top Requesters By Day & Hour" table keeps the aesthetics of the whole base component good.
