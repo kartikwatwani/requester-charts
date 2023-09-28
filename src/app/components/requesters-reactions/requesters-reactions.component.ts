@@ -66,3 +66,5 @@ export class RequestersReactionsComponent {
     });
   }
 }
+
+//Rename employeersList to requestersIDToNameMapping. Rename requesterList to requestersReactionsList.

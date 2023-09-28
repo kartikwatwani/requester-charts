@@ -550,6 +550,7 @@ export class ChartService {
   }
 
   getEmployeeName(): AngularFireList<any> {
+    //TODO Use this.db.object() instead of this.db.list() and save the data as object instead of list.
     return this.db.list(`/req_id_to_name_mapping`);
   }
 
@@ -560,6 +561,5 @@ export class ChartService {
   getLimitedData(key: string,orderBy:string,limit:number): AngularFireList<any> {
     return this.db.list(`/${key}`,ref=>ref.orderByChild(orderBy).limitToLast(limit));
   }
-
 
 }

@@ -125,4 +125,7 @@ export class RequestersPresenceComponent implements OnInit {
   }
 }
 
-//TODO: Rename Base component to RequestersPresence component with files named as follows: requesters-presence.component.ts and so on for html , scss files.
+//TODO: Rename this function to RequestersAnalysis function with file name as requesters-analysis and create a separate requesters-presence component to make the template have <app-requesters-presence></app-requesters-presence> and move html code from line 15 to 38 from this component to the new component.
+
+
+//TODO: Remove unwanted variables in all components.

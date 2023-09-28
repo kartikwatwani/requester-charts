@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { map } from 'rxjs/operators';
+
 import { ChartService } from '../../services/chart.service';
 import 'chart.js';
-import { firstValueFrom } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ChartConstant } from '../../constant';
 let topRequestersByDay = [];
@@ -502,10 +501,8 @@ export class ChartComponent {
 }
 
 
-// TODO: In "ByPresence" view, For the "Top Requesters By Day & Hour" table, there are three select options. Increase the width of the table to match the width of the total width of 3 select options. Also, experiment If other tables need to be increased in width to improve the UI or only increasing the width of "Top Requesters By Day & Hour" table keeps the aesthetics of the whole base component good.
+//FIXME: More than 100 top requesters are shown when bySubmit presence type is selected. Only 100 requesters should be shown.
 
-//TODO: Set min-width:480px instead of width for the table to avoid the table from shrinking too much when multiple tables are shown on the same row.
 
-//TODO: Show only top 100 requesters on the table for byDay, byHour and byDayAndHour charts.
+//TODO: Rename employeersList to requesterIDToNameMapping
 
-//TODO: Replace View Chart button with "Requester Detail" button.

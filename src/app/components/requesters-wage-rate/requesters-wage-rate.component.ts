@@ -40,3 +40,7 @@ export class RequestersWageRateComponent {
 }
 
 //FIXME: When clicking "Requesters Details" button from from the table of wage rate component the charts are not showing up on the requester-detail component.
+
+//TODO: Move all firstValueFrom, map, snapshotChanges calls to the service, leave only simple .then or await call in the component. Do this in all components.
+
+//TODO: Convert employeersList to object. It will be easier to find the data by key.
