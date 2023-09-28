@@ -1,13 +1,13 @@
 <div
   style="display: block;"
   class="chart-container"
-  [ngClass]="{'section':filterKey==='topRequestersByHour'|| filterKey==='topRequestersByDayAndHour'}"
+  [ngClass]="{'section':metric==='byHour'|| metric==='byDayAndHour'}"
 >
   <div style="display: flex; flex-direction: column;">
     <h2>{{label}}</h2>
     <div style="display: flex;">
       <mat-form-field
-        *ngIf="filterKey ==='topRequestersByDayAndHour'"
+        *ngIf="metric ==='byDayAndHour'"
         appearance="outline"
         style="margin-left: 20px;"
       >
@@ -22,68 +22,30 @@
           >
         </mat-select>
       </mat-form-field>
-      <!-- <mat-form-field
-        appearance="outline"
-        *ngIf="filterKey ==='topRequestersByDayAndHour'"
-        style="margin-left: 20px;"
-      >
-        <mat-label>Hour</mat-label>
-        <mat-select
-          name="selectedHour"
-          [(ngModel)]="selectedHour"
-          (selectionChange)="prepareChartData()"
-        >
-          <mat-option [value]="item.value" *ngFor="let item of hoursList"
-            >{{ item.name }}</mat-option
-          >
-        </mat-select>
-      </mat-form-field> -->
     </div>
   </div>
   <canvas
-    *ngIf="chartDetail && filterKey === 'topRequestersByDay'"
+    *ngIf="acceptData &&metric !== 'requestersDetail'"
     baseChart
     [datasets]="chartData"
-    [labels]="dayChartLabels"
+    [labels]="xAxisLabels"
     [chartType]="chartType"
     [options]="chartOptions"
     [plugins]="barChartPlugins"
     [legend]="chartLegend"
   >
   </canvas>
-  <canvas
-    *ngIf="chartDetail && filterKey === 'topRequestersByHour'"
-    baseChart
-    [datasets]="chartData"
-    [labels]="hourChartLabels"
-    [options]="chartOptions"
-    [plugins]="barChartPlugins"
-    [chartType]="chartType"
-    [legend]="chartLegend"
-  >
-  </canvas>
-  <canvas
-    *ngIf="chartDetail && filterKey === 'topRequestersByDayAndHour'"
-    baseChart
-    [datasets]="chartData"
-    [labels]="hourChartLabels"
-    [options]="chartOptions"
-    [plugins]="barChartPlugins"
-    [chartType]="chartType"
-    [legend]="chartLegend"
-  >
-  </canvas>
-  <mat-card *ngIf="filterKey === 'requestersDetail'">
+  <mat-card *ngIf="metric === 'requestersDetail'">
     <div class="requesters-detail">
       <div class="d-flex justify-content-between">
         <h3>Top Day : {{productiveDay}}</h3>
         <h3>Top Hour : {{productiveHour}}</h3>
       </div>
-      <ng-container *ngIf="(requestersReaction | json) != '{}'">
+      <ng-container *ngIf="(reactionsData | json) != '{}'">
         <mat-divider></mat-divider>
         <h3 style="font-weight: 500;">Requerters Reaction</h3>
         <div class="d-flex justify-content-between flex-wrap">
-          <ng-container *ngFor="let data of requestersReaction|keyvalue">
+          <ng-container *ngFor="let data of reactionsData|keyvalue">
             <p *ngIf="data.key!=='key'">
               <span>{{data.key|uppercase}}</span> : {{data.value}}
             </p>

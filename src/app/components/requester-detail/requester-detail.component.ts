@@ -1,44 +1,32 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ChartService } from '../../services/chart.service';
-import { Chart } from '../requesters-presence/requesters-presence';
 import { ChartConstant } from '../../constant';
-let productiveDay='';
-let productiveHour=''
+let productiveDay = '';
+let productiveHour = '';
 @Component({
   selector: 'app-requester-detail',
   templateUrl: './requester-detail.component.html',
   styleUrls: ['./requester-detail.component.scss'],
 })
 export class RequesterDetailComponent implements OnInit {
-  @Input() key = '';
-  @Input() requestersReaction: any = {};
-  @Input() label = '';
-  chartsList: Chart[] = [
-    {
-      label: 'Top 10 Requester By Day',
-      key: 'topRequestersByDay',
-    },
-    {
-      label: 'Top 10 Requester By Hour',
-      key: 'topRequestersByHour',
-    },
-    {
-      label: 'Top 10 Requester By Day And Hour',
-      key: 'topRequestersByDayAndHour',
-    },
-  ];
-  @Input() chartDetail: any = {};
   dayList: any[] = ChartConstant.dayList;
   hoursList: any[] = ChartConstant.hoursList;
   chartType = ChartConstant.barChartType;
   hourCount: number[] = ChartConstant.hourCount;
+  dayCount = ChartConstant.dayCount;
+  chartOptions = ChartConstant.chartOptions;
+
+  @Input() label = '';
+  @Input() metric = '';
+  @Input() submitData: any = {};
+  @Input() acceptData: any = {};
+  @Input() xAxisLabels: any[];
+
   selectedHour = this.hoursList[0].value;
   selectedDay = this.dayList[0].id;
   chartLegend = true;
-  productiveDay='';
-  productiveHour=''
+  productiveDay = '';
+  productiveHour = '';
   barChartPlugins = [];
-  hourChartLabels: string[] = ChartConstant.hourChartLabels;
   chartData: any[] = [
     {
       data: [],
@@ -47,12 +35,9 @@ export class RequesterDetailComponent implements OnInit {
     },
   ];
   dayChartLabels: string[] = ChartConstant.dayChartLabels;
-  chartOptions = ChartConstant.chartOptions;
-  @Input() filterKey = '';
-  @Input() submitData: any = {};
   @Input() wageData: any = {};
-  dayCount = ChartConstant.dayCount;
-  constructor(private chartService: ChartService) {}
+  @Input() reactionsData: any = {};
+  constructor() {}
 
   ngOnInit(): void {
     const currentDate = new Date();
@@ -73,7 +58,7 @@ export class RequesterDetailComponent implements OnInit {
   prepareData() {
     this.chartData = [
       {
-        data: this.prepareChartData(this.chartDetail),
+        data: this.prepareChartData(this.acceptData),
         label: 'By Accept',
         backgroundColor: '#1074f6',
       },
@@ -83,12 +68,14 @@ export class RequesterDetailComponent implements OnInit {
         backgroundColor: 'orange',
       },
     ];
+    console.log(this.metric);
+console.log(this.chartData);
+
     if (
-      this.filterKey === 'topRequestersByDay' ||
-      this.filterKey === 'topRequestersByHour'
+      this.metric === 'topRequestersByDay' ||
+      this.metric === 'topRequestersByHour'
     ) {
       const array = this.chartData.map((item) => item.data);
-      console.log(array);
       if (array.length > 0) {
         const array1 = array[0];
         const array2 = array[1];
@@ -100,31 +87,31 @@ export class RequesterDetailComponent implements OnInit {
         }
         const maxValue = Math.max(...resultArray);
         const indexOfMaxValue = resultArray.indexOf(maxValue);
-        if(this.filterKey==='topRequestersByDay'){
-          productiveDay=this.dayList[indexOfMaxValue].name
-        }else{
-          productiveHour=this.hoursList[indexOfMaxValue].name
-
+        if (this.metric === 'topRequestersByDay') {
+          productiveDay = this.dayList[indexOfMaxValue].name;
+        } else {
+          productiveHour = this.hoursList[indexOfMaxValue].name;
         }
       }
-
     }
-    if(this.filterKey==='requestersDetail'){
-      this.productiveDay=productiveDay;
-      this.productiveHour=productiveHour
-    }
-    console.log(productiveHour);
     console.log(productiveDay);
+    console.log(productiveHour);
 
+    if (this.metric === 'requestersDetail') {
+      this.productiveDay = productiveDay;
+      this.productiveHour = productiveHour;
+    }
+
+    console.log(this.reactionsData);
   }
 
   getMainChartLabel() {
-    switch (this.filterKey) {
-      case 'topRequestersByDay':
+    switch (this.metric) {
+      case 'byDay':
         return 'Day Wise Percentage';
-      case 'topRequestersByHour':
+      case 'byHour':
         return 'Hour Wise Percentage';
-      case 'topRequestersByDayAndHour':
+      case 'byDayAndHour':
         return 'Day and Hour Wise Percentage';
     }
   }
@@ -132,8 +119,8 @@ export class RequesterDetailComponent implements OnInit {
   prepareChartData(chartDetail) {
     let array: any[] = [];
     const newArray: number[] = [];
-    switch (this.filterKey) {
-      case 'topRequestersByDay':
+    switch (this.metric) {
+      case 'byDay':
         if (chartDetail && chartDetail.LosAngeles.byDay) {
           this.dayCount.forEach((_, index) => {
             array.push(chartDetail.LosAngeles.byDay[index] || 0);
@@ -149,7 +136,7 @@ export class RequesterDetailComponent implements OnInit {
           });
         }
         return array;
-      case 'topRequestersByHour':
+      case 'byHour':
         if (chartDetail && chartDetail.LosAngeles.byHour) {
           this.hourCount.forEach((_, index) => {
             array.push(chartDetail.LosAngeles.byHour[index] || 0);
@@ -165,7 +152,7 @@ export class RequesterDetailComponent implements OnInit {
           });
         }
         return array;
-      case 'topRequestersByDayAndHour':
+      case 'byDayAndHour':
         this.chartData[0].data = [];
         array = [];
         this.dayCount.forEach((day) => {

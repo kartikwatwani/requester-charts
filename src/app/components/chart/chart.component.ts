@@ -19,32 +19,29 @@ let topRequestersByDayAndHourForSubmit = [];
 })
 export class ChartComponent {
   chartOptions = ChartConstant.chartOptions;
-  barChartData: any = {};
   dayCount = ChartConstant.dayCount;
-  requesterList: any[] = [];
+  dayList: any[] = ChartConstant.dayList;
+  hoursList: any[] = ChartConstant.hoursList;
+  hourCount: number[] = ChartConstant.hourCount;
+  reactionList: any[] = ChartConstant.reactionList
+  chartType = ChartConstant.barChartType;
+
   @Input() label: string = '';
   @Input() xAxisLabels: string[] = [];
   @Input() isShow=false
   @Input() employeersList: any[] = [];
-
-  id = '';
+  @Input() key = 'byDay';
   @Input() presenceType = 'accept';
   @Input() selectedFilter: string = '';
-  reactionList: any[] =ChartConstant.reactionList
   selectedReaction = this.reactionList[0].id;
-  dayList: any[] = ChartConstant.dayList;
-  hoursList: any[] = ChartConstant.hoursList;
-  hourCount: number[] = ChartConstant.hourCount;
-  @Input() key = 'byDay';
   @Input() width ='';
+  id = '';
+  requesterList: any[] = [];
   databasePath = '';
   selectedHour = '';
   selectedDay = '';
-  data: any = [];
+  acceptData: any = [];
   submitData: any[] = [];
-  dayWiseRequesterCounts: any = [];
-  hoursWiseRequestersCounts: any = [];
-  chartType = ChartConstant.barChartType;
   chartData: any[] = [
     {
       data: [45, 37, 60, 70, 46, 33, 3],
@@ -79,32 +76,18 @@ export class ChartComponent {
   }
 
   async getData() {
-    this.data = [];
+    this.acceptData = [];
+
     if (
       this.key.indexOf('top') === -1
     ) {
-      this.data = await firstValueFrom(
-        this.chartService
-          .getAll(this.key)
-          .snapshotChanges()
-          .pipe(
-            map((changes) =>
-              changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
-            )
-          )
-      );
-      console.log(this.data);
+      this.acceptData = await this.chartService
+        .getAcceptCounts(this.key);
 
-      this.submitData = await firstValueFrom(
-        this.chartService
-          .getAllSubmitCount(this.key)
-          .snapshotChanges()
-          .pipe(
-            map((changes) =>
-              changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
-            )
-          )
-      );
+      console.log(this.acceptData);
+
+      this.submitData = await  this.chartService
+          .getSubmitCounts(this.key)
     }
     switch (this.key) {
       case 'byDay':
@@ -319,8 +302,8 @@ export class ChartComponent {
     let array: any = [];
     let value;
     const metric = this.key.replace('topRequestersBy', 'by');
-    Object.keys(this.data).forEach((key) => {
-      const counts = this.data[key].counts.LosAngeles;
+    Object.keys(this.acceptData).forEach((key) => {
+      const counts = this.acceptData[key].counts.LosAngeles;
       let selectedValue =
         metric === 'byDay' ? this.selectedDay : this.selectedHour;
       switch (metric) {
@@ -328,7 +311,7 @@ export class ChartComponent {
         case 'byHour':
           value = counts[metric][selectedValue + ''] || 0;
           if (value !== 0) {
-            array.push({ name: this.data[key].key, value });
+            array.push({ name: this.acceptData[key].key, value });
           }
           break;
         case 'byDayAndHour':
@@ -339,7 +322,7 @@ export class ChartComponent {
                 ]
               : 0 || 0;
           if (value && value !== 0) {
-            array.push({ name: this.data[key].key, value: value });
+            array.push({ name: this.acceptData[key].key, value: value });
           }
       }
     });
@@ -364,7 +347,7 @@ export class ChartComponent {
       },
     ];
 
-    this.chartData[0].data = this.prepareDataForChart(this.data, 'Accept');
+    this.chartData[0].data = this.prepareDataForChart(this.acceptData, 'Accept');
     this.chartData[0].backgroundColor = '#1074f6';
     this.chartData[1].data = this.prepareDataForChart(
       this.submitData,
@@ -477,7 +460,7 @@ export class ChartComponent {
   }
 
   calculateTotalTasksPerPeriodForRequesters(
-    data: any = this.data,
+    data: any = this.acceptData,
     filterkey = 'Accept'
   ) {
     const array: any = [];

@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Chart } from '../requesters-presence/requesters-presence';
 import { ChartService } from '../../services/chart.service';
+import { ChartConstant } from '../../constant';
 import { firstValueFrom, map } from 'rxjs';
 
 @Component({
@@ -11,24 +12,26 @@ import { firstValueFrom, map } from 'rxjs';
 })
 export class RequestersBaseComponent implements OnInit, OnDestroy {
   key: string = '';
-  chartData: any = {};
+  acceptData: any = {};
   submitData: any = {};
+  wageData: any = {};
   reactionsData: any = {};
-  wageData:any={};
-  filterKey: string = '';
   requestersName: string = '';
   chartsList: Chart[] = [
     {
       label: 'By Day',
-      key: 'topRequestersByDay',
+      key: 'byDay',
+      xAxisLabels: ChartConstant.dayChartLabels,
     },
     {
       label: 'By Hour',
-      key: 'topRequestersByHour',
+      key: 'byHour',
+      xAxisLabels: ChartConstant.hourChartLabels,
     },
     {
       label: 'By Day And Hour',
-      key: 'topRequestersByDayAndHour',
+      key: 'byDayAndHour',
+      xAxisLabels: ChartConstant.dayChartLabels,
     },
     {
       label: 'Requesters Detail',
@@ -52,31 +55,25 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
   ngOnDestroy() {}
 
   async getData() {
-    this.chartData = {};
-    const acceptData = await firstValueFrom(
-      this.chartService
-        .getAll(`byRequesterID/${this.key}`, true)
-        .snapshotChanges()
-        .pipe(
-          map((changes) =>
-            changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
-          )
-        )
+    this.acceptData = {};
+    const acceptData = await this.chartService.getAcceptCounts(
+      `byRequesterID/${this.key}`,
+      true
     );
+
     if (acceptData.length > 0) {
-      this.chartData = acceptData[0];
+      this.acceptData = acceptData[0];
     }
 
-    const data = await firstValueFrom(
-      this.chartService
-        .getAllSubmitCount(`byRequesterID/${this.key}`, true)
-        .snapshotChanges()
-        .pipe(
-          map((changes) =>
-            changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
-          )
-        )
+    const submitData = await this.chartService.getSubmitCounts(
+      `byRequesterID/${this.key}`,
+      true
     );
+
+    if (submitData.length > 0) {
+      this.submitData = submitData[0];
+    }
+
     const requestersReaction = await firstValueFrom(
       this.chartService
         .getOthersEmployeeData(`reacts/requester/${this.key}`)
@@ -90,9 +87,8 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
     if (requestersReaction.length > 0) {
       this.reactionsData = requestersReaction[0];
     }
-    if (data.length > 0) {
-      this.submitData = data[0];
-    }
+    console.log(this.reactionsData);
+
     const wageData = await firstValueFrom(
       this.chartService
         .getOthersEmployeeData(`reqs`)
@@ -105,9 +101,11 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
           })
         )
     );
-    this.wageData=wageData
+    this.wageData = wageData;
     console.log(this.wageData);
   }
 }
 
 // TODO: When viewing a particular requester data, add a card to show details about requesters average, min and max wage rate. Also, add data about reactions.
+
+//TODO: Rename the component RequestersBaseComponent to RequesterBaseComponent. Also, rename the folder and files from requesters-base to requester-base.

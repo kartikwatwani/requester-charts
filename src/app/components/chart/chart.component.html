@@ -83,15 +83,8 @@
     </ng-container>
   </div>
   <ng-container>
-    <canvas
-      *ngIf="data.length > 0"
-      baseChart
-      [datasets]="chartData"
-      [chartType]="chartType"
-      [labels]="xAxisLabels"
-      [options]="chartOptions"
-      [legend]="true"
-    >
+    <canvas *ngIf="acceptData.length > 0" baseChart [datasets]="chartData" [chartType]="chartType"
+      [labels]="xAxisLabels" [options]="chartOptions" [legend]="true">
     </canvas>
   </ng-container>
   <ng-container *ngIf="requesterList.length > 0; else noRequesters">
