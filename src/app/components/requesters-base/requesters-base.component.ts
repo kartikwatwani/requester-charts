@@ -68,5 +68,7 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
 
 // TODO: When viewing a particular requester data, add a card to show details about requesters average, min and max wage rate. Also, add data about reactions.
 
+//TODO: Rename the component RequestersBaseComponent to RequesterBaseComponent. Also, rename the folder and files from requesters-base to requester-base.
+
 
 
