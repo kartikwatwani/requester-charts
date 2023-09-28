@@ -3,6 +3,7 @@ import {
   AngularFireDatabase,
   AngularFireList,
 } from '@angular/fire/compat/database';
+import { firstValueFrom, map } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
@@ -499,7 +500,7 @@ export class ChartService {
   
   }
 
-  getAll(key: string, singleRequester = false): AngularFireList<any> {
+  getAcceptCounts(key: string, singleRequester = false):Promise<any[]> {
     const newKey = this.getFilterCondition(key);
 
     let path;
@@ -508,7 +509,12 @@ export class ChartService {
     } else {
       path = key;
     }
-    return this.db.list(`/req_pre/${path}`);
+    return firstValueFrom(this.db.list(`/req_pre/${path}`).snapshotChanges()
+      .pipe(
+        map((changes:any[]) =>
+          changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
+        )
+      ));
   }
 
   getFilterCondition(key) {
@@ -519,10 +525,10 @@ export class ChartService {
       : `${key}/LosAngeles`;
   }
 
-  getAllSubmitCount(
+  getSubmitCounts(
     key: string,
     singleRequester = false
-  ): AngularFireList<any> {
+  ): Promise<any[]> {
     const newKey = this.getFilterCondition(key);
     let path;
     if (!singleRequester) {
@@ -530,7 +536,16 @@ export class ChartService {
     } else {
       path = key;
     }
-    return this.db.list(`/req_pre_by_submit_time/${path}`);
+
+    return firstValueFrom(
+     this.db.list(`/req_pre_by_submit_time/${path}`)
+        .snapshotChanges()
+        .pipe(
+          map((changes:any[]) =>
+            changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
+          )
+        )
+    ) ;
   }
 
   getEmployeeName(): AngularFireList<any> {

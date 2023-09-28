@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Chart } from '../base/base.component';
 import { ChartService } from '../../services/chart.service';
-import { firstValueFrom, map } from 'rxjs';
+import { ChartConstant } from '../../constant';
 
 @Component({
   selector: 'app-requesters-base',
@@ -11,22 +11,25 @@ import { firstValueFrom, map } from 'rxjs';
 })
 export class RequestersBaseComponent implements OnInit, OnDestroy {
   key: string = '';
-  chartData: any = {};
+  acceptData: any = {};
   submitData:any={};
-  filterKey: string = '';
+
   requestersName: string = '';
   chartsList: Chart[] = [
     {
       label: 'By Day',
-      key: 'topRequestersByDay',
+      key: 'byDay',
+      xAxisLabels:ChartConstant.dayChartLabels
     },
     {
       label: 'By Hour',
-      key: 'topRequestersByHour',
+      key: 'byHour',
+      xAxisLabels:ChartConstant.hourChartLabels
     },
     {
       label: 'By Day And Hour',
-      key: 'topRequestersByDayAndHour',
+      key: 'byDayAndHour',
+      xAxisLabels:ChartConstant.dayChartLabels
     },
   ];
   constructor(
@@ -44,31 +47,19 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
   ngOnDestroy() {}
 
   async getData() {
-    this.chartData = {};
-  const acceptData=await firstValueFrom( this.chartService
-      .getAll(`byRequesterID/${this.key}`,true)
-      .snapshotChanges()
-      .pipe(
-        map((changes) =>
-          changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
-        )
-      ))
+    this.acceptData = {};
+    const acceptData = await this.chartService
+      .getAcceptCounts(`byRequesterID/${this.key}`, true);
+    
       if(acceptData.length>0){
-        this.chartData=acceptData[0];
+        this.acceptData=acceptData[0];
       }
 
-    const data = await firstValueFrom(
-      this.chartService
-        .getAllSubmitCount(`byRequesterID/${this.key}`,true)
-        .snapshotChanges()
-        .pipe(
-          map((changes) =>
-            changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
-          )
-        )
-    );
-    if(data.length>0){
-      this.submitData=data[0];
+    const submitData = await this.chartService
+      .getSubmitCounts(`byRequesterID/${this.key}`, true);
+    
+    if(submitData.length>0){
+      this.submitData=submitData[0];
 
     }
   }

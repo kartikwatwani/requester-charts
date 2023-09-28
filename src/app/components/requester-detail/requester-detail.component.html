@@ -1,76 +1,19 @@
-<div
-  style="display: block;"
-  class="chart-container"
-  [ngClass]="{'section':filterKey==='topRequestersByHour'|| filterKey==='topRequestersByDayAndHour'}"
->
+<div style="display: block;" class="chart-container"
+  [ngClass]="{'section':metric==='byHour'|| metric==='byDayAndHour'}">
   <div style="display: flex; flex-direction: column;">
     <h2>{{label}}</h2>
     <div style="display: flex;">
-      <mat-form-field
-        *ngIf="filterKey ==='topRequestersByDayAndHour'"
-        appearance="outline"
-        style="margin-left: 20px;"
-      >
+      <mat-form-field *ngIf="metric ==='byDayAndHour'" appearance="outline" style="margin-left: 20px;">
         <mat-label>Day</mat-label>
-        <mat-select
-          name="selectedDay"
-          [(ngModel)]="selectedDay"
-          (selectionChange)="prepareData()"
-        >
-          <mat-option [value]="item.id" *ngFor="let item of dayList"
-            >{{ item.name }}</mat-option
-          >
+        <mat-select name="selectedDay" [(ngModel)]="selectedDay" (selectionChange)="prepareData()">
+          <mat-option [value]="item.id" *ngFor="let item of dayList">{{ item.name }}</mat-option>
         </mat-select>
       </mat-form-field>
-      <!-- <mat-form-field
-        appearance="outline"
-        *ngIf="filterKey ==='topRequestersByDayAndHour'"
-        style="margin-left: 20px;"
-      >
-        <mat-label>Hour</mat-label>
-        <mat-select
-          name="selectedHour"
-          [(ngModel)]="selectedHour"
-          (selectionChange)="prepareChartData()"
-        >
-          <mat-option [value]="item.value" *ngFor="let item of hoursList"
-            >{{ item.name }}</mat-option
-          >
-        </mat-select>
-      </mat-form-field> -->
+
     </div>
   </div>
-  <canvas
-    *ngIf="chartDetail && filterKey === 'topRequestersByDay'"
-    baseChart
-    [datasets]="chartData"
-    [labels]="dayChartLabels"
-    [chartType]="chartType"
-    [options]="chartOptions"
-    [plugins]="barChartPlugins"
-    [legend]="chartLegend"
-  >
+  <canvas *ngIf="acceptData" baseChart [datasets]="chartData" [labels]="xAxisLabels" [chartType]="chartType"
+    [options]="chartOptions" [plugins]="barChartPlugins" [legend]="chartLegend">
   </canvas>
-  <canvas
-    *ngIf="chartDetail && filterKey === 'topRequestersByHour'"
-    baseChart
-    [datasets]="chartData"
-    [labels]="hourChartLabels"
-    [options]="chartOptions"
-    [plugins]="barChartPlugins"
-    [chartType]="chartType"
-    [legend]="chartLegend"
-  >
-  </canvas>
-  <canvas
-    *ngIf="chartDetail && filterKey === 'topRequestersByDayAndHour'"
-    baseChart
-    [datasets]="chartData"
-    [labels]="hourChartLabels"
-    [options]="chartOptions"
-    [plugins]="barChartPlugins"
-    [chartType]="chartType"
-    [legend]="chartLegend"
-  >
-  </canvas>
+
 </div>
