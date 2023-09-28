@@ -1,0 +1,53 @@
+<div style="display: flex; justify-content: center; margin: 16px 0px;">
+  <mat-form-field appearance="outline" class="w-50">
+    <mat-label>Requester Analysis</mat-label>
+    <mat-select
+      name="selectedDay"
+      [(ngModel)]="selectedFilter"
+      (selectionChange)="addFragmentToUrl()"
+    >
+      <mat-option [value]="filter.id" *ngFor="let filter of filters"
+        >{{ filter.name }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+</div>
+<div
+  class="container"
+  style="
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 16px 0px 16px;
+  "
+  *ngIf="requesterList.length>0 && selectedFilter=='by-presence'"
+>
+  <div *ngFor="let chart of chartsList">
+    <app-chart
+      [selectedFilter]="selectedFilter"
+      [key]="chart.key"
+      [isShow]="chart.isShow"
+      [width]="chart.width"
+      [presenceType]="presenceType"
+      [label]="chart.label"
+      [employeersList]="requesterList"
+      [xAxisLabels]="chart.xAxisLabels"
+    >
+    </app-chart>
+  </div>
+</div>
+<app-requesters-wage-rate
+  *ngIf="selectedFilter==='by-wage-rate'"
+  [selectedFilter]="selectedFilter"
+  [presenceType]="presenceType"
+  [employeersList]="requesterList"
+>
+</app-requesters-wage-rate>
+
+<app-requesters-reactions
+  *ngIf="selectedFilter==='by-reaction'"
+  [selectedFilter]="selectedFilter"
+  [presenceType]="presenceType"
+  [employeersList]="requesterList"
+>
+</app-requesters-reactions>

@@ -5,3 +5,10 @@
 .section{
   width: 700px !important;
 }
+.requesters-detail{
+  display: flex;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+}

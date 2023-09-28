@@ -8,16 +8,17 @@ import { ChartConstant } from 'src/app/constant';
 export interface Chart {
   label: string;
   key: string;
+  width?: string;
   isShow?: boolean;
   xAxisLabels?: string[];
 }
 
 @Component({
   selector: 'app-base',
-  templateUrl: './base.component.html',
-  styleUrls: ['./base.component.scss'],
+  templateUrl: './requesters-presence.html',
+  styleUrls: ['./requesters-presence.scss'],
 })
-export class BaseComponent implements OnInit {
+export class RequestersPresenceComponent implements OnInit {
   dayChartLabels: string[] = ChartConstant.dayChartLabels;
   hourChartLabels: string[] = ChartConstant.hourChartLabels;
   requesterList: any[] = [];
@@ -25,18 +26,21 @@ export class BaseComponent implements OnInit {
     {
       label: 'Day Wise',
       key: 'byDay',
+      width: '450px',
       isShow: true,
       xAxisLabels: this.dayChartLabels,
     },
     {
       label: 'Hour Wise',
       key: 'byHour',
+      width: '650px',
       isShow: true,
       xAxisLabels: this.hourChartLabels,
     },
     {
       label: 'Hour Comparison Across All Days',
       key: 'byDayAndHour',
+      width: '450px',
       isShow: true,
       xAxisLabels: this.dayChartLabels,
     },
@@ -44,23 +48,27 @@ export class BaseComponent implements OnInit {
       label: 'By Day And Hour',
       key: 'byDayAndHourForAllRequesters',
       isShow: true,
+      width: '650px',
       xAxisLabels: this.hourChartLabels,
     },
     {
       label: 'Top Requesters By Day',
       key: 'topRequestersByDay',
+      width: '550px',
       isShow: true,
     },
     {
       label: 'Top Requesters By Hour',
       key: 'topRequestersByHour',
+      width: '550px',
       isShow: true,
     },
     {
       label: 'Top Requesters By Day And Hour',
       key: 'topRequestersByDayAndHour',
+      width: '650px',
       isShow: true,
-    }
+    },
   ];
   filters: any[] = [
     {
@@ -79,15 +87,21 @@ export class BaseComponent implements OnInit {
   presenceType = 'accept';
   selectedFilter = this.filters[0].id;
 
-  constructor(private chartService: ChartService, private location: Location,private route:ActivatedRoute) {}
+  constructor(
+    private chartService: ChartService,
+    private location: Location,
+    private route: ActivatedRoute
+  ) {}
   ngOnInit() {
     this.getEmployeeName();
-    console.log(this.route.snapshot.fragment);
-
-    this.selectedFilter = this.route.snapshot.fragment!=='null' &&this.route.snapshot.fragment!==null?this.route.snapshot.fragment:this.filters[0].id;
-
-    this.addFragmentToUrl()
+    this.selectedFilter =
+      this.route.snapshot.fragment !== 'null' &&
+      this.route.snapshot.fragment !== null
+        ? this.route.snapshot.fragment
+        : this.filters[0].id;
+    this.addFragmentToUrl();
   }
+
   getEmployeeName() {
     firstValueFrom(
       this.chartService

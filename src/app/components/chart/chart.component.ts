@@ -36,6 +36,7 @@ export class ChartComponent {
   hoursList: any[] = ChartConstant.hoursList;
   hourCount: number[] = ChartConstant.hourCount;
   @Input() key = 'byDay';
+  @Input() width ='';
   databasePath = '';
   selectedHour = '';
   selectedDay = '';
@@ -79,7 +80,6 @@ export class ChartComponent {
 
   async getData() {
     this.data = [];
-
     if (
       this.key.indexOf('top') === -1
     ) {

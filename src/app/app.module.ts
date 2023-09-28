@@ -19,13 +19,22 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { RequesterDetailComponent } from './components/requester-detail/requester-detail.component';
-import { BaseComponent } from './components/base/base.component';
+import { RequestersPresenceComponent } from './components/requesters-presence/requesters-presence';
 import { RequestersBaseComponent } from './components/requesters-base/requesters-base.component';
 import { RequestersWageRateComponent } from './components/requesters-wage-rate/requesters-wage-rate.component';
 import { RequestersReactionsComponent } from './components/requesters-reactions/requesters-reactions.component';
+import {MatCardModule} from '@angular/material/card'
 
 @NgModule({
-  declarations: [AppComponent, ChartComponent, RequesterDetailComponent, BaseComponent, RequestersBaseComponent, RequestersWageRateComponent, RequestersReactionsComponent],
+  declarations: [
+    AppComponent,
+    ChartComponent,
+    RequesterDetailComponent,
+    RequestersPresenceComponent,
+    RequestersBaseComponent,
+    RequestersWageRateComponent,
+    RequestersReactionsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,6 +42,7 @@ import { RequestersReactionsComponent } from './components/requesters-reactions/
     MatToolbarModule,
     MatSidenavModule,
     FormsModule,
+    MatCardModule,
     MatListModule,
     MatButtonModule,
     MatIconModule,

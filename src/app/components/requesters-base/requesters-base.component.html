@@ -21,7 +21,9 @@ class="mt-2">{{requestersName}}</h2>
     <app-requester-detail
       [filterKey]="chart.key"
       [key]="key"
+      [requestersReaction]="reactionsData"
       [chartDetail]="chartData"
+      [wageData]="wageData"
       [submitData]="submitData"
       [label]="chart.label"
     ></app-requester-detail>

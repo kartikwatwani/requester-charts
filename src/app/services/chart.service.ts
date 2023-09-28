@@ -496,7 +496,7 @@ export class ChartService {
 
 
   constructor(private db: AngularFireDatabase) {
-  
+
   }
 
   getAll(key: string, singleRequester = false): AngularFireList<any> {
@@ -538,6 +538,8 @@ export class ChartService {
   }
 
   getOthersEmployeeData(key: string): AngularFireList<any> {
+    console.log(key);
+
     return this.db.list(`/${key}`);
   }
 
@@ -545,5 +547,5 @@ export class ChartService {
     return this.db.list(`/${key}`,ref=>ref.orderByChild(orderBy).limitToLast(limit));
   }
 
-  
+
 }

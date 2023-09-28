@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ChartService } from '../../services/chart.service';
-import { Chart } from '../base/base.component';
+import { Chart } from '../requesters-presence/requesters-presence';
 import { ChartConstant } from '../../constant';
-
+let productiveDay='';
+let productiveHour=''
 @Component({
   selector: 'app-requester-detail',
   templateUrl: './requester-detail.component.html',
@@ -10,6 +11,7 @@ import { ChartConstant } from '../../constant';
 })
 export class RequesterDetailComponent implements OnInit {
   @Input() key = '';
+  @Input() requestersReaction: any = {};
   @Input() label = '';
   chartsList: Chart[] = [
     {
@@ -33,6 +35,8 @@ export class RequesterDetailComponent implements OnInit {
   selectedHour = this.hoursList[0].value;
   selectedDay = this.dayList[0].id;
   chartLegend = true;
+  productiveDay='';
+  productiveHour=''
   barChartPlugins = [];
   hourChartLabels: string[] = ChartConstant.hourChartLabels;
   chartData: any[] = [
@@ -46,6 +50,7 @@ export class RequesterDetailComponent implements OnInit {
   chartOptions = ChartConstant.chartOptions;
   @Input() filterKey = '';
   @Input() submitData: any = {};
+  @Input() wageData: any = {};
   dayCount = ChartConstant.dayCount;
   constructor(private chartService: ChartService) {}
 
@@ -78,6 +83,39 @@ export class RequesterDetailComponent implements OnInit {
         backgroundColor: 'orange',
       },
     ];
+    if (
+      this.filterKey === 'topRequestersByDay' ||
+      this.filterKey === 'topRequestersByHour'
+    ) {
+      const array = this.chartData.map((item) => item.data);
+      console.log(array);
+      if (array.length > 0) {
+        const array1 = array[0];
+        const array2 = array[1];
+        const resultArray = [];
+        if (array1.length > 0 && array2.length > 0) {
+          for (let i = 0; i < array1.length; i++) {
+            resultArray.push(array1[i] + array2[i]);
+          }
+        }
+        const maxValue = Math.max(...resultArray);
+        const indexOfMaxValue = resultArray.indexOf(maxValue);
+        if(this.filterKey==='topRequestersByDay'){
+          productiveDay=this.dayList[indexOfMaxValue].name
+        }else{
+          productiveHour=this.hoursList[indexOfMaxValue].name
+
+        }
+      }
+
+    }
+    if(this.filterKey==='requestersDetail'){
+      this.productiveDay=productiveDay;
+      this.productiveHour=productiveHour
+    }
+    console.log(productiveHour);
+    console.log(productiveDay);
+
   }
 
   getMainChartLabel() {

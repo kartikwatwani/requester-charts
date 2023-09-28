@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BaseComponent } from './components/base/base.component';
+import { RequestersPresenceComponent } from './components/requesters-presence/requesters-presence';
 import { RequestersBaseComponent } from './components/requesters-base/requesters-base.component';
 
 const routes: Routes = [
   {
     path:'requester-analysis',
-    component:BaseComponent
+    component:RequestersPresenceComponent
   },
 
   {
