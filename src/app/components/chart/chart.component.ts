@@ -178,7 +178,7 @@ export class ChartComponent {
       }
     }
     requestersResult.sort((a, b) => b.value - a.value);
-    this.requesterList = requestersResult;
+    this.requesterList = requestersResult.slice(0,100);
     if (this.requesterList.length > 0) {
       const totalRequestersCount = this.requesterList
         .map((item) => item.value)

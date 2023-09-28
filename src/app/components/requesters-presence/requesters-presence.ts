@@ -40,7 +40,7 @@ export class RequestersPresenceComponent implements OnInit {
     {
       label: 'Hour Comparison Across All Days',
       key: 'byDayAndHour',
-      width: '450px',
+      width: '550px',
       isShow: true,
       xAxisLabels: this.dayChartLabels,
     },

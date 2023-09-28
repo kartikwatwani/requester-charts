@@ -20,7 +20,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { RequesterDetailComponent } from './components/requester-detail/requester-detail.component';
 import { RequestersPresenceComponent } from './components/requesters-presence/requesters-presence';
-import { RequestersBaseComponent } from './components/requesters-base/requesters-base.component';
+import { RequesterBaseComponent } from './components/requester-base/requester-base.component';
 import { RequestersWageRateComponent } from './components/requesters-wage-rate/requesters-wage-rate.component';
 import { RequestersReactionsComponent } from './components/requesters-reactions/requesters-reactions.component';
 import {MatCardModule} from '@angular/material/card'
@@ -31,7 +31,7 @@ import {MatCardModule} from '@angular/material/card'
     ChartComponent,
     RequesterDetailComponent,
     RequestersPresenceComponent,
-    RequestersBaseComponent,
+    RequesterBaseComponent,
     RequestersWageRateComponent,
     RequestersReactionsComponent,
   ],

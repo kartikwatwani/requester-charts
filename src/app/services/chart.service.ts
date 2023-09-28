@@ -3,7 +3,7 @@ import {
   AngularFireDatabase,
   AngularFireList,
 } from '@angular/fire/compat/database';
-import { firstValueFrom, map } from 'rxjs';
+import { BehaviorSubject, Subject, firstValueFrom, map } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
@@ -495,6 +495,8 @@ export class ChartService {
     },
   };
 
+ employeerData:Subject<any>=new BehaviorSubject({});
+
 
   constructor(private db: AngularFireDatabase) {
 
@@ -536,7 +538,6 @@ export class ChartService {
     } else {
       path = key;
     }
-
     return firstValueFrom(
      this.db.list(`/req_pre_by_submit_time/${path}`)
         .snapshotChanges()
@@ -553,8 +554,6 @@ export class ChartService {
   }
 
   getOthersEmployeeData(key: string): AngularFireList<any> {
-    console.log(key);
-
     return this.db.list(`/${key}`);
   }
 

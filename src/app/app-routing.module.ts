@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RequestersPresenceComponent } from './components/requesters-presence/requesters-presence';
-import { RequestersBaseComponent } from './components/requesters-base/requesters-base.component';
+import { RequesterBaseComponent } from './components/requester-base/requester-base.component';
 
 const routes: Routes = [
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path:'**',
-    component:RequestersBaseComponent
+    component:RequesterBaseComponent
   },
 ];
 

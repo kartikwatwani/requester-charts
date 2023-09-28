@@ -4,7 +4,7 @@
     isShow
   "
   class="chart-container"
-  [ngStyle]="{'width':width}"
+  [ngStyle]="(key==='byDay' ||key==='byHour' || key==='byDayAndHourForAllRequesters'|| key==='byDayAndHour') &&{'width':width}"
 >
   <div style="display: flex; align-items: flex-start; flex-direction: column;">
     <h2>
@@ -12,7 +12,8 @@
     </h2>
 
     <ng-container>
-      <div style="display: flex;">
+      <div style="display: flex;    width: 100%;
+      ">
         <mat-form-field
           *ngIf="
             key === 'topRequestersByDay' ||
@@ -83,8 +84,15 @@
     </ng-container>
   </div>
   <ng-container>
-    <canvas *ngIf="acceptData.length > 0" baseChart [datasets]="chartData" [chartType]="chartType"
-      [labels]="xAxisLabels" [options]="chartOptions" [legend]="true">
+    <canvas
+      *ngIf="acceptData.length > 0"
+      baseChart
+      [datasets]="chartData"
+      [chartType]="chartType"
+      [labels]="xAxisLabels"
+      [options]="chartOptions"
+      [legend]="true"
+    >
     </canvas>
   </ng-container>
   <ng-container *ngIf="requesterList.length > 0; else noRequesters">

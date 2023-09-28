@@ -1,5 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  DoCheck,
+  Input,
+  OnInit,
+} from '@angular/core';
 import { ChartConstant } from '../../constant';
+import { ChartService } from 'src/app/services/chart.service';
 let productiveDay = '';
 let productiveHour = '';
 @Component({
@@ -37,9 +44,18 @@ export class RequesterDetailComponent implements OnInit {
   dayChartLabels: string[] = ChartConstant.dayChartLabels;
   @Input() wageData: any = {};
   @Input() reactionsData: any = {};
-  constructor() {}
+  constructor(
+    private chartService: ChartService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
+    this.chartService.employeerData.subscribe((res) => {
+      setTimeout(() => {
+        this.productiveDay = res.productiveDay;
+        this.productiveHour = res.productiveHour;
+      }, 100);
+    });
     const currentDate = new Date();
     currentDate.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
     const numericDayOfWeekInLosAngeles = currentDate.getDay();
@@ -54,7 +70,6 @@ export class RequesterDetailComponent implements OnInit {
     this.selectedHour = hour;
     this.prepareData();
   }
-
   prepareData() {
     this.chartData = [
       {
@@ -68,13 +83,8 @@ export class RequesterDetailComponent implements OnInit {
         backgroundColor: 'orange',
       },
     ];
-    console.log(this.metric);
-console.log(this.chartData);
 
-    if (
-      this.metric === 'topRequestersByDay' ||
-      this.metric === 'topRequestersByHour'
-    ) {
+    if (this.metric === 'byDay' || this.metric === 'byHour') {
       const array = this.chartData.map((item) => item.data);
       if (array.length > 0) {
         const array1 = array[0];
@@ -87,22 +97,17 @@ console.log(this.chartData);
         }
         const maxValue = Math.max(...resultArray);
         const indexOfMaxValue = resultArray.indexOf(maxValue);
-        if (this.metric === 'topRequestersByDay') {
+        if (this.metric === 'byDay') {
           productiveDay = this.dayList[indexOfMaxValue].name;
         } else {
           productiveHour = this.hoursList[indexOfMaxValue].name;
         }
+        this.chartService.employeerData.next({ productiveDay, productiveHour });
       }
     }
-    console.log(productiveDay);
-    console.log(productiveHour);
 
     if (this.metric === 'requestersDetail') {
-      this.productiveDay = productiveDay;
-      this.productiveHour = productiveHour;
     }
-
-    console.log(this.reactionsData);
   }
 
   getMainChartLabel() {

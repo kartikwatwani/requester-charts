@@ -7,10 +7,10 @@ import { firstValueFrom, map } from 'rxjs';
 
 @Component({
   selector: 'app-requesters-base',
-  templateUrl: './requesters-base.component.html',
-  styleUrls: ['./requesters-base.component.scss'],
+  templateUrl: './requester-base.component.html',
+  styleUrls: ['./requester-base.component.scss'],
 })
-export class RequestersBaseComponent implements OnInit, OnDestroy {
+export class RequesterBaseComponent implements OnInit, OnDestroy {
   key: string = '';
   acceptData: any = {};
   submitData: any = {};
@@ -18,6 +18,10 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
   reactionsData: any = {};
   requestersName: string = '';
   chartsList: Chart[] = [
+    {
+      label: 'Requesters Detail',
+      key: 'requestersDetail',
+    },
     {
       label: 'By Day',
       key: 'byDay',
@@ -32,10 +36,6 @@ export class RequestersBaseComponent implements OnInit, OnDestroy {
       label: 'By Day And Hour',
       key: 'byDayAndHour',
       xAxisLabels: ChartConstant.dayChartLabels,
-    },
-    {
-      label: 'Requesters Detail',
-      key: 'requestersDetail',
     },
   ];
   constructor(
