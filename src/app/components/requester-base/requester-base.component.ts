@@ -74,34 +74,16 @@ export class RequesterBaseComponent implements OnInit, OnDestroy {
       this.submitData = submitData[0];
     }
 
-    const requestersReaction = await firstValueFrom(
-      this.chartService
-        .getOthersEmployeeData(`reacts/requester/${this.key}`)
-        .snapshotChanges()
-        .pipe(
-          map((changes) =>
-            changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
-          )
-        )
+    const requestersReaction = await this.chartService.getOthersEmployeeData(
+      `reacts/requester/${this.key}`
     );
+
     if (requestersReaction.length > 0) {
       this.reactionsData = requestersReaction[0];
     }
-    console.log(this.reactionsData);
-
-    const wageData = await firstValueFrom(
-      this.chartService
-        .getOthersEmployeeData(`reqs`)
-        .snapshotChanges()
-        .pipe(
-          map((changes) => {
-            return changes
-              .map((c) => ({ key: c.payload.key, ...c.payload.val() }))
-              .filter((item) => item.key === this.key)[0];
-          })
-        )
-    );
-    this.wageData = wageData;
+    this.wageData = (
+      await this.chartService.getOthersEmployeeData(`reqs`)
+    ).filter((item) => item.key == this.key)[0];
     console.log(this.wageData);
   }
 }

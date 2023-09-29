@@ -10,43 +10,38 @@ import { ChartService } from 'src/app/services/chart.service';
   styleUrls: ['./requesters-reactions.component.scss'],
 })
 export class RequestersReactionsComponent {
-  data: any[] = [];
-  databasePath = '';
   @Input() label;
   requesterList = [];
   reactionList = ChartConstant.reactionList;
   selectedReaction = this.reactionList[0].id;
-  @Input() employeersList: any[] = [];
+  @Input() requestersIDToNameMapping: any[] = [];
+
   constructor(private chartService: ChartService, private router: Router) {}
+
   async ngOnInit() {
-    this.data = await firstValueFrom(
-      this.chartService
-        .getOthersEmployeeData('reacts/requester')
-        .snapshotChanges()
-        .pipe(
-          map((changes) =>
-            changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
-          )
-        )
+    this.requesterList = await this.chartService.getOthersEmployeeData(
+      'reacts/requester'
     );
     this.prepareDataForRequesterReaction();
   }
+
   prepareDataForRequesterReaction() {
-    this.requesterList = this.data
+    this.requesterList = this.requesterList
       .sort(
         (a, b) =>
           b.summary[this.selectedReaction] - a.summary[this.selectedReaction]
       )
       .filter((item) => item.summary[this.selectedReaction] !== 0);
-    this.mappedNameForEmployer('key');
+    this.mappedNameForEmployer();
   }
-  mappedNameForEmployer(key = 'name') {
+
+  mappedNameForEmployer() {
     this.requesterList.forEach((requester) => {
-      const index = this.employeersList.findIndex(
-        (item) => item.key === requester[key]
+      const index = this.requestersIDToNameMapping.findIndex(
+        (item) => item.key === requester.key
       );
       if (index > -1) {
-        const obj = { ...this.employeersList[index] };
+        const obj = { ...this.requestersIDToNameMapping[index] };
         delete obj.key;
         const values = Object.values(obj);
         let concatenatedString = values.join('').replace(/ +/g, ' ');
@@ -55,7 +50,7 @@ export class RequestersReactionsComponent {
         }
         requester.requestersName = concatenatedString;
       } else {
-        requester.requestersName = requester[key];
+        requester.requestersName = requester.key;
       }
     });
   }
@@ -66,5 +61,3 @@ export class RequestersReactionsComponent {
     });
   }
 }
-
-//Rename employeersList to requestersIDToNameMapping. Rename requesterList to requestersReactionsList.

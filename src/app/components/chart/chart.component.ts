@@ -10,7 +10,14 @@ let topRequestersByDayAndHour = [];
 let topRequestersByDayForSubmit = [];
 let topRequestersByHourForSubmit = [];
 let topRequestersByDayAndHourForSubmit = [];
+// let topList={
+//   byDay:{
+//     accept:[
 
+//     ],
+//     submit:[]
+//   }
+// }
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
@@ -28,7 +35,7 @@ export class ChartComponent {
   @Input() label: string = '';
   @Input() xAxisLabels: string[] = [];
   @Input() isShow=false
-  @Input() employeersList: any[] = [];
+  @Input() requesterIDToNameMapping: any[] = [];
   @Input() key = 'byDay';
   @Input() presenceType = 'accept';
   @Input() selectedFilter: string = '';
@@ -82,9 +89,6 @@ export class ChartComponent {
     ) {
       this.acceptData = await this.chartService
         .getAcceptCounts(this.key);
-
-      console.log(this.acceptData);
-
       this.submitData = await  this.chartService
           .getSubmitCounts(this.key)
     }
@@ -236,11 +240,11 @@ export class ChartComponent {
 
   mappedNameForEmployer(key = 'name') {
     this.requesterList.forEach((requester) => {
-      const index = this.employeersList.findIndex(
+      const index = this.requesterIDToNameMapping.findIndex(
         (item) => item.key === requester[key]
       );
       if (index > -1) {
-        const obj = { ...this.employeersList[index] };
+        const obj = { ...this.requesterIDToNameMapping[index] };
         delete obj.key;
         const values = Object.values(obj);
         let concatenatedString = values.join('').replace(/ +/g, ' ');
@@ -504,5 +508,5 @@ export class ChartComponent {
 //FIXME: More than 100 top requesters are shown when bySubmit presence type is selected. Only 100 requesters should be shown.
 
 
-//TODO: Rename employeersList to requesterIDToNameMapping
+//TODO: Rename requesterIDToNameMapping to requesterIDToNameMapping
 

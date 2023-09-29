@@ -30,7 +30,7 @@
       [width]="chart.width"
       [presenceType]="presenceType"
       [label]="chart.label"
-      [employeersList]="requesterList"
+      [requesterIDToNameMapping]="requesterList"
       [xAxisLabels]="chart.xAxisLabels"
     >
     </app-chart>
@@ -39,15 +39,13 @@
 <app-requesters-wage-rate
   *ngIf="selectedFilter==='by-wage-rate'"
   [selectedFilter]="selectedFilter"
-  [presenceType]="presenceType"
-  [employeersList]="requesterList"
+
 >
 </app-requesters-wage-rate>
 
 <app-requesters-reactions
   *ngIf="selectedFilter==='by-reaction'"
   [selectedFilter]="selectedFilter"
-  [presenceType]="presenceType"
-  [employeersList]="requesterList"
+  [requestersIDToNameMapping]="requesterList"
 >
 </app-requesters-reactions>

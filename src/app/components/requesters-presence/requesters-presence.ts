@@ -70,20 +70,7 @@ export class RequestersPresenceComponent implements OnInit {
       isShow: true,
     },
   ];
-  filters: any[] = [
-    {
-      id: 'by-presence',
-      name: 'By Presence',
-    },
-    {
-      id: 'by-wage-rate',
-      name: 'By Wage Rate',
-    },
-    {
-      id: 'by-reaction',
-      name: 'By Reaction',
-    },
-  ];
+  filters: any[] = ChartConstant.filters
   presenceType = 'accept';
   selectedFilter = this.filters[0].id;
 
@@ -92,6 +79,7 @@ export class RequestersPresenceComponent implements OnInit {
     private location: Location,
     private route: ActivatedRoute
   ) {}
+
   ngOnInit() {
     this.getEmployeeName();
     this.selectedFilter =
@@ -116,16 +104,14 @@ export class RequestersPresenceComponent implements OnInit {
       this.requesterList = data;
     });
   }
-  addFragmentToUrl() {
-    const currentUrl = this.location.path();
-    const updatedUrl = `${currentUrl}#${this.selectedFilter}`;
 
-    // Replace the current URL without triggering a route change
-    this.location.replaceState(updatedUrl);
+  addFragmentToUrl() {
+  const updatedUrl = `${this.location.path()}#${this.selectedFilter}`;
+  this.location.replaceState(updatedUrl);
   }
 }
 
-//TODO: Rename this function to RequestersAnalysis function with file name as requesters-analysis and create a separate requesters-presence component to make the template have <app-requesters-presence></app-requesters-presence> and move html code from line 15 to 38 from this component to the new component.
+//TODO: Rename this function to RequestersAnalysis Component with file name as requesters-analysis and create a separate requesters-presence component to make the template have <app-requesters-presence></app-requesters-presence> and move html code from line 15 to 38 from this component to the new component.
 
 
 //TODO: Remove unwanted variables in all components.

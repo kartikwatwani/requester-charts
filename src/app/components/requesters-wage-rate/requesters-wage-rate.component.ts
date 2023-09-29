@@ -12,12 +12,12 @@ export class RequestersWageRateComponent {
   data: any[] = [];
   @Input() label;
   requesterList = [];
-  @Input() employeersList: any[] = [];
   constructor(private chartService: ChartService, private router: Router) {}
+
   async ngOnInit() {
     this.data = await firstValueFrom(
       this.chartService
-        .getLimitedData('reqs','wageRate',100)
+        .getLimitedData('reqs', 'wageRate', 100)
         .snapshotChanges()
         .pipe(
           map((changes) =>
@@ -27,11 +27,13 @@ export class RequestersWageRateComponent {
     );
     this.prepareDataForEmployeeWages();
   }
+
   prepareDataForEmployeeWages() {
     this.requesterList = this.data
       .sort((a, b) => b.wageRate - a.wageRate)
       .slice(0, 100);
   }
+
   getRequesterDetail(item, key = 'name', query = 'requestersName') {
     this.router.navigate([`/requester-analysis/${item[key]}`], {
       queryParams: { name: item[query] },
@@ -43,4 +45,3 @@ export class RequestersWageRateComponent {
 
 //TODO: Move all firstValueFrom, map, snapshotChanges calls to the service, leave only simple .then or await call in the component. Do this in all components.
 
-//TODO: Convert employeersList to object. It will be easier to find the data by key.

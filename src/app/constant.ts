@@ -125,4 +125,18 @@ export class ChartConstant {
     topRequestersByDayAndHourForSubmit:'topRequestersByDayAndHourForSubmit',
     byDayAndHourForAllRequesters:'byDayAndHourForAllRequesters'
   }
+  static filters:any[]=[
+    {
+      id: 'by-presence',
+      name: 'By Presence',
+    },
+    {
+      id: 'by-wage-rate',
+      name: 'By Wage Rate',
+    },
+    {
+      id: 'by-reaction',
+      name: 'By Reaction',
+    },
+  ];
 }

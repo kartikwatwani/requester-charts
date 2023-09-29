@@ -495,14 +495,11 @@ export class ChartService {
     },
   };
 
- employeerData:Subject<any>=new BehaviorSubject({});
+  employeerData: Subject<any> = new BehaviorSubject({});
 
+  constructor(private db: AngularFireDatabase) {}
 
-  constructor(private db: AngularFireDatabase) {
-
-  }
-
-  getAcceptCounts(key: string, singleRequester = false):Promise<any[]> {
+  getAcceptCounts(key: string, singleRequester = false): Promise<any[]> {
     const newKey = this.getFilterCondition(key);
 
     let path;
@@ -511,12 +508,16 @@ export class ChartService {
     } else {
       path = key;
     }
-    return firstValueFrom(this.db.list(`/req_pre/${path}`).snapshotChanges()
-      .pipe(
-        map((changes:any[]) =>
-          changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
+    return firstValueFrom(
+      this.db
+        .list(`/req_pre/${path}`)
+        .snapshotChanges()
+        .pipe(
+          map((changes: any[]) =>
+            changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
+          )
         )
-      ));
+    );
   }
 
   getFilterCondition(key) {
@@ -527,10 +528,7 @@ export class ChartService {
       : `${key}/LosAngeles`;
   }
 
-  getSubmitCounts(
-    key: string,
-    singleRequester = false
-  ): Promise<any[]> {
+  getSubmitCounts(key: string, singleRequester = false): Promise<any[]> {
     const newKey = this.getFilterCondition(key);
     let path;
     if (!singleRequester) {
@@ -539,14 +537,15 @@ export class ChartService {
       path = key;
     }
     return firstValueFrom(
-     this.db.list(`/req_pre_by_submit_time/${path}`)
+      this.db
+        .list(`/req_pre_by_submit_time/${path}`)
         .snapshotChanges()
         .pipe(
-          map((changes:any[]) =>
+          map((changes: any[]) =>
             changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
           )
         )
-    ) ;
+    );
   }
 
   getEmployeeName(): AngularFireList<any> {
@@ -554,12 +553,24 @@ export class ChartService {
     return this.db.list(`/req_id_to_name_mapping`);
   }
 
-  getOthersEmployeeData(key: string): AngularFireList<any> {
-    return this.db.list(`/${key}`);
+  getOthersEmployeeData(key: string): any {
+    return firstValueFrom(this.db
+      .list(`/${key}`)
+      .snapshotChanges()
+      .pipe(
+        map((changes: any) =>
+          changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
+        )
+      ));
   }
 
-  getLimitedData(key: string,orderBy:string,limit:number): AngularFireList<any> {
-    return this.db.list(`/${key}`,ref=>ref.orderByChild(orderBy).limitToLast(limit));
+  getLimitedData(
+    key: string,
+    orderBy: string,
+    limit: number
+  ): AngularFireList<any> {
+    return this.db.list(`/${key}`, (ref) =>
+      ref.orderByChild(orderBy).limitToLast(limit)
+    );
   }
-
 }
