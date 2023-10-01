@@ -28,7 +28,7 @@ export class RequestersAnalysis implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.setRequesterIDToNameMapping();
+    this.getRequestersName();
     this.selectedFilter =
       this.route.snapshot.fragment !== 'null' &&
       this.route.snapshot.fragment !== null
@@ -37,7 +37,7 @@ export class RequestersAnalysis implements OnInit {
     this.addFragmentToUrl();
   }
 
-  setRequesterIDToNameMapping() {
+  getRequestersName() {
     this.chartService.getRequestersName().then((data) => {
       this.requesterIDToNameMapping = data;
     });
@@ -47,3 +47,12 @@ export class RequestersAnalysis implements OnInit {
     this.location.replaceState(`${this.location.path()}#${this.selectedFilter}`);
   }
 }
+
+//TODO: Rename component to RequestersAnalysisComponent
+
+//TODO: Remove [selectedFilter] from the template requesters-presence, requesters-wage-rate component as it is not needed.
+
+//TODO: Use relative imports everywhere in the project. in future also, check it before pushing.
+
+//TODO: Remove unused imports from the project, in future also, check it before pushing.
+
