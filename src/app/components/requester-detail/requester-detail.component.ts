@@ -22,7 +22,7 @@ export class RequesterDetailComponent implements OnInit {
   dayCount = ChartConstant.dayCount;
   chartOptions = ChartConstant.chartOptions;
 
-  @Input() label = '';
+  @Input() title = '';
   @Input() metric = '';
   @Input() submitData: any = {};
   @Input() acceptData: any = {};
@@ -33,7 +33,6 @@ export class RequesterDetailComponent implements OnInit {
   chartLegend = true;
   productiveDay = '';
   productiveHour = '';
-  barChartPlugins = [];
   chartData: any[] = [
     {
       data: [],
@@ -42,11 +41,10 @@ export class RequesterDetailComponent implements OnInit {
     },
   ];
   dayChartLabels: string[] = ChartConstant.dayChartLabels;
-  @Input() wageData: any = {};
+  @Input() wageRateData: any = {};
   @Input() reactionsData: any = {};
   constructor(
     private chartService: ChartService,
-    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {

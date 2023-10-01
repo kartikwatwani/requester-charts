@@ -8,7 +8,7 @@ export class ChartConstant {
       backgroundColor: [],
     },
   ];
-  static reactionList: any[] = [
+  static reactionsList: any[] = [
       {
       name: 'Thumbs Down',
       id: 'thumbs_down',
@@ -115,6 +115,52 @@ export class ChartConstant {
   static chartOptions: ChartOptions = {
     responsive: true,
   };
+
+  static tableTypes={
+    accept:'accept',
+    submit:"submit"
+  }
+  static chartList=[
+    {
+      label: 'Day Wise',
+      key: 'byDay',
+      width: '450px',
+      xAxisLabels: this.dayChartLabels,
+    },
+    {
+      label: 'Hour Wise',
+      key: 'byHour',
+      width: '650px',
+      xAxisLabels: this.hourChartLabels,
+    },
+    {
+      label: 'Hour Comparison Across All Days',
+      key: 'byDayAndHour',
+      width: '550px',
+      xAxisLabels: this.dayChartLabels,
+    },
+    {
+      label: 'By Day And Hour',
+      key: 'byDayAndHourForAllRequesters',
+      width: '650px',
+      xAxisLabels: this.hourChartLabels,
+    },
+    {
+      label: 'Top Requesters By Day',
+      key: 'topRequestersByDay',
+      width: '550px',
+    },
+    {
+      label: 'Top Requesters By Hour',
+      key: 'topRequestersByHour',
+      width: '550px',
+    },
+    {
+      label: 'Top Requesters By Day And Hour',
+      key: 'topRequestersByDayAndHour',
+      width: '650px',
+    },
+  ];
   static dayCount = [0, 1, 2, 3, 4, 5, 6];
   static filterType={
     topRequestersByDay:'topRequestersByDay',

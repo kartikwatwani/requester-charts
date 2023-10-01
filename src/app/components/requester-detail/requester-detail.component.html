@@ -4,7 +4,7 @@
   [ngClass]="{'section':metric==='byHour'|| metric==='byDayAndHour'}"
 >
   <div style="display: flex; flex-direction: column;">
-    <h2>{{label}}</h2>
+    <h2>{{title}}</h2>
     <div style="display: flex;">
       <mat-form-field
         *ngIf="metric ==='byDayAndHour'"
@@ -37,13 +37,16 @@
   </canvas>
   <mat-card *ngIf="metric === 'requestersDetail'">
     <div class="requesters-detail">
-      <div class="d-flex justify-content-between">
-        <h3>Top Day : {{productiveDay}}</h3>
-        <h3>Top Hour : {{productiveHour}}</h3>
+      <div class="d-flex flex-column">
+        <h3 style="font-weight: 500;">Requester Presence</h3>
+        <div class="d-flex justify-content-between">
+          <h3>Top Day : {{productiveDay}}</h3>
+          <h3>Top Hour : {{productiveHour}}</h3>
+        </div>
       </div>
       <ng-container *ngIf="(reactionsData | json) != '{}'">
         <mat-divider></mat-divider>
-        <h3 style="font-weight: 500;">Requerters Reaction</h3>
+        <h3 style="font-weight: 500;">Requester Reaction</h3>
         <div class="d-flex justify-content-between flex-wrap">
           <ng-container *ngFor="let data of reactionsData|keyvalue">
             <p *ngIf="data.key!=='key'">
@@ -52,15 +55,20 @@
           </ng-container>
         </div>
       </ng-container>
-      <ng-container *ngIf="(wageData | json) != '{}'">
+      <ng-container *ngIf="(wageRateData | json) != '{}'">
         <mat-divider></mat-divider>
-        <h3 style="font-weight: 500;">Requerters Wage</h3>
+        <h3 style="font-weight: 500;">Requester Wage</h3>
         <div>
-          <p><span>Minimum Wage</span> : {{wageData.min | number : ".2-2" }}</p>
           <p>
-            <span>Average Wage</span> : {{wageData.wageRate | number : ".2-2" }}
+            <span>Minimum Wage Rate</span> : {{wageRateData.min | number : ".2-2" }}
           </p>
-          <p><span>Maximum Wage</span> :{{ wageData.max | number : ".2-2" }}</p>
+          <p>
+            <span>Average Wage Rate</span> : {{wageRateData.wageRate | number :
+            ".2-2" }}
+          </p>
+          <p>
+            <span>Maximum Wage Rate</span> :{{ wageRateData.max | number : ".2-2" }}
+          </p>
         </div>
       </ng-container>
     </div>

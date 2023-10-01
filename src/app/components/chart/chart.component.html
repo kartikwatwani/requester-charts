@@ -1,26 +1,22 @@
 <div
   style="display: flex; flex-direction: column;"
-  *ngIf="
-    isShow
-  "
   class="chart-container"
-  [ngStyle]="(key==='byDay' ||key==='byHour' || key==='byDayAndHourForAllRequesters'|| key==='byDayAndHour') &&{'width':width}"
+  [ngStyle]="(metric==='byDay' ||metric==='byHour' || metric==='byDayAndHourForAllRequesters'|| metric==='byDayAndHour') &&{'width':width}"
 >
   <div style="display: flex; align-items: flex-start; flex-direction: column;">
     <h2>
-      {{ label }}
+      {{ title }}
     </h2>
 
     <ng-container>
-      <div style="display: flex;    width: 100%;
-      ">
+      <div style="display: flex; width: 100%;">
         <mat-form-field
           *ngIf="
-            key === 'topRequestersByDay' ||
-            key === 'topRequestersByDayAndHour' ||
-            key === 'topRequestersByDayForSubmit' ||
-            key === 'topRequestersByDayAndHourForSubmit' ||
-            key === 'byDayAndHourForAllRequesters'
+            metric === 'topRequestersByDay' ||
+            metric === 'topRequestersByDayAndHour' ||
+            metric === 'topRequestersByDayForSubmit' ||
+            metric === 'topRequestersByDayAndHourForSubmit' ||
+            metric === 'byDayAndHourForAllRequesters'
           "
           appearance="outline"
         >
@@ -39,11 +35,11 @@
         <mat-form-field
           style="margin-left: 10px;"
           *ngIf="
-            key === 'byDayAndHour' ||
-            key === 'topRequestersByHour' ||
-            key === 'topRequestersByHourForSubmit' ||
-            key === 'topRequestersByDayAndHour' ||
-            key === 'topRequestersByDayAndHourForSubmit'
+            metric === 'byDayAndHour' ||
+            metric === 'topRequestersByHour' ||
+            metric === 'topRequestersByHourForSubmit' ||
+            metric === 'topRequestersByDayAndHour' ||
+            metric === 'topRequestersByDayAndHourForSubmit'
           "
           appearance="outline"
         >
@@ -61,12 +57,12 @@
         <mat-form-field
           style="position: relative; margin-left: 20px;"
           *ngIf="
-            key === 'topRequestersByDay' ||
-            key === 'topRequestersByHour' ||
-            key === 'topRequestersByDayAndHour' ||
-            key === 'topRequestersByDayForSubmit' ||
-            key === 'topRequestersByHourForSubmit' ||
-            key === 'topRequestersByDayAndHourForSubmit'
+            metric === 'topRequestersByDay' ||
+            metric === 'topRequestersByHour' ||
+            metric === 'topRequestersByDayAndHour' ||
+            metric === 'topRequestersByDayForSubmit' ||
+            metric === 'topRequestersByHourForSubmit' ||
+            metric === 'topRequestersByDayAndHourForSubmit'
           "
           appearance="outline"
         >
@@ -95,7 +91,7 @@
     >
     </canvas>
   </ng-container>
-  <ng-container *ngIf="requesterList.length > 0; else noRequesters">
+  <ng-container *ngIf="topRequestersList.length > 0; else noRequesters">
     <div class="table-container">
       <table class="table">
         <thead>
@@ -103,20 +99,20 @@
             <th scope="col">S.No</th>
             <th scope="col">Name</th>
             <th scope="col">
-              {{ key === "topRequestersByDay" || key === "topRequestersByHour"
-              || key === "topRequestersByDayAndHour" ? "Accept Percentage" :
-              "Submit Percentage" }}
+              {{ metric === "topRequestersByDay" || metric ===
+              "topRequestersByHour" || metric === "topRequestersByDayAndHour" ?
+              "Accept Percentage" : "Submit Percentage" }}
             </th>
             <th scope="col"></th>
           </tr>
         </thead>
-        <tbody *ngFor="let item of requesterList; let i = index">
+        <tbody *ngFor="let item of topRequestersList; let i = index">
           <tr>
             <td>{{ i + 1 }}</td>
             <td>{{ item.requestersName }}</td>
             <td>{{ item.acceptPercentage }}</td>
             <td>
-              <a (click)="getRequesterDetail(item)" [queryParams]="{key}"
+              <a (click)="getRequesterDetail(item)" [queryParams]="{metric}"
                 >Requester Detail</a
               >
             </td>
@@ -129,10 +125,10 @@
     <p
       style="text-align: center;"
       *ngIf="
-        key !== 'byDay' &&
-        key !== 'byHour' &&
-        key !== 'byDayAndHour' &&
-        key !== 'byDayAndHourForAllRequesters'
+        metric !== 'byDay' &&
+        metric !== 'byHour' &&
+        metric !== 'byDayAndHour' &&
+        metric !== 'byDayAndHourForAllRequesters'
       "
     >
       No Requesters Found

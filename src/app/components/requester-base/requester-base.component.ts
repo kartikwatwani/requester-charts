@@ -1,9 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Chart } from '../requesters-presence/requesters-presence';
+import { ActivatedRoute } from '@angular/router';
+import { Chart } from '../requesters-analysis/requesters-analysis';
 import { ChartService } from '../../services/chart.service';
 import { ChartConstant } from '../../constant';
-import { firstValueFrom, map } from 'rxjs';
 
 @Component({
   selector: 'app-requesters-base',
@@ -11,15 +10,15 @@ import { firstValueFrom, map } from 'rxjs';
   styleUrls: ['./requester-base.component.scss'],
 })
 export class RequesterBaseComponent implements OnInit, OnDestroy {
-  key: string = '';
+  requesterID: string = '';
   acceptData: any = {};
   submitData: any = {};
-  wageData: any = {};
+  wageRateData: any = {};
   reactionsData: any = {};
   requestersName: string = '';
   chartsList: Chart[] = [
     {
-      label: 'Requesters Detail',
+      label: 'Summary',
       key: 'requestersDetail',
     },
     {
@@ -39,16 +38,13 @@ export class RequesterBaseComponent implements OnInit, OnDestroy {
     },
   ];
   constructor(
-    private router: Router,
     private chartService: ChartService,
     private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.requestersName = this.route.snapshot.queryParams['name'];
-    this.key = this.route.snapshot.url[1].path;
-    console.log(this.key);
-
+    this.requesterID = this.route.snapshot.url[1].path;
     this.getData();
   }
 
@@ -57,7 +53,7 @@ export class RequesterBaseComponent implements OnInit, OnDestroy {
   async getData() {
     this.acceptData = {};
     const acceptData = await this.chartService.getAcceptCounts(
-      `byRequesterID/${this.key}`,
+      `byRequesterID/${this.requesterID}`,
       true
     );
 
@@ -66,7 +62,7 @@ export class RequesterBaseComponent implements OnInit, OnDestroy {
     }
 
     const submitData = await this.chartService.getSubmitCounts(
-      `byRequesterID/${this.key}`,
+      `byRequesterID/${this.requesterID}`,
       true
     );
 
@@ -74,20 +70,15 @@ export class RequesterBaseComponent implements OnInit, OnDestroy {
       this.submitData = submitData[0];
     }
 
-    const requestersReaction = await this.chartService.getOthersEmployeeData(
-      `reacts/requester/${this.key}`
+    const requestersReaction = await this.chartService.getDataAtPath(
+      `reacts/requester/${this.requesterID}`
     );
 
     if (requestersReaction.length > 0) {
       this.reactionsData = requestersReaction[0];
     }
-    this.wageData = (
-      await this.chartService.getOthersEmployeeData(`reqs`)
-    ).filter((item) => item.key == this.key)[0];
-    console.log(this.wageData);
+    this.wageRateData = (
+      await this.chartService.getDataAtPath(`reqs`)
+    ).filter((item) => item.key == this.requesterID)[0];
   }
 }
-
-// TODO: When viewing a particular requester data, add a card to show details about requesters average, min and max wage rate. Also, add data about reactions.
-
-//TODO: Rename the component RequestersBaseComponent to RequesterBaseComponent. Also, rename the folder and files from requesters-base to requester-base.

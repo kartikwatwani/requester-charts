@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RequestersPresenceComponent } from './requesters-presence';
+import { RequestersPresenceComponent } from './requesters-presence.component';
 
 describe('RequestersPresenceComponent', () => {
   let component: RequestersPresenceComponent;

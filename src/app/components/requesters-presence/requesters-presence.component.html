@@ -1,0 +1,14 @@
+<div  class="parent-container">
+<div *ngFor="let chart of chartsList" >
+  <app-chart
+    [selectedFilter]="selectedFilter"
+    [metric]="chart.key"
+    [width]="chart.width"
+    [presenceType]="presenceType"
+    [title]="chart.label"
+    [requesterIDToNameMapping]="requesterIDToNameMapping"
+    [xAxisLabels]="chart.xAxisLabels"
+  >
+  </app-chart>
+</div>
+</div>

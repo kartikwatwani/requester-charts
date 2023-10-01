@@ -10,23 +10,22 @@ import { ChartService } from 'src/app/services/chart.service';
   styleUrls: ['./requesters-reactions.component.scss'],
 })
 export class RequestersReactionsComponent {
-  @Input() label;
-  requesterList = [];
-  reactionList = ChartConstant.reactionList;
+  employeerList = [];
+  reactionList = ChartConstant.reactionsList;
   selectedReaction = this.reactionList[0].id;
-  @Input() requestersIDToNameMapping: any[] = [];
+  @Input() requesterIDToNameMapping: any = {};
 
   constructor(private chartService: ChartService, private router: Router) {}
 
   async ngOnInit() {
-    this.requesterList = await this.chartService.getOthersEmployeeData(
+    this.employeerList = await this.chartService.getDataAtPath(
       'reacts/requester'
     );
     this.prepareDataForRequesterReaction();
   }
 
   prepareDataForRequesterReaction() {
-    this.requesterList = this.requesterList
+    this.employeerList = this.employeerList
       .sort(
         (a, b) =>
           b.summary[this.selectedReaction] - a.summary[this.selectedReaction]
@@ -36,22 +35,9 @@ export class RequestersReactionsComponent {
   }
 
   mappedNameForEmployer() {
-    this.requesterList.forEach((requester) => {
-      const index = this.requestersIDToNameMapping.findIndex(
-        (item) => item.key === requester.key
-      );
-      if (index > -1) {
-        const obj = { ...this.requestersIDToNameMapping[index] };
-        delete obj.key;
-        const values = Object.values(obj);
-        let concatenatedString = values.join('').replace(/ +/g, ' ');
-        if (concatenatedString.charAt(0) === ' ') {
-          concatenatedString = concatenatedString.slice(1);
-        }
-        requester.requestersName = concatenatedString;
-      } else {
-        requester.requestersName = requester.key;
-      }
+    this.employeerList.forEach((requester) => {
+      requester.requestersName =
+        this.requesterIDToNameMapping[requester.key] || requester.key;
     });
   }
 

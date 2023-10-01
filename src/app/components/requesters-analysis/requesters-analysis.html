@@ -12,40 +12,21 @@
     </mat-select>
   </mat-form-field>
 </div>
-<div
-  class="container"
-  style="
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0px 16px 0px 16px;
-  "
-  *ngIf="requesterList.length>0 && selectedFilter=='by-presence'"
->
-  <div *ngFor="let chart of chartsList">
-    <app-chart
-      [selectedFilter]="selectedFilter"
-      [key]="chart.key"
-      [isShow]="chart.isShow"
-      [width]="chart.width"
-      [presenceType]="presenceType"
-      [label]="chart.label"
-      [requesterIDToNameMapping]="requesterList"
-      [xAxisLabels]="chart.xAxisLabels"
-    >
-    </app-chart>
-  </div>
+<div class="container parent-container" *ngIf="selectedFilter=='by-presence'">
+  <app-requesters-presence
+    [requesterIDToNameMapping]="requesterIDToNameMapping"
+  >
+  </app-requesters-presence>
 </div>
 <app-requesters-wage-rate
   *ngIf="selectedFilter==='by-wage-rate'"
   [selectedFilter]="selectedFilter"
-
 >
 </app-requesters-wage-rate>
 
 <app-requesters-reactions
   *ngIf="selectedFilter==='by-reaction'"
   [selectedFilter]="selectedFilter"
-  [requestersIDToNameMapping]="requesterList"
+  [requesterIDToNameMapping]="requesterIDToNameMapping"
 >
 </app-requesters-reactions>
