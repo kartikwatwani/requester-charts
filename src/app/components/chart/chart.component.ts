@@ -40,7 +40,7 @@ export class ChartComponent {
   @Input() presenceType = 'accept';
   @Input() selectedFilter: string = '';
   @Input() width = '';
-  
+
   topRequestersList: any[] = [];
   selectedHour = '';
   selectedDay = '';
@@ -499,3 +499,5 @@ export class ChartComponent {
     return array;
   }
 }
+
+//TODO: Separate Chart and table component.
