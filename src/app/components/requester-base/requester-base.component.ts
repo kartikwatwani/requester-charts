@@ -34,7 +34,7 @@ export class RequesterBaseComponent implements OnInit, OnDestroy {
     {
       label: 'By Day And Hour',
       key: 'byDayAndHour',
-      xAxisLabels: ChartConstant.dayChartLabels,
+      xAxisLabels: ChartConstant.hourChartLabels,
     },
   ];
   constructor(

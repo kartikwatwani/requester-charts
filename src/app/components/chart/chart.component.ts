@@ -39,8 +39,8 @@ export class ChartComponent {
   @Input() metric = 'byDay';
   @Input() presenceType = 'accept';
   @Input() selectedFilter: string = '';
-  selectedReaction = this.reactionList[0].id;
   @Input() width = '';
+  
   topRequestersList: any[] = [];
   selectedHour = '';
   selectedDay = '';
@@ -56,7 +56,6 @@ export class ChartComponent {
 
   constructor(
     private chartService: ChartService,
-    private route: ActivatedRoute,
     private router: Router
   ) {}
 

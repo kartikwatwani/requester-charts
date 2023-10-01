@@ -1,7 +1,5 @@
 import {
-  ChangeDetectorRef,
   Component,
-  DoCheck,
   Input,
   OnInit,
 } from '@angular/core';
@@ -27,6 +25,8 @@ export class RequesterDetailComponent implements OnInit {
   @Input() submitData: any = {};
   @Input() acceptData: any = {};
   @Input() xAxisLabels: any[];
+  @Input() wageRateData: any = {};
+  @Input() reactionsData: any = {};
 
   selectedHour = this.hoursList[0].value;
   selectedDay = this.dayList[0].id;
@@ -40,9 +40,7 @@ export class RequesterDetailComponent implements OnInit {
       backgroundColor: [],
     },
   ];
-  dayChartLabels: string[] = ChartConstant.dayChartLabels;
-  @Input() wageRateData: any = {};
-  @Input() reactionsData: any = {};
+
   constructor(
     private chartService: ChartService,
   ) {}
@@ -124,7 +122,7 @@ export class RequesterDetailComponent implements OnInit {
     const newArray: number[] = [];
     switch (this.metric) {
       case 'byDay':
-        if (chartDetail && chartDetail.LosAngeles.byDay) {
+        if (chartDetail?.LosAngeles?.byDay) {
           this.dayCount.forEach((_, index) => {
             array.push(chartDetail.LosAngeles.byDay[index] || 0);
           });
@@ -138,9 +136,9 @@ export class RequesterDetailComponent implements OnInit {
             newArray.push(element);
           });
         }
-        return array;
+        return newArray;
       case 'byHour':
-        if (chartDetail && chartDetail.LosAngeles.byHour) {
+        if (chartDetail?.LosAngeles?.byHour) {
           this.hourCount.forEach((_, index) => {
             array.push(chartDetail.LosAngeles.byHour[index] || 0);
           });
@@ -154,14 +152,13 @@ export class RequesterDetailComponent implements OnInit {
             newArray.push(element);
           });
         }
-        return array;
+        return newArray;
       case 'byDayAndHour':
         this.chartData[0].data = [];
         array = [];
         this.dayCount.forEach((day) => {
           if (
-            chartDetail &&
-            chartDetail.LosAngeles.byDayAndHour[day] &&
+            chartDetail?.LosAngeles?.byDayAndHour[day] &&
             day === this.selectedDay
           ) {
             let sum: any = 0;
@@ -192,3 +189,5 @@ export class RequesterDetailComponent implements OnInit {
     }
   }
 }
+
+//TODO: Select option is not working for byDayAndHour chart for particular requester.

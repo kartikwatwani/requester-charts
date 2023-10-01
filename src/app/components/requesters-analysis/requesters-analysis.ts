@@ -28,7 +28,7 @@ export class RequestersAnalysis implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.getRequestersName();
+    this.setRequesterIDToNameMapping();
     this.selectedFilter =
       this.route.snapshot.fragment !== 'null' &&
       this.route.snapshot.fragment !== null
@@ -37,7 +37,7 @@ export class RequestersAnalysis implements OnInit {
     this.addFragmentToUrl();
   }
 
-  getRequestersName() {
+  setRequesterIDToNameMapping() {
     this.chartService.getRequestersName().then((data) => {
       this.requesterIDToNameMapping = data;
     });

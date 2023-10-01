@@ -1,39 +1,18 @@
-<div
-  style="display: block;"
-  class="chart-container"
-  [ngClass]="{'section':metric==='byHour'|| metric==='byDayAndHour'}"
->
+<div style="display: block;" class="chart-container"
+  [ngClass]="{'section':metric==='byHour'|| metric==='byDayAndHour'}">
   <div style="display: flex; flex-direction: column;">
     <h2>{{title}}</h2>
     <div style="display: flex;">
-      <mat-form-field
-        *ngIf="metric ==='byDayAndHour'"
-        appearance="outline"
-        style="margin-left: 20px;"
-      >
+      <mat-form-field *ngIf="metric ==='byDayAndHour'" appearance="outline" style="margin-left: 20px;">
         <mat-label>Day</mat-label>
-        <mat-select
-          name="selectedDay"
-          [(ngModel)]="selectedDay"
-          (selectionChange)="prepareData()"
-        >
-          <mat-option [value]="item.id" *ngFor="let item of dayList"
-            >{{ item.name }}</mat-option
-          >
+        <mat-select name="selectedDay" [(ngModel)]="selectedDay" (selectionChange)="prepareData()">
+          <mat-option [value]="item.id" *ngFor="let item of dayList">{{ item.name }}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
   </div>
-  <canvas
-    *ngIf="acceptData &&metric !== 'requestersDetail'"
-    baseChart
-    [datasets]="chartData"
-    [labels]="xAxisLabels"
-    [chartType]="chartType"
-    [options]="chartOptions"
-    [plugins]="barChartPlugins"
-    [legend]="chartLegend"
-  >
+  <canvas *ngIf="acceptData && metric !== 'requestersDetail'" baseChart [datasets]="chartData" [labels]="xAxisLabels"
+    [chartType]="chartType" [options]="chartOptions" [plugins]="barChartPlugins" [legend]="chartLegend">
   </canvas>
   <mat-card *ngIf="metric === 'requestersDetail'">
     <div class="requesters-detail">
