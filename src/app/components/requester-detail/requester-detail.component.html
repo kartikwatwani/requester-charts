@@ -29,7 +29,7 @@
         <div class="d-flex justify-content-between flex-wrap">
           <ng-container *ngFor="let data of reactionsData|keyvalue">
             <p *ngIf="data.key!=='key'">
-              <span>{{data.key|uppercase}}</span> : {{data.value}}
+              <span>{{data?.key|uppercase}}</span> : {{data.value}}
             </p>
           </ng-container>
         </div>
@@ -39,14 +39,14 @@
         <h3 style="font-weight: 500;">Requester Wage</h3>
         <div>
           <p>
-            <span>Minimum Wage Rate</span> : {{wageRateData.min | number : ".2-2" }}
+            <span>Minimum Wage Rate</span> : {{wageRateData?.min | number : ".2-2" }}
           </p>
           <p>
-            <span>Average Wage Rate</span> : {{wageRateData.wageRate | number :
+            <span>Average Wage Rate</span> : {{wageRateData?.wageRate | number :
             ".2-2" }}
           </p>
           <p>
-            <span>Maximum Wage Rate</span> :{{ wageRateData.max | number : ".2-2" }}
+            <span>Maximum Wage Rate</span> :{{ wageRateData?.max | number : ".2-2" }}
           </p>
         </div>
       </ng-container>

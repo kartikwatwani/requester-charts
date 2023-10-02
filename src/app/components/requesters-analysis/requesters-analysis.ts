@@ -17,7 +17,7 @@ export interface Chart {
   templateUrl: './requesters-analysis.html',
   styleUrls: ['./requesters-analysis.scss'],
 })
-export class RequestersAnalysis implements OnInit {
+export class RequestersAnalysisComponent implements OnInit {
   requesterIDToNameMapping: any = {};
   filters: any[] = ChartConstant.filters;
   selectedFilter = this.filters[0].id;

@@ -4,7 +4,7 @@ import {
   OnInit,
 } from '@angular/core';
 import { ChartConstant } from '../../constant';
-import { ChartService } from 'src/app/services/chart.service';
+import { ChartService } from "../../services/chart.service"
 let productiveDay = '';
 let productiveHour = '';
 @Component({
