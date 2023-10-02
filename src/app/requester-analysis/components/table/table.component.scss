@@ -1,0 +1,10 @@
+.table-container{
+  height: 400px; overflow: auto;
+}
+a {
+  color: #0d6efd !important;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline !important;
+  }
+}

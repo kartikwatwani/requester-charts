@@ -1,12 +1,9 @@
-import {
-  Component,
-  Input,
-  OnInit,
-} from '@angular/core';
-import { ChartConstant } from '../../constant';
-import { ChartService } from "../../services/chart.service"
-let productiveDay = '';
-let productiveHour = '';
+import { Component, Input, OnInit } from '@angular/core';
+import { ChartConstant } from '../../../constant';
+import { ChartService } from '../../../services/chart.service';
+let mostActiveDay = '';
+let mostActiveHour = '';
+
 @Component({
   selector: 'app-requester-detail',
   templateUrl: './requester-detail.component.html',
@@ -31,8 +28,8 @@ export class RequesterDetailComponent implements OnInit {
   selectedHour = this.hoursList[0].value;
   selectedDay = this.dayList[0].id;
   chartLegend = true;
-  productiveDay = '';
-  productiveHour = '';
+  mostActiveDay = '';
+  mostActiveHour = '';
   chartData: any[] = [
     {
       data: [],
@@ -41,15 +38,13 @@ export class RequesterDetailComponent implements OnInit {
     },
   ];
 
-  constructor(
-    private chartService: ChartService,
-  ) {}
+  constructor(private chartService: ChartService) {}
 
   ngOnInit(): void {
     this.chartService.employeerData.subscribe((res) => {
       setTimeout(() => {
-        this.productiveDay = res.productiveDay;
-        this.productiveHour = res.productiveHour;
+        this.mostActiveDay = res.mostActiveDay;
+        this.mostActiveHour = res.mostActiveHour;
       }, 100);
     });
     const currentDate = new Date();
@@ -94,15 +89,12 @@ export class RequesterDetailComponent implements OnInit {
         const maxValue = Math.max(...resultArray);
         const indexOfMaxValue = resultArray.indexOf(maxValue);
         if (this.metric === 'byDay') {
-          productiveDay = this.dayList[indexOfMaxValue].name;
+          mostActiveDay = this.dayList[indexOfMaxValue].name;
         } else {
-          productiveHour = this.hoursList[indexOfMaxValue].name;
+          mostActiveHour = this.hoursList[indexOfMaxValue].name;
         }
-        this.chartService.employeerData.next({ productiveDay, productiveHour });
+        this.chartService.employeerData.next({ mostActiveDay, mostActiveHour });
       }
-    }
-
-    if (this.metric === 'requestersDetail') {
     }
   }
 
@@ -189,5 +181,3 @@ export class RequesterDetailComponent implements OnInit {
     }
   }
 }
-
-//TODO: Select option is not working for byDayAndHour chart for particular requester.

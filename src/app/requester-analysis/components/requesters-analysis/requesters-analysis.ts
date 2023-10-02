@@ -1,9 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { firstValueFrom, map } from 'rxjs';
-import { ChartService } from '../../services/chart.service';
+import { Component, OnInit } from '@angular/core';
+import { ChartService } from '../../../services/chart.service';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { ChartConstant } from 'src/app/constant';
+import { ChartConstant } from '../../../constant';
 
 export interface Chart {
   label: string;
@@ -48,11 +47,8 @@ export class RequestersAnalysisComponent implements OnInit {
   }
 }
 
-//TODO: Rename component to RequestersAnalysisComponent
 
-//TODO: Remove [selectedFilter] from the template requesters-presence, requesters-wage-rate component as it is not needed.
 
-//TODO: Use relative imports everywhere in the project. in future also, check it before pushing.
 
 //TODO: Remove unused imports from the project, in future also, check it before pushing.
 

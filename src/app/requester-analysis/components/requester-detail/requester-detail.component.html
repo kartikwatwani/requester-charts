@@ -19,8 +19,8 @@
       <div class="d-flex flex-column">
         <h3 style="font-weight: 500;">Requester Presence</h3>
         <div class="d-flex justify-content-between">
-          <h3>Top Day : {{productiveDay}}</h3>
-          <h3>Top Hour : {{productiveHour}}</h3>
+          <h3>Top Day : {{mostActiveDay}}</h3>
+          <h3>Top Hour : {{mostActiveHour}}</h3>
         </div>
       </div>
       <ng-container *ngIf="(reactionsData | json) != '{}'">

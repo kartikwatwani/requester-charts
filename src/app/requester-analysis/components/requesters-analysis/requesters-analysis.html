@@ -20,13 +20,11 @@
 </div>
 <app-requesters-wage-rate
   *ngIf="selectedFilter==='by-wage-rate'"
-  [selectedFilter]="selectedFilter"
 >
 </app-requesters-wage-rate>
 
 <app-requesters-reactions
   *ngIf="selectedFilter==='by-reaction'"
-  [selectedFilter]="selectedFilter"
   [requesterIDToNameMapping]="requesterIDToNameMapping"
 >
 </app-requesters-reactions>

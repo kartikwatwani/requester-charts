@@ -1,0 +1,31 @@
+<div class="parent-container">
+  <div *ngFor="let chart of chartsList">
+    <ng-container
+      *ngIf="
+        chart.key === 'byDay' ||
+          chart.key === 'byHour' ||
+          chart.key === 'byDayAndHour' ||
+          chart.key === 'byDayAndHourForAllRequesters';
+        else tableData
+      "
+    >
+      <app-chart
+        [metric]="chart.key"
+        [width]="chart.width"
+        [presenceType]="presenceType"
+        [title]="chart.label"
+        [xAxisLabels]="chart.xAxisLabels"
+      >
+      </app-chart>
+    </ng-container>
+    <ng-template #tableData>
+      <app-table
+        [metric]="chart.key"
+        [presenceType]="presenceType"
+        [title]="chart.label"
+        [requesterIDToNameMapping]="requesterIDToNameMapping"
+      >
+      </app-table>
+    </ng-template>
+  </div>
+</div>

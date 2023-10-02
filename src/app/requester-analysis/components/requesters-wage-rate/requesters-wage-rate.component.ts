@@ -1,7 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { firstValueFrom, map } from 'rxjs';
-import { ChartService } from 'src/app/services/chart.service';
+import { ChartService } from '../../../services/chart.service';
 
 @Component({
   selector: 'app-requesters-wage-rate',
@@ -14,16 +13,7 @@ export class RequestersWageRateComponent {
   constructor(private chartService: ChartService, private router: Router) {}
 
   async ngOnInit() {
-    this.data = await firstValueFrom(
-      this.chartService
-        .getLimitedData('reqs', 'wageRate', 100)
-        .snapshotChanges()
-        .pipe(
-          map((changes) =>
-            changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
-          )
-        )
-    );
+    this.data = await this.chartService.getLimitedData('reqs', 'wageRate', 100);
     this.prepareDataForEmployeeWages();
   }
 
@@ -41,3 +31,4 @@ export class RequestersWageRateComponent {
 }
 
 //FIXME: When clicking "Requesters Details" button from from the table of wage rate component the charts are not showing up on the requester-detail component.
+//TO create a module requester-anyalsis

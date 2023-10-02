@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { firstValueFrom, map } from 'rxjs';
-import { ChartConstant } from 'src/app/constant';
-import { ChartService } from 'src/app/services/chart.service';
+import { ChartConstant } from '../../../constant';
+import { ChartService } from '../../../services/chart.service';
 
 @Component({
   selector: 'app-requesters-reactions',

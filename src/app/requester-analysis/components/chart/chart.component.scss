@@ -4,13 +4,7 @@
 .chart{
   width: 450px;
 }
-a {
-  color: #0d6efd !important;
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline !important;
-  }
-}
+
 .common-margin{
   position: relative;
   left: 250px;
@@ -34,7 +28,4 @@ a {
 }
 .new-section{
   position: absolute; left: 3%;
-}
-.table-container{
-  height: 400px; overflow: auto;
 }

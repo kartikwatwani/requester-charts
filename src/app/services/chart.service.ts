@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
-import {
-  AngularFireDatabase,
-  AngularFireList,
-} from '@angular/fire/compat/database';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { BehaviorSubject, Subject, firstValueFrom, map } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
 export class ChartService {
   employeerData: Subject<any> = new BehaviorSubject({});
+  requesterList: BehaviorSubject<any> = new BehaviorSubject({});
   constructor(private db: AngularFireDatabase) {}
 
   getAcceptCounts(key: string, singleRequester = false): Promise<any[]> {
@@ -85,14 +83,16 @@ export class ChartService {
     );
   }
 
-  getLimitedData(
-    key: string,
-    orderBy: string,
-    limit: number
-  ): AngularFireList<any> {
-    return this.db.list(`/${key}`, (ref) =>
-      ref.orderByChild(orderBy).limitToLast(limit)
+  getLimitedData(key: string, orderBy: string, limit: number): any {
+    return firstValueFrom(
+      this.db
+        .list(`/${key}`, (ref) => ref.orderByChild(orderBy).limitToLast(limit))
+        .snapshotChanges()
+        .pipe(
+          map((changes: any) =>
+            changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
+          )
+        )
     );
   }
 }
-

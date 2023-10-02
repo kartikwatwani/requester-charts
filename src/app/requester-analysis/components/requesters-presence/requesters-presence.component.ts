@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ChartConstant } from 'src/app/constant';
-import { Chart } from '../requesters-analysis/requesters-analysis';
+import { ChartConstant } from '../../../constant';
 
 @Component({
   selector: 'app-requesters-presence',
@@ -57,5 +56,3 @@ export class RequestersPresenceComponent implements OnInit {
 
   }
 }
-
-//TODO: Move chartList from constant to
