@@ -29,3 +29,5 @@ export class RequestersWageRateComponent {
     });
   }
 }
+
+//TODO: Add a slider to set minimum count for top 100 requesters i.e. if the value of slider is 50, then we need to find top 100 requesters who have the requester.count value at least 50.
