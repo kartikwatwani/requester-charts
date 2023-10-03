@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChartService } from '../../../services/chart.service';
+import { ChartService } from '../../services/chart.service';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ChartConstant } from '../../../constant';

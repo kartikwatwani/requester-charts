@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Chart } from '../requesters-analysis/requesters-analysis';
-import { ChartService } from '../../../services/chart.service';
+import { ChartService } from '../../services/chart.service';
 import { ChartConstant } from '../../../constant';
 
 @Component({
@@ -12,6 +12,7 @@ import { ChartConstant } from '../../../constant';
 export class RequesterBaseComponent implements OnInit, OnDestroy {
   requesterID: string = '';
   acceptData: any = {};
+  renderDetail = false;
   submitData: any = {};
   wageRateData: any = {};
   reactionsData: any = {};
@@ -61,6 +62,8 @@ export class RequesterBaseComponent implements OnInit, OnDestroy {
       this.acceptData = acceptData[0];
     }
 
+    console.log(acceptData);
+
     const submitData = await this.chartService.getSubmitCounts(
       `byRequesterID/${this.requesterID}`,
       true
@@ -70,15 +73,10 @@ export class RequesterBaseComponent implements OnInit, OnDestroy {
       this.submitData = submitData[0];
     }
 
-    const requestersReaction = await this.chartService.getDataAtPath(
+    this.reactionsData = await this.chartService.getDataAtPathAsObject(
       `reacts/requester/${this.requesterID}`
     );
-
-    if (requestersReaction.length > 0) {
-      this.reactionsData = requestersReaction[0];
-    }
-    this.wageRateData = (
-      await this.chartService.getDataAtPath(`reqs`)
-    ).filter((item) => item.key == this.requesterID)[0];
+    this.wageRateData = await this.chartService.getDataAtPathAsObject(`reqs/${this.requesterID}`)
+    this.renderDetail = true;
   }
 }

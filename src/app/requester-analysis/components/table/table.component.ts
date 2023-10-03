@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ChartConstant } from '../../../constant';
 import { Router } from '@angular/router';
-import { ChartService } from '../../../services/chart.service';
+import { ChartService } from '../../services/chart.service';
 let topList = {
   byDay: {
     accept: [],

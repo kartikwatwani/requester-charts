@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ChartService } from '../../../services/chart.service';
+import { ChartService } from '../../services/chart.service';
 
 @Component({
   selector: 'app-requesters-wage-rate',
@@ -29,6 +29,3 @@ export class RequestersWageRateComponent {
     });
   }
 }
-
-//FIXME: When clicking "Requesters Details" button from from the table of wage rate component the charts are not showing up on the requester-detail component.
-//TO create a module requester-anyalsis

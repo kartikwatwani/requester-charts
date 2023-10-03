@@ -1,18 +1,44 @@
-<div style="display: block;" class="chart-container"
-  [ngClass]="{'section':metric==='byHour'|| metric==='byDayAndHour'}">
+<div
+  style="display: block;"
+  class="chart-container"
+  [ngClass]="{'section':metric==='byHour'|| metric==='byDayAndHour'}"
+>
   <div style="display: flex; flex-direction: column;">
-    <h2>{{title}}</h2>
-    <div style="display: flex;">
-      <mat-form-field *ngIf="metric ==='byDayAndHour'" appearance="outline" style="margin-left: 20px;">
+    <h2 *ngIf="(acceptData | json) != '{}' ||(submitData | json) != '{}'">
+      {{title}}
+    </h2>
+    <div
+      style="display: flex;"
+      *ngIf="(acceptData | json) != '{}' ||(submitData | json) != '{}'"
+    >
+      <mat-form-field
+        *ngIf="metric ==='byDayAndHour'"
+        appearance="outline"
+        style="margin-left: 20px;"
+      >
         <mat-label>Day</mat-label>
-        <mat-select name="selectedDay" [(ngModel)]="selectedDay" (selectionChange)="prepareData()">
-          <mat-option [value]="item.id" *ngFor="let item of dayList">{{ item.name }}</mat-option>
+        <mat-select
+          name="selectedDay"
+          [(ngModel)]="selectedDay"
+          (selectionChange)="prepareData()"
+        >
+          <mat-option [value]="item.id" *ngFor="let item of dayList"
+            >{{ item.name }}</mat-option
+          >
         </mat-select>
       </mat-form-field>
     </div>
   </div>
-  <canvas *ngIf="acceptData && metric !== 'requestersDetail'" baseChart [datasets]="chartData" [labels]="xAxisLabels"
-    [chartType]="chartType" [options]="chartOptions" [plugins]="barChartPlugins" [legend]="chartLegend">
+  <canvas
+    *ngIf="metric !== 'requestersDetail'"
+    baseChart
+    [datasets]="chartData"
+    [labels]="xAxisLabels"
+    [chartType]="chartType"
+    [options]="chartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="chartLegend"
+  >
   </canvas>
   <mat-card *ngIf="metric === 'requestersDetail'">
     <div class="requesters-detail">
@@ -27,7 +53,7 @@
         <mat-divider></mat-divider>
         <h3 style="font-weight: 500;">Requester Reaction</h3>
         <div class="d-flex justify-content-between flex-wrap">
-          <ng-container *ngFor="let data of reactionsData|keyvalue">
+          <ng-container *ngFor="let data of reactionsData.summary|keyvalue">
             <p *ngIf="data.key!=='key'">
               <span>{{data?.key|uppercase}}</span> : {{data.value}}
             </p>
@@ -36,17 +62,19 @@
       </ng-container>
       <ng-container *ngIf="(wageRateData | json) != '{}'">
         <mat-divider></mat-divider>
-        <h3 style="font-weight: 500;">Requester Wage</h3>
+        <h3 style="font-weight: 500;margin-top: 16px;">Requester Wage</h3>
         <div>
           <p>
-            <span>Minimum Wage Rate</span> : {{wageRateData?.min | number : ".2-2" }}
+            <span>Minimum Wage Rate</span> : {{wageRateData?.min | number :
+            ".2-2" }}
           </p>
           <p>
             <span>Average Wage Rate</span> : {{wageRateData?.wageRate | number :
             ".2-2" }}
           </p>
           <p>
-            <span>Maximum Wage Rate</span> :{{ wageRateData?.max | number : ".2-2" }}
+            <span>Maximum Wage Rate</span> :{{ wageRateData?.max | number :
+            ".2-2" }}
           </p>
         </div>
       </ng-container>

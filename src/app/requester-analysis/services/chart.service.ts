@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { BehaviorSubject, Subject, firstValueFrom, map } from 'rxjs';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -70,7 +71,7 @@ export class ChartService {
     );
   }
 
-  getDataAtPath(key: string): any {
+  getDataAtPathAsList(key: string): any {
     return firstValueFrom(
       this.db
         .list(`/${key}`)
@@ -80,6 +81,14 @@ export class ChartService {
             changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
           )
         )
+    );
+  }
+
+  getDataAtPathAsObject(key: string): any {
+    return firstValueFrom(
+      this.db
+        .object(`/${key}`)
+        .valueChanges()
     );
   }
 

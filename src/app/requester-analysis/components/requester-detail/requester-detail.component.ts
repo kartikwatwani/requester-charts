@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ChartConstant } from '../../../constant';
-import { ChartService } from '../../../services/chart.service';
+import { ChartService } from '../../services/chart.service';
 let mostActiveDay = '';
 let mostActiveHour = '';
 
@@ -16,7 +16,6 @@ export class RequesterDetailComponent implements OnInit {
   hourCount: number[] = ChartConstant.hourCount;
   dayCount = ChartConstant.dayCount;
   chartOptions = ChartConstant.chartOptions;
-
   @Input() title = '';
   @Input() metric = '';
   @Input() submitData: any = {};
@@ -61,6 +60,7 @@ export class RequesterDetailComponent implements OnInit {
     this.selectedHour = hour;
     this.prepareData();
   }
+
   prepareData() {
     this.chartData = [
       {
@@ -74,7 +74,6 @@ export class RequesterDetailComponent implements OnInit {
         backgroundColor: 'orange',
       },
     ];
-
     if (this.metric === 'byDay' || this.metric === 'byHour') {
       const array = this.chartData.map((item) => item.data);
       if (array.length > 0) {
@@ -88,10 +87,12 @@ export class RequesterDetailComponent implements OnInit {
         }
         const maxValue = Math.max(...resultArray);
         const indexOfMaxValue = resultArray.indexOf(maxValue);
-        if (this.metric === 'byDay') {
-          mostActiveDay = this.dayList[indexOfMaxValue].name;
-        } else {
-          mostActiveHour = this.hoursList[indexOfMaxValue].name;
+        if (indexOfMaxValue > -1) {
+          if (this.metric === 'byDay') {
+            mostActiveDay = this.dayList[indexOfMaxValue].name;
+          } else {
+            mostActiveHour = this.hoursList[indexOfMaxValue].name;
+          }
         }
         this.chartService.employeerData.next({ mostActiveDay, mostActiveHour });
       }

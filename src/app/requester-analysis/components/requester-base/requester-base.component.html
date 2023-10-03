@@ -14,7 +14,7 @@
     flex-wrap: wrap;
     padding: 0px 16px 0px 16px;
   "
-  *ngIf="(acceptData | json) != '{}' &&(submitData | json) != '{}';else noData"
+  *ngIf="renderDetail"
 >
   <div *ngFor="let chart of chartsList">
     <app-requester-detail

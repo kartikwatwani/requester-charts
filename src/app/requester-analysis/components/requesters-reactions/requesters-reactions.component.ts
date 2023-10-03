@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { ChartConstant } from '../../../constant';
-import { ChartService } from '../../../services/chart.service';
+import { ChartService } from '../../services/chart.service';
 
 @Component({
   selector: 'app-requesters-reactions',
@@ -17,7 +17,7 @@ export class RequestersReactionsComponent {
   constructor(private chartService: ChartService, private router: Router) {}
 
   async ngOnInit() {
-    this.employeerList = await this.chartService.getDataAtPath(
+    this.employeerList = await this.chartService.getDataAtPathAsList(
       'reacts/requester'
     );
     this.prepareDataForRequesterReaction();
