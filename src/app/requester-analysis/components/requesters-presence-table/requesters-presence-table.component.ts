@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ChartConstant } from '../../../constant';
+import { ChartConstant } from '../../constant';
 import { Router } from '@angular/router';
 import { ChartService } from '../../services/chart.service';
 let topList = {
@@ -19,10 +19,10 @@ let topList = {
 
 @Component({
   selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss'],
+  templateUrl: './requesters-presence-table.component.html',
+  styleUrls: ['./requesters-presence-table.component.scss'],
 })
-export class TableComponent {
+export class RequestersPresenceTableComponent {
   @Input() topRequestersList: any[] = [];
   @Input() requesterIDToNameMapping: any = {};
   @Input() metric = '';

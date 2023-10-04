@@ -6,7 +6,7 @@ import { BehaviorSubject, Subject, firstValueFrom, map } from 'rxjs';
   providedIn: 'root',
 })
 export class ChartService {
-  employeerData: Subject<any> = new BehaviorSubject({});
+  requesterData: Subject<any> = new BehaviorSubject({});
   requesterList: BehaviorSubject<any> = new BehaviorSubject({});
   constructor(private db: AngularFireDatabase) {}
 

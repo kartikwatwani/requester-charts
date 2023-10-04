@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { ChartConstant } from '../../../constant';
+import { ChartConstant } from '../../constant';
 import { ChartService } from '../../services/chart.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ChartService } from '../../services/chart.service';
   styleUrls: ['./requesters-reactions.component.scss'],
 })
 export class RequestersReactionsComponent {
-  employeerList = [];
+  requestersList = [];
   reactionList = ChartConstant.reactionsList;
   selectedReaction = this.reactionList[0].id;
   @Input() requesterIDToNameMapping: any = {};
@@ -17,14 +17,14 @@ export class RequestersReactionsComponent {
   constructor(private chartService: ChartService, private router: Router) {}
 
   async ngOnInit() {
-    this.employeerList = await this.chartService.getDataAtPathAsList(
+    this.requestersList = await this.chartService.getDataAtPathAsList(
       'reacts/requester'
     );
     this.prepareDataForRequesterReaction();
   }
 
   prepareDataForRequesterReaction() {
-    this.employeerList = this.employeerList
+    this.requestersList = this.requestersList
       .sort(
         (a, b) =>
           b.summary[this.selectedReaction] - a.summary[this.selectedReaction]
@@ -34,7 +34,7 @@ export class RequestersReactionsComponent {
   }
 
   mappedNameForEmployer() {
-    this.employeerList.forEach((requester) => {
+    this.requestersList.forEach((requester) => {
       requester.requestersName =
         this.requesterIDToNameMapping[requester.key] || requester.key;
     });

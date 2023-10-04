@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Chart } from '../requesters-analysis/requesters-analysis';
 import { ChartService } from '../../services/chart.service';
-import { ChartConstant } from '../../../constant';
+import { ChartConstant } from '../../constant';
 
 @Component({
   selector: 'app-requesters-base',

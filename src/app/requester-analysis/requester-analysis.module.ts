@@ -16,9 +16,10 @@ import { RequestersAnalysisComponent } from './components/requesters-analysis/re
 import { RequestersPresenceComponent } from './components/requesters-presence/requesters-presence.component';
 import { RequestersReactionsComponent } from './components/requesters-reactions/requesters-reactions.component';
 import { RequestersWageRateComponent } from './components/requesters-wage-rate/requesters-wage-rate.component';
-import { TableComponent } from './components/table/table.component';
+import { RequestersPresenceTableComponent } from './components/requesters-presence-table/requesters-presence-table.component';
 import { RequesterAnalysisRoutingModule } from './requester-analysis-routing.module';
 import { RequesterDetailComponent } from './components/requester-detail/requester-detail.component';
+import {MatSliderModule} from '@angular/material/slider'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { RequesterDetailComponent } from './components/requester-detail/requeste
     RequestersWageRateComponent,
     RequestersReactionsComponent,
     RequestersPresenceComponent,
-    TableComponent,
+    RequestersPresenceTableComponent,
     RequesterDetailComponent,
     RequestersAnalysisComponent,
   ],
@@ -41,6 +42,7 @@ import { RequesterDetailComponent } from './components/requester-detail/requeste
     MatIconModule,
     AngularFirestoreModule,
     NgChartsModule,
+    MatSliderModule,
     AngularFireStorageModule,
     AngularFirestoreModule,
     MatFormFieldModule,

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ChartConstant } from '../../../constant';
+import { ChartConstant } from '../../constant';
 
 @Component({
   selector: 'app-requesters-presence',

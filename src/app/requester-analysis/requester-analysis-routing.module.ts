@@ -5,18 +5,17 @@ import { RequesterBaseComponent } from './components/requester-base/requester-ba
 
 const routes: Routes = [
   {
-    path:'',
-    component:RequestersAnalysisComponent,
-
+    path: '',
+    component: RequestersAnalysisComponent,
   },
   {
-    path:':id',
-    component:RequesterBaseComponent,
+    path: ':id',
+    component: RequesterBaseComponent,
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class RequesterAnalysisRoutingModule { }
+export class RequesterAnalysisRoutingModule {}

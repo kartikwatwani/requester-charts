@@ -2,7 +2,19 @@
   <h2>
     Top Requesters By Wage Rate
   </h2>
+  <div class="slider">
+    <label id="example-name-label" class="example-name-label">Value</label>
+    <label class="example-value-label ml-5">{{slider.value}}</label>
+  </div>
 
+  <mat-slider
+  class="example-margin"
+  [max]="100"
+  [min]="50"
+   [discrete]="true"
+>
+<input matSliderThumb (change)="onSliderChange()" [(ngModel)]="value" #slider>
+</mat-slider>
   <div class="table-container">
     <table class="table">
       <thead>

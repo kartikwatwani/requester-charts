@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ChartConstant } from '../../../constant';
+import { ChartConstant } from '../../constant';
 import { ChartService } from '../../services/chart.service';
 let mostActiveDay = '';
 let mostActiveHour = '';
@@ -40,7 +40,7 @@ export class RequesterDetailComponent implements OnInit {
   constructor(private chartService: ChartService) {}
 
   ngOnInit(): void {
-    this.chartService.employeerData.subscribe((res) => {
+    this.chartService.requesterData.subscribe((res) => {
       setTimeout(() => {
         this.mostActiveDay = res.mostActiveDay;
         this.mostActiveHour = res.mostActiveHour;
@@ -94,7 +94,7 @@ export class RequesterDetailComponent implements OnInit {
             mostActiveHour = this.hoursList[indexOfMaxValue].name;
           }
         }
-        this.chartService.employeerData.next({ mostActiveDay, mostActiveHour });
+        this.chartService.requesterData.next({ mostActiveDay, mostActiveHour });
       }
     }
   }
