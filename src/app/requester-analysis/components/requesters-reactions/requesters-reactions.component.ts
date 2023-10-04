@@ -30,10 +30,10 @@ export class RequestersReactionsComponent {
           b.summary[this.selectedReaction] - a.summary[this.selectedReaction]
       )
       .filter((item) => item.summary[this.selectedReaction] !== 0);
-    this.mappedNameForEmployer();
+    this.mappedNameForRequesters();
   }
 
-  mappedNameForEmployer() {
+  mappedNameForRequesters() {
     this.requestersList.forEach((requester) => {
       requester.requestersName =
         this.requesterIDToNameMapping[requester.key] || requester.key;

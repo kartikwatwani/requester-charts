@@ -120,7 +120,7 @@ export class ChartConstant {
     accept:'accept',
     submit:"submit"
   }
-  
+
   static dayCount = [0, 1, 2, 3, 4, 5, 6];
   static filterType={
     topRequestersByDay:'topRequestersByDay',
@@ -146,5 +146,3 @@ export class ChartConstant {
     },
   ];
 }
-
-//TODO: move constant.ts inside requester-analysis module

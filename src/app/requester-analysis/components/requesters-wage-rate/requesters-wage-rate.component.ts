@@ -10,18 +10,21 @@ import { ChartService } from '../../services/chart.service';
 export class RequestersWageRateComponent {
   data: any[] = [];
   requesterList = [];
-  value=50;
+  value = 100;
   constructor(private chartService: ChartService, private router: Router) {}
 
-  async ngOnInit() {
-    this.data = await this.chartService.getLimitedData('reqs', 'wageRate', 100);
-    this.prepareDataForEmployeeWages();
+  ngOnInit() {
+    this.prepareDataForRequesterWages();
   }
 
-  prepareDataForEmployeeWages() {
+  async prepareDataForRequesterWages() {
+    this.data = await this.chartService.getQueryData('reqs', (ref) =>
+      ref.orderByChild('count').startAt(this.value)
+    );
     this.requesterList = this.data
+      .filter((item) => item.count >= this.value)
       .sort((a, b) => b.wageRate - a.wageRate)
-      .slice(0, this.value);
+      .slice(0, 100);
   }
 
   getRequesterDetail(item, key = 'name', query = 'requestersName') {
@@ -29,12 +32,7 @@ export class RequestersWageRateComponent {
       queryParams: { name: item[query] },
     });
   }
-  onSliderChange(){
-
-this.prepareDataForEmployeeWages();
+  onSliderChange() {
+    this.prepareDataForRequesterWages();
   }
 }
-
-
-
-//TODO: Add a slider to set minimum count for top 100 requesters i.e. if the value of slider is 50, then we need to find top 100 requesters who have the requester.count value at least 50.

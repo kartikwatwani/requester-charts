@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { AngularFireDatabase, QueryFn } from '@angular/fire/compat/database';
 import { BehaviorSubject, Subject, firstValueFrom, map } from 'rxjs';
 
 @Injectable({
@@ -92,10 +92,10 @@ export class ChartService {
     );
   }
 
-  getLimitedData(key: string, orderBy: string, limit: number): any {
+  getQueryData(key: string, queryFn:QueryFn): any {
     return firstValueFrom(
       this.db
-        .list(`/${key}`, (ref) => ref.orderByChild(orderBy).limitToLast(limit))
+        .list(`/${key}`,queryFn)
         .snapshotChanges()
         .pipe(
           map((changes: any) =>
@@ -104,4 +104,6 @@ export class ChartService {
         )
     );
   }
+
+
 }
