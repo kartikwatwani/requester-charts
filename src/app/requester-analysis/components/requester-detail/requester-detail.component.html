@@ -49,7 +49,9 @@
           <h3>Top Hour : {{mostActiveHour}}</h3>
         </div>
       </div>
-      <ng-container *ngIf="(reactionsData | json) != '{}'">
+      <ng-container
+        *ngIf="(reactionsData | json) != '{}' &&(reactionsData | json) !='null'"
+      >
         <mat-divider></mat-divider>
         <h3 style="font-weight: 500;">Requester Reaction</h3>
         <div class="d-flex justify-content-between flex-wrap">
@@ -62,7 +64,7 @@
       </ng-container>
       <ng-container *ngIf="(wageRateData | json) != '{}'">
         <mat-divider></mat-divider>
-        <h3 style="font-weight: 500;margin-top: 16px;">Requester Wage</h3>
+        <h3 style="font-weight: 500; margin-top: 16px;">Requester Wage</h3>
         <div>
           <p>
             <span>Minimum Wage Rate</span> : {{wageRateData?.min | number :
